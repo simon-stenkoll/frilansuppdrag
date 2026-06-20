@@ -18,8 +18,8 @@
       "listing_url": "https://afry.com/sv/bli-en-del-av-afry/afry-partner-network",
       "method": "http",
       "status": "working",
-      "relevant_count": 1,
-      "listing_score": 0,
+      "relevant_count": 2,
+      "listing_score": 40,
       "last_checked": "2026-06-20",
       "last_found": "2026-06-20"
     },
@@ -30,6 +30,17 @@
       "method": "http",
       "status": "working",
       "relevant_count": 2,
+      "listing_score": 8,
+      "last_checked": "2026-06-20",
+      "last_found": "2026-06-20"
+    },
+    {
+      "name": "Brainville",
+      "website": "https://www.brainville.com/",
+      "listing_url": "https://www.brainville.com/HittaKonsultuppdrag",
+      "method": "http",
+      "status": "working",
+      "relevant_count": 1,
       "listing_score": 0,
       "last_checked": "2026-06-20",
       "last_found": "2026-06-20"
@@ -41,7 +52,7 @@
       "method": "http",
       "status": "working",
       "relevant_count": 1,
-      "listing_score": 0,
+      "listing_score": 43,
       "last_checked": "2026-06-20",
       "last_found": "2026-06-20"
     },
@@ -63,18 +74,7 @@
       "method": "http",
       "status": "working",
       "relevant_count": 1,
-      "listing_score": 16,
-      "last_checked": "2026-06-20",
-      "last_found": "2026-06-20"
-    },
-    {
-      "name": "Flexjobs",
-      "website": "https://www.flexjobs.com/",
-      "listing_url": "https://www.flexjobs.com/",
-      "method": "http",
-      "status": "working",
-      "relevant_count": 1,
-      "listing_score": 0,
+      "listing_score": 19,
       "last_checked": "2026-06-20",
       "last_found": "2026-06-20"
     },
@@ -85,7 +85,7 @@
       "method": "http",
       "status": "working",
       "relevant_count": 1,
-      "listing_score": 3165,
+      "listing_score": 3166,
       "last_checked": "2026-06-20",
       "last_found": "2026-06-20"
     },
@@ -129,7 +129,7 @@
       "method": "http",
       "status": "working",
       "relevant_count": 2,
-      "listing_score": 20,
+      "listing_score": 24,
       "last_checked": "2026-06-20",
       "last_found": "2026-06-20"
     },
@@ -140,7 +140,7 @@
       "method": "playwright",
       "status": "working",
       "relevant_count": 3,
-      "listing_score": 0,
+      "listing_score": 6,
       "last_checked": "2026-06-20",
       "last_found": "2026-06-20"
     },
@@ -156,13 +156,24 @@
       "last_found": "2026-06-20"
     },
     {
+      "name": "Adwise Consulting",
+      "website": "https://www.adwise.se/",
+      "listing_url": "https://www.adwise.se/",
+      "method": "playwright",
+      "status": "listing",
+      "relevant_count": 0,
+      "listing_score": 52,
+      "last_checked": "2026-06-20",
+      "last_found": ""
+    },
+    {
       "name": "Aliant",
       "website": "https://www.aliant.se/",
       "listing_url": "https://aliant.recman.se/",
       "method": "playwright",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 11,
+      "listing_score": 14,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -170,6 +181,39 @@
       "name": "Biolit",
       "website": "https://biolit.se/",
       "listing_url": "https://biolit.se/",
+      "method": "http",
+      "status": "listing",
+      "relevant_count": 0,
+      "listing_score": 4,
+      "last_checked": "2026-06-20",
+      "last_found": ""
+    },
+    {
+      "name": "Centric",
+      "website": "https://www.centric.eu/se/",
+      "listing_url": "https://careers.centric.eu/se/underkonsult/",
+      "method": "http",
+      "status": "listing",
+      "relevant_count": 0,
+      "listing_score": 3,
+      "last_checked": "2026-06-20",
+      "last_found": ""
+    },
+    {
+      "name": "Cfinder",
+      "website": "https://www.cfinder.com/",
+      "listing_url": "https://www.cfinder.com/",
+      "method": "http",
+      "status": "listing",
+      "relevant_count": 0,
+      "listing_score": 3,
+      "last_checked": "2026-06-20",
+      "last_found": ""
+    },
+    {
+      "name": "Cogig",
+      "website": "https://www.cogig.se/",
+      "listing_url": "https://www.cogig.se/",
       "method": "http",
       "status": "listing",
       "relevant_count": 0,
@@ -195,7 +239,29 @@
       "method": "http",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 28,
+      "listing_score": 31,
+      "last_checked": "2026-06-20",
+      "last_found": ""
+    },
+    {
+      "name": "Donald Davis & Partners",
+      "website": "https://ddp.se/",
+      "listing_url": "https://ddp.se/",
+      "method": "http",
+      "status": "listing",
+      "relevant_count": 0,
+      "listing_score": 42,
+      "last_checked": "2026-06-20",
+      "last_found": ""
+    },
+    {
+      "name": "Experis",
+      "website": "https://www.experis.se/",
+      "listing_url": "https://www.experis.se/sv/sok",
+      "method": "playwright",
+      "status": "listing",
+      "relevant_count": 0,
+      "listing_score": 16,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -206,7 +272,7 @@
       "method": "http",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 74,
+      "listing_score": 75,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -214,10 +280,10 @@
       "name": "Folq",
       "website": "https://www.folq.se/",
       "listing_url": "https://www.folq.se/uppdragsgivare/utvecklare/",
-      "method": "http",
+      "method": "playwright",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 8,
+      "listing_score": 10,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -228,7 +294,7 @@
       "method": "http",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 9,
+      "listing_score": 16,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -239,18 +305,18 @@
       "method": "http",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 4,
+      "listing_score": 25,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
     {
       "name": "Iceberry",
       "website": "https://www.iceberry.se/",
-      "listing_url": "https://uppdrag.iceberry.se/",
+      "listing_url": "https://www.iceberry.se/",
       "method": "playwright",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 3,
+      "listing_score": 6,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -261,7 +327,7 @@
       "method": "http",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 5,
+      "listing_score": 7,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -283,7 +349,40 @@
       "method": "playwright",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 22,
+      "listing_score": 23,
+      "last_checked": "2026-06-20",
+      "last_found": ""
+    },
+    {
+      "name": "Jobserve",
+      "website": "https://www.jobserve.com/se/",
+      "listing_url": "https://www.jobserve.com/se/en/Job-Search/",
+      "method": "http",
+      "status": "listing",
+      "relevant_count": 0,
+      "listing_score": 23,
+      "last_checked": "2026-06-20",
+      "last_found": ""
+    },
+    {
+      "name": "K2 Partnering",
+      "website": "https://k2partnering.com/",
+      "listing_url": "https://k2partnering.com/",
+      "method": "http",
+      "status": "listing",
+      "relevant_count": 0,
+      "listing_score": 5,
+      "last_checked": "2026-06-20",
+      "last_found": ""
+    },
+    {
+      "name": "Kantur & Associates",
+      "website": "https://kantur.se/",
+      "listing_url": "https://kantur.se/",
+      "method": "http",
+      "status": "listing",
+      "relevant_count": 0,
+      "listing_score": 5,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -310,13 +409,24 @@
       "last_found": ""
     },
     {
+      "name": "Kubo international",
+      "website": "https://kubo.international/sv/",
+      "listing_url": "https://kubo.international/sv/karriar/",
+      "method": "http",
+      "status": "listing",
+      "relevant_count": 0,
+      "listing_score": 3,
+      "last_checked": "2026-06-20",
+      "last_found": ""
+    },
+    {
       "name": "Levigo",
       "website": "https://levigo.se/",
       "listing_url": "https://levigo.se/assignments/",
       "method": "http",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 13,
+      "listing_score": 14,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -324,10 +434,21 @@
       "name": "Nikita",
       "website": "https://www.nikita.se/",
       "listing_url": "https://www.nikita.se/lediga-uppdrag/",
-      "method": "http",
+      "method": "playwright",
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 34,
+      "last_checked": "2026-06-20",
+      "last_found": ""
+    },
+    {
+      "name": "Nion IT",
+      "website": "https://nionit.com/",
+      "listing_url": "https://nionit.com/",
+      "method": "http",
+      "status": "listing",
+      "relevant_count": 0,
+      "listing_score": 4,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -338,7 +459,7 @@
       "method": "http",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 5,
+      "listing_score": 24,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -347,6 +468,17 @@
       "website": "http://paventia.se/",
       "listing_url": "https://jobs.paventia.se/jobs/open",
       "method": "playwright",
+      "status": "listing",
+      "relevant_count": 0,
+      "listing_score": 4,
+      "last_checked": "2026-06-20",
+      "last_found": ""
+    },
+    {
+      "name": "Polarcape",
+      "website": "https://polarcape.com/",
+      "listing_url": "https://polarcape.com/",
+      "method": "http",
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 4,
@@ -371,7 +503,7 @@
       "method": "playwright",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 20,
+      "listing_score": 22,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -383,6 +515,28 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 303,
+      "last_checked": "2026-06-20",
+      "last_found": ""
+    },
+    {
+      "name": "Right People Group",
+      "website": "https://rightpeoplegroup.com/sv/",
+      "listing_url": "https://rightpeoplegroup.com/sv/open-assignments",
+      "method": "playwright",
+      "status": "listing",
+      "relevant_count": 0,
+      "listing_score": 7,
+      "last_checked": "2026-06-20",
+      "last_found": ""
+    },
+    {
+      "name": "Safemind",
+      "website": "https://www.safemind.se/",
+      "listing_url": "https://www.safemind.se/",
+      "method": "http",
+      "status": "listing",
+      "relevant_count": 0,
+      "listing_score": 5,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -404,6 +558,28 @@
       "method": "playwright",
       "status": "listing",
       "relevant_count": 0,
+      "listing_score": 14,
+      "last_checked": "2026-06-20",
+      "last_found": ""
+    },
+    {
+      "name": "Techlove",
+      "website": "https://techlove.se/",
+      "listing_url": "https://career.techlove.se/#jobs",
+      "method": "http",
+      "status": "listing",
+      "relevant_count": 0,
+      "listing_score": 32,
+      "last_checked": "2026-06-20",
+      "last_found": ""
+    },
+    {
+      "name": "Teksystems",
+      "website": "https://www.teksystems.com/sv-se",
+      "listing_url": "https://www.teksystems.com/sv-se",
+      "method": "http",
+      "status": "listing",
+      "relevant_count": 0,
       "listing_score": 10,
       "last_checked": "2026-06-20",
       "last_found": ""
@@ -415,7 +591,7 @@
       "method": "http",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 11,
+      "listing_score": 13,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -431,13 +607,24 @@
       "last_found": ""
     },
     {
+      "name": "Upgraded People",
+      "website": "https://upgraded.se/",
+      "listing_url": "https://upgraded.se/",
+      "method": "http",
+      "status": "listing",
+      "relevant_count": 0,
+      "listing_score": 4,
+      "last_checked": "2026-06-20",
+      "last_found": ""
+    },
+    {
       "name": "Wise IT",
       "website": "https://www.wiseit.se/",
       "listing_url": "https://www.wiseit.se/",
       "method": "playwright",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 20,
+      "listing_score": 29,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -448,29 +635,29 @@
       "method": "http",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 10,
+      "listing_score": 13,
+      "last_checked": "2026-06-20",
+      "last_found": ""
+    },
+    {
+      "name": "Witted",
+      "website": "https://witted.com/",
+      "listing_url": "https://witted.com/",
+      "method": "http",
+      "status": "listing",
+      "relevant_count": 0,
+      "listing_score": 3,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
     {
       "name": "7N",
       "website": "https://www.7n.com/",
-      "listing_url": "",
+      "listing_url": "https://www.7n.com/",
       "method": "http",
       "status": "empty",
       "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
-      "name": "Adwise Consulting",
-      "website": "https://www.adwise.se/",
-      "listing_url": "",
-      "method": "http",
-      "status": "empty",
-      "relevant_count": 0,
-      "listing_score": 0,
+      "listing_score": 1,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -552,17 +739,6 @@
       "last_found": ""
     },
     {
-      "name": "Brainville",
-      "website": "https://www.brainville.com/",
-      "listing_url": "",
-      "method": "http",
-      "status": "empty",
-      "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
       "name": "Brightmill",
       "website": "https://brightmill.se/",
       "listing_url": "",
@@ -585,52 +761,19 @@
       "last_found": ""
     },
     {
-      "name": "Centric",
-      "website": "https://www.centric.eu/se/",
-      "listing_url": "",
-      "method": "http",
-      "status": "empty",
-      "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
-      "name": "Cfinder",
-      "website": "https://www.cfinder.com/",
-      "listing_url": "",
-      "method": "http",
-      "status": "empty",
-      "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
       "name": "Chas",
       "website": "https://chas.se/",
-      "listing_url": "",
+      "listing_url": "https://chas.se/",
       "method": "http",
       "status": "empty",
       "relevant_count": 0,
-      "listing_score": 0,
+      "listing_score": 2,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
     {
       "name": "Cinode market",
       "website": "https://cinode.com/",
-      "listing_url": "",
-      "method": "http",
-      "status": "empty",
-      "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
-      "name": "Cogig",
-      "website": "https://www.cogig.se/",
       "listing_url": "",
       "method": "http",
       "status": "empty",
@@ -662,46 +805,24 @@
       "last_found": ""
     },
     {
-      "name": "Donald Davis & Partners",
-      "website": "https://ddp.se/",
-      "listing_url": "",
-      "method": "http",
-      "status": "empty",
-      "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
       "name": "Evolution",
       "website": "https://evolution-nordics.com/",
-      "listing_url": "",
+      "listing_url": "https://evolution-nordics.com/",
       "method": "http",
       "status": "empty",
       "relevant_count": 0,
-      "listing_score": 0,
+      "listing_score": 2,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
     {
       "name": "Ework Group",
       "website": "https://www.eworkgroup.com/",
-      "listing_url": "",
+      "listing_url": "https://www.eworkgroup.com/",
       "method": "http",
       "status": "empty",
       "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
-      "name": "Experis",
-      "website": "https://www.experis.se/",
-      "listing_url": "",
-      "method": "http",
-      "status": "empty",
-      "relevant_count": 0,
-      "listing_score": 0,
+      "listing_score": 2,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -715,6 +836,17 @@
       "listing_score": 0,
       "last_checked": "2026-06-20",
       "last_found": ""
+    },
+    {
+      "name": "Flexjobs",
+      "website": "https://www.flexjobs.com/",
+      "listing_url": "",
+      "method": "http",
+      "status": "empty",
+      "relevant_count": 0,
+      "listing_score": 0,
+      "last_checked": "2026-06-20",
+      "last_found": "2026-06-20"
     },
     {
       "name": "Gigassembly",
@@ -752,11 +884,11 @@
     {
       "name": "House of Skills",
       "website": "https://www.houseofskills.se/",
-      "listing_url": "",
-      "method": "http",
+      "listing_url": "https://www.houseofskills.se/konsultuppdrag/",
+      "method": "playwright",
       "status": "empty",
       "relevant_count": 0,
-      "listing_score": 0,
+      "listing_score": 2,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -783,46 +915,13 @@
       "last_found": ""
     },
     {
-      "name": "Jobserve",
-      "website": "https://www.jobserve.com/se/",
-      "listing_url": "https://www.jobserve.com/se/en/Job-Search/",
-      "method": "http",
-      "status": "empty",
-      "relevant_count": 0,
-      "listing_score": 1,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
-      "name": "K2 Partnering",
-      "website": "https://k2partnering.com/",
-      "listing_url": "https://k2partnering.com/",
-      "method": "http",
-      "status": "empty",
-      "relevant_count": 0,
-      "listing_score": 1,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
-      "name": "Kantur & Associates",
-      "website": "https://kantur.se/",
-      "listing_url": "",
-      "method": "http",
-      "status": "empty",
-      "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
       "name": "Koalitionen",
       "website": "https://koalitionen.com/",
-      "listing_url": "",
+      "listing_url": "https://koalitionen.com/career/",
       "method": "http",
       "status": "empty",
       "relevant_count": 0,
-      "listing_score": 0,
+      "listing_score": 2,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -840,22 +939,11 @@
     {
       "name": "Konsultkooperativet",
       "website": "https://konsult.coop/",
-      "listing_url": "",
+      "listing_url": "https://konsult.coop/",
       "method": "http",
       "status": "empty",
       "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
-      "name": "Kubo international",
-      "website": "https://kubo.international/sv/",
-      "listing_url": "",
-      "method": "http",
-      "status": "empty",
-      "relevant_count": 0,
-      "listing_score": 0,
+      "listing_score": 1,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -875,7 +963,7 @@
       "website": "https://connect.magello.se/",
       "listing_url": "",
       "method": "http",
-      "status": "empty",
+      "status": "error",
       "relevant_count": 0,
       "listing_score": 0,
       "last_checked": "2026-06-20",
@@ -886,7 +974,7 @@
       "website": "https://magnitglobal.com/",
       "listing_url": "",
       "method": "http",
-      "status": "empty",
+      "status": "error",
       "relevant_count": 0,
       "listing_score": 0,
       "last_checked": "2026-06-20",
@@ -908,7 +996,7 @@
       "website": "https://www.meone.se/",
       "listing_url": "",
       "method": "http",
-      "status": "empty",
+      "status": "error",
       "relevant_count": 0,
       "listing_score": 0,
       "last_checked": "2026-06-20",
@@ -928,11 +1016,11 @@
     {
       "name": "Moment",
       "website": "https://www.moment.se/frilansare/",
-      "listing_url": "https://www.moment.se/frilansare/",
+      "listing_url": "",
       "method": "http",
-      "status": "empty",
+      "status": "error",
       "relevant_count": 0,
-      "listing_score": 1,
+      "listing_score": 0,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -941,18 +1029,7 @@
       "website": "https://nexergroup.com/nexer-xtended/",
       "listing_url": "",
       "method": "http",
-      "status": "empty",
-      "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
-      "name": "Nion IT",
-      "website": "https://nionit.com/",
-      "listing_url": "",
-      "method": "http",
-      "status": "empty",
+      "status": "error",
       "relevant_count": 0,
       "listing_score": 0,
       "last_checked": "2026-06-20",
@@ -1003,24 +1080,13 @@
       "last_found": ""
     },
     {
-      "name": "Polarcape",
-      "website": "https://polarcape.com/",
-      "listing_url": "",
-      "method": "http",
-      "status": "empty",
-      "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
       "name": "Profinder by Sylog",
       "website": "https://www.profinder.se/",
-      "listing_url": "",
+      "listing_url": "https://www.profinder.se/",
       "method": "http",
       "status": "empty",
       "relevant_count": 0,
-      "listing_score": 0,
+      "listing_score": 2,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -1071,39 +1137,17 @@
     {
       "name": "Resursbrist Norden",
       "website": "https://resursbrist.se/",
-      "listing_url": "",
+      "listing_url": "https://resursbrist.se/aktuella-uppdrag/",
       "method": "http",
       "status": "empty",
       "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
-      "name": "Right People Group",
-      "website": "https://rightpeoplegroup.com/sv/",
-      "listing_url": "",
-      "method": "http",
-      "status": "empty",
-      "relevant_count": 0,
-      "listing_score": 0,
+      "listing_score": 1,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
     {
       "name": "Riktiga Konsulter",
       "website": "https://www.riktiga.com/",
-      "listing_url": "",
-      "method": "http",
-      "status": "empty",
-      "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
-      "name": "Safemind",
-      "website": "https://www.safemind.se/",
       "listing_url": "",
       "method": "http",
       "status": "empty",
@@ -1157,30 +1201,8 @@
       "last_found": ""
     },
     {
-      "name": "Techlove",
-      "website": "https://techlove.se/",
-      "listing_url": "https://career.techlove.se/#jobs",
-      "method": "http",
-      "status": "empty",
-      "relevant_count": 0,
-      "listing_score": 2,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
       "name": "TechSmidt",
       "website": "https://techsmidt.com/",
-      "listing_url": "",
-      "method": "http",
-      "status": "empty",
-      "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
-      "name": "Teksystems",
-      "website": "https://www.teksystems.com/sv-se",
       "listing_url": "",
       "method": "http",
       "status": "empty",
@@ -1247,44 +1269,33 @@
     {
       "name": "Toptal",
       "website": "https://www.toptal.com/",
-      "listing_url": "",
-      "method": "http",
+      "listing_url": "https://www.toptal.com/",
+      "method": "playwright",
       "status": "empty",
       "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
-      "name": "Upgraded People",
-      "website": "https://upgraded.se/",
-      "listing_url": "",
-      "method": "http",
-      "status": "empty",
-      "relevant_count": 0,
-      "listing_score": 0,
+      "listing_score": 1,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
     {
       "name": "Upwork",
       "website": "https://www.upwork.com/",
-      "listing_url": "",
-      "method": "http",
+      "listing_url": "https://www.upwork.com/",
+      "method": "playwright",
       "status": "empty",
       "relevant_count": 0,
-      "listing_score": 0,
+      "listing_score": 1,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
     {
       "name": "Verama",
       "website": "https://verama.com/sv/",
-      "listing_url": "",
+      "listing_url": "https://verama.com/sv/",
       "method": "http",
       "status": "empty",
       "relevant_count": 0,
-      "listing_score": 0,
+      "listing_score": 2,
       "last_checked": "2026-06-20",
       "last_found": ""
     },
@@ -1302,17 +1313,6 @@
     {
       "name": "Win win consulting",
       "website": "https://www.winwinconsulting.se/",
-      "listing_url": "",
-      "method": "http",
-      "status": "empty",
-      "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
-      "name": "Witted",
-      "website": "https://witted.com/",
       "listing_url": "",
       "method": "http",
       "status": "empty",
