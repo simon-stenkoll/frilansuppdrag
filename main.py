@@ -79,4 +79,9 @@ async def main():
 
 
 if __name__ == "__main__":
+    try:  # ensure emoji/arrows in log output don't crash a Windows console
+        import sys
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
     asyncio.run(main())

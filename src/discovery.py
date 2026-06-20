@@ -14,6 +14,7 @@ Run occasionally / manually — it is heavy (renders ~130 sites with a browser):
 import asyncio
 import json
 import os
+import re
 import sys
 from datetime import date
 from urllib.parse import urljoin, urlparse
@@ -35,34 +36,56 @@ from src.scrapers.broker_portals import _extract_from_soup, _base_url
 
 # ─── ANNA LEIJON BROKER LIST ─────────────────────────────────────────────────
 
+# Registry/social domains that are never assignment portals.
+_NON_PORTAL_DOMAINS = (
+    "annaleijon", "linkedin.", "facebook.", "twitter.", "instagram.",
+    "allabolag.", "ratsit.", "google.com/maps", "youtube.",
+)
+
+
 def _is_external(href: str) -> bool:
     href = (href or "").lower()
     if not href.startswith("http"):
         return False
-    skip = ("annaleijon", "linkedin.", "facebook.", "twitter.", "instagram.", "mailto:")
-    return not any(s in href for s in skip)
+    return not any(s in href for s in _NON_PORTAL_DOMAINS)
 
 
-def _looks_like_portal_link(a) -> bool:
-    text = (a.get_text() or "").lower()
-    href = (a.get("href") or "").lower()
-    blob = text + " " + href
-    return any(kw in blob for kw in ("uppdrag", "assignment", "jobb", "/jobs", "lediga", "career"))
+def _norm_header(text: str) -> str:
+    return re.sub(r"[^a-z]", "", (text or "").lower())
+
+
+def _cell_link(cell) -> str:
+    """First external link in a cell, or empty string."""
+    if cell is None:
+        return ""
+    for a in cell.find_all("a"):
+        href = a.get("href", "").strip()
+        if _is_external(href):
+            return href
+    return ""
 
 
 def extract_brokers(html: str) -> list[dict]:
-    """Parse the broker table into {name, website, uppdragsportal, sector}."""
+    """Parse the broker tables into {name, website, uppdragsportal, sector}.
+
+    Uses the table header row to locate the 'Uppdrags-portal' column rather than
+    guessing, so the 'Om bolaget' (allabolag.se) column is never mistaken for it.
+    """
     soup = BeautifulSoup(html, "html.parser")
     brokers: list[dict] = []
     seen: set[str] = set()
 
     for table in soup.select("table"):
+        headers = [_norm_header(th.get_text()) for th in table.select("tr th")]
+        portal_idx = next((i for i, h in enumerate(headers) if "uppdragsportal" in h), None)
+        sector_idx = next((i for i, h in enumerate(headers) if "bransch" in h), 1)
+
         for row in table.select("tr"):
             cells = row.select("td")
             if len(cells) < 2:
                 continue
 
-            # Name + website come from the first cell's link (Namn column).
+            # Name + homepage come from the first cell's link (Namn column).
             name_link = cells[0].find("a")
             name = clean_text((name_link or cells[0]).get_text())
             if not name or len(name) < 2:
@@ -75,27 +98,16 @@ def extract_brokers(html: str) -> list[dict]:
             if name_link and _is_external(name_link.get("href", "")):
                 website = name_link.get("href", "").strip()
 
-            # Uppdragsportal: an external link elsewhere in the row that looks
-            # like an assignment portal; otherwise any other external link.
+            # Uppdrags-portal column (by header index); empty for many brokers.
             uppdragsportal = ""
-            other_external = ""
-            for cell in cells[1:]:
-                for a in cell.find_all("a"):
-                    href = a.get("href", "").strip()
-                    if not _is_external(href):
-                        continue
-                    if _looks_like_portal_link(a) and not uppdragsportal:
-                        uppdragsportal = href
-                    elif not other_external:
-                        other_external = href
-            if not uppdragsportal:
-                uppdragsportal = other_external
+            if portal_idx is not None and portal_idx < len(cells):
+                uppdragsportal = _cell_link(cells[portal_idx])
 
             if not website and not uppdragsportal:
                 continue
             seen.add(key)
 
-            sector = clean_text(cells[1].get_text()) if len(cells) > 1 else ""
+            sector = clean_text(cells[sector_idx].get_text()) if sector_idx < len(cells) else ""
             brokers.append({
                 "name": name,
                 "website": website,
@@ -259,7 +271,7 @@ async def run_discovery() -> list[dict]:
             async def worker(b: dict) -> None:
                 async with sem:
                     rec = await investigate(b, client, browser)
-                    flag = {"working": "✓", "listing": "·", "empty": " ", "error": "✗"}[rec["status"]]
+                    flag = {"working": "OK", "listing": "..", "empty": "  ", "error": "XX"}[rec["status"]]
                     print(f"  [{flag}] {rec['name'][:32]:32s} {rec['status']:8s} "
                           f"rel={rec['relevant_count']} {rec['listing_url']}")
                     results.append(rec)
@@ -313,6 +325,10 @@ async def probe() -> None:
 
 
 if __name__ == "__main__":
+    try:  # ensure non-ASCII (åäö, broker names) print on a Windows console
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
     if "--probe" in sys.argv:
         asyncio.run(probe())
     else:
