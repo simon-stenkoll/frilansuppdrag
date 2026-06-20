@@ -1,0 +1,83 @@
+meta:
+  output_filename: "CV - Simon Stenlund (Swe).pdf"
+  photo: "Simon Stenlund.jpg"
+
+personal:
+  name: "SIMON STENLUND"
+  title: "Data Engineer"
+  phone: "+46 (0)73 813 0997"
+  email: "simon.stenlund@hotmail.se"
+
+about: >
+  Frilansande Data Engineer med 6+ års expertis inom flera branscher.
+  Specialiserad på Microsoft Fabric, Power BI och modern datalagring för att
+  omvandla rådata till handlingsbara insikter. Dokumenterad erfarenhet av att leda team,
+  driva projekt och leverera datadrivna lösningar som förbättrar beslutsfattande
+  och ger mätbara affärsresultat.
+
+education:
+  - school: "Umeå School of Business, Economics and Statistics"
+    period: "2015-2019"
+    degree: "Civ.ek. Företagsekonomi"
+    note: "Inriktning - Finans"
+  - school: "Universidade de São Paulo"
+    period: "2017"
+    degree: "Utbytestermin"
+  - school: "Henley Business School"
+    period: "2019-2021"
+    degree: "Executive Education"
+
+technology:
+  - category: ""
+    items:
+      - MS Fabric
+      - Azure Data Factory
+      - Azure Synapse
+      - Power BI
+      - Snowflake
+      - dbt
+      - Azure DevOps
+      - GitHub
+      - DAX
+      - SQL
+      - PySpark
+
+assignments:
+  - role: "Microsoft Fabric & Power BI"
+    company: "Torvalla Bil AB"
+    period: "- 2023-2026"
+    bullets:
+      - "Implementerade ett self-service datalager i Microsoft Fabric som möjliggjorde för kunden att samla finans-, försäljnings- och servicedata"
+      - "Byggde ett Power BI-rapportpaket som används av 50+ affärsanvändare, vilket förbättrade insyn i operativ effektivitet och finansiell prestation"
+
+  - role: "Azure Data Factory & Power BI"
+    company: "Layer Group"
+    period: "- 2024-2025"
+    bullets:
+      - "Designade och levererade ett datalager orkestrerat med Azure Data Factory för IPO-förberedelser"
+      - "Ledde ett team på 4 konsulter och samarbetade med styrgruppsintressenter för att koordinera prioriteringar"
+      - "Byggde Power BI-rapportering för konsolidering, leverantörsanalys och uppföljning av kundfordringar, vilket förbättrade användningen av strategiska leverantörer och rörelsekapitalet"
+
+  - role: "Microsoft Fabric"
+    company: "Skistar AB"
+    period: "- 2026-2026"
+    bullets:
+      - "Möjliggjorde Skistars molnmigrering genom att arkitektera ett ramverk för utveckling i MS Fabric"
+      - "Byggde optimerade spark notebooks för att extrahera och transformera data från 50+ bolag på minuter, vilket sparade tid vid validering i bokslut"
+
+  - role: "Snowflake, dbt & Power BI"
+    company: "Stegra AB"
+    period: "- 2024-2025"
+    bullets:
+      - "Samarbetade tvärfunktionellt för att stärka samordningen mellan affärsenheter och det digitala teamet"
+      - "Utvecklade finans- och inköpsrapporter i Power BI som förbättrade kostnadsinsyn och prestationsuppföljning"
+      - "Rådgav analytiker och etablerade strukturerade arbetsflöden för rapportägarskap, vilket främjade hållbara BI-praktiker"
+
+  - role: "Team Manager"
+    company: "Exsitec AB"
+    period: "- 2024-2026"
+    bullets:
+      - "Ledde ett team med 10+ BI-konsulter med fullt personalansvar"
+      - "Drev utvecklingen av bolagets Microsoft data- och analytikerbjudande, med ökad adoption hos kundbasen"
+      - "Ledde utvecklingen av agentisk AI vilket resulterade i effektivare leveranser"
+      - "Bidrog i rekrytering, försäljning och kundarbete, vilket resulterade i 270% omsättningstillväxt på 2 år"

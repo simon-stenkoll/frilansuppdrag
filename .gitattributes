@@ -1,0 +1,6 @@
+# Normalize line endings: LF in the repo, auto-convert on checkout.
+# Keeps Windows dev + Linux CI from churning line endings.
+* text=auto eol=lf
+
+# Binary assets — never normalize
+*.pdf binary

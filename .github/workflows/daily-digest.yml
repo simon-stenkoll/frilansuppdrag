@@ -1,0 +1,63 @@
+name: Daily Contract Digest
+
+on:
+  schedule:
+    # 23:00 UTC (Sun-Thu) = 01:00 CEST (Mon-Fri) Stockholm night
+    - cron: '0 23 * * 0-4'
+  workflow_dispatch:  # allow manual runs
+
+permissions:
+  contents: write  # needed to commit the digest
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  scrape-and-digest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Restore seen state
+        # seen.json is committed to the repo so it persists across runs
+        run: echo "State file exists:" && (test -f state/seen.json && echo "yes" || echo "no, will create fresh")
+
+      - name: Run scraper
+        env:
+          GITHUB_MODELS_TOKEN: ${{ secrets.GH_MODELS_TOKEN }}
+        run: python main.py
+
+      - name: Commit digest
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/ state/seen.json
+          git diff --staged --quiet && echo "no_changes=true" >> "$GITHUB_ENV" || true
+          git diff --staged --quiet || git commit -m "chore: daily digest $(date -u '+%Y-%m-%d')"
+          git pull --rebase
+          git push
+
+      - name: Notify Google Chat
+        if: success()
+        run: |
+          curl -s -X POST "${{ secrets.GCHAT_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d "{\"text\": \"Dagens konsultuppdrag är klart: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/\"}"
+
+      - name: Notify Google Chat on failure
+        if: failure()
+        run: |
+          curl -s -X POST "${{ secrets.GCHAT_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d "{\"text\": \"⚠️ Daily Contract Digest FAILED — se loggen: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}"
