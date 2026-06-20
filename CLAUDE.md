@@ -1,0 +1,67 @@
+# CLAUDE.md
+
+Guidance for Claude Code (and other AI assistants) working in this repository.
+
+## Vad projektet gör
+
+Daglig pipeline som skrapar konsult-/frilansuppdrag inom Data Engineering / BI / Analytics i
+Stockholm, deduplicerar, filtrerar på konsultuppdrag, poängsätter med en LLM, genererar en
+HTML-digest i `docs/` och notifierar via Discord. Körs nattligt via GitHub Actions (`workflow_dispatch`
+finns för manuella körningar) och kan köras lokalt.
+
+## Arkitektur (dataflöde)
+
+`main.py` orkestrerar: `run_all_scrapers()` → `deduplicate()` → `is_contract`-filter →
+`mark_new()` (jämför mot `state/seen.json`) → `summarize()` (LLM-scoring) → `generate()` (HTML) →
+`post_to_discord()` (notis).
+
+- `src/config.py` — all konfiguration: nyckelord, portallista (seed), env-namn, gränser
+- `src/models.py` — `Assignment`-dataclass (det enda objektet som flödar genom pipelinen)
+- `src/scrapers/` — en modul per källa; varje exponerar `async def scrape() -> list[Assignment]`
+- `src/scrapers/utils.py` — delade filter (`is_relevant`, `is_contract`, `is_in_stockholm`),
+  `make_client()` (httpx) och `fetch_rendered()` (Playwright för JS-portaler)
+- `src/scrapers/broker_portals.py` — svenska konsultmäklare; läser `state/portals.json` för att
+  fokusera på portaler som faktiskt visar uppdrag
+- `src/discovery.py` — engångs/sällan-körd djupskanning av Anna Leijons mäklarlista som genererar
+  `state/portals.json`
+- `src/digest.py` — bygger `docs/index.html` + `docs/archive/YYYY-MM-DD.html`
+- `src/notify.py` — postar nya uppdrag till Discord-webhook
+- `state/seen.json` — sedda URL:er (spåras i git, persisteras mellan körningar)
+- `state/portals.json` — upptäckta/verifierade mäklarportaler (genereras av discovery)
+
+## Konventioner
+
+- **Python 3.11+**. **HTTP**: `httpx` (async) för scraping. **HTML**: `BeautifulSoup4`.
+  **JS-rendering**: Playwright (chromium). **LLM**: GitHub Models API (OpenAI-kompatibelt SDK),
+  modell `gpt-4o-mini`.
+- **Scraper-interface**: varje scraper exponerar `async def scrape() -> list[Assignment]`.
+- **Felisolering**: en scraper som kastar exception måste fångas i orkestreraren — ett fel får
+  aldrig stoppa övriga. Samma princip gäller notifiering.
+- **Config**: lägg nya nyckelord/URL:er/inställningar i `src/config.py`, inte hårdkodat i moduler.
+- **Surgical changes**: ändra bara det som behövs; ingen refaktorering av orörd kod (se
+  `.github/copilot-instructions.md` för fullständiga riktlinjer — de gäller även här).
+
+## Kör lokalt (Windows / PowerShell)
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python -m playwright install chromium      # för JS-tunga mäklarportaler
+
+# Hemligheter (per session, eller lägg i en .env som inte committas)
+$env:GITHUB_MODELS_TOKEN = "<github-pat-med-models:read>"
+$env:DISCORD_WEBHOOK_URL = "<discord-webhook-url>"
+
+python -m src.discovery     # (sällan) bygg om state/portals.json
+python main.py              # full körning → docs/ + Discord
+```
+
+Öppna `docs/index.html` i webbläsaren för att se resultatet.
+
+## Att tänka på
+
+- `summarize()` och `post_to_discord()` failar tyst (loggar) om token/webhook saknas — körningen
+  fortsätter ändå och digesten genereras.
+- Kör inte `src/discovery.py` i den nattliga workflowen; den är tung (Playwright mot ~130 sajter).
+  Nattliga körningen läser bara `state/portals.json`.

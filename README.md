@@ -125,31 +125,55 @@ flowchart TD
 
 ## Setup
 
-### 1. Lägg till secret
+### 1. Lägg till secrets
 
-**Settings → Secrets → Actions:**
+**Settings → Secrets and variables → Actions:**
 
 | Secret | Värde |
 |---|---|
-| `GITHUB_MODELS_TOKEN` | GitHub PAT med `models:read`-scope |
+| `GH_MODELS_TOKEN` | GitHub PAT med `models:read`-scope (LLM-scoring) |
+| `DISCORD_WEBHOOK_URL` | Discord-webhook för dagens uppdrag (se nedan) |
 
-### 2. Aktivera GitHub Pages (valfritt)
+> Workflowen mappar `GH_MODELS_TOKEN` → miljövariabeln `GITHUB_MODELS_TOKEN` som koden läser.
+
+### 2. Skapa Discord-webhook
+
+I Discord: **Kanalinställningar → Integrationer → Webhooks → New Webhook** → kopiera webhook-URL:en
+och lägg den som secret `DISCORD_WEBHOOK_URL`. Nya uppdrag postas som embeds i kanalen varje morgon.
+
+### 3. Aktivera GitHub Pages (valfritt)
 
 **Settings → Pages** → källa: `docs/`-mappen på `main`.  
 Digest publiceras på `https://<username>.github.io/<repo>/`.
 
-### 3. Kör lokalt
+### 4. Kör lokalt på ny PC (Windows / PowerShell)
 
-```bash
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-set GITHUB_MODELS_TOKEN=<din_token>   # Windows
-python main.py
+python -m playwright install chromium      # för JS-tunga mäklarportaler
+
+$env:GITHUB_MODELS_TOKEN = "<din_token>"
+$env:DISCORD_WEBHOOK_URL = "<din_webhook>"  # valfritt lokalt
+
+python -m src.discovery     # (sällan) bygg om state/portals.json
+python main.py              # full körning → docs/ + Discord
 # Öppna docs/index.html i webbläsaren
 ```
 
-### 4. Trigga manuellt
+### 5. Trigga manuellt
 
 **Actions → Daily Contract Digest → Run workflow**
+
+### 6. Synka mot GitHub
+
+Repot initieras lokalt med `git`. Koppla din remote när du har URL:en:
+
+```powershell
+git remote add origin https://github.com/<user>/<repo>.git
+git push -u origin main
+```
 
 ---
 
@@ -164,19 +188,22 @@ src/
   state.py               # hanterar state/seen.json
   summarizer.py          # LLM-scoring + sammanfattning
   digest.py              # HTML-generator → docs/
+  notify.py              # postar nya uppdrag till Discord
+  discovery.py           # djupskanning av Anna Leijons mäklarlista → state/portals.json
   scrapers/
     jobtech.py           # Platsbanken (JobTech API)
-    broker_portals.py    # Svenska IT-brokers (32 portaler)
+    broker_portals.py    # Svenska IT-brokers (läser state/portals.json)
     ework.py             # ework.se (avstängd)
     brainville.py        # brainville.com (avstängd)
     indeed.py            # se.indeed.com (avstängd)
     linkedin_google.py   # LinkedIn via Google (avstängd)
-    utils.py             # is_relevant, is_contract, is_in_stockholm
+    utils.py             # is_relevant, is_contract, fetch_rendered (Playwright)
 docs/
   index.html             # senaste digest
   archive/               # dagligt arkiv YYYY-MM-DD.html
 state/
   seen.json              # sedda URL:er (persisteras i Git)
+  portals.json           # upptäckta/verifierade mäklarportaler (genereras av discovery)
 ```
 
 ---
