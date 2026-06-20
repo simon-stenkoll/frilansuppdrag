@@ -34,9 +34,6 @@ KEYWORDS = [
 # Location filter terms (case-insensitive, any match = include)
 LOCATION_KEYWORDS = ["stockholm", "sthlm", "remote", "hybrid"]
 
-# Number of top assignments to include in the digest (0 = all)
-MAX_RESULTS = 30
-
 # GitHub Models API settings
 GITHUB_MODELS_MODEL = "gpt-4o-mini"
 GITHUB_MODELS_ENDPOINT = "https://models.inference.ai.azure.com"

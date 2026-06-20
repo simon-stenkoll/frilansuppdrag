@@ -47,7 +47,7 @@ _UNSCRAPABLE_PORTALS = {
 async def scrape() -> list[Assignment]:
     results: list[Assignment] = []
     seen_urls: set[str] = set()
-    discovered = _load_working_portals()  # [] when discovery hasn't run yet
+    discovered = _load_active_portals()  # [] when discovery hasn't run yet
 
     async with make_client() as client:
         # API scrapers (highest quality, always run)
@@ -81,8 +81,8 @@ async def scrape() -> list[Assignment]:
     return results
 
 
-def _load_working_portals() -> list[dict]:
-    """Load portals that discovery marked as showing assignments."""
+def _load_active_portals() -> list[dict]:
+    """Load portals that discovery verified have an assignment listing page."""
     if not os.path.exists(PORTALS_STATE_FILE):
         return []
     try:
@@ -93,7 +93,8 @@ def _load_working_portals() -> list[dict]:
     portals = data.get("portals", []) if isinstance(data, dict) else data
     return [
         p for p in portals
-        if isinstance(p, dict) and p.get("status") == "working" and p.get("listing_url")
+        if isinstance(p, dict) and p.get("status") in ("working", "listing")
+        and p.get("listing_url")
         and p.get("name") not in DISABLED_BROKER_PORTALS
     ]
 
@@ -759,7 +760,7 @@ def _extract_from_soup(
         parent = link.parent
         context = clean_text(parent.get_text()) if parent else ""
         url = href if href.startswith("http") else urljoin(base + "/", href)
-        if not is_relevant(link_text, ""):
+        if not is_relevant(link_text, context):
             continue
         location = _extract_location_from_text(context)
         if location and not is_in_stockholm(location):

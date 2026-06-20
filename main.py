@@ -9,7 +9,7 @@ from src.state import mark_new
 from src.summarizer import summarize
 from src.digest import generate
 from src.notify import post_to_discord
-from src.config import MAX_RESULTS, DISABLED_SCRAPERS, PAGE_URL_FALLBACK
+from src.config import DISABLED_SCRAPERS, PAGE_URL_FALLBACK
 from src.scrapers.utils import is_contract
 
 SCRAPERS = [
@@ -67,10 +67,8 @@ async def main():
     new_count = sum(1 for a in marked if a.is_new)
     print(f"[state] {new_count} new assignments")
 
-    # Limit before sending to LLM to control cost
-    top = marked[:MAX_RESULTS] if MAX_RESULTS else marked
-    print(f"[summarizer] Summarizing {len(top)} assignments...")
-    summarized = summarize(top)
+    print(f"[summarizer] Summarizing {len(marked)} assignments...")
+    summarized = summarize(marked)
 
     generate(summarized)
 

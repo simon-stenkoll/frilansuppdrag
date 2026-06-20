@@ -153,10 +153,15 @@ def _find_listing_links(soup: BeautifulSoup, base: str) -> list[str]:
 
 def _listing_score(soup: BeautifulSoup) -> int:
     """Loose signal that a page lists assignments (even if none match keywords)."""
+    _LISTING_FRAGMENTS = (
+        "/uppdrag", "/assignment", "/jobb/", "/jobs/", "/job/", "assignmentid",
+        "/lediga", "/consultant", "/opportunit", "/career", "/position",
+        "/tjanst", "recman", "teamtailor", "/vacanc", "?assignment", "?job",
+    )
     count = 0
     for a in soup.select("a[href]"):
         href = (a.get("href") or "").lower()
-        if any(s in href for s in ("/uppdrag", "/assignment", "/jobb/", "/jobs/", "/job/", "assignmentid")):
+        if any(s in href for s in _LISTING_FRAGMENTS):
             count += 1
     return count
 

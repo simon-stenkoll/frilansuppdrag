@@ -67,6 +67,6 @@ def summarize(assignments: list[Assignment]) -> list[Assignment]:
             a.relevance_score = 5
             a.summary = ""
 
-    # Sort by relevance descending, new first
-    assignments.sort(key=lambda x: (x.is_new, x.relevance_score), reverse=True)
+    # Sort by relevance score descending; within the same score, new assignments first
+    assignments.sort(key=lambda x: (x.relevance_score, x.is_new), reverse=True)
     return assignments

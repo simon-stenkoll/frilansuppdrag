@@ -27,6 +27,25 @@ def generate(assignments: list[Assignment], run_date: str | None = None) -> None
     print(f"[digest] Wrote {index_path} and {archive_path} ({len(assignments)} assignments, {new_count} new)")
 
 
+def _new_today_strip(assignments: list[Assignment]) -> str:
+    """Compact list of new-today assignments shown above the ranked grid."""
+    new_ones = [a for a in assignments if a.is_new]
+    if not new_ones:
+        return ""
+    items = "\n".join(
+        f'    <li><a href="{a.url}" target="_blank" rel="noopener">{a.title}</a>'
+        f' <span class="strip-score {_score_class(a.relevance_score)}">{a.relevance_score}/10</span>'
+        f' <span class="strip-src">{a.source}</span></li>'
+        for a in new_ones
+    )
+    return f"""<div class="new-strip">
+  <div class="new-strip-header">&#x2728; New today ({len(new_ones)})</div>
+  <ul class="new-strip-list">
+{items}
+  </ul>
+</div>"""
+
+
 def _build_html(assignments: list[Assignment], today: str, new_count: int) -> str:
     cards_html = "\n".join(_card(a) for a in assignments) if assignments else (
         '<p class="empty">No matching assignments found today.</p>'
@@ -34,8 +53,8 @@ def _build_html(assignments: list[Assignment], today: str, new_count: int) -> st
 
     sources = sorted({a.source for a in assignments})
     source_tags = " ".join(f'<span class="source-tag">{s}</span>' for s in sources)
+    new_strip = _new_today_strip(assignments)
 
-    # Build archive links sidebar entries (handled via directory listing / GitHub)
     return f"""<!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -66,10 +85,18 @@ def _build_html(assignments: list[Assignment], today: str, new_count: int) -> st
   main {{ max-width: 980px; margin: 0 auto; padding: 24px 16px; }}
   .toolbar {{ display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; align-items: center; }}
   .source-tag {{ background: var(--border); color: var(--muted); border-radius: 6px; padding: 3px 10px; font-size: 0.78rem; }}
+  .new-strip {{ background: rgba(67,214,140,0.07); border: 1px solid rgba(67,214,140,0.3); border-radius: 12px; padding: 14px 18px; margin-bottom: 24px; }}
+  .new-strip-header {{ color: var(--new); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.04em; margin-bottom: 8px; }}
+  .new-strip-list {{ list-style: none; display: flex; flex-direction: column; gap: 5px; }}
+  .new-strip-list li {{ font-size: 0.88rem; }}
+  .new-strip-list a {{ color: var(--text); text-decoration: none; }}
+  .new-strip-list a:hover {{ color: var(--accent2); }}
+  .strip-score {{ font-size: 0.72rem; font-weight: 700; border-radius: 4px; padding: 1px 5px; margin-left: 6px; vertical-align: middle; }}
+  .strip-src {{ color: var(--muted); font-size: 0.75rem; margin-left: 6px; }}
   .grid {{ display: grid; gap: 16px; }}
   .card {{ background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: border-color 0.15s; }}
   .card:hover {{ border-color: var(--accent); }}
-  .card.is-new {{ border-left: 3px solid var(--new); }}
+  .card.is-new {{ border-left: 3px solid var(--new); background: rgba(67,214,140,0.04); }}
   .card-header {{ display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px; }}
   .card-title {{ font-size: 1rem; font-weight: 600; }}
   .card-title a {{ color: var(--text); text-decoration: none; }}
@@ -89,7 +116,7 @@ def _build_html(assignments: list[Assignment], today: str, new_count: int) -> st
 </head>
 <body>
 <header>
-  <h1>📋 Contract Assignments</h1>
+  <h1>&#x1F4CB; Contract Assignments</h1>
   <span class="meta">Stockholm · Data Engineering / BI / Analytics</span>
   <span class="badge">{len(assignments)} results</span>
   {'<span class="badge new">' + str(new_count) + ' new</span>' if new_count else ''}
@@ -99,8 +126,9 @@ def _build_html(assignments: list[Assignment], today: str, new_count: int) -> st
   <div class="toolbar">
     <span style="color:var(--muted);font-size:0.82rem">Sources:</span>
     {source_tags}
-    <a href="archive/" style="margin-left:auto;color:var(--muted);font-size:0.82rem;text-decoration:none">📁 Archive</a>
+    <a href="archive/" style="margin-left:auto;color:var(--muted);font-size:0.82rem;text-decoration:none">&#x1F4C1; Archive</a>
   </div>
+  {new_strip}
   <div class="grid">
     {cards_html}
   </div>
