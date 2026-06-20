@@ -28,10 +28,18 @@
   main { max-width: 980px; margin: 0 auto; padding: 24px 16px; }
   .toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; align-items: center; }
   .source-tag { background: var(--border); color: var(--muted); border-radius: 6px; padding: 3px 10px; font-size: 0.78rem; }
+  .new-strip { background: rgba(67,214,140,0.07); border: 1px solid rgba(67,214,140,0.3); border-radius: 12px; padding: 14px 18px; margin-bottom: 24px; }
+  .new-strip-header { color: var(--new); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.04em; margin-bottom: 8px; }
+  .new-strip-list { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+  .new-strip-list li { font-size: 0.88rem; }
+  .new-strip-list a { color: var(--text); text-decoration: none; }
+  .new-strip-list a:hover { color: var(--accent2); }
+  .strip-score { font-size: 0.72rem; font-weight: 700; border-radius: 4px; padding: 1px 5px; margin-left: 6px; vertical-align: middle; }
+  .strip-src { color: var(--muted); font-size: 0.75rem; margin-left: 6px; }
   .grid { display: grid; gap: 16px; }
   .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: border-color 0.15s; }
   .card:hover { border-color: var(--accent); }
-  .card.is-new { border-left: 3px solid var(--new); }
+  .card.is-new { border-left: 3px solid var(--new); background: rgba(67,214,140,0.04); }
   .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
   .card-title { font-size: 1rem; font-weight: 600; }
   .card-title a { color: var(--text); text-decoration: none; }
@@ -51,20 +59,39 @@
 </head>
 <body>
 <header>
-  <h1>📋 Contract Assignments</h1>
+  <h1>&#x1F4CB; Contract Assignments</h1>
   <span class="meta">Stockholm · Data Engineering / BI / Analytics</span>
-  <span class="badge">30 results</span>
-  
+  <span class="badge">51 results</span>
+  <span class="badge new">1 new</span>
   <span class="meta" style="margin-left:auto">2026-06-20</span>
 </header>
 <main>
   <div class="toolbar">
     <span style="color:var(--muted);font-size:0.82rem">Sources:</span>
-    <span class="source-tag">A Society</span> <span class="source-tag">Platsbanken</span> <span class="source-tag">Upgraded People</span>
-    <a href="archive/" style="margin-left:auto;color:var(--muted);font-size:0.82rem;text-decoration:none">📁 Archive</a>
+    <span class="source-tag">A Society</span> <span class="source-tag">Afry</span> <span class="source-tag">Alphadev</span> <span class="source-tag">Biolit</span> <span class="source-tag">Capa</span> <span class="source-tag">Enmanskonsulterna</span> <span class="source-tag">Epico</span> <span class="source-tag">ITC Network</span> <span class="source-tag">Just remote</span> <span class="source-tag">KeyMan</span> <span class="source-tag">Platsbanken</span> <span class="source-tag">Regent</span> <span class="source-tag">Senterprise</span> <span class="source-tag">Upgraded People</span> <span class="source-tag">Wetal</span>
+    <a href="archive/" style="margin-left:auto;color:var(--muted);font-size:0.82rem;text-decoration:none">&#x1F4C1; Archive</a>
   </div>
+  <div class="new-strip">
+  <div class="new-strip-header">&#x2728; New today (1)</div>
+  <ul class="new-strip-list">
+    <li><a href="https://afry.com/sv/tjanster/operativa-digitala-losningar" target="_blank" rel="noopener">Operativa och digitala lösningar</a> <span class="strip-score score-mid">5/10</span> <span class="strip-src">Afry</span></li>
+  </ul>
+</div>
   <div class="grid">
-    <div class="card">
+    <div class="card is-new">
+  <div class="card-header">
+    <div class="card-title"><a href="https://afry.com/sv/tjanster/operativa-digitala-losningar" target="_blank" rel="noopener">Operativa och digitala lösningar</a><span class="new-pill">NEW</span></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Afry)</span>
+    <span>📍 Sweden</span>
+    <span>🔗 Afry</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
   <div class="card-header">
     <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/30708777" target="_blank" rel="noopener">Data Engineer</a></div>
     <span class="score score-mid">5/10</span>
@@ -450,6 +477,266 @@
     <span>🏢 (via Upgraded People)</span>
     <span>📍 Stockholm</span>
     <span>🔗 Upgraded People</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://upgraded.se/konsultuppdrag/183617-databasprestandatekniker/" target="_blank" rel="noopener">Databasprestandatekniker</a></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Upgraded People)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Upgraded People</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://upgraded.se/konsultuppdrag/183542-kravledare-kravhanterare-2/" target="_blank" rel="noopener">Kravledare/Kravhanterare</a></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Upgraded People)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Upgraded People</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://www.keyman.se/sv/administration-ekonomi-juridik/kvalificerad-redovisningskonsult-med-revisionserfarenhet-till-skr-sveriges-kommuner-och-regioner-15826/" target="_blank" rel="noopener">Kvalificerad redovisningskonsult med revisionserfarenhet till SKR, Sveriges Kommuner och Regioner</a></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via KeyMan)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 KeyMan</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://www.keyman.se/sv/data-it/databasutvecklare-programmerare-till-forskningsprojekt-om-blodsakerhet-till-karolinska-institutet-15722/" target="_blank" rel="noopener">Databasutvecklare/programmerare till forskningsprojekt om blodsäkerhet till Karolinska Institutet</a></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via KeyMan)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 KeyMan</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="http://biolit.se/konsultuppdrag#senior-data-analyst-uppdragsnummer-1434" target="_blank" rel="noopener">Senior Data Analyst Uppdragsnummer: 1434</a></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Biolit)</span>
+    <span>📍 Sweden</span>
+    <span>🔗 Biolit</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="http://biolit.se/konsultuppdrag#data-engineer-azure-databricks-uppdragsnummer-1421" target="_blank" rel="noopener">Data Engineer - Azure Databricks Uppdragsnummer: 1421</a></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Biolit)</span>
+    <span>📍 Sweden</span>
+    <span>🔗 Biolit</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="http://biolit.se/konsultuppdrag#senior-backendutvecklare-inom-net-sql-och-betalningsflöden-u" target="_blank" rel="noopener">Senior backendutvecklare inom .NET, SQL och betalningsflöden Uppdragsnummer: 1412</a></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Biolit)</span>
+    <span>📍 Sweden</span>
+    <span>🔗 Biolit</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://itcnetwork.se/oppna-uppdrag/#itc-söker-en-data-engineer-azure-databricks-för-nivå-4" target="_blank" rel="noopener">ITC söker en Data Engineer – Azure Databricks för Nivå 4</a></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via ITC Network)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 ITC Network</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://regent.se/uppdrag/1131" target="_blank" rel="noopener">Senior Utvecklare inom SQL Server och Dokumentgenerering</a></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Regent)</span>
+    <span>📍 Sweden</span>
+    <span>🔗 Regent</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://afry.com/sv/tjanster/operations-digital-solutions/data-analytics-bi-ai" target="_blank" rel="noopener">Data Analytics, BI, & AI</a></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Afry)</span>
+    <span>📍 Sweden</span>
+    <span>🔗 Afry</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://www.alphadev.se/lediga-uppdrag/senior-site-reliability-engineer-openshift-platform-engineer-52620f06" target="_blank" rel="noopener">Senior Site Reliability Engineer - OpenShift / Platform Engineering</a></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Alphadev)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Alphadev</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://www.alphadev.se/lediga-uppdrag/fullstackutvecklare-angular-net-6809e919" target="_blank" rel="noopener">Fullstackutvecklare (Angular/.NET)</a></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Alphadev)</span>
+    <span>📍 Sweden</span>
+    <span>🔗 Alphadev</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://www.capa.se/lediga-jobb/interim-data-engineer-500000564" target="_blank" rel="noopener">Interim Data EngineerStockholm CityInterimTillsatt</a></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Capa)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Capa</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://jobs.epico.se/jobs/7902127-senior-data-engineer-databricks-developer" target="_blank" rel="noopener">Senior Data Engineer / Databricks Developer Köpenhamn, Malmö · Temporarily Remote</a></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Epico)</span>
+    <span>📍 Remote</span>
+    <span>🔗 Epico</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://justremote.co/remote-devops-sysadmin-jobs/online-data-analyst-united-states-spanish-speakers-telus-digital" target="_blank" rel="noopener">TELUS DigitalOnline Data Analyst United States Spanish speakers</a></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Just remote)</span>
+    <span>📍 Sweden</span>
+    <span>🔗 Just remote</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://jobb.senterprise.se/jobs/7899914-konsultuppdrag-data-engineer-azure-databricks" target="_blank" rel="noopener">Konsultuppdrag | Data Engineer (Azure & Databricks)</a></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Senterprise)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Senterprise</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://jobb.senterprise.se/jobs/7782632-konsultuppdrag-senior-data-engineer-backend-developer" target="_blank" rel="noopener">Konsultuppdrag | Senior Data Engineer / Backend Developer</a></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Senterprise)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Senterprise</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://wetal.com/sv/cases/custom-ai-assistant-bitstone" target="_blank" rel="noopener">Custom AI Assistant – BitStone</a></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Wetal)</span>
+    <span>📍 Sweden</span>
+    <span>🔗 Wetal</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://enmanskonsulterna.se/uppdrag" target="_blank" rel="noopener">keyboard_arrow_leftTillbaka</a></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Enmanskonsulterna)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Enmanskonsulterna</span>
+    <span>🗓 2026-06-20</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://enmanskonsulterna.se/registrera-konto" target="_blank" rel="noopener">Senior BI-konsult</a></div>
+    <span class="score score-mid">5/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Enmanskonsulterna)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Enmanskonsulterna</span>
     <span>🗓 2026-06-20</span>
   </div>
   
