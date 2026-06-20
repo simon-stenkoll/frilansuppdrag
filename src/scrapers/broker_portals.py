@@ -4,12 +4,14 @@ Uses API-first integrations where available, then dedicated HTML parsers
 for portals with known structure, and finally a generic fallback.
 """
 
+import json
+import os
 import re
 from urllib.parse import urlparse, urljoin, unquote
 
 import httpx
 from bs4 import BeautifulSoup
-from src.config import BROKER_PORTALS, DISABLED_BROKER_PORTALS
+from src.config import BROKER_PORTALS, DISABLED_BROKER_PORTALS, PORTALS_STATE_FILE
 from src.models import Assignment
 from src.scrapers.utils import (
     make_client,
@@ -18,6 +20,7 @@ from src.scrapers.utils import (
     is_contract,
     clean_text,
     polite_delay,
+    BrowserSession,
 )
 
 # ─── CONSTANTS ───────────────────────────────────────────────────────────────
@@ -44,23 +47,86 @@ _UNSCRAPABLE_PORTALS = {
 async def scrape() -> list[Assignment]:
     results: list[Assignment] = []
     seen_urls: set[str] = set()
+    discovered = _load_working_portals()  # [] when discovery hasn't run yet
 
     async with make_client() as client:
-        # API scrapers
+        # API scrapers (highest quality, always run)
         results.extend(await _scrape_asociety_api(client, seen_urls))
         results.extend(await _scrape_upgraded_api(client, seen_urls))
         results.extend(await _scrape_keyman_api(client, seen_urls))
 
-        # HTML scrapers (dedicated + generic fallback)
+        # Dedicated HTML scrapers (tuned per portal, always run)
         for portal in BROKER_PORTALS:
             name = portal.get("name")
-            if name in _API_PORTALS | DISABLED_BROKER_PORTALS | _UNSCRAPABLE_PORTALS:
+            scraper_fn = _PORTAL_SCRAPERS.get(name)
+            if scraper_fn is None or name in _API_PORTALS | DISABLED_BROKER_PORTALS:
                 continue
             await polite_delay()
-            scraper_fn = _PORTAL_SCRAPERS.get(name, _scrape_generic_portal)
             results.extend(await scraper_fn(client, portal, seen_urls))
 
+        # Long-tail portals
+        if discovered:
+            # Focus mode: only portals discovery verified as showing assignments.
+            results.extend(await _scrape_discovered_portals(client, discovered, seen_urls))
+        else:
+            # Pre-discovery fallback: generic HTTP scrape of the seed list.
+            for portal in BROKER_PORTALS:
+                name = portal.get("name")
+                if name in (_API_PORTALS | DISABLED_BROKER_PORTALS
+                            | _UNSCRAPABLE_PORTALS | set(_PORTAL_SCRAPERS)):
+                    continue
+                await polite_delay()
+                results.extend(await _scrape_generic_portal(client, portal, seen_urls))
+
     return results
+
+
+def _load_working_portals() -> list[dict]:
+    """Load portals that discovery marked as showing assignments."""
+    if not os.path.exists(PORTALS_STATE_FILE):
+        return []
+    try:
+        with open(PORTALS_STATE_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except (OSError, json.JSONDecodeError):
+        return []
+    portals = data.get("portals", []) if isinstance(data, dict) else data
+    return [
+        p for p in portals
+        if isinstance(p, dict) and p.get("status") == "working" and p.get("listing_url")
+        and p.get("name") not in DISABLED_BROKER_PORTALS
+    ]
+
+
+async def _scrape_discovered_portals(
+    client: httpx.AsyncClient, discovered: list[dict], seen_urls: set[str],
+) -> list[Assignment]:
+    """Scrape discovery-verified portals not already covered by a dedicated scraper."""
+    out: list[Assignment] = []
+    handled = _API_PORTALS | set(_PORTAL_SCRAPERS)
+    pending = [p for p in discovered if p.get("name") not in handled]
+
+    http_portals = [p for p in pending if p.get("method") != "playwright"]
+    js_portals = [p for p in pending if p.get("method") == "playwright"]
+
+    for p in http_portals:
+        await polite_delay()
+        soup = await _fetch_soup(client, p["listing_url"])
+        if soup:
+            out.extend(_extract_from_soup(soup, _base_url(p["listing_url"]), p["name"], seen_urls))
+
+    if js_portals:
+        async with BrowserSession() as browser:
+            if browser.available:
+                for p in js_portals:
+                    await polite_delay()
+                    html = await browser.fetch(p["listing_url"])
+                    if html:
+                        soup = BeautifulSoup(html, "html.parser")
+                        out.extend(_extract_from_soup(
+                            soup, _base_url(p["listing_url"]), p["name"], seen_urls,
+                        ))
+    return out
 
 
 # ─── SHARED HELPERS ──────────────────────────────────────────────────────────
@@ -648,14 +714,22 @@ _PORTAL_SCRAPERS = {
 async def _scrape_generic_portal(
     client: httpx.AsyncClient, portal: dict, seen_urls: set[str],
 ) -> list[Assignment]:
-    """Fallback: extract assignment links from any portal HTML page."""
-    out: list[Assignment] = []
-    name = portal["name"]
-    base = _base_url(portal["url"])
-
+    """Fallback: fetch a portal page over HTTP and extract assignments from it."""
     soup = await _fetch_soup(client, portal["url"])
     if not soup:
-        return out
+        return []
+    return _extract_from_soup(soup, _base_url(portal["url"]), portal["name"], seen_urls)
+
+
+def _extract_from_soup(
+    soup: BeautifulSoup, base: str, name: str, seen_urls: set[str],
+) -> list[Assignment]:
+    """Extract assignments from already-parsed portal HTML (HTTP or rendered).
+
+    Shared by the generic HTTP fallback, the discovery scanner, and the
+    Playwright-rendered path so all three apply the same extraction strategies.
+    """
+    out: list[Assignment] = []
 
     # Strategy 1: Find structured cards/containers
     cards = soup.select(

@@ -29,6 +29,10 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Install Playwright browser
+        # Needed to render JS-heavy broker portals marked as "playwright" in state/portals.json
+        run: python -m playwright install --with-deps chromium
+
       - name: Restore seen state
         # seen.json is committed to the repo so it persists across runs
         run: echo "State file exists:" && (test -f state/seen.json && echo "yes" || echo "no, will create fresh")

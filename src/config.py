@@ -54,6 +54,28 @@ REQUEST_TIMEOUT = 20
 # Polite delay between requests to same domain (seconds)
 SCRAPE_DELAY = 1.5
 
+# ─── Broker discovery (src/discovery.py) ─────────────────────────────────────
+# Anna Leijon's curated list of Swedish consultant brokers.
+LEIJON_URL = "https://annaleijon.se/lista-pa-konsultmaklare-i-stockholm.html"
+# Generated file recording which broker portals actually show assignments.
+PORTALS_STATE_FILE = "state/portals.json"
+# Sectors considered IT/tech-relevant when filtering the broker list.
+DISCOVERY_IT_KEYWORDS = {
+    "it", "tech", "data", "digital", "teknik", "system", "utveckl", "mgmt", "alla",
+}
+# Link text / href fragments that signal an assignment-listing page.
+ASSIGNMENT_NAV_KEYWORDS = [
+    "konsultuppdrag", "lediga uppdrag", "lediga konsultuppdrag", "aktuella uppdrag",
+    "hitta uppdrag", "öppna uppdrag", "open-assignments", "assignments", "uppdrag",
+    "frilans", "freelance",
+]
+# Max candidate listing pages to follow per broker during deep discovery.
+DISCOVERY_MAX_LISTING_LINKS = 6
+# How many brokers to investigate concurrently.
+DISCOVERY_CONCURRENCY = 4
+# Headless-browser navigation timeout (milliseconds).
+PLAYWRIGHT_TIMEOUT_MS = 25000
+
 # Temporarily disabled top-level scrapers due repeatable blocking/auth walls.
 # Re-enable when source access is stable again.
 DISABLED_SCRAPERS = {

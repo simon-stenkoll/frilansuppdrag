@@ -3,7 +3,10 @@
 import asyncio
 import re
 import httpx
-from src.config import KEYWORDS, LOCATION_KEYWORDS, REQUEST_TIMEOUT, SCRAPE_DELAY, CONTRACT_KEYWORDS, PERMANENT_KEYWORDS
+from src.config import (
+    KEYWORDS, LOCATION_KEYWORDS, REQUEST_TIMEOUT, SCRAPE_DELAY,
+    CONTRACT_KEYWORDS, PERMANENT_KEYWORDS, PLAYWRIGHT_TIMEOUT_MS,
+)
 
 
 HEADERS = {
@@ -22,6 +25,76 @@ def make_client() -> httpx.AsyncClient:
         timeout=REQUEST_TIMEOUT,
         follow_redirects=True,
     )
+
+
+class BrowserSession:
+    """Reusable headless-chromium session for rendering JS-heavy portals.
+
+    Keeps one browser open across many fetches (discovery scans ~130 sites).
+    Playwright is imported lazily so the rest of the pipeline works without it.
+
+        async with BrowserSession() as browser:
+            html = await browser.fetch(url)
+    """
+
+    def __init__(self) -> None:
+        self._pw = None
+        self._browser = None
+
+    async def __aenter__(self) -> "BrowserSession":
+        try:
+            from playwright.async_api import async_playwright
+        except ImportError:
+            print("[playwright] not installed — run 'python -m playwright install chromium'")
+            return self
+        try:
+            self._pw = await async_playwright().start()
+            self._browser = await self._pw.chromium.launch(headless=True)
+        except Exception as e:
+            print(f"[playwright] launch failed: {type(e).__name__}: {e}")
+            self._browser = None
+        return self
+
+    async def __aexit__(self, *exc) -> None:
+        try:
+            if self._browser:
+                await self._browser.close()
+            if self._pw:
+                await self._pw.stop()
+        except Exception:
+            pass
+
+    @property
+    def available(self) -> bool:
+        return self._browser is not None
+
+    async def fetch(self, url: str) -> str | None:
+        """Render a URL and return its HTML, or None on failure."""
+        if not self._browser:
+            return None
+        context = None
+        try:
+            context = await self._browser.new_context(
+                user_agent=HEADERS["User-Agent"],
+                locale="sv-SE",
+            )
+            page = await context.new_page()
+            await page.goto(url, wait_until="networkidle", timeout=PLAYWRIGHT_TIMEOUT_MS)
+            return await page.content()
+        except Exception as e:
+            print(f"[playwright] fetch failed for {url}: {type(e).__name__}")
+            return None
+        finally:
+            if context:
+                await context.close()
+
+
+async def fetch_rendered(url: str) -> str | None:
+    """One-shot render of a single URL (launches and closes a browser)."""
+    async with BrowserSession() as browser:
+        if not browser.available:
+            return None
+        return await browser.fetch(url)
 
 
 def is_relevant(title: str, description: str = "") -> bool:
