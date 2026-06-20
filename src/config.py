@@ -41,6 +41,13 @@ MAX_RESULTS = 30
 GITHUB_MODELS_MODEL = "gpt-4o-mini"
 GITHUB_MODELS_ENDPOINT = "https://models.inference.ai.azure.com"
 
+# Discord notification settings
+DISCORD_WEBHOOK_ENV = "DISCORD_WEBHOOK_URL"  # env var holding the webhook URL
+DISCORD_MAX_EMBEDS = 10                        # Discord allows max 10 embeds per message
+NOTIFY_WHEN_EMPTY = True                       # send a short "no new assignments" message
+# Fallback published-digest URL used when not running in GitHub Actions
+PAGE_URL_FALLBACK = ""
+
 # Scraper request timeout in seconds
 REQUEST_TIMEOUT = 20
 

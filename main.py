@@ -1,13 +1,15 @@
 """Main orchestrator — runs all scrapers, deduplicates, summarizes, generates digest."""
 
 import asyncio
+import os
 import traceback
 from src.scrapers import jobtech, ework, brainville, broker_portals, indeed, linkedin_google
 from src.dedup import deduplicate
 from src.state import mark_new
 from src.summarizer import summarize
 from src.digest import generate
-from src.config import MAX_RESULTS, DISABLED_SCRAPERS
+from src.notify import post_to_discord
+from src.config import MAX_RESULTS, DISABLED_SCRAPERS, PAGE_URL_FALLBACK
 from src.scrapers.utils import is_contract
 
 SCRAPERS = [
@@ -36,6 +38,16 @@ async def run_all_scrapers():
     return all_results
 
 
+def _page_url() -> str:
+    """Build the published GitHub Pages URL when running in GitHub Actions."""
+    owner = os.environ.get("GITHUB_REPOSITORY_OWNER")
+    repo_full = os.environ.get("GITHUB_REPOSITORY", "")  # "owner/repo"
+    repo = repo_full.split("/", 1)[1] if "/" in repo_full else ""
+    if owner and repo:
+        return f"https://{owner}.github.io/{repo}/"
+    return PAGE_URL_FALLBACK
+
+
 async def main():
     print("=== Contract Assignment Scraper ===")
 
@@ -61,6 +73,8 @@ async def main():
     summarized = summarize(top)
 
     generate(summarized)
+
+    post_to_discord(summarized, page_url=_page_url())
     print("\n✅ Done")
 
 

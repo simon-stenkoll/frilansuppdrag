@@ -36,6 +36,7 @@ jobs:
       - name: Run scraper
         env:
           GITHUB_MODELS_TOKEN: ${{ secrets.GH_MODELS_TOKEN }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: python main.py
 
       - name: Commit digest
@@ -48,16 +49,12 @@ jobs:
           git pull --rebase
           git push
 
-      - name: Notify Google Chat
-        if: success()
-        run: |
-          curl -s -X POST "${{ secrets.GCHAT_WEBHOOK_URL }}" \
-            -H "Content-Type: application/json" \
-            -d "{\"text\": \"Dagens konsultuppdrag är klart: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/\"}"
-
-      - name: Notify Google Chat on failure
+      # Success notification (with the actual new assignments) is posted from
+      # Python in the "Run scraper" step via the Discord webhook. Here we only
+      # ping Discord if the run failed.
+      - name: Notify Discord on failure
         if: failure()
         run: |
-          curl -s -X POST "${{ secrets.GCHAT_WEBHOOK_URL }}" \
+          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK_URL }}" \
             -H "Content-Type: application/json" \
-            -d "{\"text\": \"⚠️ Daily Contract Digest FAILED — se loggen: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}"
+            -d "{\"content\": \"⚠️ Daily Contract Digest FAILED — se loggen: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}"
