@@ -26,8 +26,11 @@ finns för manuella körningar) och kan köras lokalt.
   `state/portals.json`
 - `src/digest.py` — bygger `docs/index.html` + `docs/archive/YYYY-MM-DD.html`
 - `src/notify.py` — postar nya uppdrag till Discord-webhook
+- `src/scrapers/verama.py` — Eworks uppdrag via Veramas publika JSON-API (ersätter blockerade ework.se)
 - `state/seen.json` — sedda URL:er (spåras i git, persisteras mellan körningar)
 - `state/portals.json` — upptäckta/verifierade mäklarportaler (genereras av discovery)
+- `state/scores.json` — cachade LLM-poäng per URL (rensas efter 90 dagar)
+- `state/source_stats.json` — antal träffar per källa förra körningen (för trasig-scraper-varning)
 
 ## Konventioner
 
@@ -64,4 +67,5 @@ python main.py              # full körning → docs/ + Discord
 - `summarize()` och `post_to_discord()` failar tyst (loggar) om token/webhook saknas — körningen
   fortsätter ändå och digesten genereras.
 - Kör inte `src/discovery.py` i den nattliga workflowen; den är tung (Playwright mot ~130 sajter).
-  Nattliga körningen läser bara `state/portals.json`.
+  Nattliga körningen läser bara `state/portals.json`. Discovery körs i stället veckovis via
+  `.github/workflows/weekly-discovery.yml` (söndagar, eller manuellt via workflow_dispatch).

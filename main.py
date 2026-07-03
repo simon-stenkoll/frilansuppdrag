@@ -3,18 +3,19 @@
 import asyncio
 import os
 import traceback
-from src.scrapers import jobtech, ework, brainville, broker_portals, indeed, linkedin_google
+from src.scrapers import jobtech, ework, brainville, broker_portals, indeed, linkedin_google, verama
 from src.dedup import deduplicate
-from src.state import mark_new
+from src.state import mark_new, check_source_health
 from src.summarizer import summarize
 from src.digest import generate
 from src.notify import post_to_discord
 from src.config import DISABLED_SCRAPERS, PAGE_URL_FALLBACK
-from src.scrapers.utils import is_contract
+from src.scrapers.utils import is_contract, FUNNEL_STATS
 
 SCRAPERS = [
     ("Platsbanken (JobTech)", jobtech.scrape),
     ("Ework", ework.scrape),
+    ("Ework (Verama)", verama.scrape),
     ("Brainville", brainville.scrape),
     ("Broker Portals", broker_portals.scrape),
     ("Indeed", indeed.scrape),
@@ -22,8 +23,9 @@ SCRAPERS = [
 ]
 
 
-async def run_all_scrapers():
+async def run_all_scrapers() -> tuple[list, dict[str, int]]:
     all_results = []
+    counts: dict[str, int] = {}
     for name, scrape_fn in SCRAPERS:
         if name in DISABLED_SCRAPERS:
             print(f"[{name}] SKIPPED — temporarily disabled")
@@ -32,10 +34,22 @@ async def run_all_scrapers():
             results = await scrape_fn()
             print(f"[{name}] {len(results)} assignments found")
             all_results.extend(results)
+            counts[name] = len(results)
         except Exception:
             print(f"[{name}] FAILED — skipping")
             traceback.print_exc()
-    return all_results
+            counts[name] = 0
+    return all_results, counts
+
+
+def _print_funnel() -> None:
+    """Show what each filter dropped this run, so recall losses are visible."""
+    if not FUNNEL_STATS:
+        print("[funnel] no items dropped by filters")
+        return
+    for name, stats in sorted(FUNNEL_STATS.items()):
+        examples = "; ".join(stats["examples"])
+        print(f"[funnel] {name} dropped {stats['dropped']} (e.g. {examples})")
 
 
 def _page_url() -> str:
@@ -51,7 +65,7 @@ def _page_url() -> str:
 async def main():
     print("=== Contract Assignment Scraper ===")
 
-    raw = await run_all_scrapers()
+    raw, source_counts = await run_all_scrapers()
     print(f"\n[dedup] {len(raw)} total → ", end="")
 
     deduped = deduplicate(raw)
@@ -62,6 +76,11 @@ async def main():
         if is_contract(a.title, a.description, source=a.source, broker=a.is_broker)
     ]
     print(f"[contract-filter] {len(deduped)} total -> {len(contract_only)} contract/freelance")
+    _print_funnel()
+
+    broken_sources = check_source_health(source_counts)
+    if broken_sources:
+        print(f"[health] sources that yielded 0 (had results last run): {', '.join(broken_sources)}")
 
     marked = mark_new(contract_only)
     new_count = sum(1 for a in marked if a.is_new)
@@ -71,15 +90,25 @@ async def main():
     summarized = summarize(marked)
 
     unscored = sum(1 for a in summarized if not a.relevance_score)
-    warning = ""
+    warnings = []
     if summarized and unscored > len(summarized) / 2:
-        warning = (
+        warnings.append(
             f"LLM-poängsättningen misslyckades för {unscored} av {len(summarized)} uppdrag "
             "— kontrollera GITHUB_MODELS_TOKEN och ratelimit."
         )
+    if broken_sources:
+        warnings.append(
+            f"Källor som gav 0 träffar (gav träffar förra körningen): {', '.join(broken_sources)}."
+        )
+    warning = " ".join(warnings)
+    if warning:
         print(f"[health] WARNING: {warning}")
 
-    generate(summarized, warning=warning)
+    funnel_note = " · ".join(
+        f"{name}: −{stats['dropped']}" for name, stats in sorted(FUNNEL_STATS.items())
+    )
+
+    generate(summarized, warning=warning, funnel_note=funnel_note)
 
     post_to_discord(summarized, page_url=_page_url(), warning=warning)
     print("\n✅ Done")

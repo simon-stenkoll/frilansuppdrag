@@ -105,7 +105,12 @@ def _load_active_portals() -> list[dict]:
 async def _scrape_discovered_portals(
     client: httpx.AsyncClient, discovered: list[dict], seen_urls: set[str],
 ) -> list[Assignment]:
-    """Scrape discovery-verified portals not already covered by a dedicated scraper."""
+    """Scrape discovery-verified portals not already covered by a dedicated scraper.
+
+    Two recall fallbacks for portals where plain listing extraction yields 0 items:
+    keywords often live only on detail pages (fetch a few candidates), and many
+    portals render their listing with JS (retry with Playwright).
+    """
     out: list[Assignment] = []
     handled = _API_PORTALS | set(_PORTAL_SCRAPERS)
     pending = [p for p in discovered if p.get("name") not in handled]
@@ -115,9 +120,15 @@ async def _scrape_discovered_portals(
 
     for p in http_portals:
         await polite_delay()
+        base = _base_url(p["listing_url"])
         soup = await _fetch_soup(client, p["listing_url"])
-        if soup:
-            out.extend(_extract_from_soup(soup, _base_url(p["listing_url"]), p["name"], seen_urls))
+        items = _extract_from_soup(soup, base, p["name"], seen_urls) if soup else []
+        if soup and not items:
+            items = await _scrape_detail_candidates(client, soup, base, p["name"], seen_urls)
+        if not items:
+            js_portals.append(p)  # last resort: JS-rendered retry below
+            continue
+        out.extend(items)
 
     if js_portals:
         async with BrowserSession() as browser:
@@ -125,11 +136,68 @@ async def _scrape_discovered_portals(
                 for p in js_portals:
                     await polite_delay()
                     html = await browser.fetch(p["listing_url"])
-                    if html:
-                        soup = BeautifulSoup(html, "html.parser")
-                        out.extend(_extract_from_soup(
-                            soup, _base_url(p["listing_url"]), p["name"], seen_urls,
-                        ))
+                    if not html:
+                        continue
+                    soup = BeautifulSoup(html, "html.parser")
+                    base = _base_url(p["listing_url"])
+                    items = _extract_from_soup(soup, base, p["name"], seen_urls)
+                    if not items:
+                        items = await _scrape_detail_candidates(
+                            client, soup, base, p["name"], seen_urls,
+                        )
+                    out.extend(items)
+    return out
+
+
+# Href fragments suggesting a link leads to an assignment detail page.
+_DETAIL_HREF_HINTS = ("uppdrag", "assignment", "job", "position", "interim", "konsult")
+# Cap detail-page fetches per portal to keep the run polite and bounded.
+_MAX_DETAIL_FETCHES = 8
+
+
+def _candidate_detail_links(
+    soup: BeautifulSoup, base: str, seen_urls: set[str],
+) -> list[tuple[str, str]]:
+    """Links that look like assignment detail pages, for when list text lacks keywords."""
+    candidates: list[tuple[str, str]] = []
+    seen_local: set[str] = set()
+    for link in soup.select("a[href]"):
+        href = link.get("href", "")
+        if not href or href.startswith(("#", "mailto:", "tel:")):
+            continue
+        text = clean_text(link.get_text())
+        if not text or len(text) < 8 or len(text) > 200:
+            continue
+        if _is_navigation_link(text, href):
+            continue
+        url = href if href.startswith("http") else urljoin(base + "/", href)
+        if url in seen_urls or url in seen_local:
+            continue
+        if not any(h in href.lower() for h in _DETAIL_HREF_HINTS):
+            continue
+        seen_local.add(url)
+        candidates.append((text, url))
+        if len(candidates) >= _MAX_DETAIL_FETCHES:
+            break
+    return candidates
+
+
+async def _scrape_detail_candidates(
+    client: httpx.AsyncClient, soup: BeautifulSoup, base: str,
+    name: str, seen_urls: set[str],
+) -> list[Assignment]:
+    """Fetch candidate detail pages and filter on their full text."""
+    out: list[Assignment] = []
+    for title, url in _candidate_detail_links(soup, base, seen_urls):
+        await polite_delay()
+        detail = await _fetch_soup(client, url)
+        if not detail:
+            continue
+        text = clean_text(detail.get_text(" ", strip=True))[:1500]
+        location = _extract_location_from_text(text)
+        a = _try_assignment(title, text, location, url, name, seen_urls)
+        if a:
+            out.append(a)
     return out
 
 

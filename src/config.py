@@ -77,6 +77,8 @@ SCRAPE_DELAY = 1.5
 LEIJON_URL = "https://annaleijon.se/lista-pa-konsultmaklare-i-stockholm.html"
 # Generated file recording which broker portals actually show assignments.
 PORTALS_STATE_FILE = "state/portals.json"
+# Per-source result counts from the previous run (for broken-scraper detection).
+SOURCE_STATS_FILE = "state/source_stats.json"
 # Sectors considered IT/tech-relevant when filtering the broker list.
 DISCOVERY_IT_KEYWORDS = {
     "it", "tech", "data", "digital", "teknik", "system", "utveckl", "mgmt", "alla",
@@ -121,6 +123,12 @@ INDEED_LOCATION = "Stockholm"
 # Ework search config
 EWORK_SEARCH_URL = "https://www.ework.se/uppdrag"
 EWORK_SEARCH_PARAMS = {"query": "data", "location": "Stockholm"}
+
+# Verama (Ework's assignment platform) — public JSON API, no auth required
+VERAMA_API_URL = "https://app.verama.com/api/public/job-requests"
+VERAMA_JOB_URL = "https://app.verama.com/en/job-requests/{id}"
+VERAMA_PAGE_SIZE = 100
+VERAMA_MAX_PAGES = 5
 
 # Brainville search config
 BRAINVILLE_SEARCH_URL = "https://www.brainville.com/assignments"

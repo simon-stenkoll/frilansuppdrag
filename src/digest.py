@@ -9,13 +9,18 @@ DOCS_DIR = "docs"
 ARCHIVE_DIR = os.path.join(DOCS_DIR, "archive")
 
 
-def generate(assignments: list[Assignment], run_date: str | None = None, warning: str = "") -> None:
+def generate(
+    assignments: list[Assignment],
+    run_date: str | None = None,
+    warning: str = "",
+    funnel_note: str = "",
+) -> None:
     """Write docs/index.html (latest) and docs/archive/YYYY-MM-DD.html."""
     os.makedirs(ARCHIVE_DIR, exist_ok=True)
     today = run_date or date.today().isoformat()
     new_count = sum(1 for a in assignments if a.is_new)
 
-    html = _build_html(assignments, today, new_count, warning)
+    html = _build_html(assignments, today, new_count, warning, funnel_note)
 
     archive_path = os.path.join(ARCHIVE_DIR, f"{today}.html")
     index_path = os.path.join(DOCS_DIR, "index.html")
@@ -47,7 +52,13 @@ def _new_today_strip(assignments: list[Assignment]) -> str:
 </div>"""
 
 
-def _build_html(assignments: list[Assignment], today: str, new_count: int, warning: str = "") -> str:
+def _build_html(
+    assignments: list[Assignment],
+    today: str,
+    new_count: int,
+    warning: str = "",
+    funnel_note: str = "",
+) -> str:
     # Scored-but-low assignments collapse at the bottom; unscored (0) stay in the grid.
     low = [a for a in assignments if 1 <= a.relevance_score <= DIGEST_LOW_SCORE]
     main_list = [a for a in assignments if not (1 <= a.relevance_score <= DIGEST_LOW_SCORE)]
@@ -155,7 +166,7 @@ def _build_html(assignments: list[Assignment], today: str, new_count: int, warni
   </div>
   {low_section}
 </main>
-<footer>Generated {today} · <a href="https://github.com" style="color:var(--muted)">NI-Contracts</a></footer>
+<footer>Generated {today}{' · Filter: ' + funnel_note if funnel_note else ''} · <a href="https://github.com" style="color:var(--muted)">NI-Contracts</a></footer>
 </body>
 </html>"""
 

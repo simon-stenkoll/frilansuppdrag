@@ -1,0 +1,53 @@
+name: Weekly Broker Discovery
+
+on:
+  schedule:
+    # 03:00 UTC Sunday — refreshes state/portals.json before the new week's
+    # nightly runs. Heavy job (Playwright against ~130 sites), so weekly only.
+    - cron: '0 3 * * 0'
+  workflow_dispatch:  # allow manual runs
+
+permissions:
+  contents: write  # needed to commit state/portals.json
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  discovery:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright browser
+        run: python -m playwright install --with-deps chromium
+
+      - name: Run discovery
+        run: python -m src.discovery
+
+      - name: Commit portal state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/portals.json
+          git diff --staged --quiet || git commit -m "chore: weekly broker discovery $(date -u '+%Y-%m-%d')"
+          git pull --rebase
+          git push
+
+      - name: Notify Discord on failure
+        if: failure()
+        run: |
+          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d "{\"content\": \"⚠️ Weekly Broker Discovery FAILED — se loggen: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}"

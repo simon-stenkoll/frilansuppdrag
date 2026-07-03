@@ -97,10 +97,25 @@ async def fetch_rendered(url: str) -> str | None:
         return await browser.fetch(url)
 
 
+# Per-run funnel counters: how many items each filter dropped, with example titles,
+# so main.py can report where recall is lost.
+FUNNEL_STATS: dict[str, dict] = {}
+
+
+def _record_drop(filter_name: str, example: str) -> None:
+    entry = FUNNEL_STATS.setdefault(filter_name, {"dropped": 0, "examples": []})
+    entry["dropped"] += 1
+    if example and len(entry["examples"]) < 3:
+        entry["examples"].append(example[:80])
+
+
 def is_relevant(title: str, description: str = "") -> bool:
     """Return True if title or description contains at least one keyword."""
     text = (title + " " + description).lower()
-    return any(kw.lower() in text for kw in KEYWORDS)
+    if any(kw.lower() in text for kw in KEYWORDS):
+        return True
+    _record_drop("is_relevant", title)
+    return False
 
 
 def has_contract_signal(title: str, description: str = "") -> bool:
@@ -137,21 +152,25 @@ def is_contract(title: str, description: str = "", source: str = "", broker: boo
         "Tech Relations", "Wetal", "GetWiser", "WiseOne",
     }
     if broker or source in broker_sources:
-        return not (has_permanent and not has_contract)
+        result = not (has_permanent and not has_contract)
+    elif has_permanent:
+        result = False
+    else:
+        # General job boards must explicitly indicate contract/freelance.
+        result = has_contract
 
-    # General job boards must explicitly indicate contract/freelance.
-    if has_permanent:
-        return False
-    if has_contract:
-        return True
-
-    return False
+    if not result:
+        _record_drop("is_contract", title)
+    return result
 
 
 def is_in_stockholm(location: str) -> bool:
     """Return True if location matches Stockholm area or remote."""
     loc = location.lower()
-    return any(k in loc for k in LOCATION_KEYWORDS)
+    if any(k in loc for k in LOCATION_KEYWORDS):
+        return True
+    _record_drop("is_in_stockholm", location)
+    return False
 
 
 def clean_text(text: str) -> str:
