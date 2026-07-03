@@ -15,4 +15,4 @@ class Assignment:
     date_found: str = field(default_factory=lambda: date.today().isoformat())
     is_new: bool = True
     summary: str = ""
-    relevance_score: int = 0  # 1-10, set by LLM summarizer
+    relevance_score: int = 0  # 1-10 set by LLM summarizer; 0 = not scored

@@ -38,6 +38,13 @@ LOCATION_KEYWORDS = ["stockholm", "sthlm", "remote", "hybrid"]
 GITHUB_MODELS_MODEL = "gpt-4o-mini"
 GITHUB_MODELS_ENDPOINT = "https://models.inference.ai.azure.com"
 
+# LLM scoring behaviour
+LLM_MAX_RETRIES = 3        # attempts per assignment before giving up
+LLM_RETRY_BACKOFF = 5.0    # seconds before first retry; doubles per retry
+LLM_REQUEST_DELAY = 4.0    # pause between calls (GitHub Models free tier is ~15 req/min)
+SCORES_STATE_FILE = "state/scores.json"  # cached url -> {score, summary, scored_at}
+SCORES_MAX_AGE_DAYS = 90   # re-score assignments whose cached score is older than this
+
 # Discord notification settings
 DISCORD_WEBHOOK_ENV = "DISCORD_WEBHOOK_URL"  # env var holding the webhook URL
 DISCORD_MAX_EMBEDS = 10                        # Discord allows max 10 embeds per message

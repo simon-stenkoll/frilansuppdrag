@@ -70,9 +70,18 @@ async def main():
     print(f"[summarizer] Summarizing {len(marked)} assignments...")
     summarized = summarize(marked)
 
-    generate(summarized)
+    unscored = sum(1 for a in summarized if not a.relevance_score)
+    warning = ""
+    if summarized and unscored > len(summarized) / 2:
+        warning = (
+            f"LLM-poängsättningen misslyckades för {unscored} av {len(summarized)} uppdrag "
+            "— kontrollera GITHUB_MODELS_TOKEN och ratelimit."
+        )
+        print(f"[health] WARNING: {warning}")
 
-    post_to_discord(summarized, page_url=_page_url())
+    generate(summarized, warning=warning)
+
+    post_to_discord(summarized, page_url=_page_url(), warning=warning)
     print("\n✅ Done")
 
 

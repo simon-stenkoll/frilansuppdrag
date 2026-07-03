@@ -8,13 +8,13 @@ DOCS_DIR = "docs"
 ARCHIVE_DIR = os.path.join(DOCS_DIR, "archive")
 
 
-def generate(assignments: list[Assignment], run_date: str | None = None) -> None:
+def generate(assignments: list[Assignment], run_date: str | None = None, warning: str = "") -> None:
     """Write docs/index.html (latest) and docs/archive/YYYY-MM-DD.html."""
     os.makedirs(ARCHIVE_DIR, exist_ok=True)
     today = run_date or date.today().isoformat()
     new_count = sum(1 for a in assignments if a.is_new)
 
-    html = _build_html(assignments, today, new_count)
+    html = _build_html(assignments, today, new_count, warning)
 
     archive_path = os.path.join(ARCHIVE_DIR, f"{today}.html")
     index_path = os.path.join(DOCS_DIR, "index.html")
@@ -34,7 +34,7 @@ def _new_today_strip(assignments: list[Assignment]) -> str:
         return ""
     items = "\n".join(
         f'    <li><a href="{a.url}" target="_blank" rel="noopener">{a.title}</a>'
-        f' <span class="strip-score {_score_class(a.relevance_score)}">{a.relevance_score}/10</span>'
+        f' <span class="strip-score {_score_class(a.relevance_score)}">{_score_text(a.relevance_score)}</span>'
         f' <span class="strip-src">{a.source}</span></li>'
         for a in new_ones
     )
@@ -46,7 +46,7 @@ def _new_today_strip(assignments: list[Assignment]) -> str:
 </div>"""
 
 
-def _build_html(assignments: list[Assignment], today: str, new_count: int) -> str:
+def _build_html(assignments: list[Assignment], today: str, new_count: int, warning: str = "") -> str:
     cards_html = "\n".join(_card(a) for a in assignments) if assignments else (
         '<p class="empty">No matching assignments found today.</p>'
     )
@@ -54,6 +54,7 @@ def _build_html(assignments: list[Assignment], today: str, new_count: int) -> st
     sources = sorted({a.source for a in assignments})
     source_tags = " ".join(f'<span class="source-tag">{s}</span>' for s in sources)
     new_strip = _new_today_strip(assignments)
+    warning_banner = f'<div class="warning-banner">&#x26A0;&#xFE0F; {warning}</div>' if warning else ""
 
     return f"""<!DOCTYPE html>
 <html lang="sv">
@@ -105,6 +106,8 @@ def _build_html(assignments: list[Assignment], today: str, new_count: int) -> st
   .score-high {{ background: rgba(67,214,140,0.15); color: var(--score-high); }}
   .score-mid {{ background: rgba(255,215,64,0.15); color: var(--score-mid); }}
   .score-low {{ background: rgba(255,107,107,0.15); color: var(--score-low); }}
+  .score-none {{ background: rgba(139,143,168,0.15); color: var(--muted); }}
+  .warning-banner {{ background: rgba(255,215,64,0.1); border: 1px solid rgba(255,215,64,0.4); color: var(--score-mid); border-radius: 12px; padding: 12px 18px; margin-bottom: 20px; font-size: 0.88rem; }}
   .card-meta {{ color: var(--muted); font-size: 0.82rem; margin-bottom: 8px; display: flex; flex-wrap: wrap; gap: 10px; }}
   .card-meta span::before {{ content: ''; }}
   .card-summary {{ font-size: 0.88rem; color: #bbbdd6; margin-top: 6px; }}
@@ -128,6 +131,7 @@ def _build_html(assignments: list[Assignment], today: str, new_count: int) -> st
     {source_tags}
     <a href="archive/" style="margin-left:auto;color:var(--muted);font-size:0.82rem;text-decoration:none">&#x1F4C1; Archive</a>
   </div>
+  {warning_banner}
   {new_strip}
   <div class="grid">
     {cards_html}
@@ -143,12 +147,22 @@ def _score_class(score: int) -> str:
         return "score-high"
     if score >= 4:
         return "score-mid"
-    return "score-low"
+    if score >= 1:
+        return "score-low"
+    return "score-none"
+
+
+def _score_text(score: int) -> str:
+    return f"{score}/10" if score else "–"
 
 
 def _card(a: Assignment) -> str:
     new_pill = '<span class="new-pill">NEW</span>' if a.is_new else ""
-    score_label = f'<span class="score {_score_class(a.relevance_score)}">{a.relevance_score}/10</span>' if a.relevance_score else ""
+    tooltip = "" if a.relevance_score else ' title="Ej poängsatt"'
+    score_label = (
+        f'<span class="score {_score_class(a.relevance_score)}"{tooltip}>'
+        f'{_score_text(a.relevance_score)}</span>'
+    )
     summary_block = f'<div class="card-summary">{a.summary}</div>' if a.summary else ""
     card_class = "card is-new" if a.is_new else "card"
 
