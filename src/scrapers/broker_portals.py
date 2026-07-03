@@ -78,6 +78,9 @@ async def scrape() -> list[Assignment]:
                 await polite_delay()
                 results.extend(await _scrape_generic_portal(client, portal, seen_urls))
 
+    for a in results:
+        a.is_broker = True
+
     return results
 
 

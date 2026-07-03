@@ -2,6 +2,7 @@
 
 import os
 from datetime import date
+from src.config import DIGEST_LOW_SCORE
 from src.models import Assignment
 
 DOCS_DIR = "docs"
@@ -47,9 +48,22 @@ def _new_today_strip(assignments: list[Assignment]) -> str:
 
 
 def _build_html(assignments: list[Assignment], today: str, new_count: int, warning: str = "") -> str:
-    cards_html = "\n".join(_card(a) for a in assignments) if assignments else (
+    # Scored-but-low assignments collapse at the bottom; unscored (0) stay in the grid.
+    low = [a for a in assignments if 1 <= a.relevance_score <= DIGEST_LOW_SCORE]
+    main_list = [a for a in assignments if not (1 <= a.relevance_score <= DIGEST_LOW_SCORE)]
+
+    cards_html = "\n".join(_card(a) for a in main_list) if main_list else (
         '<p class="empty">No matching assignments found today.</p>'
     )
+    low_section = ""
+    if low:
+        low_cards = "\n".join(_card(a) for a in low)
+        low_section = f"""<details class="low-relevance">
+    <summary>Låg relevans ({len(low)} uppdrag med poäng ≤ {DIGEST_LOW_SCORE})</summary>
+    <div class="grid">
+      {low_cards}
+    </div>
+  </details>"""
 
     sources = sorted({a.source for a in assignments})
     source_tags = " ".join(f'<span class="source-tag">{s}</span>' for s in sources)
@@ -108,6 +122,9 @@ def _build_html(assignments: list[Assignment], today: str, new_count: int, warni
   .score-low {{ background: rgba(255,107,107,0.15); color: var(--score-low); }}
   .score-none {{ background: rgba(139,143,168,0.15); color: var(--muted); }}
   .warning-banner {{ background: rgba(255,215,64,0.1); border: 1px solid rgba(255,215,64,0.4); color: var(--score-mid); border-radius: 12px; padding: 12px 18px; margin-bottom: 20px; font-size: 0.88rem; }}
+  .low-relevance {{ margin-top: 28px; }}
+  .low-relevance summary {{ color: var(--muted); font-size: 0.88rem; cursor: pointer; padding: 10px 0; }}
+  .low-relevance .grid {{ margin-top: 12px; opacity: 0.75; }}
   .card-meta {{ color: var(--muted); font-size: 0.82rem; margin-bottom: 8px; display: flex; flex-wrap: wrap; gap: 10px; }}
   .card-meta span::before {{ content: ''; }}
   .card-summary {{ font-size: 0.88rem; color: #bbbdd6; margin-top: 6px; }}
@@ -136,6 +153,7 @@ def _build_html(assignments: list[Assignment], today: str, new_count: int, warni
   <div class="grid">
     {cards_html}
   </div>
+  {low_section}
 </main>
 <footer>Generated {today} · <a href="https://github.com" style="color:var(--muted)">NI-Contracts</a></footer>
 </body>

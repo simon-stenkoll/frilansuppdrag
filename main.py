@@ -59,7 +59,7 @@ async def main():
 
     contract_only = [
         a for a in deduped
-        if is_contract(a.title, a.description, source=a.source)
+        if is_contract(a.title, a.description, source=a.source, broker=a.is_broker)
     ]
     print(f"[contract-filter] {len(deduped)} total -> {len(contract_only)} contract/freelance")
 

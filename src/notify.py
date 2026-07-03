@@ -11,6 +11,7 @@ import httpx
 from src.config import (
     DISCORD_WEBHOOK_ENV,
     DISCORD_MAX_EMBEDS,
+    DISCORD_MIN_SCORE,
     NOTIFY_WHEN_EMPTY,
     REQUEST_TIMEOUT,
 )
@@ -69,29 +70,37 @@ def post_to_discord(assignments: list[Assignment], page_url: str = "", warning: 
         return
 
     new = [a for a in assignments if a.is_new]
+    # Only notify assignments that meet the relevance bar; the digest shows the rest.
+    relevant = [a for a in new if a.relevance_score >= DISCORD_MIN_SCORE]
+    below = len(new) - len(relevant)
+    below_suffix = f" · {below} till under tröskeln, se digesten" if below else ""
     link_suffix = f"\n{page_url}" if page_url else ""
     warning_prefix = f"⚠️ {warning}\n" if warning else ""
 
     try:
-        if not new:
+        if not relevant:
             if NOTIFY_WHEN_EMPTY:
-                _post(webhook_url, {"content": f"{warning_prefix}📋 Inga nya konsultuppdrag idag.{link_suffix}"})
+                _post(webhook_url, {
+                    "content": f"{warning_prefix}📋 Inga nya konsultuppdrag med poäng ≥ "
+                               f"{DISCORD_MIN_SCORE} idag.{below_suffix}{link_suffix}"
+                })
                 print("[notify] Posted 'no new assignments' message to Discord")
             else:
-                print("[notify] No new assignments — nothing posted")
+                print("[notify] No new assignments above threshold — nothing posted")
             return
 
         # Sort highest-scoring first so the most relevant appear at the top.
-        new.sort(key=lambda x: x.relevance_score, reverse=True)
+        relevant.sort(key=lambda x: x.relevance_score, reverse=True)
 
-        header = f"{warning_prefix}📋 Dagens nya konsultuppdrag ({len(new)} st){link_suffix}"
-        for i in range(0, len(new), DISCORD_MAX_EMBEDS):
-            batch = new[i : i + DISCORD_MAX_EMBEDS]
+        header = (f"{warning_prefix}📋 Dagens nya konsultuppdrag "
+                  f"({len(relevant)} st med poäng ≥ {DISCORD_MIN_SCORE}{below_suffix}){link_suffix}")
+        for i in range(0, len(relevant), DISCORD_MAX_EMBEDS):
+            batch = relevant[i : i + DISCORD_MAX_EMBEDS]
             payload = {"embeds": [_embed(a) for a in batch]}
             if i == 0:
                 payload["content"] = header
             _post(webhook_url, payload)
 
-        print(f"[notify] Posted {len(new)} new assignments to Discord")
+        print(f"[notify] Posted {len(relevant)} new assignments to Discord ({below} below threshold)")
     except httpx.HTTPError as e:
         print(f"[notify] Discord notification failed: {type(e).__name__}: {e}")

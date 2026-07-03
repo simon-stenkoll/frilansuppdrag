@@ -29,6 +29,17 @@ KEYWORDS = [
     "data modellering",
     "data modeling",
     "azure devops",
+    "dataingenjör",
+    "bi-utvecklare",
+    "bi utvecklare",
+    "datalager",
+    "data scientist",
+    "tableau",
+    "qlik",
+    "informationsarkitekt",
+    "dataplattform",
+    "dataarkitekt",
+    "data architect",
 ]
 
 # Location filter terms (case-insensitive, any match = include)
@@ -48,6 +59,9 @@ SCORES_MAX_AGE_DAYS = 90   # re-score assignments whose cached score is older th
 # Discord notification settings
 DISCORD_WEBHOOK_ENV = "DISCORD_WEBHOOK_URL"  # env var holding the webhook URL
 DISCORD_MAX_EMBEDS = 10                        # Discord allows max 10 embeds per message
+DISCORD_MIN_SCORE = 6                          # only notify new assignments scoring at least this
+# Digest: assignments scoring at or below this go into a collapsed low-relevance section
+DIGEST_LOW_SCORE = 3
 NOTIFY_WHEN_EMPTY = True                       # send a short "no new assignments" message
 # Fallback published-digest URL used when not running in GitHub Actions
 PAGE_URL_FALLBACK = ""

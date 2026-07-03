@@ -109,11 +109,13 @@ def has_contract_signal(title: str, description: str = "") -> bool:
     return any(kw in text for kw in CONTRACT_KEYWORDS)
 
 
-def is_contract(title: str, description: str = "", source: str = "") -> bool:
+def is_contract(title: str, description: str = "", source: str = "", broker: bool = False) -> bool:
     """Return True if the listing looks like a freelance/contract assignment.
 
     Broker portals (Ework, Brainville, etc.) are assumed to list contracts,
     so they pass by default unless they explicitly look like permanent jobs.
+    Pass broker=True for assignments scraped from a broker portal (covers
+    newly discovered portals that aren't in the hardcoded set below).
     For general job boards (Platsbanken, Indeed, LinkedIn), we require
     explicit contract wording and reject permanent-job signals.
     """
@@ -134,7 +136,7 @@ def is_contract(title: str, description: str = "", source: str = "") -> bool:
         "Randstad", "Resursbrist", "Seequaly", "Sigma",
         "Tech Relations", "Wetal", "GetWiser", "WiseOne",
     }
-    if source in broker_sources:
+    if broker or source in broker_sources:
         return not (has_permanent and not has_contract)
 
     # General job boards must explicitly indicate contract/freelance.
