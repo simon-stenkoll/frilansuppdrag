@@ -19,7 +19,8 @@ from src.models import Assignment
 # Discord embed colors (match the digest's score buckets)
 _COLOR_HIGH = 0x43D68C  # green  (>=7)
 _COLOR_MID = 0xFFD740   # yellow (4-6)
-_COLOR_LOW = 0xFF6B6B   # red    (<4)
+_COLOR_LOW = 0xFF6B6B   # red    (1-3)
+_COLOR_NONE = 0x8B8FA8  # gray   (not scored)
 
 
 def _color(score: int) -> int:
@@ -27,7 +28,9 @@ def _color(score: int) -> int:
         return _COLOR_HIGH
     if score >= 4:
         return _COLOR_MID
-    return _COLOR_LOW
+    if score >= 1:
+        return _COLOR_LOW
+    return _COLOR_NONE
 
 
 def _truncate(text: str, limit: int) -> str:
@@ -58,7 +61,7 @@ def _post(webhook_url: str, payload: dict) -> None:
     resp.raise_for_status()
 
 
-def post_to_discord(assignments: list[Assignment], page_url: str = "") -> None:
+def post_to_discord(assignments: list[Assignment], page_url: str = "", warning: str = "") -> None:
     """Post the new assignments to Discord. Safe to call unconditionally."""
     webhook_url = os.environ.get(DISCORD_WEBHOOK_ENV)
     if not webhook_url:
@@ -67,11 +70,12 @@ def post_to_discord(assignments: list[Assignment], page_url: str = "") -> None:
 
     new = [a for a in assignments if a.is_new]
     link_suffix = f"\n{page_url}" if page_url else ""
+    warning_prefix = f"⚠️ {warning}\n" if warning else ""
 
     try:
         if not new:
             if NOTIFY_WHEN_EMPTY:
-                _post(webhook_url, {"content": f"📋 Inga nya konsultuppdrag idag.{link_suffix}"})
+                _post(webhook_url, {"content": f"{warning_prefix}📋 Inga nya konsultuppdrag idag.{link_suffix}"})
                 print("[notify] Posted 'no new assignments' message to Discord")
             else:
                 print("[notify] No new assignments — nothing posted")
@@ -80,7 +84,7 @@ def post_to_discord(assignments: list[Assignment], page_url: str = "") -> None:
         # Sort highest-scoring first so the most relevant appear at the top.
         new.sort(key=lambda x: x.relevance_score, reverse=True)
 
-        header = f"📋 Dagens nya konsultuppdrag ({len(new)} st){link_suffix}"
+        header = f"{warning_prefix}📋 Dagens nya konsultuppdrag ({len(new)} st){link_suffix}"
         for i in range(0, len(new), DISCORD_MAX_EMBEDS):
             batch = new[i : i + DISCORD_MAX_EMBEDS]
             payload = {"embeds": [_embed(a) for a in batch]}
