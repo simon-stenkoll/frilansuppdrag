@@ -1,1 +1,227 @@
-{}
+{
+  "http://biolit.se/konsultuppdrag#data-engineer-data-warehouse-konsult-uppdragsnummer-1441": {
+    "score": 6,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget är för en Data Engineer/Data Warehouse-konsult, vilket ligger i närheten av konsultens fokusområden, men utan en tydlig beskrivning är det svårt att bedöma passformen. Det kan vara en roll som inte helt matchar konsultens seniora nivå eller specifika teknologier."
+  },
+  "http://biolit.se/konsultuppdrag#power-bi-utvecklare-uppdragsnummer-1440": {
+    "score": 8,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget som Power BI-utvecklare passar bra med konsultens erfarenhet inom Power BI och datalösningar, men bristen på detaljer gör det svårt att bedöma senioritetsnivån."
+  },
+  "http://biolit.se/konsultuppdrag#senior-business-analyst-inom-beslutsstöd-datakvalitet-och-po": {
+    "score": 7,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget är relaterat till beslutsstöd och Power BI, vilket passar konsultens fokusområden, men det saknas specifik information om datakvalitet och andra teknologier."
+  },
+  "http://biolit.se/konsultuppdrag#senior-data-analyst-uppdragsnummer-1434": {
+    "score": 4,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget är för en Senior Data Analyst, vilket kan vara relaterat till konsultens erfarenhet, men beskrivningen är för vag för att bedöma en stark match. Det finns ingen specifik information om fokusområden eller teknologier som nämns i CV:t."
+  },
+  "https://afry.com/sv/tjanster/operations-digital-solutions/data-analytics-bi-ai": {
+    "score": 7,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget handlar om Data Analytics, BI och AI, vilket ligger i konsultens fokusområden. Dock saknas detaljer om specifika teknologier och ansvarsnivå, vilket gör att poängen inte kan vara högre."
+  },
+  "https://afry.com/sv/tjanster/operativa-digitala-losningar": {
+    "score": 6,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget handlar om operativa och digitala lösningar, vilket är relaterat till dataanalys och digitalisering, men beskrivningen är för vag för att säkerställa en stark match med konsultens fokusområden."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/30698854": {
+    "score": 4,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget är mer inriktat på DevOps och plattformsutveckling, vilket ligger utanför konsultens huvudfokusområden inom data och analys. Det finns viss överlappning med teknologier, men rollen är inte i linje med konsultens expertis."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/30708777": {
+    "score": 8,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget som Data Engineer hos CoreChange Tech AB matchar väl med konsultens erfarenhet inom dataengineering och BI, med fokus på seniora uppgifter och relevanta teknologier."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/30788123": {
+    "score": 3,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget som Senior Business Controller ligger utanför konsultens fokusområden inom data och analys, och det verkar vara en mer verksamhetsnära roll snarare än en teknisk roll."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/30859146": {
+    "score": 8,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget är relevant för konsultens profil med fokus på datalandskap och datapipelines, men det är något vagt och saknar specifik information om seniora ansvarsområden."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31031658": {
+    "score": 6,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget som Solutions Designer hos Pokayoke har viss relevans för konsultens erfarenhet inom analys och modellering, men det är oklart om det fokuserar på de specifika områdena data engineering och BI/analytics."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31052204": {
+    "score": 4,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget handlar om AI-arkitektur, vilket är en angränsande roll till konsultens fokusområden, men det finns inte tillräcklig överlappning med CV-teknologierna."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31052468": {
+    "score": 8,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget är relevant för konsultens profil med fokus på dataengineering och moderna dataplattformar, men det krävs minst 3 års erfarenhet vilket är något lägre än konsultens 6+ år."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31052534": {
+    "score": 6,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget som dataanalytiker har viss relevans för konsultens erfarenhet inom data och analys, men det verkar mer fokuserat på användarupplevelser och insikter snarare än på de tekniska fokusområdena som konsulten specialiserar sig på."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31060930": {
+    "score": 8,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget som Tech Lead / Lead Data Engineer för ett masterdata-projekt passar bra med konsultens erfarenhet inom data engineering och ledarskap, men det är något mer fokuserat på masterdata vilket ger en måttlig överlappning med CV:t."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31229326": {
+    "score": 4,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget som Business Analyst är mer inriktat på affärsanalys och stakeholder management, vilket ligger utanför konsultens primära fokusområden inom data engineering och BI/analytics. Det finns viss överlappning, men rollen verkar vara mer junior och inte helt i linje med konsultens erfarenhet."
+  },
+  "https://datakonsulter.info/WiseDki/StartController": {
+    "score": 8,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget är relevant för konsultens profil med fokus på Azure och Snowflake, vilket ligger nära konsultens erfarenhet inom dataplattformar och analys. Det finns en måttlig överlappning med konsultens teknologier och fokusområden."
+  },
+  "https://itcnetwork.se/oppna-uppdrag/#itc-söker-en-data-engineer-data-warehouse-konsult-för-nivå-4": {
+    "score": 8,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget som Data Engineer har en stark koppling till konsultens fokusområden och teknologier, men det är oklart om det är en freelance- eller permanent anställning."
+  },
+  "https://itcnetwork.se/oppna-uppdrag/#itc-söker-en-senior-power-bi-utvecklare-för-nivå-4": {
+    "score": 8,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget som Senior Power BI utvecklare har en stark koppling till konsultens fokusområden och teknologier, vilket gör det till en bra match för deras erfarenhet."
+  },
+  "https://jobb.senterprise.se/jobs/7782632-konsultuppdrag-senior-data-engineer-backend-developer": {
+    "score": 8,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget som Senior Data Engineer/Backend Developer ligger inom data och analys, vilket matchar konsultens profil. Det finns en stark överlappning med teknologierna i CV:t, men det är något oklart om det finns specifika fokusområden som BI/Analytics."
+  },
+  "https://jobs.epico.se/jobs/7998079-epico-tech-soker-3-seniora-data-engineer-flexibel-uppstart-under-hosten": {
+    "score": 8,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget är en senior roll inom data engineering i Stockholm, vilket matchar konsultens erfarenhet och fokusområden. Det finns en god överensstämmelse med konsultens teknologier, även om beskrivningen är vag."
+  },
+  "https://regent.se/uppdrag/1147": {
+    "score": 8,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget som Senior Data Warehouse utvecklare har en stark koppling till konsultens erfarenhet inom data och analys, särskilt med fokus på Snowflake och Azure. Det saknas dock en detaljerad beskrivning av uppdraget, vilket gör det svårt att bedöma passformen helt."
+  },
+  "https://upgraded.se/konsultuppdrag/185345-testautomatiserare-6": {
+    "score": 2,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget handlar om testautomatisering, vilket ligger utanför konsultens fokusområden inom data och BI. Dessutom verkar det vara en junior nivå på rollen."
+  },
+  "https://upgraded.se/konsultuppdrag/185749-integrationsspecialist-3": {
+    "score": 4,
+    "scored_at": "2026-07-07",
+    "summary": "Denna uppdrag är mer fokuserad på integrationsspecialisering och plattformsadministration, vilket ligger utanför konsultens primära fokusområden inom data engineering och BI. Det finns viss överlappning med teknologier, men rollen verkar vara mer junior och inte helt i linje med konsultens erfarenhet."
+  },
+  "https://upgraded.se/konsultuppdrag/185892-systemutvecklare-77": {
+    "score": 6,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget handlar om ETL‑utredning och dataleveranser, vilket är relaterat till konsultens fokusområden, men det saknas tydlig koppling till specifika teknologier och seniora ansvarsområden."
+  },
+  "https://upgraded.se/konsultuppdrag/186458-metodutveckling-portfoljstyrning": {
+    "score": 4,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget handlar om metodutveckling inom portföljstyrning, vilket ligger utanför konsultens fokusområden inom data och analys. Beskrivningen är för vag för att bedöma en stark match."
+  },
+  "https://upgraded.se/konsultuppdrag/186529-power-platform": {
+    "score": 7,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget fokuserar på Power Platform och involverar Power BI, vilket är relevant för konsultens erfarenhet. Det är dock mer inriktat på förvaltning och ramverk snarare än djupgående dataengineering, vilket ger en måttlig överensstämmelse."
+  },
+  "https://upgraded.se/konsultuppdrag/186534-m365-generalist": {
+    "score": 4,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget handlar om Microsoft 365, vilket ligger utanför konsultens fokusområden inom data och analys. Beskrivningen är för vag för att bedöma en stark match."
+  },
+  "https://upgraded.se/konsultuppdrag/186560-capital-reporting-support": {
+    "score": 7,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget handlar om kapitalrapportering och regulatorisk rapportering, vilket är relaterat till data och analys. Det finns en måttlig överlappning med konsultens erfarenhet inom datalagring och rapportering, men fokus ligger mer på UAT och banksektorn."
+  },
+  "https://upgraded.se/konsultuppdrag/186578-affarsutvecklare-analytiker": {
+    "score": 4,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget är mer inriktat på affärsutveckling och analytik snarare än på datateknik och BI, vilket gör att det inte passar perfekt med konsultens profil."
+  },
+  "https://upgraded.se/konsultuppdrag/186583-senior-power-bi-utvecklare": {
+    "score": 9,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget som senior Power BI-utvecklare matchar väl med konsultens erfarenhet och fokusområden, särskilt inom Power BI och datahantering. Konsulten har relevant erfarenhet av att arbeta med data warehouses och rapportering, vilket gör detta uppdrag mycket passande."
+  },
+  "https://upgraded.se/konsultuppdrag/186588-data-engineer-data-warehouse-konsult": {
+    "score": 8,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget som Data Engineer/Data Warehouse-konsult matchar väl med konsultens erfarenhet inom datahantering och datalagring, med fokus på att förvalta och utveckla data warehouse-lösningar. Det finns en stark överensstämmelse med konsultens kompetenser inom relevanta teknologier."
+  },
+  "https://upgraded.se/konsultuppdrag/187049-program-lead-project-manager": {
+    "score": 3,
+    "scored_at": "2026-07-07",
+    "summary": "Det här uppdraget är en projektledarroll som inte matchar konsultens fokusområden inom dataengineering och BI/analys. Det verkar också vara en permanent anställning snarare än ett frilansuppdrag."
+  },
+  "https://upgraded.se/konsultuppdrag/187119-data-warehouse-utvecklare-3": {
+    "score": 8,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget som Data Warehouse-utvecklare passar bra med konsultens erfarenhet inom data engineering och specifika teknologier som Snowflake och Azure Data Factory. Det kräver också seniora färdigheter och erfarenhet, vilket stämmer överens med konsultens profil."
+  },
+  "https://wetal.com/sv/cases/custom-ai-assistant-bitstone": {
+    "score": 6,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget handlar om att skapa en AI-assistent med fokus på affärsintelligens, vilket är relaterat till konsultens erfarenhet. Dock är beskrivningen vag och det framgår inte om det är en freelance-roll eller om den har seniora ansvarsområden."
+  },
+  "https://weworkremotely.com/categories/remote-design-jobs": {
+    "score": 1,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget handlar om administrativt stöd och är inte relaterat till konsultens fokusområden inom data och analys. Det är också en permanent anställning, vilket gör det helt olämpligt för konsultprofilen."
+  },
+  "https://weworkremotely.com/categories/remote-front-end-programming-jobs": {
+    "score": 1,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget handlar om front-end programmering och webbutveckling, vilket ligger utanför konsultens fokusområden inom data och analys. Det är också en permanent anställning, vilket inte matchar konsultens profil som frilansare."
+  },
+  "https://www.alphadev.se/lediga-uppdrag/fullstackutvecklare-angular-net-6809e919": {
+    "score": 1,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget är en junior fullstackutvecklare med fokus på Angular och .NET, vilket ligger utanför konsultens expertis inom data och analys."
+  },
+  "https://www.alphadev.se/lediga-uppdrag/senior-site-reliability-engineer-openshift-platform-engineer-52620f06": {
+    "score": 2,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget handlar om en Senior Site Reliability Engineer, vilket ligger utanför konsultens fokusområden inom data och analys. Det är också oklart om det är en freelance- eller permanentanställning."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/business-operations-partner-dach-16272": {
+    "score": 3,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget handlar om en affärsoperationspartner inom medicinteknik, vilket ligger utanför konsultens fokusområden. Det finns ingen tydlig koppling till dataengineering eller BI/analys."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/digital-transformation-driver-16292": {
+    "score": 6,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget handlar om digital transformation och använder avancerad teknik, vilket är relevant för konsultens erfarenhet. Dock är beskrivningen vag och det framgår inte tydligt hur mycket fokus som ligger på data engineering eller BI/analys."
+  },
+  "https://www.capa.se/lediga-jobb/interim-data-engineer-500000564": {
+    "score": 7,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget är en interimstjänst som passar konsultens erfarenhet inom dataengineering, men utan specifik information om arbetsuppgifterna är det svårt att bedöma passformen helt. Det finns en rimlig överlappning med konsultens kompetens inom data och analys."
+  },
+  "https://www.keyman.se/sv/administration-ekonomi-juridik/kvalificerad-redovisningskonsult-med-revisionserfarenhet-till-skr-sveriges-kommuner-och-regioner-15826": {
+    "score": 1,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget handlar om redovisning och revision, vilket ligger utanför konsultens fokusområden inom data och analys."
+  },
+  "https://www.keyman.se/sv/data-it/pausad-databasutvecklare-programmerare-till-forskningsprojekt-om-blodsakerhet-till-karolinska-institutet-15722": {
+    "score": 6,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget handlar om databasutveckling för ett forskningsprojekt, vilket är relaterat till data men har en mer specifik inriktning och mindre fokus på konsultens kärnkompetenser inom data engineering och BI."
+  },
+  "https://www.keyman.se/sv/data-it/test-och-testautomatisering-intervjuer-sker-lopande-15893": {
+    "score": 3,
+    "scored_at": "2026-07-07",
+    "summary": "Uppdraget handlar om test och testautomatisering, vilket ligger utanför konsultens fokusområden inom data och analys. Det kräver också kompetens inom TypeScript och Playwright, vilket inte nämns i CV:t."
+  }
+}
