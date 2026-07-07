@@ -35,8 +35,8 @@ KEYWORDS = [
 LOCATION_KEYWORDS = ["stockholm", "sthlm", "remote", "hybrid"]
 
 # GitHub Models API settings
-GITHUB_MODELS_MODEL = "gpt-4o-mini"
-GITHUB_MODELS_ENDPOINT = "https://models.inference.ai.azure.com"
+GITHUB_MODELS_MODEL = "openai/gpt-4o-mini"  # new endpoint requires publisher prefix
+GITHUB_MODELS_ENDPOINT = "https://models.github.ai/inference"
 
 # LLM scoring behaviour
 LLM_MAX_RETRIES = 3        # attempts per assignment before giving up

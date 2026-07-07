@@ -50,6 +50,9 @@ pip install -r requirements.txt
 python -m playwright install chromium      # för JS-tunga mäklarportaler
 
 # Hemligheter (per session, eller lägg i en .env som inte committas)
+# OBS: PAT:en måste vara fine-grained med behörigheten "Models: read" —
+# utan den svarar GitHub Models 401. I CI behövs ingen PAT: workflowen
+# använder inbyggda GITHUB_TOKEN med `models: read`-permission.
 $env:GITHUB_MODELS_TOKEN = "<github-pat-med-models:read>"
 $env:DISCORD_WEBHOOK_URL = "<discord-webhook-url>"
 
