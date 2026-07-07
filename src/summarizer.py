@@ -5,7 +5,7 @@ import json
 import time
 from datetime import date
 
-from openai import OpenAI
+from openai import AuthenticationError, OpenAI, PermissionDeniedError
 
 from src.config import (
     GITHUB_MODELS_MODEL,
@@ -69,6 +69,8 @@ def _score_one(client: OpenAI, prompt: str) -> tuple[int, str]:
             data = json.loads(resp.choices[0].message.content)
             score = int(data["score"])
             return max(1, min(10, score)), str(data.get("summary", ""))
+        except (AuthenticationError, PermissionDeniedError):
+            raise  # 401/403 are permanent — retrying only wastes time
         except Exception as e:
             last_error = e
     raise last_error
@@ -113,6 +115,12 @@ def summarize(assignments: list[Assignment]) -> list[Assignment]:
             a.summary = summary
             cache[key] = {"score": score, "summary": summary, "scored_at": today}
             scored_count += 1
+        except (AuthenticationError, PermissionDeniedError) as e:
+            # Auth errors hit every remaining call too — bail out of the whole loop
+            failed_count = sum(1 for x in assignments if not x.relevance_score)
+            print(f"[summarize] ABORTED — auth error, skipping remaining assignments: "
+                  f"{type(e).__name__}: {e}")
+            break
         except Exception as e:
             a.relevance_score = 0
             a.summary = ""
