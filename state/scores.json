@@ -79,6 +79,11 @@
     "scored_at": "2026-07-07",
     "summary": "Uppdraget som Business Analyst är mer inriktat på affärsanalys och stakeholder management, vilket ligger utanför konsultens primära fokusområden inom data engineering och BI/analytics. Det finns viss överlappning, men rollen verkar vara mer junior och inte helt i linje med konsultens erfarenhet."
   },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31259623": {
+    "score": 4,
+    "scored_at": "2026-07-09",
+    "summary": "Uppdraget som Data Analyst fokuserar på DORA-regelverket och kräver närvaro på plats, vilket inte matchar konsultens seniora profil och fokusområden inom data engineering och BI."
+  },
   "https://datakonsulter.info/WiseDki/StartController": {
     "score": 8,
     "scored_at": "2026-07-07",
@@ -169,6 +174,11 @@
     "scored_at": "2026-07-07",
     "summary": "Uppdraget som Data Warehouse-utvecklare passar bra med konsultens erfarenhet inom data engineering och specifika teknologier som Snowflake och Azure Data Factory. Det kräver också seniora färdigheter och erfarenhet, vilket stämmer överens med konsultens profil."
   },
+  "https://upgraded.se/konsultuppdrag/187261-data-analyst-dora": {
+    "score": 6,
+    "scored_at": "2026-07-09",
+    "summary": "Uppdraget som Data Analyst har viss relevans för konsultens profil, men fokuserar mer på datakrav och processer snarare än på konsultens specialisering inom dataengineering och BI/analytics."
+  },
   "https://wetal.com/sv/cases/custom-ai-assistant-bitstone": {
     "score": 6,
     "scored_at": "2026-07-07",
@@ -198,6 +208,11 @@
     "score": 3,
     "scored_at": "2026-07-07",
     "summary": "Uppdraget handlar om en affärsoperationspartner inom medicinteknik, vilket ligger utanför konsultens fokusområden. Det finns ingen tydlig koppling till dataengineering eller BI/analys."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/devops-sysadmin-16320": {
+    "score": 2,
+    "scored_at": "2026-07-09",
+    "summary": "Uppdraget handlar om DevOps och sysadmin, vilket ligger utanför konsultens fokusområden inom data och analys. Det verkar också vara en mer junior roll, vilket inte matchar konsultens seniora profil."
   },
   "https://www.asocietygroup.com/sv/uppdrag/digital-transformation-driver-16292": {
     "score": 6,
