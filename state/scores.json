@@ -84,6 +84,11 @@
     "scored_at": "2026-07-09",
     "summary": "Uppdraget som Data Analyst fokuserar på DORA-regelverket och kräver närvaro på plats, vilket inte matchar konsultens seniora profil och fokusområden inom data engineering och BI."
   },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31260851": {
+    "score": 5,
+    "scored_at": "2026-07-10",
+    "summary": "Uppdraget som Data Analyst har viss relevans för konsultens erfarenhet inom data, men det fokuserar mer på datakrav och processer snarare än de specifika fokusområdena för konsulten. Rollen verkar också vara mer junior och kräver fysisk närvaro, vilket kan begränsa flexibiliteten."
+  },
   "https://datakonsulter.info/WiseDki/StartController": {
     "score": 8,
     "scored_at": "2026-07-07",
@@ -103,6 +108,11 @@
     "score": 8,
     "scored_at": "2026-07-07",
     "summary": "Uppdraget som Senior Data Engineer/Backend Developer ligger inom data och analys, vilket matchar konsultens profil. Det finns en stark överlappning med teknologierna i CV:t, men det är något oklart om det finns specifika fokusområden som BI/Analytics."
+  },
+  "https://jobb.senterprise.se/jobs/8046685-konsultuppdrag-azure-devops-specialist-hyr-kop": {
+    "score": 3,
+    "scored_at": "2026-07-10",
+    "summary": "Detta uppdrag fokuserar på Azure DevOps, vilket ligger utanför konsultens kärnkompetenser inom dataengineering och BI. Det verkar också vara en permanent anställning, vilket inte matchar konsultens profil som frilansare."
   },
   "https://jobs.epico.se/jobs/7998079-epico-tech-soker-3-seniora-data-engineer-flexibel-uppstart-under-hosten": {
     "score": 8,
@@ -179,6 +189,16 @@
     "scored_at": "2026-07-09",
     "summary": "Uppdraget som Data Analyst har viss relevans för konsultens profil, men fokuserar mer på datakrav och processer snarare än på konsultens specialisering inom dataengineering och BI/analytics."
   },
+  "https://upgraded.se/konsultuppdrag/187339-senior-data-engineer-21": {
+    "score": 8,
+    "scored_at": "2026-07-10",
+    "summary": "Uppdraget är en senior Data Engineer-roll med fokus på dataplattform och skalbara dataflöden, vilket passar bra med konsultens erfarenhet inom data engineering och moderna datalösningar."
+  },
+  "https://upgraded.se/konsultuppdrag/187391-senior-backendutvecklare-java": {
+    "score": 2,
+    "scored_at": "2026-07-10",
+    "summary": "Uppdraget handlar om en Senior Backendutvecklare med fokus på Java, vilket ligger utanför konsultens expertis inom dataengineering och BI. Det finns ingen relevant överlappning med konsultens profil eller teknologier."
+  },
   "https://wetal.com/sv/cases/custom-ai-assistant-bitstone": {
     "score": 6,
     "scored_at": "2026-07-07",
@@ -203,6 +223,11 @@
     "score": 2,
     "scored_at": "2026-07-07",
     "summary": "Uppdraget handlar om en Senior Site Reliability Engineer, vilket ligger utanför konsultens fokusområden inom data och analys. Det är också oklart om det är en freelance- eller permanentanställning."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/azure-devops-specialist-niv-3-medior-16328": {
+    "score": 3,
+    "scored_at": "2026-07-10",
+    "summary": "Uppdraget är för en Azure DevOps Specialist på medior nivå, vilket inte matchar konsultens seniora profil och fokusområden inom data engineering och analytics."
   },
   "https://www.asocietygroup.com/sv/uppdrag/business-operations-partner-dach-16272": {
     "score": 3,
