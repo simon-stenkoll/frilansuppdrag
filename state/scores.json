@@ -204,6 +204,11 @@
     "scored_at": "2026-07-07",
     "summary": "Uppdraget handlar om att skapa en AI-assistent med fokus på affärsintelligens, vilket är relaterat till konsultens erfarenhet. Dock är beskrivningen vag och det framgår inte om det är en freelance-roll eller om den har seniora ansvarsområden."
   },
+  "https://weworkremotely.com/categories/all-other-remote-jobs": {
+    "score": 1,
+    "scored_at": "2026-07-13",
+    "summary": "Det här uppdraget är helt utanför konsultens fokusområden och kräver en junior nivå inom kundsupport, vilket inte matchar konsultens profil."
+  },
   "https://weworkremotely.com/categories/remote-design-jobs": {
     "score": 1,
     "scored_at": "2026-07-07",
@@ -238,6 +243,11 @@
     "score": 3,
     "scored_at": "2026-07-07",
     "summary": "Uppdraget handlar om en affärsoperationspartner inom medicinteknik, vilket ligger utanför konsultens fokusområden. Det finns ingen tydlig koppling till dataengineering eller BI/analys."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/data-scientist-with-strong-background-and-knowledge-in-linear-or-mixed-integer-optimization-16336": {
+    "score": 3,
+    "scored_at": "2026-07-13",
+    "summary": "Uppdraget är för en Data Scientist med fokus på linjär programmering och MLOps, vilket ligger utanför konsultens expertis inom data engineering och BI/analys. Det verkar också vara en mer junior roll, vilket inte matchar konsultens seniora profil."
   },
   "https://www.asocietygroup.com/sv/uppdrag/devops-sysadmin-16320": {
     "score": 2,
