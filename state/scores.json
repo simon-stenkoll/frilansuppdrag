@@ -4,6 +4,11 @@
     "scored_at": "2026-07-07",
     "summary": "Uppdraget är för en Data Engineer/Data Warehouse-konsult, vilket ligger i närheten av konsultens fokusområden, men utan en tydlig beskrivning är det svårt att bedöma passformen. Det kan vara en roll som inte helt matchar konsultens seniora nivå eller specifika teknologier."
   },
+  "http://biolit.se/konsultuppdrag#devsecops-specialist-azure-devops-engineer-uppdragsnummer-14": {
+    "score": 4,
+    "scored_at": "2026-07-20",
+    "summary": "Uppdraget verkar vara mer inriktat på DevSecOps och Azure DevOps, vilket ligger utanför konsultens huvudfokus på dataengineering och BI/analys. Beskrivningen är också för vag för att bedöma en stark match."
+  },
   "http://biolit.se/konsultuppdrag#power-bi-utvecklare-uppdragsnummer-1440": {
     "score": 8,
     "scored_at": "2026-07-07",
@@ -213,6 +218,11 @@
     "score": 2,
     "scored_at": "2026-07-14",
     "summary": "Uppdraget handlar om frontendutveckling, vilket ligger utanför konsultens fokusområden inom data och analys. Det verkar också vara en mer junior roll i en teknikorganisation."
+  },
+  "https://upgraded.se/konsultuppdrag/188017-devsecops-specialist-azure-devops": {
+    "score": 4,
+    "scored_at": "2026-07-20",
+    "summary": "Uppdraget fokuserar på DevSecOps och Azure DevOps, vilket ligger utanför konsultens huvudområden inom dataengineering och BI. Det är en relaterad roll men inte tillräckligt nära för att matcha konsultens profil."
   },
   "https://wetal.com/sv/cases/custom-ai-assistant-bitstone": {
     "score": 6,
