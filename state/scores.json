@@ -109,6 +109,11 @@
     "scored_at": "2026-07-07",
     "summary": "Uppdraget som Data Engineer har en stark koppling till konsultens fokusområden och teknologier, men det är oklart om det är en freelance- eller permanent anställning."
   },
+  "https://itcnetwork.se/oppna-uppdrag/#itc-söker-en-devsecops-specialist-azure-devops-engineer-för-": {
+    "score": 3,
+    "scored_at": "2026-07-20",
+    "summary": "Detta uppdrag är en DevSecOps-specialistroll som inte matchar konsultens fokusområden inom dataengineering och BI/analys. Rollen verkar vara mer inriktad på DevOps och saknar relevanta datarelaterade ansvarsområden."
+  },
   "https://itcnetwork.se/oppna-uppdrag/#itc-söker-en-senior-power-bi-utvecklare-för-nivå-4": {
     "score": 8,
     "scored_at": "2026-07-07",
@@ -223,6 +228,11 @@
     "score": 4,
     "scored_at": "2026-07-20",
     "summary": "Uppdraget fokuserar på DevSecOps och Azure DevOps, vilket ligger utanför konsultens huvudområden inom dataengineering och BI. Det är en relaterad roll men inte tillräckligt nära för att matcha konsultens profil."
+  },
+  "https://upgraded.se/konsultuppdrag/188059-digitalt-transformationsuppdrag": {
+    "score": 8,
+    "scored_at": "2026-07-20",
+    "summary": "Uppdraget fokuserar på digitalisering och avancerad analys, vilket ligger i linje med konsultens erfarenhet inom datahantering och BI. Det finns en stark överlappning med konsultens kompetenser och ansvarsnivå."
   },
   "https://wetal.com/sv/cases/custom-ai-assistant-bitstone": {
     "score": 6,
