@@ -139,6 +139,11 @@
     "scored_at": "2026-07-07",
     "summary": "Uppdraget som Senior Data Warehouse utvecklare har en stark koppling till konsultens erfarenhet inom data och analys, särskilt med fokus på Snowflake och Azure. Det saknas dock en detaljerad beskrivning av uppdraget, vilket gör det svårt att bedöma passformen helt."
   },
+  "https://rightpeoplegroup.com/sv/open-assignments/consultant-task-senior-data-engineer-greater-copenhagen-28-07-2026": {
+    "score": 4,
+    "scored_at": "2026-07-28",
+    "summary": "Uppdraget är en konsultroll som kan relateras till data, men det är oklart hur väl det matchar konsultens specifika fokusområden och teknologier. Dessutom är platsen i Köpenhamn, vilket kan påverka tillgängligheten."
+  },
   "https://rightpeoplegroup.com/sv/open-assignments/konsultuppdrag-lead-data-engineer-2026-07-27": {
     "score": 8,
     "scored_at": "2026-07-28",
@@ -264,6 +269,16 @@
     "scored_at": "2026-07-23",
     "summary": "Detta uppdrag är en junior roll inom fullstack-programmering och ligger utanför konsultens fokusområden inom data och analys. Det finns ingen relevant överlappning med CV:t."
   },
+  "https://weworkremotely.com/remote-jobs/toptal-senior-data-engineer-azure-databricks-ml-pipelines-remote": {
+    "score": 4,
+    "scored_at": "2026-07-28",
+    "summary": "Uppdraget fokuserar på Azure och Databricks, vilket är relaterat men inte direkt i linje med konsultens specialiseringar. Beskrivningen är också för vag för att säkerställa en stark match."
+  },
+  "https://weworkremotely.com/remote-jobs/toptal-technical-project-manager-ai-data-products-databricks-remote": {
+    "score": 4,
+    "scored_at": "2026-07-28",
+    "summary": "Uppdraget handlar om en teknisk projektledare för AI och dataprojekt, vilket är relaterat men inte direkt inom konsultens fokusområden. Beskrivningen är också för vag för att säkerställa en stark matchning."
+  },
   "https://www.alphadev.se/lediga-uppdrag/azure-devops-specialist-a30ff163": {
     "score": 3,
     "scored_at": "2026-07-12",
@@ -304,6 +319,11 @@
     "scored_at": "2026-07-07",
     "summary": "Uppdraget handlar om digital transformation och använder avancerad teknik, vilket är relevant för konsultens erfarenhet. Dock är beskrivningen vag och det framgår inte tydligt hur mycket fokus som ligger på data engineering eller BI/analys."
   },
+  "https://www.brainville.com/PublicProfile/Requisition": {
+    "score": 3,
+    "scored_at": "2026-07-28",
+    "summary": "Uppdraget handlar om IBM Planning Analytics, vilket inte matchar konsultens fokusområden inom data engineering och BI/analytics. Dessutom verkar det vara en roll som kan vara mer junior eller permanent, vilket inte passar konsultens profil."
+  },
   "https://www.capa.se/lediga-jobb/interim-data-engineer-500000564": {
     "score": 7,
     "scored_at": "2026-07-07",
@@ -318,6 +338,11 @@
     "score": 6,
     "scored_at": "2026-07-07",
     "summary": "Uppdraget handlar om databasutveckling för ett forskningsprojekt, vilket är relaterat till data men har en mer specifik inriktning och mindre fokus på konsultens kärnkompetenser inom data engineering och BI."
+  },
+  "https://www.keyman.se/sv/data-it/platform-engineer-data-platform-team-postnord-group-15962": {
+    "score": 8,
+    "scored_at": "2026-07-28",
+    "summary": "Uppdraget som Plattformingenjör på PostNord har en stark koppling till konsultens erfarenhet inom data och plattformstekniker, särskilt med fokus på Azure. Det är en senior roll som kräver expertis inom dataplattformar, vilket passar konsultens profil väl."
   },
   "https://www.keyman.se/sv/data-it/test-och-testautomatisering-intervjuer-sker-lopande-15893": {
     "score": 3,
