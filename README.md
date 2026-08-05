@@ -131,15 +131,44 @@ flowchart TD
 
 | Secret | Värde |
 |---|---|
-| `GH_MODELS_TOKEN` | GitHub PAT med `models:read`-scope (LLM-scoring) |
-| `DISCORD_WEBHOOK_URL` | Discord-webhook för dagens uppdrag (se nedan) |
+| `SMTP_USER` | Gmail-adressen som skickar mailet |
+| `SMTP_PASSWORD` | Gmail **app-lösenord** (16 tecken), inte kontolösenordet |
 
-> Workflowen mappar `GH_MODELS_TOKEN` → miljövariabeln `GITHUB_MODELS_TOKEN` som koden läser.
+> LLM-scoringen använder workflowens inbyggda `GITHUB_TOKEN` (permission `models: read`),
+> så någon egen PAT behövs inte i CI.
 
-### 2. Skapa Discord-webhook
+### 2. Skapa Gmail-app-lösenord
 
-I Discord: **Kanalinställningar → Integrationer → Webhooks → New Webhook** → kopiera webhook-URL:en
-och lägg den som secret `DISCORD_WEBHOOK_URL`. Nya uppdrag postas som embeds i kanalen varje morgon.
+Förutsätter att tvåstegsverifiering är påslagen på kontot.
+
+1. Logga in på det Gmail-konto som ska skicka mailet.
+2. Gå till <https://myaccount.google.com/apppasswords> (nås inte via en meny i
+   säkerhetsinställningarna, använd länken direkt).
+3. Skriv ett namn i fältet **App name**, t.ex. `frilansuppdrag`. Namnet är bara en etikett.
+4. Klicka **Create**. En ruta visar ett 16-teckens lösenord i fyra grupper, t.ex. `abcd efgh ijkl mnop`.
+5. Kopiera det och ta bort mellanslagen (`abcdefghijklmnop`) — det är värdet för `SMTP_PASSWORD`.
+   Lösenordet visas bara en gång; tappar du bort det raderar du posten och skapar ett nytt.
+6. Lägg Gmail-adressen som `SMTP_USER`.
+
+Om `/apppasswords` svarar att alternativet inte är tillgängligt beror det oftast på att kontot är
+ett arbets-/skolkonto (Google Workspace) där administratören blockerat app-lösenord, att
+tvåstegsverifieringen bara använder säkerhetsnyckel, eller att Advanced Protection är på. Använd
+i så fall ett vanligt `@gmail.com`-konto som avsändare.
+
+Byter du lösenord på Google-kontot slutar app-lösenordet att gälla och måste skapas om.
+
+Testa uppgifterna lokalt innan du lägger in dem som secrets (skickar ett mail med ett påhittat
+uppdrag):
+
+```powershell
+$env:SMTP_USER = "din.adress@gmail.com"
+$env:SMTP_PASSWORD = "abcdefghijklmnop"
+python -m src.notify --test
+```
+
+Mottagare är `simon.stenlund@northintelligence.se` (satt i `src/config.py`, kan överstyras med
+miljövariabeln `EMAIL_TO`). Andra leverantörer fungerar via `SMTP_HOST` / `SMTP_PORT`
+(t.ex. `smtp.office365.com` / `587`, eller port `465` för implicit TLS).
 
 ### 3. Aktivera GitHub Pages (valfritt)
 
@@ -155,10 +184,11 @@ pip install -r requirements.txt
 python -m playwright install chromium      # för JS-tunga mäklarportaler
 
 $env:GITHUB_MODELS_TOKEN = "<din_token>"
-$env:DISCORD_WEBHOOK_URL = "<din_webhook>"  # valfritt lokalt
+$env:SMTP_USER = "<din_gmail>"          # valfritt lokalt
+$env:SMTP_PASSWORD = "<app_losenord>"   # valfritt lokalt
 
 python -m src.discovery     # (sällan) bygg om state/portals.json
-python main.py              # full körning → docs/ + Discord
+python main.py              # full körning → docs/ + e-post
 # Öppna docs/index.html i webbläsaren
 ```
 
@@ -188,7 +218,7 @@ src/
   state.py               # hanterar state/seen.json
   summarizer.py          # LLM-scoring + sammanfattning
   digest.py              # HTML-generator → docs/
-  notify.py              # postar nya uppdrag till Discord
+  notify.py              # mailar nya uppdrag via SMTP
   discovery.py           # djupskanning av Anna Leijons mäklarlista → state/portals.json
   scrapers/
     jobtech.py           # Platsbanken (JobTech API)

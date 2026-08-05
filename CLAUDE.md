@@ -6,14 +6,14 @@ Guidance for Claude Code (and other AI assistants) working in this repository.
 
 Daglig pipeline som skrapar konsult-/frilansuppdrag inom Data Engineering / BI / Analytics i
 Stockholm, deduplicerar, filtrerar på konsultuppdrag, poängsätter med en LLM, genererar en
-HTML-digest i `docs/` och notifierar via Discord. Körs nattligt via GitHub Actions (`workflow_dispatch`
+HTML-digest i `docs/` och notifierar via e-post. Körs nattligt via GitHub Actions (`workflow_dispatch`
 finns för manuella körningar) och kan köras lokalt.
 
 ## Arkitektur (dataflöde)
 
 `main.py` orkestrerar: `run_all_scrapers()` → `deduplicate()` → `is_contract`-filter →
 `mark_new()` (jämför mot `state/seen.json`) → `summarize()` (LLM-scoring) → `generate()` (HTML) →
-`post_to_discord()` (notis).
+`send_email()` (notis).
 
 - `src/config.py` — all konfiguration: nyckelord, portallista (seed), env-namn, gränser
 - `src/models.py` — `Assignment`-dataclass (det enda objektet som flödar genom pipelinen)
@@ -25,7 +25,7 @@ finns för manuella körningar) och kan köras lokalt.
 - `src/discovery.py` — engångs/sällan-körd djupskanning av Anna Leijons mäklarlista som genererar
   `state/portals.json`
 - `src/digest.py` — bygger `docs/index.html` + `docs/archive/YYYY-MM-DD.html`
-- `src/notify.py` — postar nya uppdrag till Discord-webhook
+- `src/notify.py` — mailar nya uppdrag via SMTP (Gmail app-lösenord)
 - `state/seen.json` — sedda URL:er (spåras i git, persisteras mellan körningar)
 - `state/portals.json` — upptäckta/verifierade mäklarportaler (genereras av discovery)
 
@@ -54,17 +54,19 @@ python -m playwright install chromium      # för JS-tunga mäklarportaler
 # utan den svarar GitHub Models 401. I CI behövs ingen PAT: workflowen
 # använder inbyggda GITHUB_TOKEN med `models: read`-permission.
 $env:GITHUB_MODELS_TOKEN = "<github-pat-med-models:read>"
-$env:DISCORD_WEBHOOK_URL = "<discord-webhook-url>"
+# E-postnotis via SMTP (Gmail kräver app-lösenord, inte kontolösenordet)
+$env:SMTP_USER = "<gmail-adress>"
+$env:SMTP_PASSWORD = "<app-losenord>"
 
 python -m src.discovery     # (sällan) bygg om state/portals.json
-python main.py              # full körning → docs/ + Discord
+python main.py              # full körning → docs/ + e-post
 ```
 
 Öppna `docs/index.html` i webbläsaren för att se resultatet.
 
 ## Att tänka på
 
-- `summarize()` och `post_to_discord()` failar tyst (loggar) om token/webhook saknas — körningen
+- `summarize()` och `send_email()` failar tyst (loggar) om token/SMTP-uppgifter saknas — körningen
   fortsätter ändå och digesten genereras.
 - Kör inte `src/discovery.py` i den nattliga workflowen; den är tung (Playwright mot ~130 sajter).
   Nattliga körningen läser bara `state/portals.json`.

@@ -42,7 +42,8 @@ jobs:
         env:
           # Built-in token (never expires, no rotation) — requires `models: read` above
           GITHUB_MODELS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
         run: python main.py
 
       - name: Commit digest
@@ -55,12 +56,13 @@ jobs:
           git pull --rebase
           git push
 
-      # Success notification (with the actual new assignments) is posted from
-      # Python in the "Run scraper" step via the Discord webhook. Here we only
-      # ping Discord if the run failed.
-      - name: Notify Discord on failure
+      # The success email (with the actual new assignments) is sent from Python
+      # in the "Run scraper" step. Here we only mail if the run failed.
+      - name: Email on failure
         if: failure()
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
         run: |
-          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK_URL }}" \
-            -H "Content-Type: application/json" \
-            -d "{\"content\": \"⚠️ Daily Contract Digest FAILED — se loggen: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}"
+          python -m src.notify --failure \
+            "Se loggen: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"

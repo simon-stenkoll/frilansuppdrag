@@ -45,10 +45,19 @@ LLM_REQUEST_DELAY = 4.0    # pause between calls (GitHub Models free tier is ~15
 SCORES_STATE_FILE = "state/scores.json"  # cached url -> {score, summary, scored_at}
 SCORES_MAX_AGE_DAYS = 90   # re-score assignments whose cached score is older than this
 
-# Discord notification settings
-DISCORD_WEBHOOK_ENV = "DISCORD_WEBHOOK_URL"  # env var holding the webhook URL
-DISCORD_MAX_EMBEDS = 10                        # Discord allows max 10 embeds per message
-NOTIFY_WHEN_EMPTY = True                       # send a short "no new assignments" message
+# Email notification settings (SMTP)
+EMAIL_TO = "simon.stenlund@northintelligence.se"  # recipient of the daily digest
+EMAIL_TO_ENV = "EMAIL_TO"          # optional override of the recipient
+EMAIL_FROM_ENV = "EMAIL_FROM"      # optional sender address (defaults to SMTP_USER)
+SMTP_HOST_ENV = "SMTP_HOST"
+SMTP_PORT_ENV = "SMTP_PORT"
+SMTP_USER_ENV = "SMTP_USER"
+SMTP_PASSWORD_ENV = "SMTP_PASSWORD"
+SMTP_HOST_DEFAULT = "smtp.gmail.com"
+SMTP_PORT_DEFAULT = 587            # 587 = STARTTLS, 465 = implicit TLS
+EMAIL_SUBJECT_PREFIX = "Konsultuppdrag"
+EMAIL_MAX_ITEMS = 40               # cap assignments listed in the mail body
+NOTIFY_WHEN_EMPTY = True           # send a short "no new assignments" message
 # Fallback published-digest URL used when not running in GitHub Actions
 PAGE_URL_FALLBACK = ""
 
