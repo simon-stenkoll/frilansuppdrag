@@ -8,7 +8,7 @@ from src.dedup import deduplicate
 from src.state import mark_new
 from src.summarizer import summarize
 from src.digest import generate
-from src.notify import post_to_discord
+from src.notify import send_email
 from src.config import DISABLED_SCRAPERS, PAGE_URL_FALLBACK
 from src.scrapers.utils import is_contract
 
@@ -81,7 +81,7 @@ async def main():
 
     generate(summarized, warning=warning)
 
-    post_to_discord(summarized, page_url=_page_url(), warning=warning)
+    send_email(summarized, page_url=_page_url(), warning=warning)
     print("\n✅ Done")
 
 
