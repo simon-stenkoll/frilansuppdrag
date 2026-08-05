@@ -139,9 +139,23 @@ flowchart TD
 
 ### 2. Skapa Gmail-app-lösenord
 
-Tvåstegsverifiering måste vara på. Gå till **Google-kontot → Säkerhet → Tvåstegsverifiering →
-App-lösenord**, skapa ett för "Mail", och lägg de 16 tecknen som secret `SMTP_PASSWORD`
-(utan mellanslag). Adressen läggs som `SMTP_USER`.
+Förutsätter att tvåstegsverifiering är påslagen på kontot.
+
+1. Logga in på det Gmail-konto som ska skicka mailet.
+2. Gå till <https://myaccount.google.com/apppasswords> (nås inte via en meny i
+   säkerhetsinställningarna, använd länken direkt).
+3. Skriv ett namn i fältet **App name**, t.ex. `frilansuppdrag`. Namnet är bara en etikett.
+4. Klicka **Create**. En ruta visar ett 16-teckens lösenord i fyra grupper, t.ex. `abcd efgh ijkl mnop`.
+5. Kopiera det och ta bort mellanslagen (`abcdefghijklmnop`) — det är värdet för `SMTP_PASSWORD`.
+   Lösenordet visas bara en gång; tappar du bort det raderar du posten och skapar ett nytt.
+6. Lägg Gmail-adressen som `SMTP_USER`.
+
+Om `/apppasswords` svarar att alternativet inte är tillgängligt beror det oftast på att kontot är
+ett arbets-/skolkonto (Google Workspace) där administratören blockerat app-lösenord, att
+tvåstegsverifieringen bara använder säkerhetsnyckel, eller att Advanced Protection är på. Använd
+i så fall ett vanligt `@gmail.com`-konto som avsändare.
+
+Byter du lösenord på Google-kontot slutar app-lösenordet att gälla och måste skapas om.
 
 Mottagare är `simon.stenlund@northintelligence.se` (satt i `src/config.py`, kan överstyras med
 miljövariabeln `EMAIL_TO`). Andra leverantörer fungerar via `SMTP_HOST` / `SMTP_PORT`
