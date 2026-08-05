@@ -239,10 +239,29 @@ def send_failure_email(message: str) -> None:
         print(f"[notify] Failure email could not be sent: {type(e).__name__}: {e}")
 
 
-if __name__ == "__main__":  # python -m src.notify --failure "<message>"
+def send_test_email() -> None:
+    """Send a single sample assignment — verifies SMTP credentials end to end."""
+    sample = Assignment(
+        title="Testuppdrag: Data Engineer (Microsoft Fabric)",
+        company="Testbolaget AB",
+        location="Stockholm",
+        description="Detta är ett testmail från frilansuppdrag-pipelinen.",
+        url="https://example.com/testuppdrag",
+        source="Test",
+        summary="Om du ser det här fungerar SMTP-inställningarna.",
+        relevance_score=9,
+        is_new=True,
+    )
+    send_email([sample], page_url="https://example.com/digest/")
+
+
+if __name__ == "__main__":  # python -m src.notify --test | --failure "<message>"
     import sys
 
-    if len(sys.argv) > 2 and sys.argv[1] == "--failure":
-        send_failure_email(sys.argv[2])
+    args = sys.argv[1:]
+    if args and args[0] == "--test":
+        send_test_email()
+    elif len(args) > 1 and args[0] == "--failure":
+        send_failure_email(args[1])
     else:
-        print("usage: python -m src.notify --failure <message>")
+        print("usage: python -m src.notify [--test | --failure <message>]")

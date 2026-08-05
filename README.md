@@ -157,6 +157,15 @@ i så fall ett vanligt `@gmail.com`-konto som avsändare.
 
 Byter du lösenord på Google-kontot slutar app-lösenordet att gälla och måste skapas om.
 
+Testa uppgifterna lokalt innan du lägger in dem som secrets (skickar ett mail med ett påhittat
+uppdrag):
+
+```powershell
+$env:SMTP_USER = "din.adress@gmail.com"
+$env:SMTP_PASSWORD = "abcdefghijklmnop"
+python -m src.notify --test
+```
+
 Mottagare är `simon.stenlund@northintelligence.se` (satt i `src/config.py`, kan överstyras med
 miljövariabeln `EMAIL_TO`). Andra leverantörer fungerar via `SMTP_HOST` / `SMTP_PORT`
 (t.ex. `smtp.office365.com` / `587`, eller port `465` för implicit TLS).
