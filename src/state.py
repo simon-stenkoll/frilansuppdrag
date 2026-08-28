@@ -20,15 +20,29 @@ def save_seen(seen: set[str]) -> None:
         json.dump(sorted(seen), f, indent=2)
 
 
-def mark_new(assignments: list[Assignment]) -> list[Assignment]:
-    """Set is_new=True for assignments not previously seen, then persist state."""
+def flag_new(assignments: list[Assignment]) -> list[Assignment]:
+    """Set is_new=True for assignments not previously seen. Persists nothing."""
     seen = load_seen()
-    new_urls: set[str] = set()
 
     for a in assignments:
         key = a.url.split("?")[0].rstrip("/")
         a.is_new = key not in seen
-        new_urls.add(key)
 
-    save_seen(seen | new_urls)
+    return assignments
+
+
+def persist_seen(assignments: list[Assignment]) -> list[Assignment]:
+    """Record classified assignments as seen, keeping every existing entry.
+
+    Only assignments with classified=True are stored. An assignment that ran out of
+    LLM budget stays "new" so the next run still has a chance to classify and mail it.
+    """
+    seen = load_seen()
+    stored = {
+        a.url.split("?")[0].rstrip("/")
+        for a in assignments
+        if a.classified
+    }
+
+    save_seen(seen | stored)
     return assignments

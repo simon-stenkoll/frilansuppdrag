@@ -5,15 +5,15 @@ Guidance for Claude Code (and other AI assistants) working in this repository.
 ## Vad projektet gör
 
 Daglig pipeline som skrapar konsult-/frilansuppdrag inom Data Engineering / BI / Analytics i
-Stockholm, deduplicerar, filtrerar på konsultuppdrag, poängsätter med en LLM, genererar en
+Stockholm, deduplicerar, klassificerar och poängsätter med en LLM, genererar en
 HTML-digest i `docs/` och notifierar via e-post. Körs nattligt via GitHub Actions (`workflow_dispatch`
 finns för manuella körningar) och kan köras lokalt.
 
 ## Arkitektur (dataflöde)
 
-`main.py` orkestrerar: `run_all_scrapers()` → `deduplicate()` → `is_contract`-filter →
-`mark_new()` (jämför mot `state/seen.json`) → `summarize()` (LLM-scoring) → `generate()` (HTML) →
-`send_email()` (notis).
+`main.py` orkestrerar: `run_all_scrapers()` → `deduplicate()` → `flag_new()` (jämför mot
+`state/seen.json`) → `classify()` (LLM-klassificering, pipelinens beslutsgrind) →
+`persist_seen()` → `generate()` (HTML) → `send_email()` (notis).
 
 - `src/config.py` — all konfiguration: nyckelord, portallista (seed), env-namn, gränser
 - `src/models.py` — `Assignment`-dataclass (det enda objektet som flödar genom pipelinen)
@@ -24,9 +24,15 @@ finns för manuella körningar) och kan köras lokalt.
   fokusera på portaler som faktiskt visar uppdrag
 - `src/discovery.py` — engångs/sällan-körd djupskanning av Anna Leijons mäklarlista som genererar
   `state/portals.json`
+- `src/classifier.py`: LLM-klassificerare (employment_type, role_match, location_ok, status,
+  score, summary) med delad `LlmBudget` per körning
+- `src/classify_cache.py`: cache i `state/classifications.json`, nyckel på url + content_hash +
+  prompt_version
 - `src/digest.py` — bygger `docs/index.html` + `docs/archive/YYYY-MM-DD.html`
 - `src/notify.py` — mailar nya uppdrag via SMTP (Gmail app-lösenord)
-- `state/seen.json` — sedda URL:er (spåras i git, persisteras mellan körningar)
+- `state/seen.json`: sedda URL:er (spåras i git, persisteras mellan körningar); bara
+  klassificerade uppdrag skrivs hit, så budgetuppskjutna uppdrag förblir "nya"
+- `state/classifications.json`: cachade LLM-klassificeringar (spåras i git)
 - `state/portals.json` — upptäckta/verifierade mäklarportaler (genereras av discovery)
 
 ## Konventioner
@@ -66,7 +72,7 @@ python main.py              # full körning → docs/ + e-post
 
 ## Att tänka på
 
-- `summarize()` och `send_email()` failar tyst (loggar) om token/SMTP-uppgifter saknas — körningen
+- `classify()` och `send_email()` failar tyst (loggar) om token/SMTP-uppgifter saknas: körningen
   fortsätter ändå och digesten genereras.
 - Kör inte `src/discovery.py` i den nattliga workflowen; den är tung (Playwright mot ~130 sajter).
   Nattliga körningen läser bara `state/portals.json`.
