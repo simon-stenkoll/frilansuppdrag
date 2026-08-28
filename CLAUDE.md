@@ -21,11 +21,14 @@ allt men delat i "Uppdrag" och "Osäkra / anställningar".
 
 - `src/config.py` — all konfiguration: nyckelord, portallista (seed), env-namn, gränser
 - `src/models.py` — `Assignment`-dataclass (det enda objektet som flödar genom pipelinen)
-- `src/scrapers/` — en modul per källa; varje exponerar `async def scrape() -> list[Assignment]`
-- `src/scrapers/utils.py` — delade filter (`is_relevant`, `is_contract`, `is_in_stockholm`),
+- `src/scrapers/`: en modul per källa; varje exponerar `async def scrape() -> list[Assignment]`.
+  Två källor kvar: `jobtech.py` (Platsbanken/JobTech API) och `broker_apis.py`
+  (A Society, Upgraded People, KeyMan). De handskrivna HTML-parsarna i `broker_portals.py`
+  gav nästan inget och är borttagna.
+- `src/scrapers/utils.py`: delade filter (`is_relevant`, `is_in_stockholm`),
   `make_client()` (httpx) och `fetch_rendered()` (Playwright för JS-portaler)
-- `src/scrapers/broker_portals.py` — svenska konsultmäklare; läser `state/portals.json` för att
-  fokusera på portaler som faktiskt visar uppdrag
+- `src/scrapers/legacy_extract.py`: generisk HTML-extrahering som BARA används av
+  `discovery.py`, tas bort när discovery byggs om
 - `src/discovery.py` — engångs/sällan-körd djupskanning av Anna Leijons mäklarlista som genererar
   `state/portals.json`
 - `src/classifier.py`: LLM-klassificerare (employment_type, role_match, location_ok, status,
@@ -35,8 +38,11 @@ allt men delat i "Uppdrag" och "Osäkra / anställningar".
 - `src/routing.py`: `is_qualified()` och `disqualify_reason()`, delade av digest och notify
 - `src/digest.py`: bygger `docs/index.html` + `docs/archive/YYYY-MM-DD.html`, tvådelad sida
 - `src/notify.py`: mailar nya kvalificerade uppdrag via SMTP (Gmail app-lösenord)
-- `state/seen.json`: sedda URL:er (spåras i git, persisteras mellan körningar); bara
-  klassificerade uppdrag skrivs hit, så budgetuppskjutna uppdrag förblir "nya"
+- `state/seen.json`: sedda URL:er som `{"url": "YYYY-MM-DD"}` med datum för senast sedd
+  (spåras i git, persisteras mellan körningar). Bara klassificerade uppdrag läggs till,
+  så budgetuppskjutna uppdrag förblir "nya"; kända nycklar som dyker upp igen får nytt
+  datum och poster äldre än `SEEN_MAX_AGE_DAYS` rensas vid skrivning. Gamla listformatet
+  läses fortfarande och konverteras vid första körningen
 - `state/classifications.json`: cachade LLM-klassificeringar (spåras i git)
 - `state/portals.json` — upptäckta/verifierade mäklarportaler (genereras av discovery)
 
