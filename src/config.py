@@ -107,15 +107,12 @@ DISABLED_BROKER_PORTALS = {
     "Interim Marketing",  # 404
 }
 
-# Cinode Market search config
-CINODE_SEARCH_URL = "https://app.cinode.com/market/assignments"
-
-# ─── Cinode Market (src/scrapers/cinode_market.py) ───────────────────────────
+# Cinode Market (src/scrapers/cinode_market.py)
 # Public server-rendered marketplace; cursor pagination via #load-more-button.
 CINODE_LIST_URL = "https://market.cinode.com/requests"
 CINODE_MAX_PAGES = 15              # ~20 cards per page, ~110 assignments today
 
-# ─── Verama (src/scrapers/verama.py) ─────────────────────────────────────────
+# Verama (src/scrapers/verama.py)
 # Ework Group's marketplace; open JSON API, no auth. The platform is moving to
 # an eworkgroup domain, so keep the endpoints configurable.
 VERAMA_API_URL = "https://app.verama.com/api/public/job-requests"

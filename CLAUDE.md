@@ -22,9 +22,9 @@ allt men delat i "Uppdrag" och "Osäkra / anställningar".
 - `src/config.py` — all konfiguration: nyckelord, portallista (seed), env-namn, gränser
 - `src/models.py` — `Assignment`-dataclass (det enda objektet som flödar genom pipelinen)
 - `src/scrapers/`: en modul per källa; varje exponerar `async def scrape() -> list[Assignment]`.
-  Två källor kvar: `jobtech.py` (Platsbanken/JobTech API) och `broker_apis.py`
-  (A Society, Upgraded People, KeyMan). De handskrivna HTML-parsarna i `broker_portals.py`
-  gav nästan inget och är borttagna.
+  Källor: `jobtech.py` (Platsbanken/JobTech API), `broker_apis.py` (A Society, Upgraded
+  People, KeyMan), `cinode_market.py` och `verama.py`. De handskrivna HTML-parsarna i
+  `broker_portals.py` gav nästan inget och är borttagna.
 - `src/scrapers/cinode_market.py`: Cinode Market (market.cinode.com), publik serverrenderad
   HTML, cursor-paginering via `#load-more-button`, detaljsida hämtas bara för relevanta kort
 - `src/scrapers/verama.py`: Verama (Ework Groups marknadsplats), öppet JSON-API utan auth,
