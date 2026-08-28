@@ -25,6 +25,7 @@
   header .meta { color: var(--muted); font-size: 0.85rem; }
   .badge { background: var(--accent); color: #fff; border-radius: 999px; padding: 2px 10px; font-size: 0.78rem; font-weight: 600; }
   .badge.new { background: var(--new); color: #0f1117; }
+  .badge.muted { background: var(--border); color: var(--muted); }
   main { max-width: 980px; margin: 0 auto; padding: 24px 16px; }
   .toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; align-items: center; }
   .source-tag { background: var(--border); color: var(--muted); border-radius: 6px; padding: 3px 10px; font-size: 0.78rem; }
@@ -36,14 +37,24 @@
   .new-strip-list a:hover { color: var(--accent2); }
   .strip-score { font-size: 0.72rem; font-weight: 700; border-radius: 4px; padding: 1px 5px; margin-left: 6px; vertical-align: middle; }
   .strip-src { color: var(--muted); font-size: 0.75rem; margin-left: 6px; }
+  .section { margin-bottom: 36px; }
+  .section-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  .section-head h2 { font-size: 1.05rem; font-weight: 700; color: var(--text); }
+  .section-count { background: var(--border); color: var(--muted); border-radius: 999px; padding: 1px 9px; font-size: 0.75rem; font-weight: 700; }
+  .section-sub { color: var(--muted); font-size: 0.8rem; }
+  .section-muted { border-top: 1px dashed var(--border); padding-top: 24px; }
+  .section-muted .section-head h2 { color: var(--muted); }
+  .section-muted .card { opacity: 0.72; }
+  .section-muted .card:hover { opacity: 1; }
   .grid { display: grid; gap: 16px; }
-  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: border-color 0.15s; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: border-color 0.15s, opacity 0.15s; }
   .card:hover { border-color: var(--accent); }
   .card.is-new { border-left: 3px solid var(--new); background: rgba(67,214,140,0.04); }
   .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
   .card-title { font-size: 1rem; font-weight: 600; }
   .card-title a { color: var(--text); text-decoration: none; }
   .card-title a:hover { color: var(--accent2); }
+  .reason { background: rgba(139,143,168,0.15); color: var(--muted); border: 1px solid var(--border); border-radius: 999px; padding: 1px 9px; font-size: 0.72rem; font-weight: 600; vertical-align: middle; margin-left: 6px; white-space: nowrap; }
   .score { font-size: 0.78rem; font-weight: 700; border-radius: 6px; padding: 2px 8px; white-space: nowrap; }
   .score-high { background: rgba(67,214,140,0.15); color: var(--score-high); }
   .score-mid { background: rgba(255,215,64,0.15); color: var(--score-mid); }
@@ -54,7 +65,7 @@
   .card-meta span::before { content: ''; }
   .card-summary { font-size: 0.88rem; color: #bbbdd6; margin-top: 6px; }
   .new-pill { background: var(--new); color: #0f1117; border-radius: 999px; padding: 1px 8px; font-size: 0.72rem; font-weight: 700; vertical-align: middle; margin-left: 6px; }
-  .empty { color: var(--muted); text-align: center; padding: 60px 0; }
+  .empty { color: var(--muted); text-align: center; padding: 40px 0; }
   footer { text-align: center; color: var(--muted); font-size: 0.78rem; padding: 32px 16px; border-top: 1px solid var(--border); margin-top: 32px; }
   @media (max-width: 600px) { header { padding: 14px 16px; } }
 </style>
@@ -63,296 +74,43 @@
 <header>
   <h1>&#x1F4CB; Contract Assignments</h1>
   <span class="meta">Stockholm · Data Engineering / BI / Analytics</span>
-  <span class="badge">37 results</span>
-  <span class="badge new">6 new</span>
+  <span class="badge">0 uppdrag</span>
+  <span class="badge muted">23 osäkra</span>
+  
   <span class="meta" style="margin-left:auto">2026-08-28</span>
 </header>
 <main>
   <div class="toolbar">
     <span style="color:var(--muted);font-size:0.82rem">Sources:</span>
-    <span class="source-tag">A Society</span> <span class="source-tag">Afry</span> <span class="source-tag">Alphadev</span> <span class="source-tag">Biolit</span> <span class="source-tag">Capa</span> <span class="source-tag">Epico</span> <span class="source-tag">KeyMan</span> <span class="source-tag">Nikita</span> <span class="source-tag">Platsbanken</span> <span class="source-tag">Right People Group</span> <span class="source-tag">Senterprise</span> <span class="source-tag">Upgraded People</span> <span class="source-tag">We work remotely</span>
+    <span class="source-tag">A Society</span> <span class="source-tag">Cinode Market</span> <span class="source-tag">Platsbanken</span> <span class="source-tag">Upgraded People</span> <span class="source-tag">Verama</span>
     <a href="archive/" style="margin-left:auto;color:var(--muted);font-size:0.82rem;text-decoration:none">&#x1F4C1; Archive</a>
   </div>
+  <div class="warning-banner">&#x26A0;&#xFE0F; LLM-klassificeringen misslyckades för 23 av 23 uppdrag, kontrollera GITHUB_MODELS_TOKEN, budget och ratelimit.</div>
   
-  <div class="new-strip">
-  <div class="new-strip-header">&#x2728; New today (6)</div>
-  <ul class="new-strip-list">
-    <li><a href="https://arbetsformedlingen.se/platsbanken/annonser/31406522" target="_blank" rel="noopener">Senior Software Platform Engineer</a> <span class="strip-score score-none">–</span> <span class="strip-src">Platsbanken</span></li>
-    <li><a href="https://www.asocietygroup.com/sv/uppdrag/project-leader-16511" target="_blank" rel="noopener">Project Leader</a> <span class="strip-score score-none">–</span> <span class="strip-src">A Society</span></li>
-    <li><a href="https://upgraded.se/konsultuppdrag/191881-systemutvecklare-82/" target="_blank" rel="noopener">Systemutvecklare</a> <span class="strip-score score-none">–</span> <span class="strip-src">Upgraded People</span></li>
-    <li><a href="https://upgraded.se/konsultuppdrag/191826-fullstackutvecklare-1-2-stycken/" target="_blank" rel="noopener">Fullstackutvecklare 1-2 stycken</a> <span class="strip-score score-none">–</span> <span class="strip-src">Upgraded People</span></li>
-    <li><a href="https://upgraded.se/konsultuppdrag/191771-testspecialist-3/" target="_blank" rel="noopener">Testspecialist</a> <span class="strip-score score-none">–</span> <span class="strip-src">Upgraded People</span></li>
-    <li><a href="https://upgraded.se/konsultuppdrag/191732-fullstackutvecklare-29/" target="_blank" rel="noopener">Fullstackutvecklare</a> <span class="strip-score score-none">–</span> <span class="strip-src">Upgraded People</span></li>
-  </ul>
-</div>
+  <section class="section">
+  <div class="section-head">
+    <h2>Uppdrag</h2>
+    <span class="section-count">0</span>
+    <span class="section-sub">konsultuppdrag som matchar profilen</span>
+  </div>
   <div class="grid">
-    <div class="card">
+    <p class="empty">Inga kvalificerade uppdrag idag.</p>
+  </div>
+</section>
+  <section class="section section-muted">
+  <div class="section-head">
+    <h2>Osäkra / anställningar</h2>
+    <span class="section-count">23</span>
+    <span class="section-sub">filtrerade bort från mailet</span>
+  </div>
+  <div class="grid">
+    <div class="card is-new">
   <div class="card-header">
-    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/30708777" target="_blank" rel="noopener">Data Engineer</a></div>
-    <span class="score score-high">8/10</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 CoreChange Tech AB</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 Platsbanken</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  <div class="card-summary">Uppdraget som Data Engineer hos CoreChange Tech AB matchar väl med konsultens erfarenhet inom dataengineering och BI, med fokus på seniora uppgifter och relevanta teknologier.</div>
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/30859146" target="_blank" rel="noopener">Data Engineer – Konsultuppdrag, Stockholm</a></div>
-    <span class="score score-high">8/10</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 Liminity AB</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 Platsbanken</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  <div class="card-summary">Uppdraget är relevant för konsultens profil med fokus på datalandskap och datapipelines, men det är något vagt och saknar specifik information om seniora ansvarsområden.</div>
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31052468" target="_blank" rel="noopener">Data Engineer med modern stack (Databricks, Azure Data Factory & Azure)</a></div>
-    <span class="score score-high">8/10</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 Castra Group AB</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 Platsbanken</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  <div class="card-summary">Uppdraget är relevant för konsultens profil med fokus på dataengineering och moderna dataplattformar, men det krävs minst 3 års erfarenhet vilket är något lägre än konsultens 6+ år.</div>
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://rightpeoplegroup.com/sv/open-assignments/konsultuppdrag-lead-data-engineer-2026-07-27" target="_blank" rel="noopener">Konsultuppdrag – Lead Data Engineer</a></div>
-    <span class="score score-high">8/10</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 (via Right People Group)</span>
-    <span>📍 Sweden</span>
-    <span>🔗 Right People Group</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  <div class="card-summary">Konsultuppdraget som Lead Data Engineer har en stark koppling till konsultens fokusområden inom data och analys, med seniora ansvarsområden. Det finns också en god överensstämmelse med teknologier som nämns i CV:t.</div>
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://jobs.epico.se/jobs/7998079-epico-tech-soker-3-seniora-data-engineer-flexibel-uppstart-under-hosten" target="_blank" rel="noopener">Epico Tech söker 3 Seniora Data Engineer – flex... Stockholm · Hybrid</a></div>
-    <span class="score score-high">8/10</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 (via Epico)</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 Epico</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  <div class="card-summary">Uppdraget är en senior roll inom data engineering i Stockholm, vilket matchar konsultens erfarenhet och fokusområden. Det finns en god överensstämmelse med konsultens teknologier, även om beskrivningen är vag.</div>
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31277983" target="_blank" rel="noopener">Konsult – Analys & förändring</a></div>
-    <span class="score score-high">7/10</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 Tenant & Partner AB</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 Platsbanken</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  <div class="card-summary">Uppdraget handlar om analys och förändring inom arbetsplatser, vilket ligger nära konsultens fokusområden. Det finns en måttlig överlappning med konsultens erfarenhet inom data och analys, men det är oklart om det är en freelance-roll.</div>
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://afry.com/sv/tjanster/operations-digital-solutions/data-analytics-bi-ai" target="_blank" rel="noopener">Data Analytics, BI, & AI</a></div>
-    <span class="score score-high">7/10</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 (via Afry)</span>
-    <span>📍 Sweden</span>
-    <span>🔗 Afry</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  <div class="card-summary">Uppdraget handlar om Data Analytics, BI och AI, vilket ligger i konsultens fokusområden. Dock saknas detaljer om specifika teknologier och ansvarsnivå, vilket gör att poängen inte kan vara högre.</div>
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://www.capa.se/lediga-jobb/interim-data-engineer-500000564" target="_blank" rel="noopener">Interim Data EngineerStockholm CityInterimTillsatt</a></div>
-    <span class="score score-high">7/10</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 (via Capa)</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 Capa</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  <div class="card-summary">Uppdraget är en interimstjänst som passar konsultens erfarenhet inom dataengineering, men utan specifik information om arbetsuppgifterna är det svårt att bedöma passformen helt. Det finns en rimlig överlappning med konsultens kompetens inom data och analys.</div>
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://www.keyman.se/sv/data-it/pausad-databasutvecklare-programmerare-till-forskningsprojekt-om-blodsakerhet-till-karolinska-institutet-15722/" target="_blank" rel="noopener">PAUSAD Databasutvecklare/programmerare till forskningsprojekt om blodsäkerhet till Karolinska Institutet</a></div>
-    <span class="score score-mid">6/10</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 (via KeyMan)</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 KeyMan</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  <div class="card-summary">Uppdraget handlar om databasutveckling för ett forskningsprojekt, vilket är relaterat till data men har en mer specifik inriktning och mindre fokus på konsultens kärnkompetenser inom data engineering och BI.</div>
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://afry.com/sv/tjanster/operativa-digitala-losningar" target="_blank" rel="noopener">Operativa och digitala lösningar</a></div>
-    <span class="score score-mid">6/10</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 (via Afry)</span>
-    <span>📍 Sweden</span>
-    <span>🔗 Afry</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  <div class="card-summary">Uppdraget handlar om operativa och digitala lösningar, vilket är relaterat till dataanalys och digitalisering, men beskrivningen är för vag för att säkerställa en stark match med konsultens fokusområden.</div>
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31052204" target="_blank" rel="noopener">Senior AI-arkitekt</a></div>
-    <span class="score score-mid">4/10</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 Liminity AB</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 Platsbanken</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  <div class="card-summary">Uppdraget handlar om AI-arkitektur, vilket är en angränsande roll till konsultens fokusområden, men det finns inte tillräcklig överlappning med CV-teknologierna.</div>
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/30698854" target="_blank" rel="noopener">DevOps Engineer / Platform Engineer</a></div>
-    <span class="score score-mid">4/10</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 Liminity AB</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 Platsbanken</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  <div class="card-summary">Uppdraget är mer inriktat på DevOps och plattformsutveckling, vilket ligger utanför konsultens huvudfokusområden inom data och analys. Det finns viss överlappning med teknologier, men rollen är inte i linje med konsultens expertis.</div>
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="http://biolit.se/konsultuppdrag#devsecops-specialist-azure-devops-engineer-uppdragsnummer-14" target="_blank" rel="noopener">DevSecOps-specialist / Azure DevOps Engineer Uppdragsnummer: 1450</a></div>
-    <span class="score score-mid">4/10</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 (via Biolit)</span>
-    <span>📍 Sweden</span>
-    <span>🔗 Biolit</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  <div class="card-summary">Uppdraget verkar vara mer inriktat på DevSecOps och Azure DevOps, vilket ligger utanför konsultens huvudfokus på dataengineering och BI/analys. Beskrivningen är också för vag för att bedöma en stark match.</div>
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/30788123" target="_blank" rel="noopener">Business controller - Konsultuppdrag</a></div>
-    <span class="score score-low">3/10</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 Eqwiry AB</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 Platsbanken</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  <div class="card-summary">Uppdraget som Senior Business Controller ligger utanför konsultens fokusområden inom data och analys, och det verkar vara en mer verksamhetsnära roll snarare än en teknisk roll.</div>
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://www.asocietygroup.com/sv/uppdrag/azure-devops-specialist-niv-3-medior-16328" target="_blank" rel="noopener">Azure DevOps Specialist (nivå 3 – medior)</a></div>
-    <span class="score score-low">3/10</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 (via A Society)</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 A Society</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  <div class="card-summary">Uppdraget är för en Azure DevOps Specialist på medior nivå, vilket inte matchar konsultens seniora profil och fokusområden inom data engineering och analytics.</div>
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://www.keyman.se/sv/data-it/test-och-testautomatisering-intervjuer-sker-lopande-15893/" target="_blank" rel="noopener">Test och testautomatisering – Intervjuer sker löpande!</a></div>
-    <span class="score score-low">3/10</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 (via KeyMan)</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 KeyMan</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  <div class="card-summary">Uppdraget handlar om test och testautomatisering, vilket ligger utanför konsultens fokusområden inom data och analys. Det kräver också kompetens inom TypeScript och Playwright, vilket inte nämns i CV:t.</div>
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://www.alphadev.se/lediga-uppdrag/azure-devops-specialist-a30ff163" target="_blank" rel="noopener">Azure DevOps Specialist</a></div>
-    <span class="score score-low">3/10</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 (via Alphadev)</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 Alphadev</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  <div class="card-summary">Uppdraget handlar om Azure DevOps, vilket ligger utanför konsultens fokusområden inom data och analys. Rollen är också på medior nivå, vilket inte matchar konsultens seniora profil.</div>
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://jobb.senterprise.se/jobs/8046685-konsultuppdrag-azure-devops-specialist-hyr-kop" target="_blank" rel="noopener">Konsultuppdrag | Azure DevOps Specialist (Hyr/Köp)</a></div>
-    <span class="score score-low">3/10</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 (via Senterprise)</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 Senterprise</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  <div class="card-summary">Detta uppdrag fokuserar på Azure DevOps, vilket ligger utanför konsultens kärnkompetenser inom dataengineering och BI. Det verkar också vara en permanent anställning, vilket inte matchar konsultens profil som frilansare.</div>
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://www.alphadev.se/lediga-uppdrag/senior-site-reliability-engineer-openshift-platform-engineer-52620f06" target="_blank" rel="noopener">Senior Site Reliability Engineer - OpenShift / Platform Engineering</a></div>
-    <span class="score score-low">2/10</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 (via Alphadev)</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 Alphadev</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  <div class="card-summary">Uppdraget handlar om en Senior Site Reliability Engineer, vilket ligger utanför konsultens fokusområden inom data och analys. Det är också oklart om det är en freelance- eller permanentanställning.</div>
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://weworkremotely.com/categories/all-other-remote-jobs" target="_blank" rel="noopener">All Other Remote JobsLatest post about 12 hours ago</a></div>
-    <span class="score score-low">1/10</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 (via We work remotely)</span>
-    <span>📍 Remote</span>
-    <span>🔗 We work remotely</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  <div class="card-summary">Det här uppdraget är helt utanför konsultens fokusområden och kräver en junior nivå inom kundsupport, vilket inte matchar konsultens profil.</div>
-</div>
-<div class="card is-new">
-  <div class="card-header">
-    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31406522" target="_blank" rel="noopener">Senior Software Platform Engineer</a><span class="new-pill">NEW</span></div>
+    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31387174" target="_blank" rel="noopener">Lead Data engineer</a><span class="new-pill">NEW</span><span class="reason">Ej klassificerad</span></div>
     <span class="score score-none" title="Ej poängsatt">–</span>
   </div>
   <div class="card-meta">
-    <span>🏢 Tendium AB</span>
+    <span>🏢 Asta Agency AB</span>
     <span>📍 Stockholm</span>
     <span>🔗 Platsbanken</span>
     <span>🗓 2026-08-28</span>
@@ -361,7 +119,202 @@
 </div>
 <div class="card is-new">
   <div class="card-header">
-    <div class="card-title"><a href="https://www.asocietygroup.com/sv/uppdrag/project-leader-16511" target="_blank" rel="noopener">Project Leader</a><span class="new-pill">NEW</span></div>
+    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31292698" target="_blank" rel="noopener">Senior Data Engineer</a><span class="new-pill">NEW</span><span class="reason">Ej klassificerad</span></div>
+    <span class="score score-none" title="Ej poängsatt">–</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Edge of Talent AB</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Platsbanken</span>
+    <span>🗓 2026-08-28</span>
+  </div>
+  
+</div>
+<div class="card is-new">
+  <div class="card-header">
+    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31378527" target="_blank" rel="noopener">Data Engineer (ETL Specialist)</a><span class="new-pill">NEW</span><span class="reason">Ej klassificerad</span></div>
+    <span class="score score-none" title="Ej poängsatt">–</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Securitas Intelligent Services AB</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Platsbanken</span>
+    <span>🗓 2026-08-28</span>
+  </div>
+  
+</div>
+<div class="card is-new">
+  <div class="card-header">
+    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31274667" target="_blank" rel="noopener">AI &amp; Data Project Manager</a><span class="new-pill">NEW</span><span class="reason">Ej klassificerad</span></div>
+    <span class="score score-none" title="Ej poängsatt">–</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Edge of Talent AB</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Platsbanken</span>
+    <span>🗓 2026-08-28</span>
+  </div>
+  
+</div>
+<div class="card is-new">
+  <div class="card-header">
+    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31276912" target="_blank" rel="noopener">Treasury Specialist med systemintresse</a><span class="new-pill">NEW</span><span class="reason">Ej klassificerad</span></div>
+    <span class="score score-none" title="Ej poängsatt">–</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Capega AB</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Platsbanken</span>
+    <span>🗓 2026-08-28</span>
+  </div>
+  
+</div>
+<div class="card is-new">
+  <div class="card-header">
+    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31395265" target="_blank" rel="noopener">Data Analyst till Nordregio</a><span class="new-pill">NEW</span><span class="reason">Ej klassificerad</span></div>
+    <span class="score score-none" title="Ej poängsatt">–</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Nordregio</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Platsbanken</span>
+    <span>🗓 2026-08-28</span>
+  </div>
+  
+</div>
+<div class="card is-new">
+  <div class="card-header">
+    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31373598" target="_blank" rel="noopener">CRM-Utvecklare</a><span class="new-pill">NEW</span><span class="reason">Ej klassificerad</span></div>
+    <span class="score score-none" title="Ej poängsatt">–</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Länsförsäkringar AB (publ)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Platsbanken</span>
+    <span>🗓 2026-08-28</span>
+  </div>
+  
+</div>
+<div class="card is-new">
+  <div class="card-header">
+    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31406208" target="_blank" rel="noopener">Junior Product Development Intern</a><span class="new-pill">NEW</span><span class="reason">Ej klassificerad</span></div>
+    <span class="score score-none" title="Ej poängsatt">–</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Stronger AB</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Platsbanken</span>
+    <span>🗓 2026-08-28</span>
+  </div>
+  
+</div>
+<div class="card is-new">
+  <div class="card-header">
+    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31355492" target="_blank" rel="noopener">Software Engineer</a><span class="new-pill">NEW</span><span class="reason">Ej klassificerad</span></div>
+    <span class="score score-none" title="Ej poängsatt">–</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 AFSS Consultancy Services Sweden FIL till I-Contracts Ltd, UK</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Platsbanken</span>
+    <span>🗓 2026-08-28</span>
+  </div>
+  
+</div>
+<div class="card is-new">
+  <div class="card-header">
+    <div class="card-title"><a href="https://www.asocietygroup.com/sv/uppdrag/platform-engineer-remote-100-ok-16519" target="_blank" rel="noopener">Platform Engineer Remote 100% OK</a><span class="new-pill">NEW</span><span class="reason">Ej klassificerad</span></div>
+    <span class="score score-none" title="Ej poängsatt">–</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via A Society)</span>
+    <span>📍 Remote International</span>
+    <span>🔗 A Society</span>
+    <span>🗓 2026-08-28</span>
+  </div>
+  
+</div>
+<div class="card is-new">
+  <div class="card-header">
+    <div class="card-title"><a href="https://market.cinode.com/requests/22194" target="_blank" rel="noopener">Senior Data Engineer – Snowflake / dbt</a><span class="new-pill">NEW</span><span class="reason">Ej klassificerad</span></div>
+    <span class="score score-none" title="Ej poängsatt">–</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 CAG Group</span>
+    <span>📍 Stockholm (Onsite)</span>
+    <span>🔗 Cinode Market</span>
+    <span>🗓 2026-08-28</span>
+  </div>
+  
+</div>
+<div class="card is-new">
+  <div class="card-header">
+    <div class="card-title"><a href="https://market.cinode.com/requests/22193" target="_blank" rel="noopener">Senior Data Engineer / ML Engineer - Databricks (Remote first)</a><span class="new-pill">NEW</span><span class="reason">Ej klassificerad</span></div>
+    <span class="score score-none" title="Ej poängsatt">–</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Aliant AB</span>
+    <span>📍 Göteborg (100% remote)</span>
+    <span>🔗 Cinode Market</span>
+    <span>🗓 2026-08-28</span>
+  </div>
+  
+</div>
+<div class="card is-new">
+  <div class="card-header">
+    <div class="card-title"><a href="https://app.verama.com/en/job-requests/82965" target="_blank" rel="noopener">Systemutvecklare/konfiguratör</a><span class="new-pill">NEW</span><span class="reason">Ej klassificerad</span></div>
+    <span class="score score-none" title="Ej poängsatt">–</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 ICA Sverige AB</span>
+    <span>📍 Borås, Remote</span>
+    <span>🔗 Verama</span>
+    <span>🗓 2026-08-28</span>
+  </div>
+  
+</div>
+<div class="card is-new">
+  <div class="card-header">
+    <div class="card-title"><a href="https://app.verama.com/en/job-requests/82844" target="_blank" rel="noopener">Systemutvecklare nivå 4</a><span class="new-pill">NEW</span><span class="reason">Ej klassificerad</span></div>
+    <span class="score score-none" title="Ej poängsatt">–</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Tullverket</span>
+    <span>📍 Luleå, Stockholm, Remote</span>
+    <span>🔗 Verama</span>
+    <span>🗓 2026-08-28</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31378410" target="_blank" rel="noopener">Interim Business Controller</a><span class="reason">Ej klassificerad</span></div>
+    <span class="score score-none" title="Ej poängsatt">–</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 People of Interim &amp; Finance Sweden AB</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Platsbanken</span>
+    <span>🗓 2026-08-28</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31382649" target="_blank" rel="noopener">BI Specialist - Digital Commercial (10 months temporary contract)</a><span class="reason">Ej klassificerad</span></div>
+    <span class="score score-none" title="Ej poängsatt">–</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 H &amp; M Hennes &amp; Mauritz GBC AB</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Platsbanken</span>
+    <span>🗓 2026-08-28</span>
+  </div>
+  
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://www.asocietygroup.com/sv/uppdrag/project-leader-16511" target="_blank" rel="noopener">Project Leader</a><span class="reason">Ej klassificerad</span></div>
     <span class="score score-none" title="Ej poängsatt">–</span>
   </div>
   <div class="card-meta">
@@ -372,48 +325,35 @@
   </div>
   
 </div>
-<div class="card is-new">
+<div class="card">
   <div class="card-header">
-    <div class="card-title"><a href="https://upgraded.se/konsultuppdrag/191881-systemutvecklare-82/" target="_blank" rel="noopener">Systemutvecklare</a><span class="new-pill">NEW</span></div>
+    <div class="card-title"><a href="https://www.asocietygroup.com/sv/uppdrag/systemutvecklare-niv-4-till-tullverket-e-arkiv-16473" target="_blank" rel="noopener">Systemutvecklare nivå 4 till Tullverket – e-arkiv</a><span class="reason">Ej klassificerad</span></div>
     <span class="score score-none" title="Ej poängsatt">–</span>
   </div>
   <div class="card-meta">
-    <span>🏢 (via Upgraded People)</span>
-    <span>📍 SE, Stockholm</span>
-    <span>🔗 Upgraded People</span>
+    <span>🏢 (via A Society)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 A Society</span>
     <span>🗓 2026-08-28</span>
   </div>
   
 </div>
-<div class="card is-new">
+<div class="card">
   <div class="card-header">
-    <div class="card-title"><a href="https://upgraded.se/konsultuppdrag/191826-fullstackutvecklare-1-2-stycken/" target="_blank" rel="noopener">Fullstackutvecklare 1-2 stycken</a><span class="new-pill">NEW</span></div>
+    <div class="card-title"><a href="https://www.asocietygroup.com/sv/uppdrag/azure-devops-specialist-niv-3-medior-16328" target="_blank" rel="noopener">Azure DevOps Specialist (nivå 3 – medior)</a><span class="reason">Ej klassificerad</span></div>
     <span class="score score-none" title="Ej poängsatt">–</span>
   </div>
   <div class="card-meta">
-    <span>🏢 (via Upgraded People)</span>
-    <span>📍 Kalmar, Stockholm, SE</span>
-    <span>🔗 Upgraded People</span>
+    <span>🏢 (via A Society)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 A Society</span>
     <span>🗓 2026-08-28</span>
   </div>
   
 </div>
-<div class="card is-new">
+<div class="card">
   <div class="card-header">
-    <div class="card-title"><a href="https://upgraded.se/konsultuppdrag/191771-testspecialist-3/" target="_blank" rel="noopener">Testspecialist</a><span class="new-pill">NEW</span></div>
-    <span class="score score-none" title="Ej poängsatt">–</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 (via Upgraded People)</span>
-    <span>📍 Kalmar, Stockholm, SE</span>
-    <span>🔗 Upgraded People</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  
-</div>
-<div class="card is-new">
-  <div class="card-header">
-    <div class="card-title"><a href="https://upgraded.se/konsultuppdrag/191732-fullstackutvecklare-29/" target="_blank" rel="noopener">Fullstackutvecklare</a><span class="new-pill">NEW</span></div>
+    <div class="card-title"><a href="https://upgraded.se/konsultuppdrag/191881-systemutvecklare-82/" target="_blank" rel="noopener">Systemutvecklare</a><span class="reason">Ej klassificerad</span></div>
     <span class="score score-none" title="Ej poängsatt">–</span>
   </div>
   <div class="card-meta">
@@ -426,148 +366,45 @@
 </div>
 <div class="card">
   <div class="card-header">
-    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31396231" target="_blank" rel="noopener">Data Engineer – Microsoft Fabric / Azure</a></div>
+    <div class="card-title"><a href="https://upgraded.se/konsultuppdrag/191826-fullstackutvecklare-1-2-stycken/" target="_blank" rel="noopener">Fullstackutvecklare 1-2 stycken</a><span class="reason">Ej klassificerad</span></div>
     <span class="score score-none" title="Ej poängsatt">–</span>
   </div>
   <div class="card-meta">
-    <span>🏢 Happy Group AB</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 Platsbanken</span>
+    <span>🏢 (via Upgraded People)</span>
+    <span>📍 Kalmar, Stockholm, SE</span>
+    <span>🔗 Upgraded People</span>
     <span>🗓 2026-08-28</span>
   </div>
   
 </div>
 <div class="card">
   <div class="card-header">
-    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31327879" target="_blank" rel="noopener">CRM Analyst & BI Developer</a></div>
+    <div class="card-title"><a href="https://upgraded.se/konsultuppdrag/191771-testspecialist-3/" target="_blank" rel="noopener">Testspecialist</a><span class="reason">Ej klassificerad</span></div>
     <span class="score score-none" title="Ej poängsatt">–</span>
   </div>
   <div class="card-meta">
-    <span>🏢 Evidensia Sverige AB</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 Platsbanken</span>
+    <span>🏢 (via Upgraded People)</span>
+    <span>📍 Kalmar, Stockholm, SE</span>
+    <span>🔗 Upgraded People</span>
     <span>🗓 2026-08-28</span>
   </div>
   
 </div>
 <div class="card">
   <div class="card-header">
-    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31378410" target="_blank" rel="noopener">Interim Business Controller</a></div>
+    <div class="card-title"><a href="https://upgraded.se/konsultuppdrag/191732-fullstackutvecklare-29/" target="_blank" rel="noopener">Fullstackutvecklare</a><span class="reason">Ej klassificerad</span></div>
     <span class="score score-none" title="Ej poängsatt">–</span>
   </div>
   <div class="card-meta">
-    <span>🏢 People of Interim & Finance Sweden AB</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 Platsbanken</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31382649" target="_blank" rel="noopener">BI Specialist - Digital Commercial (10 months temporary contract)</a></div>
-    <span class="score score-none" title="Ej poängsatt">–</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 H & M Hennes & Mauritz GBC AB</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 Platsbanken</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31326819" target="_blank" rel="noopener">Dataarkitekt Finansinspektionen, Stockholm</a></div>
-    <span class="score score-none" title="Ej poängsatt">–</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 Agil arbetskraft Sverige GF AB</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 Platsbanken</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://www.asocietygroup.com/sv/uppdrag/systemutvecklare-niv-4-till-tullverket-e-arkiv-16473" target="_blank" rel="noopener">Systemutvecklare nivå 4 till Tullverket – e-arkiv</a></div>
-    <span class="score score-none" title="Ej poängsatt">–</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 (via A Society)</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 A Society</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="http://biolit.se/konsultuppdrag#senior-data-engineer-uppdragsnummer-1457" target="_blank" rel="noopener">Senior Data Engineer Uppdragsnummer: 1457</a></div>
-    <span class="score score-none" title="Ej poängsatt">–</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 (via Biolit)</span>
-    <span>📍 Sweden</span>
-    <span>🔗 Biolit</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="http://biolit.se/konsultuppdrag#senior-data-engineer-azure-databricks-uppdragsnummer-1456" target="_blank" rel="noopener">Senior Data Engineer – Azure & Databricks Uppdragsnummer: 1456</a></div>
-    <span class="score score-none" title="Ej poängsatt">–</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 (via Biolit)</span>
-    <span>📍 Sweden</span>
-    <span>🔗 Biolit</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="http://biolit.se/konsultuppdrag#data-engineer-data-platform-uppdragsnummer-1452" target="_blank" rel="noopener">Data Engineer – Data Platform Uppdragsnummer: 1452</a></div>
-    <span class="score score-none" title="Ej poängsatt">–</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 (via Biolit)</span>
-    <span>📍 Sweden</span>
-    <span>🔗 Biolit</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://www.nikita.se/jobs/detail/data-engineer-postgresql-specialist-143" target="_blank" rel="noopener">Data Engineer - PostgreSQL Specialist</a></div>
-    <span class="score score-none" title="Ej poängsatt">–</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 (via Nikita)</span>
-    <span>📍 Sweden</span>
-    <span>🔗 Nikita</span>
-    <span>🗓 2026-08-28</span>
-  </div>
-  
-</div>
-<div class="card">
-  <div class="card-header">
-    <div class="card-title"><a href="https://www.alphadev.se/lediga-uppdrag/agil-coach-758fb243" target="_blank" rel="noopener">Agil Coach</a></div>
-    <span class="score score-none" title="Ej poängsatt">–</span>
-  </div>
-  <div class="card-meta">
-    <span>🏢 (via Alphadev)</span>
-    <span>📍 Stockholm</span>
-    <span>🔗 Alphadev</span>
+    <span>🏢 (via Upgraded People)</span>
+    <span>📍 SE, Stockholm</span>
+    <span>🔗 Upgraded People</span>
     <span>🗓 2026-08-28</span>
   </div>
   
 </div>
   </div>
+</section>
 </main>
 <footer>Generated 2026-08-28 · <a href="https://github.com" style="color:var(--muted)">NI-Contracts</a></footer>
 </body>
