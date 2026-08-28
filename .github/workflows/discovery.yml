@@ -1,0 +1,52 @@
+name: Monthly Portal Discovery
+
+on:
+  schedule:
+    # 10:00 UTC on the 1st of every month (day-of-week left as '*' so cron does
+    # not OR the two day fields together)
+    - cron: '0 10 1 * *'
+  workflow_dispatch:  # allow manual runs
+
+permissions:
+  contents: write  # needed to commit state/portals.json
+  models: read     # lets the built-in GITHUB_TOKEN call GitHub Models
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  discover-portals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright browser
+        # Discovery escalates to a rendered page for JS-heavy broker sites
+        run: python -m playwright install --with-deps chromium
+
+      - name: Run discovery
+        env:
+          # Built-in token (never expires, no rotation), requires `models: read` above
+          GITHUB_MODELS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m src.discovery
+
+      - name: Commit portals
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/portals.json
+          git diff --staged --quiet || git commit -m "chore: portal discovery $(date -u '+%Y-%m-%d')"
+          git pull --rebase
+          git push
