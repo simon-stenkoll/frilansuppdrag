@@ -3,10 +3,10 @@
 import asyncio
 import os
 import traceback
-from src.scrapers import jobtech, broker_apis, cinode_market, verama
+from src.scrapers import jobtech, broker_apis, portal_llm, cinode_market, verama
 from src.dedup import deduplicate
 from src.state import flag_new, persist_seen
-from src.classifier import classify
+from src.classifier import LlmBudget, classify
 from src.digest import generate
 from src.notify import send_email
 from src.config import DISABLED_SCRAPERS, PAGE_URL_FALLBACK
@@ -14,6 +14,7 @@ from src.config import DISABLED_SCRAPERS, PAGE_URL_FALLBACK
 SCRAPERS = [
     ("Platsbanken (JobTech)", jobtech.scrape),
     ("Broker APIs", broker_apis.scrape),
+    ("Broker Portals (LLM)", portal_llm.scrape),
     ("Cinode Market", cinode_market.scrape),
     ("Verama", verama.scrape),
 ]
@@ -48,6 +49,13 @@ def _page_url() -> str:
 async def main():
     print("=== Contract Assignment Scraper ===")
 
+    # One LLM budget for the whole run, shared by portal extraction and classification.
+    # Portal extraction happens inside the scrapers, before classify(), so main owns the
+    # counter. The scraper interface stays `async def scrape()`, so portal_llm receives
+    # the instance through set_budget() while classify() takes it as an argument.
+    budget = LlmBudget()
+    portal_llm.set_budget(budget)
+
     raw = await run_all_scrapers()
     print(f"\n[dedup] {len(raw)} total → ", end="")
 
@@ -59,7 +67,7 @@ async def main():
     print(f"[state] {new_count} new assignments")
 
     print(f"[classifier] Klassificerar {len(marked)} uppdrag...")
-    classified = classify(marked)
+    classified = classify(marked, budget=budget)
 
     persist_seen(classified)
 

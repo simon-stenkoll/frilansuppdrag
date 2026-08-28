@@ -49,6 +49,14 @@ CLASSIFY_STATE_FILE = "state/classifications.json"  # cached url -> classificati
 CLASSIFY_MAX_AGE_DAYS = 90        # drop cached classifications older than this
 CLASSIFIER_PROMPT_VERSION = 1     # bump to invalidate every cached classification
 
+# LLM portal extraction (src/scrapers/portal_llm.py)
+PORTAL_LLM_MAX_CALLS = 35          # max portal pages sent to the LLM per run
+PORTAL_TEXT_MAX_CHARS = 8000       # cap on the reduced listing text handed to the LLM
+PORTAL_PAGES_STATE_FILE = "state/portal_pages.json"  # listing_url -> page hash + items
+# Applicant tracking systems brokers publish their assignments on. Links to these
+# domains are accepted even though they differ from the portal's own domain.
+PORTAL_ATS_DOMAINS = {"teamtailor.com", "recman.se", "jobylon.com", "varbi.com"}
+
 # Seen-state (src/state.py): url -> date last seen
 SEEN_MAX_AGE_DAYS = 180           # drop seen entries not observed for this long
 
