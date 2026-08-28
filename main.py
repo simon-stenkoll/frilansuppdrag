@@ -3,7 +3,7 @@
 import asyncio
 import os
 import traceback
-from src.scrapers import jobtech, broker_apis
+from src.scrapers import jobtech, broker_apis, cinode_market, verama
 from src.dedup import deduplicate
 from src.state import flag_new, persist_seen
 from src.classifier import classify
@@ -14,6 +14,8 @@ from src.config import DISABLED_SCRAPERS, PAGE_URL_FALLBACK
 SCRAPERS = [
     ("Platsbanken (JobTech)", jobtech.scrape),
     ("Broker APIs", broker_apis.scrape),
+    ("Cinode Market", cinode_market.scrape),
+    ("Verama", verama.scrape),
 ]
 
 
