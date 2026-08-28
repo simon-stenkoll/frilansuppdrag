@@ -25,6 +25,10 @@ allt men delat i "Uppdrag" och "Osäkra / anställningar".
   Två källor kvar: `jobtech.py` (Platsbanken/JobTech API) och `broker_apis.py`
   (A Society, Upgraded People, KeyMan). De handskrivna HTML-parsarna i `broker_portals.py`
   gav nästan inget och är borttagna.
+- `src/scrapers/cinode_market.py`: Cinode Market (market.cinode.com), publik serverrenderad
+  HTML, cursor-paginering via `#load-more-button`, detaljsida hämtas bara för relevanta kort
+- `src/scrapers/verama.py`: Verama (Ework Groups marknadsplats), öppet JSON-API utan auth,
+  beskrivning hämtas per uppdrag från detaljendpointen efter land-, ort- och nyckelordsfilter
 - `src/scrapers/utils.py`: delade filter (`is_relevant`, `is_in_stockholm`),
   `make_client()` (httpx) och `fetch_rendered()` (Playwright för JS-portaler)
 - `src/scrapers/legacy_extract.py`: generisk HTML-extrahering som BARA används av
