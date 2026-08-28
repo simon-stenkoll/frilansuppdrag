@@ -64,8 +64,9 @@ allt men delat i "Uppdrag" och "Osäkra / anställningar".
 ## Konventioner
 
 - **Python 3.11+**. **HTTP**: `httpx` (async) för scraping. **HTML**: `BeautifulSoup4`.
-  **JS-rendering**: Playwright (chromium). **LLM**: GitHub Models API (OpenAI-kompatibelt SDK),
-  modell `gpt-4o-mini`.
+  **JS-rendering**: Playwright (chromium). **LLM**: Google Gemini via det OpenAI-kompatibla
+  endpointet, modell `gemini-2.5-flash-lite` (GitHub Models pensionerades 2026-07-30 och
+  svarar 410; byt aldrig tillbaka).
 - **Scraper-interface**: varje scraper exponerar `async def scrape() -> list[Assignment]`.
 - **Felisolering**: en scraper som kastar exception måste fångas i orkestreraren — ett fel får
   aldrig stoppa övriga. Samma princip gäller notifiering.
@@ -82,10 +83,9 @@ pip install -r requirements.txt
 python -m playwright install chromium      # för JS-tunga mäklarportaler
 
 # Hemligheter (per session, eller lägg i en .env som inte committas)
-# OBS: PAT:en måste vara fine-grained med behörigheten "Models: read" —
-# utan den svarar GitHub Models 401. I CI behövs ingen PAT: workflowen
-# använder inbyggda GITHUB_TOKEN med `models: read`-permission.
-$env:GITHUB_MODELS_TOKEN = "<github-pat-med-models:read>"
+# Gratis nyckel skapas på https://aistudio.google.com/apikey.
+# I CI ligger samma värde som repo-secreten GEMINI_API_KEY.
+$env:GEMINI_API_KEY = "<google-ai-studio-nyckel>"
 # E-postnotis via SMTP (Gmail kräver app-lösenord, inte kontolösenordet)
 $env:SMTP_USER = "<gmail-adress>"
 $env:SMTP_PASSWORD = "<app-losenord>"

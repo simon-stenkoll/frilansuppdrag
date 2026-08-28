@@ -51,7 +51,7 @@ The test: Would a senior engineer say this is overcomplicated? If yes, simplify.
 - **HTTP**: `httpx` (async) for scraping, `requests` for simple one-off calls
 - **HTML parsing**: `BeautifulSoup4`
 - **Scheduling**: GitHub Actions cron
-- **LLM**: GitHub Models API (OpenAI-compatible SDK) — use `gpt-4o-mini`
+- **LLM**: Google Gemini via the OpenAI-compatible endpoint: use `LLM_MODEL` / `LLM_ENDPOINT` from `src/config.py` (GitHub Models was retired 2026-07-30)
 - **Config**: `src/config.py` — all keywords, URLs, and settings live here
 - **Scraper interface**: every scraper exposes `async def scrape() -> list[Assignment]`
 - **Failures**: a scraper that raises an exception must be caught in the orchestrator; one failure must not stop the rest

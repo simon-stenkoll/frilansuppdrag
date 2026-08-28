@@ -34,14 +34,18 @@ KEYWORDS = [
 # Location filter terms (case-insensitive, any match = include)
 LOCATION_KEYWORDS = ["stockholm", "sthlm", "remote", "hybrid"]
 
-# GitHub Models API settings
-GITHUB_MODELS_MODEL = "openai/gpt-4o-mini"  # new endpoint requires publisher prefix
-GITHUB_MODELS_ENDPOINT = "https://models.github.ai/inference"
+# LLM provider: Google Gemini via the OpenAI-compatible endpoint.
+# (GitHub Models was fully retired on 2026-07-30 and returns HTTP 410.)
+# Free tier for gemini-2.5-flash-lite: ~15 requests/min and ~1000 requests/day,
+# which the 4 s request delay and LLM_RUN_BUDGET stay well inside.
+# API key: env var GEMINI_API_KEY (create one at https://aistudio.google.com/apikey).
+LLM_MODEL = "gemini-2.5-flash-lite"
+LLM_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/openai/"
 
 # LLM scoring behaviour
 LLM_MAX_RETRIES = 3        # attempts per assignment before giving up
 LLM_RETRY_BACKOFF = 5.0    # seconds before first retry; doubles per retry
-LLM_REQUEST_DELAY = 4.0    # pause between calls (GitHub Models free tier is ~15 req/min)
+LLM_REQUEST_DELAY = 4.0    # pause between calls (Gemini free tier is ~15 req/min)
 LLM_RUN_BUDGET = 120       # max LLM calls per pipeline run, shared by all LLM consumers
 
 # LLM classification (src/classifier.py + src/classify_cache.py)

@@ -76,7 +76,7 @@ async def main():
     if classified and unclassified > len(classified) / 2:
         warning = (
             f"LLM-klassificeringen misslyckades för {unclassified} av {len(classified)} "
-            "uppdrag, kontrollera GITHUB_MODELS_TOKEN, budget och ratelimit."
+            "uppdrag, kontrollera GEMINI_API_KEY, budget och ratelimit."
         )
         print(f"[health] WARNING: {warning}")
 
