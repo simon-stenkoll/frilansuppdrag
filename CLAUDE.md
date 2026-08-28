@@ -30,7 +30,7 @@ finns för manuella körningar) och kan köras lokalt.
   prompt_version
 - `src/digest.py` — bygger `docs/index.html` + `docs/archive/YYYY-MM-DD.html`
 - `src/notify.py` — mailar nya uppdrag via SMTP (Gmail app-lösenord)
-- `state/seen.json` — sedda URL:er (spåras i git, persisteras mellan körningar); bara
+- `state/seen.json`: sedda URL:er (spåras i git, persisteras mellan körningar); bara
   klassificerade uppdrag skrivs hit, så budgetuppskjutna uppdrag förblir "nya"
 - `state/classifications.json`: cachade LLM-klassificeringar (spåras i git)
 - `state/portals.json` — upptäckta/verifierade mäklarportaler (genereras av discovery)
@@ -72,7 +72,7 @@ python main.py              # full körning → docs/ + e-post
 
 ## Att tänka på
 
-- `classify()` och `send_email()` failar tyst (loggar) om token/SMTP-uppgifter saknas — körningen
+- `classify()` och `send_email()` failar tyst (loggar) om token/SMTP-uppgifter saknas: körningen
   fortsätter ändå och digesten genereras.
 - Kör inte `src/discovery.py` i den nattliga workflowen; den är tung (Playwright mot ~130 sajter).
   Nattliga körningen läser bara `state/portals.json`.
