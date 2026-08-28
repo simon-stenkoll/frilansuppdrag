@@ -15,6 +15,10 @@ finns för manuella körningar) och kan köras lokalt.
 `state/seen.json`) → `classify()` (LLM-klassificering, pipelinens beslutsgrind) →
 `persist_seen()` → `generate()` (HTML) → `send_email()` (notis).
 
+Routingen i `src/routing.py` (`is_qualified` / `disqualify_reason`) är enda sanningskällan för
+vad som räknas som ett kvalificerat uppdrag: mailet skickar bara nya kvalificerade, webben visar
+allt men delat i "Uppdrag" och "Osäkra / anställningar".
+
 - `src/config.py` — all konfiguration: nyckelord, portallista (seed), env-namn, gränser
 - `src/models.py` — `Assignment`-dataclass (det enda objektet som flödar genom pipelinen)
 - `src/scrapers/` — en modul per källa; varje exponerar `async def scrape() -> list[Assignment]`
@@ -28,8 +32,9 @@ finns för manuella körningar) och kan köras lokalt.
   score, summary) med delad `LlmBudget` per körning
 - `src/classify_cache.py`: cache i `state/classifications.json`, nyckel på url + content_hash +
   prompt_version
-- `src/digest.py` — bygger `docs/index.html` + `docs/archive/YYYY-MM-DD.html`
-- `src/notify.py` — mailar nya uppdrag via SMTP (Gmail app-lösenord)
+- `src/routing.py`: `is_qualified()` och `disqualify_reason()`, delade av digest och notify
+- `src/digest.py`: bygger `docs/index.html` + `docs/archive/YYYY-MM-DD.html`, tvådelad sida
+- `src/notify.py`: mailar nya kvalificerade uppdrag via SMTP (Gmail app-lösenord)
 - `state/seen.json`: sedda URL:er (spåras i git, persisteras mellan körningar); bara
   klassificerade uppdrag skrivs hit, så budgetuppskjutna uppdrag förblir "nya"
 - `state/classifications.json`: cachade LLM-klassificeringar (spåras i git)

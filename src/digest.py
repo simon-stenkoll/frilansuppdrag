@@ -1,20 +1,40 @@
-"""Generates the HTML digest pages."""
+"""Generates the HTML digest pages.
+
+The page is split in two by src/routing.py: qualified assignments first, then
+everything else under "Osäkra / anställningar" with a short reason label.
+All scraped text is HTML-escaped before it is interpolated into the markup.
+"""
 
 import os
 from datetime import date
+from html import escape
+
 from src.models import Assignment
+from src.routing import disqualify_reason, is_qualified
 
 DOCS_DIR = "docs"
 ARCHIVE_DIR = os.path.join(DOCS_DIR, "archive")
+
+
+def _sort_key(a: Assignment):
+    """Highest score first; new assignments win ties."""
+    return (-a.relevance_score, 0 if a.is_new else 1)
+
+
+def _split(assignments: list[Assignment]) -> tuple[list[Assignment], list[Assignment]]:
+    qualified = sorted((a for a in assignments if is_qualified(a)), key=_sort_key)
+    other = sorted((a for a in assignments if not is_qualified(a)), key=_sort_key)
+    return qualified, other
 
 
 def generate(assignments: list[Assignment], run_date: str | None = None, warning: str = "") -> None:
     """Write docs/index.html (latest) and docs/archive/YYYY-MM-DD.html."""
     os.makedirs(ARCHIVE_DIR, exist_ok=True)
     today = run_date or date.today().isoformat()
-    new_count = sum(1 for a in assignments if a.is_new)
+    qualified, other = _split(assignments)
+    new_count = sum(1 for a in qualified if a.is_new)
 
-    html = _build_html(assignments, today, new_count, warning)
+    html = _build_html(qualified, other, today, new_count, warning)
 
     archive_path = os.path.join(ARCHIVE_DIR, f"{today}.html")
     index_path = os.path.join(DOCS_DIR, "index.html")
@@ -24,18 +44,22 @@ def generate(assignments: list[Assignment], run_date: str | None = None, warning
     with open(index_path, "w", encoding="utf-8") as f:
         f.write(html)
 
-    print(f"[digest] Wrote {index_path} and {archive_path} ({len(assignments)} assignments, {new_count} new)")
+    print(
+        f"[digest] Wrote {index_path} and {archive_path} "
+        f"({len(qualified)} uppdrag, {len(other)} osäkra, {new_count} nya kvalificerade)"
+    )
 
 
-def _new_today_strip(assignments: list[Assignment]) -> str:
-    """Compact list of new-today assignments shown above the ranked grid."""
-    new_ones = [a for a in assignments if a.is_new]
+def _new_today_strip(qualified: list[Assignment]) -> str:
+    """Compact list of qualified new-today assignments shown above the grid."""
+    new_ones = [a for a in qualified if a.is_new]
     if not new_ones:
         return ""
     items = "\n".join(
-        f'    <li><a href="{a.url}" target="_blank" rel="noopener">{a.title}</a>'
+        f'    <li><a href="{escape(a.url, quote=True)}" target="_blank" rel="noopener">'
+        f'{escape(a.title)}</a>'
         f' <span class="strip-score {_score_class(a.relevance_score)}">{_score_text(a.relevance_score)}</span>'
-        f' <span class="strip-src">{a.source}</span></li>'
+        f' <span class="strip-src">{escape(a.source)}</span></li>'
         for a in new_ones
     )
     return f"""<div class="new-strip">
@@ -46,15 +70,49 @@ def _new_today_strip(assignments: list[Assignment]) -> str:
 </div>"""
 
 
-def _build_html(assignments: list[Assignment], today: str, new_count: int, warning: str = "") -> str:
-    cards_html = "\n".join(_card(a) for a in assignments) if assignments else (
-        '<p class="empty">No matching assignments found today.</p>'
+def _section(title: str, subtitle: str, assignments: list[Assignment], empty_text: str,
+             section_class: str = "") -> str:
+    cards = "\n".join(_card(a) for a in assignments) if assignments else (
+        f'<p class="empty">{escape(empty_text)}</p>'
+    )
+    wrapper_class = f"section {section_class}".strip()
+    subtitle_html = (
+        f'<span class="section-sub">{escape(subtitle)}</span>' if subtitle else ""
+    )
+    return f"""<section class="{wrapper_class}">
+  <div class="section-head">
+    <h2>{escape(title)}</h2>
+    <span class="section-count">{len(assignments)}</span>
+    {subtitle_html}
+  </div>
+  <div class="grid">
+    {cards}
+  </div>
+</section>"""
+
+
+def _build_html(qualified: list[Assignment], other: list[Assignment], today: str,
+                new_count: int, warning: str = "") -> str:
+    sources = sorted({a.source for a in qualified + other})
+    source_tags = " ".join(f'<span class="source-tag">{escape(s)}</span>' for s in sources)
+    new_strip = _new_today_strip(qualified)
+    warning_banner = (
+        f'<div class="warning-banner">&#x26A0;&#xFE0F; {escape(warning)}</div>' if warning else ""
     )
 
-    sources = sorted({a.source for a in assignments})
-    source_tags = " ".join(f'<span class="source-tag">{s}</span>' for s in sources)
-    new_strip = _new_today_strip(assignments)
-    warning_banner = f'<div class="warning-banner">&#x26A0;&#xFE0F; {warning}</div>' if warning else ""
+    main_section = _section(
+        "Uppdrag",
+        "konsultuppdrag som matchar profilen",
+        qualified,
+        "Inga kvalificerade uppdrag idag.",
+    )
+    other_section = _section(
+        "Osäkra / anställningar",
+        "filtrerade bort från mailet",
+        other,
+        "Inget hamnade i den här kategorin idag.",
+        section_class="section-muted",
+    )
 
     return f"""<!DOCTYPE html>
 <html lang="sv">
@@ -83,6 +141,7 @@ def _build_html(assignments: list[Assignment], today: str, new_count: int, warni
   header .meta {{ color: var(--muted); font-size: 0.85rem; }}
   .badge {{ background: var(--accent); color: #fff; border-radius: 999px; padding: 2px 10px; font-size: 0.78rem; font-weight: 600; }}
   .badge.new {{ background: var(--new); color: #0f1117; }}
+  .badge.muted {{ background: var(--border); color: var(--muted); }}
   main {{ max-width: 980px; margin: 0 auto; padding: 24px 16px; }}
   .toolbar {{ display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; align-items: center; }}
   .source-tag {{ background: var(--border); color: var(--muted); border-radius: 6px; padding: 3px 10px; font-size: 0.78rem; }}
@@ -94,14 +153,24 @@ def _build_html(assignments: list[Assignment], today: str, new_count: int, warni
   .new-strip-list a:hover {{ color: var(--accent2); }}
   .strip-score {{ font-size: 0.72rem; font-weight: 700; border-radius: 4px; padding: 1px 5px; margin-left: 6px; vertical-align: middle; }}
   .strip-src {{ color: var(--muted); font-size: 0.75rem; margin-left: 6px; }}
+  .section {{ margin-bottom: 36px; }}
+  .section-head {{ display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }}
+  .section-head h2 {{ font-size: 1.05rem; font-weight: 700; color: var(--text); }}
+  .section-count {{ background: var(--border); color: var(--muted); border-radius: 999px; padding: 1px 9px; font-size: 0.75rem; font-weight: 700; }}
+  .section-sub {{ color: var(--muted); font-size: 0.8rem; }}
+  .section-muted {{ border-top: 1px dashed var(--border); padding-top: 24px; }}
+  .section-muted .section-head h2 {{ color: var(--muted); }}
+  .section-muted .card {{ opacity: 0.72; }}
+  .section-muted .card:hover {{ opacity: 1; }}
   .grid {{ display: grid; gap: 16px; }}
-  .card {{ background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: border-color 0.15s; }}
+  .card {{ background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: border-color 0.15s, opacity 0.15s; }}
   .card:hover {{ border-color: var(--accent); }}
   .card.is-new {{ border-left: 3px solid var(--new); background: rgba(67,214,140,0.04); }}
   .card-header {{ display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px; }}
   .card-title {{ font-size: 1rem; font-weight: 600; }}
   .card-title a {{ color: var(--text); text-decoration: none; }}
   .card-title a:hover {{ color: var(--accent2); }}
+  .reason {{ background: rgba(139,143,168,0.15); color: var(--muted); border: 1px solid var(--border); border-radius: 999px; padding: 1px 9px; font-size: 0.72rem; font-weight: 600; vertical-align: middle; margin-left: 6px; white-space: nowrap; }}
   .score {{ font-size: 0.78rem; font-weight: 700; border-radius: 6px; padding: 2px 8px; white-space: nowrap; }}
   .score-high {{ background: rgba(67,214,140,0.15); color: var(--score-high); }}
   .score-mid {{ background: rgba(255,215,64,0.15); color: var(--score-mid); }}
@@ -112,7 +181,7 @@ def _build_html(assignments: list[Assignment], today: str, new_count: int, warni
   .card-meta span::before {{ content: ''; }}
   .card-summary {{ font-size: 0.88rem; color: #bbbdd6; margin-top: 6px; }}
   .new-pill {{ background: var(--new); color: #0f1117; border-radius: 999px; padding: 1px 8px; font-size: 0.72rem; font-weight: 700; vertical-align: middle; margin-left: 6px; }}
-  .empty {{ color: var(--muted); text-align: center; padding: 60px 0; }}
+  .empty {{ color: var(--muted); text-align: center; padding: 40px 0; }}
   footer {{ text-align: center; color: var(--muted); font-size: 0.78rem; padding: 32px 16px; border-top: 1px solid var(--border); margin-top: 32px; }}
   @media (max-width: 600px) {{ header {{ padding: 14px 16px; }} }}
 </style>
@@ -121,8 +190,9 @@ def _build_html(assignments: list[Assignment], today: str, new_count: int, warni
 <header>
   <h1>&#x1F4CB; Contract Assignments</h1>
   <span class="meta">Stockholm · Data Engineering / BI / Analytics</span>
-  <span class="badge">{len(assignments)} results</span>
-  {'<span class="badge new">' + str(new_count) + ' new</span>' if new_count else ''}
+  <span class="badge">{len(qualified)} uppdrag</span>
+  <span class="badge muted">{len(other)} osäkra</span>
+  {'<span class="badge new">' + str(new_count) + ' nya</span>' if new_count else ''}
   <span class="meta" style="margin-left:auto">{today}</span>
 </header>
 <main>
@@ -133,9 +203,8 @@ def _build_html(assignments: list[Assignment], today: str, new_count: int, warni
   </div>
   {warning_banner}
   {new_strip}
-  <div class="grid">
-    {cards_html}
-  </div>
+  {main_section}
+  {other_section}
 </main>
 <footer>Generated {today} · <a href="https://github.com" style="color:var(--muted)">NI-Contracts</a></footer>
 </body>
@@ -158,24 +227,27 @@ def _score_text(score: int) -> str:
 
 def _card(a: Assignment) -> str:
     new_pill = '<span class="new-pill">NEW</span>' if a.is_new else ""
+    reason = disqualify_reason(a)
+    reason_badge = f'<span class="reason">{escape(reason)}</span>' if reason else ""
     tooltip = "" if a.relevance_score else ' title="Ej poängsatt"'
     score_label = (
         f'<span class="score {_score_class(a.relevance_score)}"{tooltip}>'
         f'{_score_text(a.relevance_score)}</span>'
     )
-    summary_block = f'<div class="card-summary">{a.summary}</div>' if a.summary else ""
+    summary = a.summary or ""
+    summary_block = f'<div class="card-summary">{escape(summary)}</div>' if summary else ""
     card_class = "card is-new" if a.is_new else "card"
 
     return f"""<div class="{card_class}">
   <div class="card-header">
-    <div class="card-title"><a href="{a.url}" target="_blank" rel="noopener">{a.title}</a>{new_pill}</div>
+    <div class="card-title"><a href="{escape(a.url, quote=True)}" target="_blank" rel="noopener">{escape(a.title)}</a>{new_pill}{reason_badge}</div>
     {score_label}
   </div>
   <div class="card-meta">
-    <span>🏢 {a.company}</span>
-    <span>📍 {a.location}</span>
-    <span>🔗 {a.source}</span>
-    <span>🗓 {a.date_found}</span>
+    <span>🏢 {escape(a.company)}</span>
+    <span>📍 {escape(a.location)}</span>
+    <span>🔗 {escape(a.source)}</span>
+    <span>🗓 {escape(a.date_found)}</span>
   </div>
   {summary_block}
 </div>"""

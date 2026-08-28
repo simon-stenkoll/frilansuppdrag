@@ -61,6 +61,7 @@ SMTP_HOST_DEFAULT = "smtp.gmail.com"
 SMTP_PORT_DEFAULT = 587            # 587 = STARTTLS, 465 = implicit TLS
 EMAIL_SUBJECT_PREFIX = "Konsultuppdrag"
 EMAIL_MAX_ITEMS = 40               # cap assignments listed in the mail body
+EMAIL_MIN_SCORE = 0                # 0 = no score threshold; >0 filters out lower-scored items
 NOTIFY_WHEN_EMPTY = True           # send a short "no new assignments" message
 # Fallback published-digest URL used when not running in GitHub Actions
 PAGE_URL_FALLBACK = ""
