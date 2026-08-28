@@ -65,7 +65,7 @@ allt men delat i "Uppdrag" och "Osäkra / anställningar".
 
 - **Python 3.11+**. **HTTP**: `httpx` (async) för scraping. **HTML**: `BeautifulSoup4`.
   **JS-rendering**: Playwright (chromium). **LLM**: Google Gemini via det OpenAI-kompatibla
-  endpointet, modell `gemini-2.5-flash-lite` (GitHub Models pensionerades 2026-07-30 och
+  endpointet, modell `gemini-3.5-flash-lite` (GitHub Models pensionerades 2026-07-30 och
   svarar 410; byt aldrig tillbaka).
 - **Scraper-interface**: varje scraper exponerar `async def scrape() -> list[Assignment]`.
 - **Felisolering**: en scraper som kastar exception måste fångas i orkestreraren — ett fel får

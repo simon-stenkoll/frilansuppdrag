@@ -36,10 +36,11 @@ LOCATION_KEYWORDS = ["stockholm", "sthlm", "remote", "hybrid"]
 
 # LLM provider: Google Gemini via the OpenAI-compatible endpoint.
 # (GitHub Models was fully retired on 2026-07-30 and returns HTTP 410.)
-# Free tier for gemini-2.5-flash-lite: ~15 requests/min and ~1000 requests/day,
+# Free tier for the flash-lite models: ~15 requests/min and ~1000 requests/day,
 # which the 4 s request delay and LLM_RUN_BUDGET stay well inside.
 # API key: env var GEMINI_API_KEY (create one at https://aistudio.google.com/apikey).
-LLM_MODEL = "gemini-2.5-flash-lite"
+# Note: gemini-2.5-flash-lite is closed to new users (404 with a pointer to 3.5).
+LLM_MODEL = "gemini-3.5-flash-lite"
 LLM_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/openai/"
 
 # LLM scoring behaviour
