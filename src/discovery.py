@@ -2,8 +2,7 @@
 
 Reads Anna Leijon's curated broker list, then digs into each broker's site to
 find a page that actually lists assignments. The result is written to
-state/portals.json, which the nightly run (src/scrapers/broker_portals.py) reads
-so it can focus only on portals that show assignments.
+state/portals.json, which records the portals that show assignments.
 
 Run occasionally / manually — it is heavy (renders ~130 sites with a browser):
 
@@ -31,7 +30,7 @@ from src.config import (
     DISCOVERY_CONCURRENCY,
 )
 from src.scrapers.utils import make_client, BrowserSession, clean_text, polite_delay
-from src.scrapers.broker_portals import _extract_from_soup, _base_url
+from src.scrapers.legacy_extract import _extract_from_soup, _base_url
 
 
 # ─── ANNA LEIJON BROKER LIST ─────────────────────────────────────────────────

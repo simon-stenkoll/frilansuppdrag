@@ -3,22 +3,17 @@
 import asyncio
 import os
 import traceback
-from src.scrapers import jobtech, ework, brainville, broker_portals, indeed, linkedin_google
+from src.scrapers import jobtech, broker_apis
 from src.dedup import deduplicate
 from src.state import flag_new, persist_seen
 from src.classifier import classify
 from src.digest import generate
 from src.notify import send_email
 from src.config import DISABLED_SCRAPERS, PAGE_URL_FALLBACK
-from src.scrapers.utils import is_contract
 
 SCRAPERS = [
     ("Platsbanken (JobTech)", jobtech.scrape),
-    ("Ework", ework.scrape),
-    ("Brainville", brainville.scrape),
-    ("Broker Portals", broker_portals.scrape),
-    ("Indeed", indeed.scrape),
-    ("LinkedIn (Google)", linkedin_google.scrape),
+    ("Broker APIs", broker_apis.scrape),
 ]
 
 
@@ -56,15 +51,6 @@ async def main():
 
     deduped = deduplicate(raw)
     print(f"{len(deduped)} after deduplication")
-
-    # The keyword contract filter no longer gates the pipeline, the LLM classifier does.
-    # Keep the statistic during the transition so the two can be compared.
-    keyword_contract = sum(
-        1 for a in deduped
-        if is_contract(a.title, a.description, source=a.source)
-    )
-    print(f"[contract-filter] statistik: {keyword_contract} av {len(deduped)} uppdrag "
-          "hade passerat det gamla nyckelordsfiltret (filtrerar inte längre)")
 
     marked = flag_new(deduped)
     new_count = sum(1 for a in marked if a.is_new)

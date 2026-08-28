@@ -49,6 +49,9 @@ CLASSIFY_STATE_FILE = "state/classifications.json"  # cached url -> classificati
 CLASSIFY_MAX_AGE_DAYS = 90        # drop cached classifications older than this
 CLASSIFIER_PROMPT_VERSION = 1     # bump to invalidate every cached classification
 
+# Seen-state (src/state.py): url -> date last seen
+SEEN_MAX_AGE_DAYS = 180           # drop seen entries not observed for this long
+
 # Email notification settings (SMTP)
 EMAIL_TO = "simon.stenlund@northintelligence.se"  # recipient of the daily digest
 EMAIL_TO_ENV = "EMAIL_TO"          # optional override of the recipient
@@ -95,70 +98,17 @@ DISCOVERY_CONCURRENCY = 4
 PLAYWRIGHT_TIMEOUT_MS = 25000
 
 # Temporarily disabled top-level scrapers due repeatable blocking/auth walls.
-# Re-enable when source access is stable again.
-DISABLED_SCRAPERS = {
-    "Ework",
-    "Brainville",
-    "Indeed",
-    "LinkedIn (Google)",
-}
+# Re-enable when source access is stable again. Empty for now: the scrapers that
+# were parked here (Ework, Brainville, Indeed, LinkedIn) are removed.
+DISABLED_SCRAPERS: set[str] = set()
 
 # Temporarily disabled broker portals due repeatable HTTP blocking/errors.
 DISABLED_BROKER_PORTALS = {
     "Interim Marketing",  # 404
 }
 
-# Indeed search config
-INDEED_BASE_URL = "https://se.indeed.com"
-INDEED_SEARCH_QUERIES = [
-    "data+engineer+konsult",
-    "BI+developer+konsult",
-    "data+analytics+konsult",
-    "microsoft+fabric+konsult",
-]
-INDEED_LOCATION = "Stockholm"
-
-# Ework search config
-EWORK_SEARCH_URL = "https://www.ework.se/uppdrag"
-EWORK_SEARCH_PARAMS = {"query": "data", "location": "Stockholm"}
-
-# Brainville search config
-BRAINVILLE_SEARCH_URL = "https://www.brainville.com/assignments"
-
 # Cinode Market search config
 CINODE_SEARCH_URL = "https://app.cinode.com/market/assignments"
-
-# Keywords that indicate a freelance / contract assignment (vs permanent employment)
-CONTRACT_KEYWORDS = [
-    "konsultuppdrag",
-    "uppdrag",
-    "freelance",
-    "frilans",
-    "frilansuppdrag",
-    "contract",
-    "contractor",
-    "interim",
-    "interimsuppdrag",
-    "underkonsult",
-    "konsult",
-    "kontrakts",
-    "uppdragsperiod",
-    "uppdragsstart",
-    "timpris",
-]
-
-# Keywords that indicate a permanent job (used to exclude non-contract listings)
-PERMANENT_KEYWORDS = [
-    "tillsvidareanställning",
-    "fast anställning",
-    "fast tjänst",
-    "permanent",
-    "anställning",
-    "provanställning",
-    "rekrytering",
-    "heltidstjänst",
-    "tills vidare",
-]
 
 # Broker portals with verified public assignment pages
 # Source: scan of https://annaleijon.se/lista-pa-konsultmaklare-i-stockholm.html (2026-05-27)
@@ -324,12 +274,4 @@ BROKER_PORTALS = [
         "url": "https://datakonsulter.info/WiseDki/StartController?assignments=on",
         "search_param": "q",
     },
-]
-
-# Google search for LinkedIn jobs (via scraping search results)
-GOOGLE_LINKEDIN_QUERIES = [
-    'site:linkedin.com/jobs "data engineer" "Stockholm"',
-    'site:linkedin.com/jobs "BI developer" "Stockholm"',
-    'site:linkedin.com/jobs "Microsoft Fabric" "Stockholm"',
-    'site:linkedin.com/jobs "data analytics" "Stockholm" konsult',
 ]

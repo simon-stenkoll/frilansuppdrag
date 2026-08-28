@@ -1,12 +1,13 @@
 """Scraper using JobTech Dev API (Swedish government, free, no auth).
 
 Covers all jobs posted via Arbetsförmedlingen / Platsbanken.
-Filters for freelance / contract assignments only.
+Filters on keyword relevance and the ad's own employment-type metadata; the LLM
+classifier decides whether a listing is a real assignment.
 """
 
 import httpx
 from src.models import Assignment
-from src.scrapers.utils import clean_text, polite_delay, is_contract, has_contract_signal
+from src.scrapers.utils import clean_text, polite_delay
 from src.config import KEYWORDS
 
 API_URL = "https://jobsearch.api.jobtechdev.se/search"
@@ -70,19 +71,16 @@ async def scrape() -> list[Assignment]:
                 if not any(kw.lower() in combined for kw in KEYWORDS):
                     continue
 
-                # Structured guard from JobTech metadata: skip obvious permanent listings
-                # unless contract wording is explicit in title/description.
+                # Structured guard from JobTech metadata: skip listings the ad itself
+                # labels as regular employment. The keyword contract filter is gone,
+                # the LLM classifier decides the rest.
                 employment_label = clean_text(
                     (hit.get("employment_type", {}) or {}).get("label", "")
                 ).lower()
                 if employment_label in {
                     "vanlig anställning",
                     "tillsvidareanställning (inkl. eventuell provanställning)",
-                } and not has_contract_signal(headline, description_text):
-                    continue
-
-                # Filter: only keep freelance / contract assignments
-                if not is_contract(headline, description_text, source="Platsbanken"):
+                }:
                     continue
 
                 employer = hit.get("employer", {}).get("name", "")
