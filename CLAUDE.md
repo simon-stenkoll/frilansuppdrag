@@ -36,10 +36,14 @@ allt men delat i "Uppdrag" och "Osäkra / anställningar".
   beskrivning hämtas per uppdrag från detaljendpointen efter land-, ort- och nyckelordsfilter
 - `src/scrapers/utils.py`: delade filter (`is_relevant`, `is_in_stockholm`),
   `make_client()` (httpx) och `fetch_rendered()` (Playwright för JS-portaler)
-- `src/scrapers/legacy_extract.py`: generisk HTML-extrahering som BARA används av
-  `discovery.py`, tas bort när discovery byggs om
-- `src/discovery.py` — engångs/sällan-körd djupskanning av Anna Leijons mäklarlista som genererar
-  `state/portals.json`
+- `src/discovery.py`: djupskanning av Anna Leijons mäklarlista som genererar
+  `state/portals.json`. Kandidatsidor bedöms med samma LLM-extrahering som nattkörningen
+  (`portal_llm.reduce_html` + `extract_listings_llm` + `validate_items`): minst ett validerat
+  uppdrag ger status "working", 0 items men listningssignaler ger "listing", annars "empty".
+  Den billiga `listing_score`-heuristiken är gratis försortering, bara sidor med signaler
+  kostar ett LLM-anrop. Egen budget `DISCOVERY_LLM_BUDGET`; portaler som inte hann få sin
+  probe behåller sin tidigare status i stället för att nedgraderas. `--limit N` kör bara de
+  N första mäklarna. Körs månadsvis av `.github/workflows/discovery.yml`
 - `src/classifier.py`: LLM-klassificerare (employment_type, role_match, location_ok, status,
   score, summary) med delad `LlmBudget` per körning
 - `src/classify_cache.py`: cache i `state/classifications.json`, nyckel på url + content_hash +
@@ -96,5 +100,6 @@ python main.py              # full körning → docs/ + e-post
 
 - `classify()` och `send_email()` failar tyst (loggar) om token/SMTP-uppgifter saknas: körningen
   fortsätter ändå och digesten genereras.
-- Kör inte `src/discovery.py` i den nattliga workflowen; den är tung (Playwright mot ~130 sajter).
-  Nattliga körningen läser bara `state/portals.json`.
+- Kör inte `src/discovery.py` i den nattliga workflowen; den är tung (Playwright plus LLM-probe
+  mot ~130 sajter). Den har en egen månadsworkflow, "Monthly Portal Discovery", som kör den
+  första i månaden och committar `state/portals.json`. Nattliga körningen läser bara filen.

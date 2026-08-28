@@ -100,6 +100,8 @@ ASSIGNMENT_NAV_KEYWORDS = [
 ]
 # Max candidate listing pages to follow per broker during deep discovery.
 DISCOVERY_MAX_LISTING_LINKS = 6
+# Max LLM probe calls per discovery run (own budget, separate from the nightly run).
+DISCOVERY_LLM_BUDGET = 80
 # How many brokers to investigate concurrently.
 DISCOVERY_CONCURRENCY = 4
 # Headless-browser navigation timeout (milliseconds).
