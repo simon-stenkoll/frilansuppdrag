@@ -23,8 +23,13 @@ allt men delat i "Uppdrag" och "Osäkra / anställningar".
 - `src/models.py` — `Assignment`-dataclass (det enda objektet som flödar genom pipelinen)
 - `src/scrapers/`: en modul per källa; varje exponerar `async def scrape() -> list[Assignment]`.
   Källor: `jobtech.py` (Platsbanken/JobTech API), `broker_apis.py` (A Society, Upgraded
-  People, KeyMan), `cinode_market.py` och `verama.py`. De handskrivna HTML-parsarna i
-  `broker_portals.py` gav nästan inget och är borttagna.
+  People, KeyMan), `portal_llm.py`, `cinode_market.py` och `verama.py`. De handskrivna
+  HTML-parsarna i `broker_portals.py` gav nästan inget och är borttagna.
+- `src/scrapers/portal_llm.py`: hämtar mäklarportalerna i `state/portals.json`, reducerar
+  HTML till text och låter LLM:en extrahera uppdragen som JSON. Sidhash-cache i
+  `state/portal_pages.json` gör att oförändrade sidor inte kostar något LLM-anrop, och
+  anropen begränsas av `PORTAL_LLM_MAX_CALLS` plus den delade `LlmBudget` som `main.py`
+  skickar in med `set_budget()`
 - `src/scrapers/cinode_market.py`: Cinode Market (market.cinode.com), publik serverrenderad
   HTML, cursor-paginering via `#load-more-button`, detaljsida hämtas bara för relevanta kort
 - `src/scrapers/verama.py`: Verama (Ework Groups marknadsplats), öppet JSON-API utan auth,
@@ -49,6 +54,8 @@ allt men delat i "Uppdrag" och "Osäkra / anställningar".
   läses fortfarande och konverteras vid första körningen
 - `state/classifications.json`: cachade LLM-klassificeringar (spåras i git)
 - `state/portals.json` — upptäckta/verifierade mäklarportaler (genereras av discovery)
+- `state/portal_pages.json`: sidhash + senast extraherade uppdrag per portal-listningssida
+  (spåras i git)
 
 ## Konventioner
 
