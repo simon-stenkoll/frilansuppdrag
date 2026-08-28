@@ -42,8 +42,12 @@ GITHUB_MODELS_ENDPOINT = "https://models.github.ai/inference"
 LLM_MAX_RETRIES = 3        # attempts per assignment before giving up
 LLM_RETRY_BACKOFF = 5.0    # seconds before first retry; doubles per retry
 LLM_REQUEST_DELAY = 4.0    # pause between calls (GitHub Models free tier is ~15 req/min)
-SCORES_STATE_FILE = "state/scores.json"  # cached url -> {score, summary, scored_at}
-SCORES_MAX_AGE_DAYS = 90   # re-score assignments whose cached score is older than this
+LLM_RUN_BUDGET = 120       # max LLM calls per pipeline run, shared by all LLM consumers
+
+# LLM classification (src/classifier.py + src/classify_cache.py)
+CLASSIFY_STATE_FILE = "state/classifications.json"  # cached url -> classification record
+CLASSIFY_MAX_AGE_DAYS = 90        # drop cached classifications older than this
+CLASSIFIER_PROMPT_VERSION = 1     # bump to invalidate every cached classification
 
 # Email notification settings (SMTP)
 EMAIL_TO = "simon.stenlund@northintelligence.se"  # recipient of the daily digest

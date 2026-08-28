@@ -1,12 +1,12 @@
-"""Main orchestrator — runs all scrapers, deduplicates, summarizes, generates digest."""
+"""Main orchestrator: runs all scrapers, deduplicates, classifies, generates digest."""
 
 import asyncio
 import os
 import traceback
 from src.scrapers import jobtech, ework, brainville, broker_portals, indeed, linkedin_google
 from src.dedup import deduplicate
-from src.state import mark_new
-from src.summarizer import summarize
+from src.state import flag_new, persist_seen
+from src.classifier import classify
 from src.digest import generate
 from src.notify import send_email
 from src.config import DISABLED_SCRAPERS, PAGE_URL_FALLBACK
@@ -57,31 +57,36 @@ async def main():
     deduped = deduplicate(raw)
     print(f"{len(deduped)} after deduplication")
 
-    contract_only = [
-        a for a in deduped
+    # The keyword contract filter no longer gates the pipeline, the LLM classifier does.
+    # Keep the statistic during the transition so the two can be compared.
+    keyword_contract = sum(
+        1 for a in deduped
         if is_contract(a.title, a.description, source=a.source)
-    ]
-    print(f"[contract-filter] {len(deduped)} total -> {len(contract_only)} contract/freelance")
+    )
+    print(f"[contract-filter] statistik: {keyword_contract} av {len(deduped)} uppdrag "
+          "hade passerat det gamla nyckelordsfiltret (filtrerar inte längre)")
 
-    marked = mark_new(contract_only)
+    marked = flag_new(deduped)
     new_count = sum(1 for a in marked if a.is_new)
     print(f"[state] {new_count} new assignments")
 
-    print(f"[summarizer] Summarizing {len(marked)} assignments...")
-    summarized = summarize(marked)
+    print(f"[classifier] Klassificerar {len(marked)} uppdrag...")
+    classified = classify(marked)
 
-    unscored = sum(1 for a in summarized if not a.relevance_score)
+    persist_seen(classified)
+
+    unclassified = sum(1 for a in classified if not a.classified)
     warning = ""
-    if summarized and unscored > len(summarized) / 2:
+    if classified and unclassified > len(classified) / 2:
         warning = (
-            f"LLM-poängsättningen misslyckades för {unscored} av {len(summarized)} uppdrag "
-            "— kontrollera GITHUB_MODELS_TOKEN och ratelimit."
+            f"LLM-klassificeringen misslyckades för {unclassified} av {len(classified)} "
+            "uppdrag, kontrollera GITHUB_MODELS_TOKEN, budget och ratelimit."
         )
         print(f"[health] WARNING: {warning}")
 
-    generate(summarized, warning=warning)
+    generate(classified, warning=warning)
 
-    send_email(summarized, page_url=_page_url(), warning=warning)
+    send_email(classified, page_url=_page_url(), warning=warning)
     print("\n✅ Done")
 
 
