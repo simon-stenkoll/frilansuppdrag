@@ -28,8 +28,8 @@ from src.classify_cache import (
     url_key,
 )
 from src.config import (
-    GITHUB_MODELS_MODEL,
-    GITHUB_MODELS_ENDPOINT,
+    LLM_MODEL,
+    LLM_ENDPOINT,
     LLM_MAX_RETRIES,
     LLM_RETRY_BACKOFF,
     LLM_REQUEST_DELAY,
@@ -76,10 +76,10 @@ class LlmBudget:
 
 
 def _client() -> OpenAI | None:
-    token = os.environ.get("GITHUB_MODELS_TOKEN") or os.environ.get("GITHUB_TOKEN")
-    if not token:
+    api_key = os.environ.get("GEMINI_API_KEY")
+    if not api_key:
         return None
-    return OpenAI(base_url=GITHUB_MODELS_ENDPOINT, api_key=token)
+    return OpenAI(base_url=LLM_ENDPOINT, api_key=api_key)
 
 
 def build_prompt(a: Assignment, consultant_cv_profile: str) -> str:
@@ -134,8 +134,14 @@ def build_prompt(a: Assignment, consultant_cv_profile: str) -> str:
 
 def validate_result(raw: str) -> dict[str, Any] | None:
     """Parse and field-validate a model answer. Returns None when anything is off."""
+    text = raw.strip()
+    # Some models wrap the JSON in markdown fences despite response_format.
+    if text.startswith("```"):
+        text = text.strip("`")
+        if text.startswith("json"):
+            text = text[4:]
     try:
-        data = json.loads(raw)
+        data = json.loads(text)
     except Exception:
         return None
     return validate_fields(data)
@@ -207,7 +213,7 @@ def _call_llm(client: OpenAI, prompt: str) -> str:
             time.sleep(LLM_RETRY_BACKOFF * (2 ** (attempt - 1)))
         try:
             resp = client.chat.completions.create(
-                model=GITHUB_MODELS_MODEL,
+                model=LLM_MODEL,
                 messages=[{"role": "user", "content": prompt}],
                 max_tokens=250,
                 temperature=0.1,
@@ -259,7 +265,7 @@ def classify(
     cache = load_classifications()
     client = _client()
     if client is None:
-        print("[classify] GITHUB_MODELS_TOKEN saknas, kör bara cache och statuskoll")
+        print("[classify] GEMINI_API_KEY saknas, kör bara cache och statuskoll")
 
     consultant_cv_profile = get_consultant_cv_profile() if client is not None else ""
 

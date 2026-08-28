@@ -204,8 +204,8 @@ class LlmProbe:
     """Judges a candidate page with the nightly run's LLM extraction.
 
     The calls are serialised behind one lock (the OpenAI SDK is synchronous and
-    GitHub Models rate limits hard), share one LlmBudget and stop for the rest of
-    the run as soon as the budget, the token or the model itself gives out.
+    the Gemini free tier rate limits hard), share one LlmBudget and stop for the
+    rest of the run as soon as the budget, the key or the model itself gives out.
     """
 
     def __init__(self, budget: LlmBudget) -> None:
@@ -216,7 +216,7 @@ class LlmProbe:
         self.deferred = 0
         self._lock = asyncio.Lock()
         if self.client is None:
-            print("[discovery] GITHUB_MODELS_TOKEN/GITHUB_TOKEN saknas: kör bara den "
+            print("[discovery] GEMINI_API_KEY saknas: kör bara den "
                   "billiga heuristiken, portaler som kräver LLM-probe behåller sin "
                   "tidigare status\n")
 

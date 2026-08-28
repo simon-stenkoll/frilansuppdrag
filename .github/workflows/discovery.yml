@@ -9,7 +9,6 @@ on:
 
 permissions:
   contents: write  # needed to commit state/portals.json
-  models: read     # lets the built-in GITHUB_TOKEN call GitHub Models
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -38,8 +37,8 @@ jobs:
 
       - name: Run discovery
         env:
-          # Built-in token (never expires, no rotation), requires `models: read` above
-          GITHUB_MODELS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Gemini via the OpenAI-compatible endpoint (GitHub Models retired 2026-07-30)
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python -m src.discovery
 
       - name: Commit portals

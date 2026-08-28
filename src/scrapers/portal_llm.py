@@ -25,7 +25,7 @@ from openai import AuthenticationError, OpenAI, PermissionDeniedError
 from src.classifier import LlmBudget, _client
 from src.config import (
     DISABLED_BROKER_PORTALS,
-    GITHUB_MODELS_MODEL,
+    LLM_MODEL,
     LLM_REQUEST_DELAY,
     PORTAL_ATS_DOMAINS,
     PORTAL_LLM_MAX_CALLS,
@@ -257,13 +257,18 @@ def build_prompt(portal_name: str, reduced_text: str) -> str:
 def extract_listings_llm(client: OpenAI, portal_name: str, reduced_text: str) -> list[dict]:
     """One chat completion per page. Returns the raw, unvalidated items."""
     resp = client.chat.completions.create(
-        model=GITHUB_MODELS_MODEL,
+        model=LLM_MODEL,
         messages=[{"role": "user", "content": build_prompt(portal_name, reduced_text)}],
         max_tokens=1500,
         temperature=0.1,
         response_format={"type": "json_object"},
     )
-    raw = resp.choices[0].message.content or ""
+    raw = (resp.choices[0].message.content or "").strip()
+    # Some models wrap the JSON in markdown fences despite response_format.
+    if raw.startswith("```"):
+        raw = raw.strip("`")
+        if raw.startswith("json"):
+            raw = raw[4:]
     try:
         data = json.loads(raw)
     except Exception:
@@ -297,7 +302,7 @@ async def scrape() -> list[Assignment]:
     cache = load_page_cache()
     llm = _client()
     if llm is None:
-        print(f"[{SOURCE_LABEL}] GITHUB_MODELS_TOKEN saknas, kör bara sidcachen")
+        print(f"[{SOURCE_LABEL}] GEMINI_API_KEY saknas, kör bara sidcachen")
 
     budget = BUDGET if BUDGET is not None else LlmBudget()
     browser: BrowserSession | None = None

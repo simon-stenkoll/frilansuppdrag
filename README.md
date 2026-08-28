@@ -45,7 +45,8 @@ flowchart TD
 
 ## Klassificering och routing
 
-Ett LLM-anrop per annons (gpt-4o-mini via GitHub Models, gratis i CI) returnerar:
+Ett LLM-anrop per annons (Gemini Flash-Lite via Googles OpenAI-kompatibla endpoint,
+gratis-tier) returnerar:
 
 | Fält | Värden | Betydelse |
 |---|---|---|
@@ -119,9 +120,10 @@ Två workflows:
 |---|---|
 | `SMTP_USER` | Gmail-adressen som skickar mailet |
 | `SMTP_PASSWORD` | Gmail **app-lösenord** (16 tecken), inte kontolösenordet |
+| `GEMINI_API_KEY` | Gratis nyckel från <https://aistudio.google.com/apikey> |
 
-> LLM-anropen använder workflowens inbyggda `GITHUB_TOKEN` (permission `models: read`),
-> så någon egen PAT behövs inte i CI.
+> LLM-anropen går till Google Gemini via det OpenAI-kompatibla endpointet.
+> GitHub Models pensionerades 2026-07-30 och kan inte längre användas.
 
 ### 2. Skapa Gmail-app-lösenord
 
@@ -169,9 +171,8 @@ python -m venv .venv
 pip install -r requirements.txt
 python -m playwright install chromium      # för JS-tunga mäklarportaler
 
-# OBS: PAT:en måste vara fine-grained med behörigheten "Models: read",
-# annars svarar GitHub Models 401.
-$env:GITHUB_MODELS_TOKEN = "<din_token>"
+# Gratis nyckel skapas på https://aistudio.google.com/apikey
+$env:GEMINI_API_KEY = "<din_nyckel>"
 $env:SMTP_USER = "<din_gmail>"          # valfritt lokalt
 $env:SMTP_PASSWORD = "<app_losenord>"   # valfritt lokalt
 
@@ -229,7 +230,7 @@ Allt i `src/config.py`:
 - **`KEYWORDS`**: tekniktermer som fungerar som billigt prefilter före LLM-klassificeringen
 - **`LOCATION_KEYWORDS`**: stockholm, remote, hybrid
 - **`LLM_RUN_BUDGET`** / **`PORTAL_LLM_MAX_CALLS`** / **`DISCOVERY_LLM_BUDGET`**: anropstak
-  som håller körningarna inom GitHub Models gratisnivå
+  som håller körningarna inom Gemini-gratisnivån (~15 anrop/min, ~1000/dag)
 - **`CLASSIFIER_PROMPT_VERSION`**: höj för att medvetet ogiltigförklara klassificeringscachen
 - **`EMAIL_MIN_SCORE`**: poängtröskel för mailet (0 = av)
 - **`SEEN_MAX_AGE_DAYS`** / **`CLASSIFY_MAX_AGE_DAYS`**: rensning av statefiler
