@@ -45,4 +45,6 @@ def disqualify_reason(a: Assignment) -> str:
         return "Angränsande roll"
     if a.location_ok is False:
         return "Fel ort"
+    if a.status == "unknown":
+        return "Oklar status"
     return ""
