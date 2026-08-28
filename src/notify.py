@@ -1,7 +1,8 @@
 """Emails the day's new assignments over SMTP.
 
-Only assignments flagged is_new are included. Config/SMTP failures are logged
-and swallowed so a notification problem never breaks the pipeline.
+Only new assignments that pass src/routing.is_qualified are included; the rest
+are left to the web digest. Config/SMTP failures are logged and swallowed so a
+notification problem never breaks the pipeline.
 
 Required env vars (see README): SMTP_USER, SMTP_PASSWORD. SMTP_HOST, SMTP_PORT,
 EMAIL_FROM and EMAIL_TO are optional and fall back to the values in config.py.
@@ -18,6 +19,7 @@ from html import escape
 from src.config import (
     EMAIL_FROM_ENV,
     EMAIL_MAX_ITEMS,
+    EMAIL_MIN_SCORE,
     EMAIL_SUBJECT_PREFIX,
     EMAIL_TO,
     EMAIL_TO_ENV,
@@ -31,6 +33,7 @@ from src.config import (
     SMTP_USER_ENV,
 )
 from src.models import Assignment
+from src.routing import is_qualified
 
 # Score bucket colors (match the digest's)
 _COLOR_HIGH = "#1f9d55"  # green  (>=7)
@@ -53,6 +56,25 @@ class _SmtpConfig:
     @property
     def ok(self) -> bool:
         return bool(self.user and self.password and self.recipient)
+
+
+def select_for_email(assignments: list[Assignment]) -> list[Assignment]:
+    """New assignments that qualify for the mail, best score first.
+
+    Pure function with no SMTP involved, so the routing can be tested directly.
+    EMAIL_MIN_SCORE only applies when it is set above 0.
+    """
+    selected = [a for a in assignments if a.is_new and is_qualified(a)]
+    if EMAIL_MIN_SCORE > 0:
+        selected = [a for a in selected if a.relevance_score >= EMAIL_MIN_SCORE]
+    selected.sort(key=lambda x: x.relevance_score, reverse=True)
+    return selected
+
+
+def count_other_new(assignments: list[Assignment], selected: list[Assignment]) -> int:
+    """How many new assignments were left out of the mail."""
+    selected_urls = {a.url for a in selected}
+    return sum(1 for a in assignments if a.is_new and a.url not in selected_urls)
 
 
 def _color(score: int) -> str:
@@ -99,7 +121,8 @@ def _card_html(a: Assignment) -> str:
 <tr><td style="height:10px;line-height:10px">&nbsp;</td></tr>"""
 
 
-def _build_html(new: list[Assignment], today: str, page_url: str, warning: str) -> str:
+def _build_html(new: list[Assignment], today: str, page_url: str, warning: str,
+                other_new: int = 0) -> str:
     warning_html = (
         f'<div style="background:#fffbeb;border:1px solid #fcd34d;color:#92400e;'
         f'border-radius:8px;padding:12px 14px;font-size:14px;margin-bottom:18px">'
@@ -111,6 +134,17 @@ def _build_html(new: list[Assignment], today: str, page_url: str, warning: str) 
         f'<p style="font-size:13px;color:#6b7280;margin:18px 0 0">'
         f'Hela digesten: <a href="{escape(page_url, quote=True)}" style="color:#4f46e5">{escape(page_url)}</a></p>'
         if page_url
+        else ""
+    )
+    other_link = (
+        f'<a href="{escape(page_url, quote=True)}" style="color:#4f46e5">se webbsidan</a>'
+        if page_url
+        else "se webbsidan"
+    )
+    other_html = (
+        f'<p style="font-size:13px;color:#6b7280;margin:14px 0 0">'
+        f"Dessutom {other_new} nya i kategorin osäkra/anställningar, {other_link}.</p>"
+        if other_new
         else ""
     )
 
@@ -137,18 +171,20 @@ def _build_html(new: list[Assignment], today: str, page_url: str, warning: str) 
     <div style="color:#6b7280;font-size:13px;margin-bottom:18px">Stockholm &middot; Data Engineering / BI / Analytics &middot; {escape(today)}</div>
     {warning_html}
     {body}
+    {other_html}
     {page_link}
   </div>
 </body>
 </html>"""
 
 
-def _build_text(new: list[Assignment], today: str, page_url: str, warning: str) -> str:
+def _build_text(new: list[Assignment], today: str, page_url: str, warning: str,
+                other_new: int = 0) -> str:
     lines = []
     if warning:
         lines.append(f"VARNING: {warning}\n")
     if new:
-        lines.append(f"Dagens nya konsultuppdrag ({len(new)} st) — {today}\n")
+        lines.append(f"Dagens nya konsultuppdrag ({len(new)} st), {today}\n")
         for a in new[:EMAIL_MAX_ITEMS]:
             meta = " · ".join(p for p in (a.company, a.location, a.source) if p)
             lines.append(f"[{_score_text(a.relevance_score)}] {a.title}")
@@ -157,7 +193,11 @@ def _build_text(new: list[Assignment], today: str, page_url: str, warning: str) 
         if len(new) > EMAIL_MAX_ITEMS:
             lines.append(f"… och {len(new) - EMAIL_MAX_ITEMS} till (se hela digesten).\n")
     else:
-        lines.append(f"Inga nya konsultuppdrag idag — {today}\n")
+        lines.append(f"Inga nya konsultuppdrag idag, {today}\n")
+    if other_new:
+        lines.append(
+            f"Dessutom {other_new} nya i kategorin osäkra/anställningar, se webbsidan.\n"
+        )
     if page_url:
         lines.append(f"Hela digesten: {page_url}")
     return "\n".join(lines)
@@ -192,13 +232,13 @@ def send_email(assignments: list[Assignment], page_url: str = "", warning: str =
         )
         return
 
-    new = [a for a in assignments if a.is_new]
+    # Strict routing: only new assignments that qualify reach the mail.
+    new = select_for_email(assignments)
+    other_new = count_other_new(assignments, new)
     if not new and not NOTIFY_WHEN_EMPTY:
-        print("[notify] No new assignments — nothing sent")
+        print("[notify] No qualified new assignments, nothing sent")
         return
 
-    # Sort highest-scoring first so the most relevant appear at the top.
-    new.sort(key=lambda x: x.relevance_score, reverse=True)
     today = date.today().isoformat()
     subject = (
         f"{EMAIL_SUBJECT_PREFIX} {today}: {len(new)} nya uppdrag"
@@ -210,10 +250,13 @@ def send_email(assignments: list[Assignment], page_url: str = "", warning: str =
         _send(
             cfg,
             subject,
-            _build_html(new, today, page_url, warning),
-            _build_text(new, today, page_url, warning),
+            _build_html(new, today, page_url, warning, other_new),
+            _build_text(new, today, page_url, warning, other_new),
         )
-        print(f"[notify] Emailed {len(new)} new assignments to {cfg.recipient}")
+        print(
+            f"[notify] Emailed {len(new)} qualified new assignments to {cfg.recipient} "
+            f"({other_new} nya i kategorin osäkra/anställningar utelämnade)"
+        )
     except (smtplib.SMTPException, OSError) as e:
         print(f"[notify] Email notification failed: {type(e).__name__}: {e}")
 
@@ -240,7 +283,10 @@ def send_failure_email(message: str) -> None:
 
 
 def send_test_email() -> None:
-    """Send a single sample assignment — verifies SMTP credentials end to end."""
+    """Send a single sample assignment, verifies SMTP credentials end to end.
+
+    The sample is pre-classified as qualified so it passes the strict routing.
+    """
     sample = Assignment(
         title="Testuppdrag: Data Engineer (Microsoft Fabric)",
         company="Testbolaget AB",
@@ -251,6 +297,11 @@ def send_test_email() -> None:
         summary="Om du ser det här fungerar SMTP-inställningarna.",
         relevance_score=9,
         is_new=True,
+        employment_type="contract",
+        role_match="core",
+        location_ok=True,
+        status="open",
+        classified=True,
     )
     send_email([sample], page_url="https://example.com/digest/")
 
