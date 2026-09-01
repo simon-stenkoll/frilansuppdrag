@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-20",
+  "generated": "2026-09-01",
   "portals": [
     {
       "name": "A Society",
@@ -9,7 +9,7 @@
       "status": "working",
       "relevant_count": 1,
       "listing_score": 17,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": "2026-06-20"
     },
     {
@@ -19,8 +19,8 @@
       "method": "http",
       "status": "working",
       "relevant_count": 2,
-      "listing_score": 40,
-      "last_checked": "2026-06-20",
+      "listing_score": 41,
+      "last_checked": "2026-09-01",
       "last_found": "2026-06-20"
     },
     {
@@ -30,19 +30,8 @@
       "method": "http",
       "status": "working",
       "relevant_count": 2,
-      "listing_score": 8,
-      "last_checked": "2026-06-20",
-      "last_found": "2026-06-20"
-    },
-    {
-      "name": "Brainville",
-      "website": "https://www.brainville.com/",
-      "listing_url": "https://www.brainville.com/HittaKonsultuppdrag",
-      "method": "http",
-      "status": "working",
-      "relevant_count": 1,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "listing_score": 6,
+      "last_checked": "2026-09-01",
       "last_found": "2026-06-20"
     },
     {
@@ -52,19 +41,19 @@
       "method": "http",
       "status": "working",
       "relevant_count": 1,
-      "listing_score": 43,
-      "last_checked": "2026-06-20",
+      "listing_score": 38,
+      "last_checked": "2026-09-01",
       "last_found": "2026-06-20"
     },
     {
       "name": "Enmanskonsulterna",
       "website": "https://enmanskonsulterna.se/",
-      "listing_url": "https://enmanskonsulterna.se/uppdrag/109710",
+      "listing_url": "https://enmanskonsulterna.se/",
       "method": "playwright",
       "status": "working",
       "relevant_count": 2,
-      "listing_score": 8,
-      "last_checked": "2026-06-20",
+      "listing_score": 16,
+      "last_checked": "2026-09-01",
       "last_found": "2026-06-20"
     },
     {
@@ -74,8 +63,8 @@
       "method": "http",
       "status": "working",
       "relevant_count": 1,
-      "listing_score": 19,
-      "last_checked": "2026-06-20",
+      "listing_score": 13,
+      "last_checked": "2026-09-01",
       "last_found": "2026-06-20"
     },
     {
@@ -85,30 +74,19 @@
       "method": "http",
       "status": "working",
       "relevant_count": 1,
-      "listing_score": 3166,
-      "last_checked": "2026-06-20",
+      "listing_score": 3478,
+      "last_checked": "2026-09-01",
       "last_found": "2026-06-20"
     },
     {
       "name": "Jappa",
       "website": "https://www.jappa.jobs/",
-      "listing_url": "https://www.jappa.jobs/",
+      "listing_url": "https://www.jappa.jobs/jobb/7558978-senior-konsult-inom-marketing-automation---uppdrag-pa-minst-3-6-man",
       "method": "playwright",
       "status": "working",
       "relevant_count": 1,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
-      "last_found": "2026-06-20"
-    },
-    {
-      "name": "Just remote",
-      "website": "https://justremote.co/",
-      "listing_url": "https://justremote.co/remote-jobs",
-      "method": "http",
-      "status": "working",
-      "relevant_count": 1,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "listing_score": 16,
+      "last_checked": "2026-09-01",
       "last_found": "2026-06-20"
     },
     {
@@ -118,8 +96,8 @@
       "method": "http",
       "status": "working",
       "relevant_count": 2,
-      "listing_score": 17,
-      "last_checked": "2026-06-20",
+      "listing_score": 29,
+      "last_checked": "2026-09-01",
       "last_found": "2026-06-20"
     },
     {
@@ -129,30 +107,19 @@
       "method": "http",
       "status": "working",
       "relevant_count": 2,
-      "listing_score": 24,
-      "last_checked": "2026-06-20",
+      "listing_score": 23,
+      "last_checked": "2026-09-01",
       "last_found": "2026-06-20"
     },
     {
       "name": "We work remotely",
       "website": "https://weworkremotely.com/",
-      "listing_url": "https://weworkremotely.com/remote-jobs/search",
+      "listing_url": "https://weworkremotely.com/remote-jobs/prowritersites-freelance-writer",
       "method": "playwright",
       "status": "working",
       "relevant_count": 3,
       "listing_score": 6,
-      "last_checked": "2026-06-20",
-      "last_found": "2026-06-20"
-    },
-    {
-      "name": "Wetal",
-      "website": "https://wetal.com/sv",
-      "listing_url": "https://wetal.com/sv",
-      "method": "http",
-      "status": "working",
-      "relevant_count": 1,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": "2026-06-20"
     },
     {
@@ -163,7 +130,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 52,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -173,8 +140,8 @@
       "method": "playwright",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 14,
-      "last_checked": "2026-06-20",
+      "listing_score": 6,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -185,7 +152,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 4,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -195,8 +162,8 @@
       "method": "http",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 3,
-      "last_checked": "2026-06-20",
+      "listing_score": 4,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -207,18 +174,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 3,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
-      "name": "Cogig",
-      "website": "https://www.cogig.se/",
-      "listing_url": "https://www.cogig.se/",
-      "method": "http",
-      "status": "listing",
-      "relevant_count": 0,
-      "listing_score": 4,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -228,8 +184,8 @@
       "method": "http",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 17,
-      "last_checked": "2026-06-20",
+      "listing_score": 20,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -240,7 +196,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 31,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -251,7 +207,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 42,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -262,18 +218,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 16,
-      "last_checked": "2026-06-20",
-      "last_found": ""
-    },
-    {
-      "name": "Flexiple",
-      "website": "https://flexiple.com/",
-      "listing_url": "https://flexiple.com/jobs/remote-software-engineer-jobs/",
-      "method": "http",
-      "status": "listing",
-      "relevant_count": 0,
-      "listing_score": 75,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -283,8 +228,8 @@
       "method": "playwright",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 10,
-      "last_checked": "2026-06-20",
+      "listing_score": 8,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -295,7 +240,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 16,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -305,8 +250,8 @@
       "method": "http",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 25,
-      "last_checked": "2026-06-20",
+      "listing_score": 23,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -317,7 +262,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 6,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -327,8 +272,8 @@
       "method": "http",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 7,
-      "last_checked": "2026-06-20",
+      "listing_score": 3,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -339,7 +284,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 17,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -350,7 +295,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 23,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -360,8 +305,8 @@
       "method": "http",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 23,
-      "last_checked": "2026-06-20",
+      "listing_score": 17,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -372,7 +317,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 5,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -383,7 +328,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 5,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -394,18 +339,18 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 9,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
       "name": "Konsultfabriken",
       "website": "https://www.konsultfabriken.se/",
-      "listing_url": "https://www.konsultfabriken.se/all-assignments.php",
+      "listing_url": "https://www.konsultfabriken.se/",
       "method": "http",
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 8,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -416,7 +361,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 3,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -427,7 +372,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 14,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -437,8 +382,8 @@
       "method": "playwright",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 34,
-      "last_checked": "2026-06-20",
+      "listing_score": 27,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -449,7 +394,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 4,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -459,8 +404,8 @@
       "method": "http",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 24,
-      "last_checked": "2026-06-20",
+      "listing_score": 26,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -470,8 +415,8 @@
       "method": "playwright",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 4,
-      "last_checked": "2026-06-20",
+      "listing_score": 5,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -482,7 +427,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 4,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -493,7 +438,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 9,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -504,18 +449,18 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 22,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
       "name": "Randstad",
       "website": "https://www.randstad.se/",
-      "listing_url": "https://www.randstad.se/jobb/jt-konsultuppdrag/page-2/",
+      "listing_url": "https://www.randstad.se/jobb/jt-konsultuppdrag/",
       "method": "http",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 303,
-      "last_checked": "2026-06-20",
+      "listing_score": 288,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -525,8 +470,8 @@
       "method": "playwright",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 7,
-      "last_checked": "2026-06-20",
+      "listing_score": 13,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -537,7 +482,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 5,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -548,18 +493,18 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 4,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
       "name": "Sigma",
       "website": "https://www.sigma.se/sv/",
-      "listing_url": "https://www.sigma.se/sv/karriar/partner-uppdrag/",
+      "listing_url": "https://www.sigma.se/career/assignments/",
       "method": "playwright",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 14,
-      "last_checked": "2026-06-20",
+      "listing_score": 18,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -570,7 +515,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 32,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -581,7 +526,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 10,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -591,8 +536,8 @@
       "method": "http",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 13,
-      "last_checked": "2026-06-20",
+      "listing_score": 3,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -602,8 +547,8 @@
       "method": "playwright",
       "status": "listing",
       "relevant_count": 0,
-      "listing_score": 19,
-      "last_checked": "2026-06-20",
+      "listing_score": 20,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -614,7 +559,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 4,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -625,7 +570,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 29,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -636,7 +581,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 13,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -647,7 +592,7 @@
       "status": "listing",
       "relevant_count": 0,
       "listing_score": 3,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -658,18 +603,18 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 1,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
       "name": "Alten",
       "website": "https://www.alten.se/",
-      "listing_url": "",
+      "listing_url": "https://www.alten.se/",
       "method": "http",
       "status": "error",
       "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "listing_score": 54,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -680,7 +625,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -691,7 +636,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -702,7 +647,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -713,7 +658,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -724,7 +669,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -735,8 +680,19 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
+    },
+    {
+      "name": "Brainville",
+      "website": "https://www.brainville.com/",
+      "listing_url": "",
+      "method": "http",
+      "status": "empty",
+      "relevant_count": 0,
+      "listing_score": 0,
+      "last_checked": "2026-09-01",
+      "last_found": "2026-06-20"
     },
     {
       "name": "Brightmill",
@@ -746,7 +702,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -757,7 +713,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -768,7 +724,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 2,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -779,7 +735,18 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
+      "last_found": ""
+    },
+    {
+      "name": "Cogig",
+      "website": "https://www.cogig.se/",
+      "listing_url": "",
+      "method": "http",
+      "status": "empty",
+      "relevant_count": 0,
+      "listing_score": 0,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -790,7 +757,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -801,7 +768,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -812,7 +779,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 2,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -823,7 +790,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 2,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -834,7 +801,18 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
+      "last_found": ""
+    },
+    {
+      "name": "Flexiple",
+      "website": "https://flexiple.com/",
+      "listing_url": "",
+      "method": "http",
+      "status": "empty",
+      "relevant_count": 0,
+      "listing_score": 0,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -842,10 +820,10 @@
       "website": "https://www.flexjobs.com/",
       "listing_url": "",
       "method": "http",
-      "status": "empty",
+      "status": "error",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": "2026-06-20"
     },
     {
@@ -856,7 +834,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -867,7 +845,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -878,7 +856,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 2,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -889,7 +867,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 2,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -900,7 +878,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -911,8 +889,19 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
+    },
+    {
+      "name": "Just remote",
+      "website": "https://justremote.co/",
+      "listing_url": "",
+      "method": "http",
+      "status": "empty",
+      "relevant_count": 0,
+      "listing_score": 0,
+      "last_checked": "2026-09-01",
+      "last_found": "2026-06-20"
     },
     {
       "name": "Koalitionen",
@@ -922,7 +911,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 2,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -933,7 +922,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -944,7 +933,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 1,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -955,29 +944,29 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 1,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
       "name": "Magello",
       "website": "https://connect.magello.se/",
-      "listing_url": "",
+      "listing_url": "https://magello.teamtailor.com/jobs",
       "method": "http",
       "status": "error",
       "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "listing_score": 2,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
       "name": "Magnit",
       "website": "https://magnitglobal.com/",
-      "listing_url": "",
+      "listing_url": "https://magnitglobal.com/",
       "method": "http",
       "status": "error",
       "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "listing_score": 2,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -988,7 +977,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -996,10 +985,10 @@
       "website": "https://www.meone.se/",
       "listing_url": "",
       "method": "http",
-      "status": "error",
+      "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1010,29 +999,29 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
       "name": "Moment",
       "website": "https://www.moment.se/frilansare/",
-      "listing_url": "",
+      "listing_url": "https://www.moment.se/frilansare/",
       "method": "http",
       "status": "error",
       "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "listing_score": 1,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
       "name": "Nexer",
       "website": "https://nexergroup.com/nexer-xtended/",
-      "listing_url": "",
+      "listing_url": "https://nexergroup.com/career/open-positions/",
       "method": "http",
       "status": "error",
       "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "listing_score": 13,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1043,7 +1032,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1054,7 +1043,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1065,7 +1054,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1076,7 +1065,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1087,18 +1076,18 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 2,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
       "name": "Proxify",
       "website": "https://proxify.io/sv",
-      "listing_url": "",
+      "listing_url": "https://proxify.io/sv",
       "method": "http",
       "status": "error",
       "relevant_count": 0,
-      "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "listing_score": 1,
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1109,7 +1098,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1120,7 +1109,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1131,7 +1120,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1142,7 +1131,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 1,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1153,7 +1142,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1164,7 +1153,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1175,7 +1164,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1186,7 +1175,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1197,7 +1186,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1208,7 +1197,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1219,7 +1208,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1230,7 +1219,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1241,7 +1230,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1252,7 +1241,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1263,7 +1252,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1274,7 +1263,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 1,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1285,7 +1274,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 1,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1296,7 +1285,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 2,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     },
     {
@@ -1307,8 +1296,19 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
+    },
+    {
+      "name": "Wetal",
+      "website": "https://wetal.com/sv",
+      "listing_url": "",
+      "method": "http",
+      "status": "empty",
+      "relevant_count": 0,
+      "listing_score": 0,
+      "last_checked": "2026-09-01",
+      "last_found": "2026-06-20"
     },
     {
       "name": "Win win consulting",
@@ -1318,7 +1318,7 @@
       "status": "empty",
       "relevant_count": 0,
       "listing_score": 0,
-      "last_checked": "2026-06-20",
+      "last_checked": "2026-09-01",
       "last_found": ""
     }
   ]
