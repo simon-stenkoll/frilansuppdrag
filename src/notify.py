@@ -261,6 +261,35 @@ def send_email(assignments: list[Assignment], page_url: str = "", warning: str =
         print(f"[notify] Email notification failed: {type(e).__name__}: {e}")
 
 
+def send_alert(subject: str, body: str) -> None:
+    """Send a plain warning mail over the same SMTP path as the digest.
+
+    Used by main.py when a run is degraded (the pipeline itself did not crash, so the
+    workflow's failure mail would never fire). Missing credentials are logged and
+    swallowed, exactly like send_email.
+    """
+    cfg = _SmtpConfig()
+    if not cfg.ok:
+        print(f"[notify] {SMTP_USER_ENV}/{SMTP_PASSWORD_ENV} not set, skipping alert email")
+        return
+
+    paragraphs = "".join(
+        f'<p style="font-size:14px;color:#374151;margin:0 0 10px">{escape(line)}</p>'
+        for line in body.splitlines()
+        if line.strip()
+    )
+    html = (
+        '<body style="font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',Arial,sans-serif">'
+        f'<p style="font-size:15px;color:#111827;font-weight:600">&#9888;&#65039; {escape(subject)}</p>'
+        f"{paragraphs}</body>"
+    )
+    try:
+        _send(cfg, f"{EMAIL_SUBJECT_PREFIX} {subject}", html, body)
+        print(f"[notify] Emailed alert to {cfg.recipient}: {subject}")
+    except (smtplib.SMTPException, OSError) as e:
+        print(f"[notify] Alert email could not be sent: {type(e).__name__}: {e}")
+
+
 def send_failure_email(message: str) -> None:
     """Send a short failure alert — used by the workflow when a run breaks."""
     cfg = _SmtpConfig()

@@ -10,6 +10,7 @@ import json
 import os
 import re
 import time
+from dataclasses import dataclass
 from typing import Any
 
 from openai import (
@@ -73,6 +74,38 @@ class LlmBudget:
             return False
         self.used += calls
         return True
+
+
+@dataclass
+class ClassifyStats:
+    """Outcome of one classify() pass, filled in for the caller.
+
+    Passed in by the caller (main.py) instead of changing the return type, so the
+    existing `classified = classify(...)` call site keeps working unchanged.
+    `auth_error` is set only when a 401/403 aborted the run.
+    """
+
+    classified: int = 0
+    cached: int = 0
+    failed: int = 0
+    deferred: int = 0
+    auth_error: str = ""
+
+    @property
+    def needed_llm(self) -> int:
+        """Assignments that were not served from cache and needed an LLM call."""
+        return self.classified + self.failed + self.deferred
+
+    @property
+    def is_degraded(self) -> bool:
+        """True when LLM classification was needed but produced nothing at all.
+
+        Only counts as degraded when the cause is an auth error or every assignment
+        being deferred; scattered per-assignment failures are not an outage.
+        """
+        if self.needed_llm == 0 or self.classified > 0:
+            return False
+        return bool(self.auth_error) or self.deferred == self.needed_llm
 
 
 def _client() -> OpenAI | None:
@@ -246,6 +279,7 @@ def _priority_order(assignments: list[Assignment]) -> list[Assignment]:
 def classify(
     assignments: list[Assignment],
     budget: LlmBudget | None = None,
+    stats: ClassifyStats | None = None,
 ) -> list[Assignment]:
     """
     Classify every assignment with one LLM call each, cached in state/classifications.json.
@@ -255,6 +289,9 @@ def classify(
     run picks it up again. The cheap keyword status override runs on every assignment,
     cache hits included, so a listing that has since been filled is caught without an
     LLM call.
+
+    When `stats` is given it is filled with the run counters so the caller can tell a
+    normal run from a total LLM outage.
     """
     if not assignments:
         return assignments
@@ -273,6 +310,7 @@ def classify(
     rate_limit_streak = 0
     calls_made = 0
     llm_disabled = client is None
+    auth_error = ""
 
     for a in _priority_order(assignments):
         key = url_key(a.url)
@@ -308,8 +346,9 @@ def classify(
         except (AuthenticationError, PermissionDeniedError) as e:
             llm_disabled = True
             deferred_count += 1
+            auth_error = f"{type(e).__name__}: {e}"
             print(f"[classify] ABORTED, auth error, hoppar över resterande uppdrag: "
-                  f"{type(e).__name__}: {e}")
+                  f"{auth_error}")
             continue
         except RateLimitError as e:
             rate_limit_streak += 1
@@ -351,6 +390,13 @@ def classify(
           f"(budget {budget.used}/{budget.limit})")
     if overridden:
         print(f"[classify] {overridden} uppdrag statusöverstyrda av nyckelord")
+
+    if stats is not None:
+        stats.classified = classified_count
+        stats.cached = cached_count
+        stats.failed = failed_count
+        stats.deferred = deferred_count
+        stats.auth_error = auth_error
 
     # Sort by score descending, unclassified (0) last, new first within the same score
     assignments.sort(key=lambda x: (x.relevance_score, x.is_new), reverse=True)

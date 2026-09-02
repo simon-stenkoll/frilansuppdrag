@@ -46,6 +46,9 @@ jobs:
         run: python main.py
 
       - name: Commit digest
+        # always() so the digest and state files are committed even when main.py exits 1
+        # (degraded run: the LLM classification produced nothing). The job still goes red.
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

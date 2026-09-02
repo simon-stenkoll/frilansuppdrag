@@ -100,6 +100,12 @@ python main.py              # full körning → docs/ + e-post
 
 - `classify()` och `send_email()` failar tyst (loggar) om token/SMTP-uppgifter saknas: körningen
   fortsätter ändå och digesten genereras.
+- Totalhaveri i LLM-delen är däremot inte tyst: `classify()` fyller i en `ClassifyStats`
+  (klassificerade, cache, misslyckade, uppskjutna, ev. auth-fel) och `main.py` kallar körningen
+  degraderad när uppdrag behövde LLM men 0 lyckades av auth-fel eller uppskjutning. Då skickas
+  ett varningsmail via `notify.send_alert()` och processen avslutar med exitkod 1, efter att
+  digest, state och vanligt mail är klara. Commit-steget i `daily-digest.yml` har `if: always()`
+  så filerna ändå committas medan jobbet blir rött.
 - Kör inte `src/discovery.py` i den nattliga workflowen; den är tung (Playwright plus LLM-probe
   mot ~130 sajter). Den har en egen månadsworkflow, "Monthly Portal Discovery", som kör den
   första i månaden och committar `state/portals.json`. Nattliga körningen läser bara filen.

@@ -79,6 +79,8 @@ EMAIL_SUBJECT_PREFIX = "Konsultuppdrag"
 EMAIL_MAX_ITEMS = 40               # cap assignments listed in the mail body
 EMAIL_MIN_SCORE = 0                # 0 = no score threshold; >0 filters out lower-scored items
 NOTIFY_WHEN_EMPTY = True           # send a short "no new assignments" message
+# Subject of the alert mail sent when the LLM classification produced nothing at all
+ALERT_LLM_DOWN_SUBJECT = "VARNING: LLM-klassificeringen är nere"
 # Fallback published-digest URL used when not running in GitHub Actions
 PAGE_URL_FALLBACK = ""
 
