@@ -81,7 +81,8 @@ class ClassifyStats:
 
     Passed in by the caller (main.py) instead of changing the return type, so the
     existing `classified = classify(...)` call site keeps working unchanged.
-    `auth_error` is set only when a 401/403 aborted the run.
+    `auth_error` is set only when a 401/403 aborted the run, `last_error` holds the
+    most recent per-assignment error text whatever the cause.
     """
 
     classified: int = 0
@@ -89,6 +90,7 @@ class ClassifyStats:
     failed: int = 0
     deferred: int = 0
     auth_error: str = ""
+    last_error: str = ""
 
     @property
     def needed_llm(self) -> int:
@@ -99,12 +101,12 @@ class ClassifyStats:
     def is_degraded(self) -> bool:
         """True when LLM classification was needed but produced nothing at all.
 
-        Only counts as degraded when the cause is an auth error or every assignment
-        being deferred; scattered per-assignment failures are not an outage.
+        Cause does not matter: auth error, everything deferred, everything failed or a
+        mix of them. Scattered failures without a single successful answer are an
+        outage, not noise (a BOM-corrupt API key once made all 33 calls raise client
+        side, which passed as a green run).
         """
-        if self.needed_llm == 0 or self.classified > 0:
-            return False
-        return bool(self.auth_error) or self.deferred == self.needed_llm
+        return self.needed_llm > 0 and self.classified == 0
 
 
 def build_prompt(a: Assignment, consultant_cv_profile: str) -> str:
@@ -303,6 +305,7 @@ def classify(
     calls_made = 0
     llm_disabled = client is None
     auth_error = ""
+    last_error = ""
 
     for a in _priority_order(assignments):
         key = url_key(a.url)
@@ -345,7 +348,8 @@ def classify(
         except RateLimitError as e:
             rate_limit_streak += 1
             failed_count += 1
-            print(f"[classify] RATELIMIT '{a.title[:60]}': {type(e).__name__}: {e}")
+            last_error = f"{type(e).__name__}: {e}"
+            print(f"[classify] RATELIMIT '{a.title[:60]}': {last_error}")
             if rate_limit_streak >= RATE_LIMIT_ABORT_AFTER:
                 llm_disabled = True
                 print(f"[classify] ABORTED, {rate_limit_streak} ratelimit-fel i rad, "
@@ -354,12 +358,14 @@ def classify(
         except Exception as e:
             rate_limit_streak = 0
             failed_count += 1
-            print(f"[classify] FAILED '{a.title[:60]}': {type(e).__name__}: {e}")
+            last_error = f"{type(e).__name__}: {e}"
+            print(f"[classify] FAILED '{a.title[:60]}': {last_error}")
             continue
 
         rate_limit_streak = 0
         if result is None:
             failed_count += 1
+            last_error = "InvalidResponse: modellen svarade inte med giltig JSON"
             print(f"[classify] INVALID '{a.title[:60]}': modellen svarade inte med giltig JSON")
             continue
 
@@ -389,6 +395,7 @@ def classify(
         stats.failed = failed_count
         stats.deferred = deferred_count
         stats.auth_error = auth_error
+        stats.last_error = last_error
 
     # Sort by score descending, unclassified (0) last, new first within the same score
     assignments.sort(key=lambda x: (x.relevance_score, x.is_new), reverse=True)

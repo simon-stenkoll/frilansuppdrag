@@ -50,7 +50,7 @@ def _page_url() -> str:
 
 def build_alert_body(stats: ClassifyStats, page_url: str = "") -> str:
     """Body of the degraded-run alert mail. Pure, so it can be checked without SMTP."""
-    reason = stats.auth_error or (
+    reason = stats.auth_error or stats.last_error or (
         "inget LLM-anrop lyckades, samtliga uppdrag sköts upp till nästa körning"
     )
     lines = [
