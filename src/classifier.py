@@ -7,7 +7,6 @@ assignment the LLM could not classify simply keeps classified=False.
 """
 
 import json
-import os
 import re
 import time
 from dataclasses import dataclass
@@ -30,13 +29,13 @@ from src.classify_cache import (
 )
 from src.config import (
     LLM_MODEL,
-    LLM_ENDPOINT,
     LLM_MAX_RETRIES,
     LLM_RETRY_BACKOFF,
     LLM_REQUEST_DELAY,
     LLM_RUN_BUDGET,
 )
 from src.cv_profile import get_consultant_cv_profile
+from src.llm import api_key_env_name, make_llm_client
 from src.models import Assignment
 
 EMPLOYMENT_TYPES = {"contract", "permanent", "unclear"}
@@ -106,13 +105,6 @@ class ClassifyStats:
         if self.needed_llm == 0 or self.classified > 0:
             return False
         return bool(self.auth_error) or self.deferred == self.needed_llm
-
-
-def _client() -> OpenAI | None:
-    api_key = os.environ.get("GEMINI_API_KEY")
-    if not api_key:
-        return None
-    return OpenAI(base_url=LLM_ENDPOINT, api_key=api_key)
 
 
 def build_prompt(a: Assignment, consultant_cv_profile: str) -> str:
@@ -300,9 +292,9 @@ def classify(
         budget = LlmBudget()
 
     cache = load_classifications()
-    client = _client()
+    client = make_llm_client()
     if client is None:
-        print("[classify] GEMINI_API_KEY saknas, kör bara cache och statuskoll")
+        print(f"[classify] {api_key_env_name()} saknas, kör bara cache och statuskoll")
 
     consultant_cv_profile = get_consultant_cv_profile() if client is not None else ""
 

@@ -1,5 +1,7 @@
 """Central configuration for the contract assignment scraper."""
 
+import os
+
 # Keywords to match against job titles and descriptions (case-insensitive)
 KEYWORDS = [
     "data engineer",
@@ -34,14 +36,21 @@ KEYWORDS = [
 # Location filter terms (case-insensitive, any match = include)
 LOCATION_KEYWORDS = ["stockholm", "sthlm", "remote", "hybrid"]
 
-# LLM provider: Google Gemini via the OpenAI-compatible endpoint.
-# (GitHub Models was fully retired on 2026-07-30 and returns HTTP 410.)
+# LLM provider: any OpenAI-compatible endpoint, defaulting to Google Gemini.
+# (GitHub Models was fully retired on 2026-07-30 and returns HTTP 410, never go back.)
 # Free tier for the flash-lite models: ~15 requests/min and ~1000 requests/day,
 # which the 4 s request delay and LLM_RUN_BUDGET stay well inside.
-# API key: env var GEMINI_API_KEY (create one at https://aistudio.google.com/apikey).
+# API key: read from the env var named by LLM_API_KEY_ENV, by default GEMINI_API_KEY
+# (create one at https://aistudio.google.com/apikey).
 # Note: gemini-2.5-flash-lite is closed to new users (404 with a pointer to 3.5).
-LLM_MODEL = "gemini-3.5-flash-lite"
-LLM_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/openai/"
+# Set LLM_ENDPOINT / LLM_MODEL / LLM_API_KEY_ENV in the environment to switch key,
+# Google project or provider entirely without a code change.
+LLM_MODEL = os.environ.get("LLM_MODEL") or "gemini-3.5-flash-lite"
+LLM_ENDPOINT = (
+    os.environ.get("LLM_ENDPOINT")
+    or "https://generativelanguage.googleapis.com/v1beta/openai/"
+)
+LLM_API_KEY_ENV = os.environ.get("LLM_API_KEY_ENV") or "GEMINI_API_KEY"
 
 # LLM scoring behaviour
 LLM_MAX_RETRIES = 3        # attempts per assignment before giving up

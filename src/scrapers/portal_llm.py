@@ -21,8 +21,8 @@ import httpx
 from bs4 import BeautifulSoup
 from openai import AuthenticationError, OpenAI, PermissionDeniedError
 
-# _client() is reused verbatim so both LLM consumers authenticate identically.
-from src.classifier import LlmBudget, _client
+from src.classifier import LlmBudget
+from src.llm import api_key_env_name, make_llm_client
 from src.config import (
     DISABLED_BROKER_PORTALS,
     LLM_MODEL,
@@ -300,9 +300,9 @@ async def scrape() -> list[Assignment]:
         return []
 
     cache = load_page_cache()
-    llm = _client()
+    llm = make_llm_client()
     if llm is None:
-        print(f"[{SOURCE_LABEL}] GEMINI_API_KEY saknas, kör bara sidcachen")
+        print(f"[{SOURCE_LABEL}] {api_key_env_name()} saknas, kör bara sidcachen")
 
     budget = BUDGET if BUDGET is not None else LlmBudget()
     browser: BrowserSession | None = None

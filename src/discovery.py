@@ -28,7 +28,8 @@ import httpx
 from bs4 import BeautifulSoup
 from openai import AuthenticationError, PermissionDeniedError
 
-from src.classifier import LlmBudget, _client
+from src.classifier import LlmBudget
+from src.llm import api_key_env_name, make_llm_client
 from src.config import (
     LEIJON_URL,
     PORTALS_STATE_FILE,
@@ -210,13 +211,13 @@ class LlmProbe:
 
     def __init__(self, budget: LlmBudget) -> None:
         self.budget = budget
-        self.client = _client()
+        self.client = make_llm_client()
         self.disabled = self.client is None
         self.calls = 0
         self.deferred = 0
         self._lock = asyncio.Lock()
         if self.client is None:
-            print("[discovery] GEMINI_API_KEY saknas: kör bara den "
+            print(f"[discovery] {api_key_env_name()} saknas: kör bara den "
                   "billiga heuristiken, portaler som kräver LLM-probe behåller sin "
                   "tidigare status\n")
 
