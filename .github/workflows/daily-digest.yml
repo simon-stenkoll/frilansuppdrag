@@ -39,8 +39,17 @@ jobs:
 
       - name: Run scraper
         env:
-          # Gemini via the OpenAI-compatible endpoint (GitHub Models retired 2026-07-30)
+          # Gemini via the OpenAI-compatible endpoint (GitHub Models retired 2026-07-30).
+          # Provider, model and the name of the key env var are plain configuration:
+          # set the repository variables LLM_ENDPOINT / LLM_MODEL / LLM_API_KEY_ENV to
+          # switch key, Google project or provider. Undefined variables expand to an
+          # empty string, which src/config.py treats as "use the default".
+          LLM_ENDPOINT: ${{ vars.LLM_ENDPOINT }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          LLM_API_KEY_ENV: ${{ vars.LLM_API_KEY_ENV }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # Alternative key, used when LLM_API_KEY_ENV points at LLM_API_KEY
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
         run: python main.py

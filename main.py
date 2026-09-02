@@ -11,6 +11,7 @@ from src.classifier import ClassifyStats, LlmBudget, classify
 from src.digest import generate
 from src.notify import send_alert, send_email
 from src.config import ALERT_LLM_DOWN_SUBJECT, DISABLED_SCRAPERS, PAGE_URL_FALLBACK
+from src.llm import api_key_env_name
 
 SCRAPERS = [
     ("Platsbanken (JobTech)", jobtech.scrape),
@@ -59,8 +60,8 @@ def build_alert_body(stats: ClassifyStats, page_url: str = "") -> str:
         f"{stats.deferred} uppskjutna).",
         f"Orsak: {reason}",
         "Digesten visar därför inga kvalificerade uppdrag och dagens mail är tomt.",
-        "Kontrollera GEMINI_API_KEY-secreten (giltig nyckel, projektet inte spärrat) "
-        "och kvoten i Google AI Studio.",
+        f"Kontrollera {api_key_env_name()}-secreten (giltig nyckel, projektet inte "
+        "spärrat) och kvoten hos leverantören.",
     ]
     if page_url:
         lines.append(f"Digest: {page_url}")
@@ -99,7 +100,7 @@ async def main() -> int:
     if classified and unclassified > len(classified) / 2:
         warning = (
             f"LLM-klassificeringen misslyckades för {unclassified} av {len(classified)} "
-            "uppdrag, kontrollera GEMINI_API_KEY, budget och ratelimit."
+            f"uppdrag, kontrollera {api_key_env_name()}, budget och ratelimit."
         )
         print(f"[health] WARNING: {warning}")
 

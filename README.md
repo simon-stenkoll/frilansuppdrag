@@ -122,8 +122,23 @@ Två workflows:
 | `SMTP_PASSWORD` | Gmail **app-lösenord** (16 tecken), inte kontolösenordet |
 | `GEMINI_API_KEY` | Gratis nyckel från <https://aistudio.google.com/apikey> |
 
-> LLM-anropen går till Google Gemini via det OpenAI-kompatibla endpointet.
-> GitHub Models pensionerades 2026-07-30 och kan inte längre användas.
+> LLM-anropen går som standard till Google Gemini (`gemini-3.5-flash-lite`) via det
+> OpenAI-kompatibla endpointet. GitHub Models pensionerades 2026-07-30 och kan inte
+> längre användas.
+
+Leverantör, modell och nyckel är ren konfiguration, ingen kodändring behövs för att byta.
+Sätt dem som **repository variables** (Settings → Secrets and variables → Actions → Variables):
+
+| Variable | Betydelse | Default när tom/osatt |
+|---|---|---|
+| `LLM_ENDPOINT` | Bas-URL till ett OpenAI-kompatibelt API | `https://generativelanguage.googleapis.com/v1beta/openai/` |
+| `LLM_MODEL` | Modellnamn | `gemini-3.5-flash-lite` |
+| `LLM_API_KEY_ENV` | Namnet på env-variabeln som nyckeln läses ur | `GEMINI_API_KEY` |
+
+Byter du nyckel eller Google-projekt räcker det att uppdatera secreten `GEMINI_API_KEY`.
+Vill du använda en helt annan nyckel-secret: lägg den som `LLM_API_KEY` och sätt
+variabeln `LLM_API_KEY_ENV` till `LLM_API_KEY`. Båda secreterna skickas redan in av
+workflowsen, och klienten skapas på ett enda ställe (`make_llm_client()` i `src/llm.py`).
 
 ### 2. Skapa Gmail-app-lösenord
 
@@ -173,6 +188,10 @@ python -m playwright install chromium      # för JS-tunga mäklarportaler
 
 # Gratis nyckel skapas på https://aistudio.google.com/apikey
 $env:GEMINI_API_KEY = "<din_nyckel>"
+# Valfritt: byt leverantör/modell/nyckelvariabel utan kodändring
+# $env:LLM_ENDPOINT = "https://api.example.com/v1/"
+# $env:LLM_MODEL = "<modellnamn>"
+# $env:LLM_API_KEY_ENV = "LLM_API_KEY"   # och sätt då $env:LLM_API_KEY
 $env:SMTP_USER = "<din_gmail>"          # valfritt lokalt
 $env:SMTP_PASSWORD = "<app_losenord>"   # valfritt lokalt
 
@@ -195,6 +214,7 @@ python main.py                       # full körning → docs/ + e-post
 main.py                  # orkestrerare; skapar den delade LLM-budgeten
 src/
   config.py              # nyckelord, URL:er, budgetar, inställningar
+  llm.py                 # make_llm_client(): delad OpenAI-kompatibel klient
   models.py              # Assignment-dataclass (inkl. klassificeringsfälten)
   dedup.py               # deduplicering över källor
   state.py               # state/seen.json: {url: senast-sedd-datum}, 180 dagars rensning

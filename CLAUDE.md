@@ -20,6 +20,8 @@ vad som räknas som ett kvalificerat uppdrag: mailet skickar bara nya kvalificer
 allt men delat i "Uppdrag" och "Osäkra / anställningar".
 
 - `src/config.py` — all konfiguration: nyckelord, portallista (seed), env-namn, gränser
+- `src/llm.py`: `make_llm_client()`, enda stället som skapar OpenAI-klienten, läser nyckeln
+  från env-variabeln som `LLM_API_KEY_ENV` pekar ut och returnerar `None` när den saknas
 - `src/models.py` — `Assignment`-dataclass (det enda objektet som flödar genom pipelinen)
 - `src/scrapers/`: en modul per källa; varje exponerar `async def scrape() -> list[Assignment]`.
   Källor: `jobtech.py` (Platsbanken/JobTech API), `broker_apis.py` (A Society, Upgraded
@@ -64,9 +66,14 @@ allt men delat i "Uppdrag" och "Osäkra / anställningar".
 ## Konventioner
 
 - **Python 3.11+**. **HTTP**: `httpx` (async) för scraping. **HTML**: `BeautifulSoup4`.
-  **JS-rendering**: Playwright (chromium). **LLM**: Google Gemini via det OpenAI-kompatibla
-  endpointet, modell `gemini-3.5-flash-lite` (GitHub Models pensionerades 2026-07-30 och
-  svarar 410; byt aldrig tillbaka).
+  **JS-rendering**: Playwright (chromium). **LLM**: valfritt OpenAI-kompatibelt endpoint,
+  default Google Gemini med modellen `gemini-3.5-flash-lite` (GitHub Models pensionerades
+  2026-07-30 och svarar 410; byt aldrig tillbaka).
+- **LLM-leverantören är ren konfiguration**: `LLM_ENDPOINT`, `LLM_MODEL` och
+  `LLM_API_KEY_ENV` (namnet på nyckelns env-variabel, default `GEMINI_API_KEY`) läses av
+  `src/config.py` från miljön, med dagens Gemini-värden som default när de är tomma eller
+  osatta. All klientskapning går genom `make_llm_client()` i `src/llm.py`: byte av nyckel,
+  Google-projekt eller leverantör kräver därför ingen kodändring.
 - **Scraper-interface**: varje scraper exponerar `async def scrape() -> list[Assignment]`.
 - **Felisolering**: en scraper som kastar exception måste fångas i orkestreraren — ett fel får
   aldrig stoppa övriga. Samma princip gäller notifiering.
@@ -86,6 +93,10 @@ python -m playwright install chromium      # för JS-tunga mäklarportaler
 # Gratis nyckel skapas på https://aistudio.google.com/apikey.
 # I CI ligger samma värde som repo-secreten GEMINI_API_KEY.
 $env:GEMINI_API_KEY = "<google-ai-studio-nyckel>"
+# Valfritt: byt leverantör/modell/nyckelvariabel utan kodändring
+# $env:LLM_ENDPOINT = "https://api.example.com/v1/"
+# $env:LLM_MODEL = "<modellnamn>"
+# $env:LLM_API_KEY_ENV = "LLM_API_KEY"   # och sätt då $env:LLM_API_KEY
 # E-postnotis via SMTP (Gmail kräver app-lösenord, inte kontolösenordet)
 $env:SMTP_USER = "<gmail-adress>"
 $env:SMTP_PASSWORD = "<app-losenord>"
