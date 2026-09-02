@@ -3,13 +3,14 @@
 import asyncio
 import os
 import traceback
+from datetime import date
 from src.scrapers import jobtech, broker_apis, portal_llm, cinode_market, verama
 from src.dedup import deduplicate
 from src.state import flag_new, persist_seen
-from src.classifier import LlmBudget, classify
+from src.classifier import ClassifyStats, LlmBudget, classify
 from src.digest import generate
-from src.notify import send_email
-from src.config import DISABLED_SCRAPERS, PAGE_URL_FALLBACK
+from src.notify import send_alert, send_email
+from src.config import ALERT_LLM_DOWN_SUBJECT, DISABLED_SCRAPERS, PAGE_URL_FALLBACK
 
 SCRAPERS = [
     ("Platsbanken (JobTech)", jobtech.scrape),
@@ -46,7 +47,28 @@ def _page_url() -> str:
     return PAGE_URL_FALLBACK
 
 
-async def main():
+def build_alert_body(stats: ClassifyStats, page_url: str = "") -> str:
+    """Body of the degraded-run alert mail. Pure, so it can be checked without SMTP."""
+    reason = stats.auth_error or (
+        "inget LLM-anrop lyckades, samtliga uppdrag sköts upp till nästa körning"
+    )
+    lines = [
+        f"Datum: {date.today().isoformat()}",
+        f"LLM-klassificeringen gav 0 lyckade svar för {stats.needed_llm} uppdrag "
+        f"({stats.cached} kom från cache, {stats.failed} misslyckade, "
+        f"{stats.deferred} uppskjutna).",
+        f"Orsak: {reason}",
+        "Digesten visar därför inga kvalificerade uppdrag och dagens mail är tomt.",
+        "Kontrollera GEMINI_API_KEY-secreten (giltig nyckel, projektet inte spärrat) "
+        "och kvoten i Google AI Studio.",
+    ]
+    if page_url:
+        lines.append(f"Digest: {page_url}")
+    return "\n".join(lines)
+
+
+async def main() -> int:
+    """Run the pipeline. Returns the process exit code (1 on a degraded run)."""
     print("=== Contract Assignment Scraper ===")
 
     # One LLM budget for the whole run, shared by portal extraction and classification.
@@ -67,7 +89,8 @@ async def main():
     print(f"[state] {new_count} new assignments")
 
     print(f"[classifier] Klassificerar {len(marked)} uppdrag...")
-    classified = classify(marked, budget=budget)
+    stats = ClassifyStats()
+    classified = classify(marked, budget=budget, stats=stats)
 
     persist_seen(classified)
 
@@ -80,16 +103,30 @@ async def main():
         )
         print(f"[health] WARNING: {warning}")
 
+    page_url = _page_url()
     generate(classified, warning=warning)
 
-    send_email(classified, page_url=_page_url(), warning=warning)
+    send_email(classified, page_url=page_url, warning=warning)
+
+    # Total LLM outage: digest and state are already written, so alert loudly and let
+    # the process exit non-zero to turn the workflow red.
+    if stats.is_degraded:
+        body = build_alert_body(stats, page_url)
+        print(f"[health] DEGRADERAD KÖRNING: {ALERT_LLM_DOWN_SUBJECT}")
+        print(body)
+        send_alert(ALERT_LLM_DOWN_SUBJECT, body)
+        print("\n❌ Degraderad körning, avslutar med exitkod 1")
+        return 1
+
     print("\n✅ Done")
+    return 0
 
 
 if __name__ == "__main__":
+    import sys
+
     try:  # ensure emoji/arrows in log output don't crash a Windows console
-        import sys
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     except Exception:
         pass
-    asyncio.run(main())
+    sys.exit(asyncio.run(main()))
