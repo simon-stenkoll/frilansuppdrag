@@ -438,5 +438,16 @@
     "score": 1,
     "status": "open",
     "summary": "Annonsen gäller en roll som underhållsingenjör inom läkemedelstillverkning, vilket saknar koppling till datateknik."
+  },
+  "https://www.sigma.se/assignment/senior-etl-developer-sweden-en-20260828": {
+    "classified_at": "2026-09-02",
+    "content_hash": "b6a2874a702443df544af729afb32e135c70e0ba",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Sigma Technology söker en senior ETL-utvecklare för att arbeta med analys och kravhantering av affärs- och tekniska krav. Rollen har stark koppling till datateknik och dataintegration, vilket matchar konsultens kompetens."
   }
 }
