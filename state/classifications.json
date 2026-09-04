@@ -241,6 +241,17 @@
     "status": "open",
     "summary": "Region Västerbotten söker en erfaren Power BI-utvecklare med fokus på visualisering och kravfångst för arbete i huvudsak på distans med fysiska träffar i Umeå. Uppdraget har specifika krav på erfarenhet inom hälso- och sjukvård samt regionalt SUSSA datalager."
   },
+  "https://market.cinode.com/requests/22278": {
+    "classified_at": "2026-09-04",
+    "content_hash": "5bfd7ebdc6a6a1d548458020ba71d65adadaeb3f",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "Uppdraget avser en roll som Data Engineer inom dagligvaruhandeln i Solna, med fokus på Google Cloud Platform, BigQuery och modern produktutveckling."
+  },
   "https://upgraded.se/konsultuppdrag/184446-utredare-behorighetslosning": {
     "classified_at": "2026-09-02",
     "content_hash": "310228dc47a31f068cc1ba09618810d5f14174c1",
@@ -384,6 +395,28 @@
     "status": "open",
     "summary": "Uppdraget avser ett konsultteam inom bank och finans (bestående av produktägare, Javautvecklare och testare), vilket inte matchar profilens kompetens inom data engineering."
   },
+  "https://upgraded.se/konsultuppdrag/193715-data-engineer-69": {
+    "classified_at": "2026-09-04",
+    "content_hash": "efbda587c7169603a3521d4086a6487bdebd4305",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 9,
+    "status": "open",
+    "summary": "Uppdraget som Data Engineer fokuserar på att utveckla analys- och AI-lösningar i ett tvärfunktionellt produktteam i Stockholm."
+  },
+  "https://upgraded.se/konsultuppdrag/193729-data-engineer-70": {
+    "classified_at": "2026-09-04",
+    "content_hash": "33b9187d352572cb6e272b038a3155c6c4c9e834",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "Uppdraget söker en fullstack-utvecklare inom analysprodukter med fokus på moderna gränssnitt, backendutveckling och lösningar för datadriven verksamhet i Stockholm."
+  },
   "https://weworkremotely.com/remote-jobs/databricks-solutions-architect": {
     "classified_at": "2026-09-02",
     "content_hash": "3a0b7a996fdc725f5e9165b077435fba87ae9d40",
@@ -405,6 +438,17 @@
     "score": 4,
     "status": "open",
     "summary": "Uppdraget söker en Azure DevOps Specialist för att arbeta med utvecklingsplattformar på plats i Stockholm, med hybridmöjlighet. Rollen ligger nära konsultens erfarenhet av Azure DevOps, men fokuserar mer på plattformsdrift än på kärnkompetensen inom data engineering."
+  },
+  "https://www.asociety.se/sv/uppdrag/teknisk-specialist-databasplattform-sql-serverpostgresql-16559": {
+    "classified_at": "2026-09-04",
+    "content_hash": "916280f1ae1944df455b95729628bf25e062ca74",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "Uppdraget avser en teknisk specialist inom databasplattformar med fokus på SQL Server och PostgreSQL, vilket ligger nära men utanför profilens primära fokus på Microsoft Fabric och modern datalagring. Tjänsten är placerad på plats i Göteborg."
   },
   "https://www.asocietygroup.com/sv/uppdrag/business-operations-partner-dach-16272": {
     "classified_at": "2026-09-02",
@@ -449,5 +493,16 @@
     "score": 8,
     "status": "open",
     "summary": "Sigma Technology söker en senior ETL-utvecklare för att arbeta med analys och kravhantering av affärs- och tekniska krav. Rollen har stark koppling till datateknik och dataintegration, vilket matchar konsultens kompetens."
+  },
+  "https://www.sigma.se/assignment/senior-platform-engineer-inom-databricks-och-data-governance-stockholms-lan-en-20260903": {
+    "classified_at": "2026-09-04",
+    "content_hash": "606be9a0f1e5688613cd9dfaedd18542b12b4f93",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 4,
+    "status": "open",
+    "summary": "Sigma Industry Development söker en senior plattformsingenjör med inriktning mot Databricks och data governance i Stockholms län. Rollen fokuserar på att utveckla och förbättra dataplattformar samt datapipelines."
   }
 }
