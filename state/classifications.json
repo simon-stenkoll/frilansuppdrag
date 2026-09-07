@@ -43,6 +43,28 @@
     "status": "open",
     "summary": "Uppdraget som Senior Platform Engineer fokuserar på Databricks och plattformsutveckling i Södertälje. Rollen innebär att bygga skalbara datapipelines samt arbeta med datastyrning och molninfrastruktur."
   },
+  "https://app.verama.com/en/job-requests/83379": {
+    "classified_at": "2026-09-07",
+    "content_hash": "e8d623d81d113996ab7bed19a88a6198b2c28fff",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 9,
+    "status": "open",
+    "summary": "ISS Facility Services söker en erfaren BI-utvecklare för att arbeta med förvaltning och utveckling i Snowflake och Power BI, vilket matchar konsultens profil perfekt."
+  },
+  "https://app.verama.com/en/job-requests/83393": {
+    "classified_at": "2026-09-07",
+    "content_hash": "ec47f76e4ea101f97f97db5b0debf3972d77b4d5",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en applikationsspecialist inom Unit4 ERP hos Svenska kraftnät, vilket ligger utanför konsultens kärnfokus inom data engineering och BI."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -152,6 +174,17 @@
     "score": 1,
     "status": "open",
     "summary": "Detta är en roll som Junior Product Development Intern hos Stronger AB i Stockholm, med fokus på produktutveckling och samordning inom activewear-branschen."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31440892": {
+    "classified_at": "2026-09-07",
+    "content_hash": "d062c10605fb8aeac8432f542cc48a7246539397",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 6,
+    "status": "open",
+    "summary": "SJR söker en junior prisanalytiker (konsultuppdrag) till ett globalt företag i Kista, med krav på erfarenhet av Microsoft Power BI."
   },
   "https://career.hemnet.se/jobs/7718268-analytics-engineer": {
     "classified_at": "2026-09-02",
@@ -417,6 +450,17 @@
     "status": "open",
     "summary": "Uppdraget söker en fullstack-utvecklare inom analysprodukter med fokus på moderna gränssnitt, backendutveckling och lösningar för datadriven verksamhet i Stockholm."
   },
+  "https://upgraded.se/konsultuppdrag/194026-enhetschef-it-arkitektur-och-it-sakerhet": {
+    "classified_at": "2026-09-07",
+    "content_hash": "3e002b4cf0d619fe0b5b9dc874a0ff83418199f3",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en roll som interim enhetschef för IT-arkitektur och IT-säkerhet hos Statens fastighetsverk, med fokus på ledarskap inom IT och digitalisering snarare än praktisk data engineering eller BI."
+  },
   "https://weworkremotely.com/remote-jobs/databricks-solutions-architect": {
     "classified_at": "2026-09-02",
     "content_hash": "3a0b7a996fdc725f5e9165b077435fba87ae9d40",
@@ -438,6 +482,17 @@
     "score": 4,
     "status": "open",
     "summary": "Uppdraget söker en Azure DevOps Specialist för att arbeta med utvecklingsplattformar på plats i Stockholm, med hybridmöjlighet. Rollen ligger nära konsultens erfarenhet av Azure DevOps, men fokuserar mer på plattformsdrift än på kärnkompetensen inom data engineering."
+  },
+  "https://www.asociety.se/sv/uppdrag/data-engineer-16543": {
+    "classified_at": "2026-09-07",
+    "content_hash": "21316ac58c37cf2bacad91414f2eb88a1ba7de98",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Uppdrag som Data Engineer i Södertälje, vilket matchar konsultens profil inom datateknik och moderna datalösningar väl."
   },
   "https://www.asociety.se/sv/uppdrag/teknisk-specialist-databasplattform-sql-serverpostgresql-16559": {
     "classified_at": "2026-09-04",
@@ -471,6 +526,17 @@
     "score": 3,
     "status": "open",
     "summary": "Uppdraget söker en plattformsingenjör med fokus på Google Cloud Platform och DevOps-verktyg som Terraform. Konsultens profil är mer inriktad mot Microsoft-ekosystemet och modern datalagring."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/senior-ai-driven-full-stack-developer-16586": {
+    "classified_at": "2026-09-07",
+    "content_hash": "d4c8edcbdc1a55427dcca3d281e57d0116198290",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Annonsen söker en senior fullstack-utvecklare med fokus på AI-drivna verktyg och agentbaserad utveckling för marknadsteam."
   },
   "https://www.asocietygroup.com/sv/uppdrag/underh-llsingenj-r-16528": {
     "classified_at": "2026-09-02",
