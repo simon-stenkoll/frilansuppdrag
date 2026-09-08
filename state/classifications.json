@@ -65,6 +65,28 @@
     "status": "open",
     "summary": "Uppdraget avser en applikationsspecialist inom Unit4 ERP hos Svenska kraftnät, vilket ligger utanför konsultens kärnfokus inom data engineering och BI."
   },
+  "https://app.verama.com/en/job-requests/83423": {
+    "classified_at": "2026-09-08",
+    "content_hash": "1a40bf5c0c269a11f5141ba6f587a59233c6db46",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 6,
+    "status": "open",
+    "summary": "Nordea söker en Snowflake-analytiker med fokus på kravhantering, dataanalys och lösningsdesign, med placering i Stockholm eller Helsingfors. Uppdraget innefattar samarbete mellan verksamhet och IT samt datakartläggning."
+  },
+  "https://app.verama.com/en/job-requests/83436": {
+    "classified_at": "2026-09-08",
+    "content_hash": "95e2e676c30600d23aba86c7026502993034fd7a",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Polismyndigheten söker en systemutvecklare med inriktning mot C++, C# och SQL för att arbeta med verksamhetskritiska IT-system. Uppdraget kräver omfattande erfarenhet av mjukvaruutveckling och databashantering."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -186,6 +208,28 @@
     "status": "open",
     "summary": "SJR söker en junior prisanalytiker (konsultuppdrag) till ett globalt företag i Kista, med krav på erfarenhet av Microsoft Power BI."
   },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31447065": {
+    "classified_at": "2026-09-08",
+    "content_hash": "f1c63d84e273b1b619ba5ecf08bae3ac868a7b1d",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "En statlig myndighet i Stockholm söker en systemutvecklare inom R och Python med inriktning mot datavisualisering. Uppdraget innebär att anpassa analysverktyg till en ny produktionsmiljö i samarbete med arkitekter."
+  },
+  "https://assignment.levigo.se/Z4tgl3xo/senior-data-engineer": {
+    "classified_at": "2026-09-08",
+    "content_hash": "e9d42679c66afc4d7a803acb55e58c35cc449348",
+    "employment_type": "unclear",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Listing söker en Senior Data Engineer i Stockholm med möjlighet till viss distansarbete. Annonsen saknar mer detaljerad information om teknikstack och uppdragsform."
+  },
   "https://career.hemnet.se/jobs/7718268-analytics-engineer": {
     "classified_at": "2026-09-02",
     "content_hash": "d96687860b0f2f3ac0df6b84856b18fff0c8683b",
@@ -207,6 +251,17 @@
     "score": 8,
     "status": "open",
     "summary": "Listing avser en roll som Data Engineer inom mjukvaruutveckling och teknik med hybrid uppskattning i Stockholm."
+  },
+  "https://enmanskonsulterna.se/uppdrag/110008": {
+    "classified_at": "2026-09-08",
+    "content_hash": "1b9720e88792baf655bfd6994c1eb6efd69fd04b",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 6,
+    "status": "open",
+    "summary": "Uppdraget som systemutvecklare innefattar arbete med R eller Python, datavisualisering och ETL. Det är på 75 procent med möjlighet till delvis distans."
   },
   "https://interimmarketing.se/jobs/542-business-intelligence-analyst-kandidatnatverk": {
     "classified_at": "2026-09-02",
@@ -461,6 +516,28 @@
     "status": "open",
     "summary": "Uppdraget avser en roll som interim enhetschef för IT-arkitektur och IT-säkerhet hos Statens fastighetsverk, med fokus på ledarskap inom IT och digitalisering snarare än praktisk data engineering eller BI."
   },
+  "https://upgraded.se/konsultuppdrag/194431-tech-lead-8": {
+    "classified_at": "2026-09-08",
+    "content_hash": "8f12f4ae5983bc226545211203155c4e80a45cdf",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Uppdraget som Technical Team Lead fokuserar på data warehouse, teknisk kvalitet och att leda utvecklingsteam i Stockholm. Rollen kräver nära samarbete med utveckling och planering för att stötta organisationens datainitiativ."
+  },
+  "https://upgraded.se/konsultuppdrag/194581-senior-applikationsspecialist-systemansvarig-inom-trading-systems": {
+    "classified_at": "2026-09-08",
+    "content_hash": "fdfab52bb1580d24780c3502faefce4976a6915f",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en roll som senior applikationsspecialist och systemansvarig inom trading systems och värdepappershandel, vilket saknar koppling till datateknik."
+  },
   "https://weworkremotely.com/remote-jobs/databricks-solutions-architect": {
     "classified_at": "2026-09-02",
     "content_hash": "3a0b7a996fdc725f5e9165b077435fba87ae9d40",
@@ -473,15 +550,15 @@
     "summary": "Databricks söker en Solutions Architect för en fast anställning (baserad i USA), vilket inte matchar konsultens profil för frilansuppdrag i Sverige."
   },
   "https://www.alphadev.se/lediga-uppdrag/azure-devops-specialist-a30ff163": {
-    "classified_at": "2026-09-02",
-    "content_hash": "5a63a38a7e63f73ed97a972a673e82bcb6723a63",
+    "classified_at": "2026-09-08",
+    "content_hash": "e8cb8ba7d9e68e4b0a934f01db67921834f725a3",
     "employment_type": "contract",
     "location_ok": true,
     "prompt_version": 1,
     "role_match": "adjacent",
-    "score": 4,
+    "score": 3,
     "status": "open",
-    "summary": "Uppdraget söker en Azure DevOps Specialist för att arbeta med utvecklingsplattformar på plats i Stockholm, med hybridmöjlighet. Rollen ligger nära konsultens erfarenhet av Azure DevOps, men fokuserar mer på plattformsdrift än på kärnkompetensen inom data engineering."
+    "summary": "Uppdraget avser en roll som Azure DevOps Specialist med fokus på att förbättra utvecklings- och leveransflöden i Stockholm, vilket endast delvis överlappar med konsultens primära kompetens inom data och analys."
   },
   "https://www.asociety.se/sv/uppdrag/data-engineer-16543": {
     "classified_at": "2026-09-07",
@@ -537,6 +614,28 @@
     "score": 1,
     "status": "open",
     "summary": "Annonsen söker en senior fullstack-utvecklare med fokus på AI-drivna verktyg och agentbaserad utveckling för marknadsteam."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/senior-technical-lead-till-arbetsf-rmedlingen-100-sthlm-16600": {
+    "classified_at": "2026-09-08",
+    "content_hash": "45df2a61566bdbeaea703844a511a418f0e6a171",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Uppdraget som teknisk team lead fokuserar på att leda och stödja utvecklingsteam inom Data Warehouse, vilket matchar konsultens erfarenhet av ledarskap och dataplattformar."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/systemutvecklare-till-scb-solna-80-16605": {
+    "classified_at": "2026-09-08",
+    "content_hash": "91e8a76313d0445c8056a58b25f049d7914779ca",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "Uppdraget söker en systemutvecklare till SCB i Solna för arbete med bearbetning och analys av data. Arbetet omfattar en gemensam produktionsmiljö med fokus på open source."
   },
   "https://www.asocietygroup.com/sv/uppdrag/underh-llsingenj-r-16528": {
     "classified_at": "2026-09-02",
