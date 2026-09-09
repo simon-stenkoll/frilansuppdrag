@@ -87,6 +87,50 @@
     "status": "open",
     "summary": "Polismyndigheten söker en systemutvecklare med inriktning mot C++, C# och SQL för att arbeta med verksamhetskritiska IT-system. Uppdraget kräver omfattande erfarenhet av mjukvaruutveckling och databashantering."
   },
+  "https://app.verama.com/en/job-requests/83494": {
+    "classified_at": "2026-09-09",
+    "content_hash": "6aa6779940a0f27c928089a1861466fe56570aff",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en systemansvarig och applikationsspecialist inom börssystem, vilket ligger utanför konsultens kärnområde inom data och BI."
+  },
+  "https://app.verama.com/en/job-requests/83528": {
+    "classified_at": "2026-09-09",
+    "content_hash": "e0187b8b788411280a15575f68780b86aad94961",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Annonsen söker en erfaren Java-utvecklare med stark arkitekturkompetens för att bygga backend-tjänster, vilket ligger helt utanför konsultens profil inom data och BI."
+  },
+  "https://app.verama.com/en/job-requests/83540": {
+    "classified_at": "2026-09-09",
+    "content_hash": "91785a64827bce3171745bac6b61889e71acd4ac",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 4,
+    "status": "open",
+    "summary": "Aurobay söker en senior Databricks Data Engineer med placering i Göteborg och möjlighet till distansarbete, för att utveckla skalbara dataplattformar och analyslösningar."
+  },
+  "https://app.verama.com/en/job-requests/83542": {
+    "classified_at": "2026-09-09",
+    "content_hash": "b889f2635fce350387fee22e11804d3de5c6bb10",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 4,
+    "status": "open",
+    "summary": "Finansinspektionen söker en BI-utvecklare och ETL-utvecklare för förvaltning samt migrering till en ny analysplattform. Rollen kräver dock omfattande erfarenhet av SAS-ekosystemet och dbt, vilket endast delvis matchar konsultens profil."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -538,6 +582,39 @@
     "status": "open",
     "summary": "Uppdraget avser en roll som senior applikationsspecialist och systemansvarig inom trading systems och värdepappershandel, vilket saknar koppling till datateknik."
   },
+  "https://upgraded.se/konsultuppdrag/194791-systemutvecklare-middleware": {
+    "classified_at": "2026-09-09",
+    "content_hash": "ec44f65fecdbdc08f622c85973b8ecc451e8f06d",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Uppdraget söker en erfaren systemutvecklare inom middleware och backend (via Upgraded People) med placering i Stockholm eller Visby för att arbeta med integrations- och backendtjänster."
+  },
+  "https://upgraded.se/konsultuppdrag/194982-qliksense-utvecklare": {
+    "classified_at": "2026-09-09",
+    "content_hash": "d2ad95594956671b96d1def8fd8a780ba707bd74",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Uppdraget söker en Qlik Sense utvecklare för att bygga och underhålla analysapplikationer samt datamodeller i Stockholm."
+  },
+  "https://upgraded.se/konsultuppdrag/195001-kravanalytiker-qliksense": {
+    "classified_at": "2026-09-09",
+    "content_hash": "878eb6f452c0f1a3eefc1421322c78e43d5cfdbe",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Uppdraget som kravanalytiker fokuserar på Qliksense och förändringar i källsystem, vilket ligger ganska långt från konsultens kärnkompetens inom data engineering och modern plattformsutveckling."
+  },
   "https://weworkremotely.com/remote-jobs/databricks-solutions-architect": {
     "classified_at": "2026-09-02",
     "content_hash": "3a0b7a996fdc725f5e9165b077435fba87ae9d40",
@@ -571,6 +648,17 @@
     "status": "open",
     "summary": "Uppdrag som Data Engineer i Södertälje, vilket matchar konsultens profil inom datateknik och moderna datalösningar väl."
   },
+  "https://www.asociety.se/sv/uppdrag/data-engineer-l4-16615": {
+    "classified_at": "2026-09-09",
+    "content_hash": "57a6aa5bd83b41020df0f398765e1ad25225d965",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Listing avser ett Data Engineer uppdrag i Stockholm med hybrid upplägg. Det är en roll som passar konsultens profil inom modern datateknik."
+  },
   "https://www.asociety.se/sv/uppdrag/teknisk-specialist-databasplattform-sql-serverpostgresql-16559": {
     "classified_at": "2026-09-04",
     "content_hash": "916280f1ae1944df455b95729628bf25e062ca74",
@@ -592,6 +680,17 @@
     "score": 1,
     "status": "open",
     "summary": "Uppdraget avser en roll som Business Operations Partner för DACH-regionen med fokus på processer och datahantering, vilket ligger utanför konsultens tekniska expertis inom data engineering och BI."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/data-engineer-l4-16615": {
+    "classified_at": "2026-09-09",
+    "content_hash": "070b77e370bc48e1c0f611c7ba45546cc8e03d52",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 9,
+    "status": "open",
+    "summary": "Uppdraget söker en senior dataingenjör (via A Society) i Stockholm för att vidareutveckla en modern, AI-klar dataplattform med högt självständigt ansvar."
   },
   "https://www.asocietygroup.com/sv/uppdrag/platform-engineer-remote-100-ok-16519": {
     "classified_at": "2026-09-02",
@@ -625,6 +724,17 @@
     "score": 8,
     "status": "open",
     "summary": "Uppdraget som teknisk team lead fokuserar på att leda och stödja utvecklingsteam inom Data Warehouse, vilket matchar konsultens erfarenhet av ledarskap och dataplattformar."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/systemutvecklare-qlik-sense-till-arbetsf-rmedlingen-16622": {
+    "classified_at": "2026-09-09",
+    "content_hash": "1c03152f33b2f4cba60f3a1e8cf640748085de2f",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 7,
+    "status": "open",
+    "summary": "Arbetsförmedlingen söker en systemutvecklare inom Qlik Sense till Stockholm, för att arbeta med datamodellering, ETL och vidareutveckling av analysstöd."
   },
   "https://www.asocietygroup.com/sv/uppdrag/systemutvecklare-till-scb-solna-80-16605": {
     "classified_at": "2026-09-08",
