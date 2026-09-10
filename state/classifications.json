@@ -77,15 +77,15 @@
     "summary": "Nordea söker en Snowflake-analytiker med fokus på kravhantering, dataanalys och lösningsdesign, med placering i Stockholm eller Helsingfors. Uppdraget innefattar samarbete mellan verksamhet och IT samt datakartläggning."
   },
   "https://app.verama.com/en/job-requests/83436": {
-    "classified_at": "2026-09-08",
-    "content_hash": "95e2e676c30600d23aba86c7026502993034fd7a",
+    "classified_at": "2026-09-10",
+    "content_hash": "b2627bba66cdcdc37e6eb7b0251ac42bfe7328d1",
     "employment_type": "contract",
     "location_ok": true,
     "prompt_version": 1,
     "role_match": "none",
-    "score": 2,
+    "score": 1,
     "status": "open",
-    "summary": "Polismyndigheten söker en systemutvecklare med inriktning mot C++, C# och SQL för att arbeta med verksamhetskritiska IT-system. Uppdraget kräver omfattande erfarenhet av mjukvaruutveckling och databashantering."
+    "summary": "Polismyndigheten söker en systemutvecklare i C++ för arbete med verksamhetskritiska IT-system (och resursplanering). Uppdraget ligger helt utanför konsultens fokusområde inom data och BI."
   },
   "https://app.verama.com/en/job-requests/83494": {
     "classified_at": "2026-09-09",
@@ -130,6 +130,17 @@
     "score": 4,
     "status": "open",
     "summary": "Finansinspektionen söker en BI-utvecklare och ETL-utvecklare för förvaltning samt migrering till en ny analysplattform. Rollen kräver dock omfattande erfarenhet av SAS-ekosystemet och dbt, vilket endast delvis matchar konsultens profil."
+  },
+  "https://app.verama.com/en/job-requests/83576": {
+    "classified_at": "2026-09-10",
+    "content_hash": "57f163e9b8bd37d27f44422d2e2cd2bbcce93b2d",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 7,
+    "status": "open",
+    "summary": "Aurobay söker en senior Power BI-utvecklare eller dataanalytiker (med möjlighet till distansarbete från Göteborg) för att omvandla företagsdata till insikter och utveckla skalbara analyslösningar."
   },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
@@ -275,15 +286,15 @@
     "summary": "Listing söker en Senior Data Engineer i Stockholm med möjlighet till viss distansarbete. Annonsen saknar mer detaljerad information om teknikstack och uppdragsform."
   },
   "https://career.hemnet.se/jobs/7718268-analytics-engineer": {
-    "classified_at": "2026-09-02",
-    "content_hash": "d96687860b0f2f3ac0df6b84856b18fff0c8683b",
+    "classified_at": "2026-09-10",
+    "content_hash": "01d5f686d713d938272d0310043bd829fd374412",
     "employment_type": "permanent",
     "location_ok": true,
     "prompt_version": 1,
     "role_match": "core",
     "score": 8,
     "status": "open",
-    "summary": "Hemnet söker en Analytics Engineer till sitt team i Stockholm, med fokus på analys och datamodellering."
+    "summary": "Hemnet söker en Analytics Engineer till sitt team i Stockholm (för att arbeta med modern dataplattform och analys)."
   },
   "https://career.nionit.com/jobs/6518264-data-engineer": {
     "classified_at": "2026-09-02",
@@ -317,6 +328,17 @@
     "score": 6,
     "status": "open",
     "summary": "Listing för en roll som Business Intelligence Analyst inom ett kandidatnätverk (interim). Uppdraget rör analys och BI, vilket ligger nära konsultens kompetens inom Power BI."
+  },
+  "https://jobb.senterprise.se/jobs/8353014-konsultuppdrag-data-analyst-analytics-engineer": {
+    "classified_at": "2026-09-10",
+    "content_hash": "4a742c5b6e0788968d11845a4e252888869c9466",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 6,
+    "status": "open",
+    "summary": "Uppdraget som Data Analyst och Analytics Engineer i Stockholm (via Senterprise) fokuserar på dataanalys och modern databearbetning. Rollen ligger nära konsultens kompetens inom BI och dbt, även om fokus lutar mer åt analys."
   },
   "https://jobs.epico.se/jobs/7998079-epico-tech-soker-3-seniora-data-engineer-uppstart-under-hosten": {
     "classified_at": "2026-09-02",
@@ -383,6 +405,17 @@
     "score": 4,
     "status": "open",
     "summary": "Uppdraget avser en roll som Data Engineer inom dagligvaruhandeln i Solna, med fokus på Google Cloud Platform, BigQuery och modern produktutveckling."
+  },
+  "https://market.cinode.com/requests/22387": {
+    "classified_at": "2026-09-10",
+    "content_hash": "73f900d6ae63631a7cd918df6b3ffa1199106622",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Uppdraget avser en senior expert inom datalager och Data Vault, med krav på bland annat Snowflake och dbt, men det utförs i Helsingfors med omnejd."
   },
   "https://upgraded.se/konsultuppdrag/184446-utredare-behorighetslosning": {
     "classified_at": "2026-09-02",
@@ -614,6 +647,39 @@
     "score": 3,
     "status": "open",
     "summary": "Uppdraget som kravanalytiker fokuserar på Qliksense och förändringar i källsystem, vilket ligger ganska långt från konsultens kärnkompetens inom data engineering och modern plattformsutveckling."
+  },
+  "https://upgraded.se/konsultuppdrag/195112-data-science-2": {
+    "classified_at": "2026-09-10",
+    "content_hash": "352de040c7325db84d762da8d0aeee1fa4a56df2",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Uppdraget avser en senior AI- och maskininlärningsingenjör (via Upgraded People) i Stockholm för att arbeta med AI-lösningar, maskininlärning och generativ AI i nära samarbete med data engineers."
+  },
+  "https://upgraded.se/konsultuppdrag/195137-systemutvecklare-86": {
+    "classified_at": "2026-09-10",
+    "content_hash": "447547b21c920a089d37856adbca375099da0e16",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 7,
+    "status": "open",
+    "summary": "Uppdraget söker en systemutvecklare (via Upgraded People) i Stockholm för att stötta en organisation i att utveckla nya arbetssätt för dataanalys och bearbetning inom en gemensam produktionsmiljö."
+  },
+  "https://upgraded.se/konsultuppdrag/195284-senior-bi-utvecklare-lead": {
+    "classified_at": "2026-09-10",
+    "content_hash": "21f01f5066cf8a5f53dee8812cbc2bab112e88f0",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 9,
+    "status": "open",
+    "summary": "Uppdraget söker en senior BI-utvecklare och lead för att etablera en ny data- och analysplattform med fokus på Power BI, där rollen kombinerar tekniskt ledarskap med arkitekturarbete."
   },
   "https://weworkremotely.com/remote-jobs/databricks-solutions-architect": {
     "classified_at": "2026-09-02",
