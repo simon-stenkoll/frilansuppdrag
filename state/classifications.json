@@ -142,6 +142,72 @@
     "status": "open",
     "summary": "Aurobay söker en senior Power BI-utvecklare eller dataanalytiker (med möjlighet till distansarbete från Göteborg) för att omvandla företagsdata till insikter och utveckla skalbara analyslösningar."
   },
+  "https://app.verama.com/en/job-requests/83602": {
+    "classified_at": "2026-09-11",
+    "content_hash": "8810cd0514f23dea145903523f9bd71cf2201afb",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "ICA Sverige AB söker en senior BI-utvecklare med stor erfarenhet av Power BI, datamodellering och Databricks. Uppdraget innebär att rigga plattformen för skalbar användning, stötta analytikergruppen och arbeta hands-on med det semantiska lagret."
+  },
+  "https://app.verama.com/en/job-requests/83605": {
+    "classified_at": "2026-09-11",
+    "content_hash": "3d0a171a36cffd995d8eb1ea46096d6c2072a776",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget avser en teknisk IT delprogramledare med ansvar for styrning och genomforande inom införandet av ett nytt tandvårdssystem. Rollen har ett starkt fokus på IT ledning snarare än data engineering eller BI."
+  },
+  "https://app.verama.com/en/job-requests/83620": {
+    "classified_at": "2026-09-11",
+    "content_hash": "6357126307f560f85687d7c9c74a6a5e8bc9aa2f",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en systemutvecklare för Omada Identity Suite (OIS) med fokus på identitets- och behörighetshantering hos Västra Götalandsregionen (VGR) i Göteborg."
+  },
+  "https://app.verama.com/en/job-requests/83622": {
+    "classified_at": "2026-09-11",
+    "content_hash": "787498c4638d9bf7c70056558611222b4c2b0523",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Polismyndigheten söker en systemutvecklare med gedigen erfarenhet av C++, C# och relaterade teknologier för arbete med verksamhetskritiska system i Stockholm."
+  },
+  "https://app.verama.com/en/job-requests/83634": {
+    "classified_at": "2026-09-11",
+    "content_hash": "b4a3d0aa267a08090120b242aa52e2898e5a81bf",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Detta är ett konsultuppdrag som systemutvecklare för plattformen Evikomp hos Linköpings kommun, med fokus på fullstackutveckling i PHP och Laravel på distans."
+  },
+  "https://app.verama.com/en/job-requests/83653": {
+    "classified_at": "2026-09-11",
+    "content_hash": "d6609a048b6e6503f5b58b5b2157f03662b45dc1",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 2,
+    "status": "open",
+    "summary": "H&M söker en Senior Platform Engineer för att arbeta med molnplattformar i GCP, infrastruktur som kod samt CI/CD-pipeliner. Rollen fokuserar starkt på mjukvaruutveckling och plattformsdrift snarare dän traditionell data engineering."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -274,6 +340,17 @@
     "status": "open",
     "summary": "En statlig myndighet i Stockholm söker en systemutvecklare inom R och Python med inriktning mot datavisualisering. Uppdraget innebär att anpassa analysverktyg till en ny produktionsmiljö i samarbete med arkitekter."
   },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31462986": {
+    "classified_at": "2026-09-11",
+    "content_hash": "2e7dd0150f2731c1b7036d84b34205b095cb379a",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "Norconsult söker en vikarierande Business Controller till sitt kontor i Stockholm, med fokus på att utveckla verksamhetsnära arbetssätt och Power BI-rapportering."
+  },
   "https://assignment.levigo.se/Z4tgl3xo/senior-data-engineer": {
     "classified_at": "2026-09-08",
     "content_hash": "e9d42679c66afc4d7a803acb55e58c35cc449348",
@@ -286,15 +363,15 @@
     "summary": "Listing söker en Senior Data Engineer i Stockholm med möjlighet till viss distansarbete. Annonsen saknar mer detaljerad information om teknikstack och uppdragsform."
   },
   "https://career.hemnet.se/jobs/7718268-analytics-engineer": {
-    "classified_at": "2026-09-10",
-    "content_hash": "01d5f686d713d938272d0310043bd829fd374412",
+    "classified_at": "2026-09-11",
+    "content_hash": "d96687860b0f2f3ac0df6b84856b18fff0c8683b",
     "employment_type": "permanent",
     "location_ok": true,
     "prompt_version": 1,
     "role_match": "core",
-    "score": 8,
+    "score": 9,
     "status": "open",
-    "summary": "Hemnet söker en Analytics Engineer till sitt team i Stockholm (för att arbeta med modern dataplattform och analys)."
+    "summary": "Hemnet söker en Analytics Engineer i Stockholm för att arbeta med data och analys, vilket matchar konsultens profil inom moderna datalösningar."
   },
   "https://career.nionit.com/jobs/6518264-data-engineer": {
     "classified_at": "2026-09-02",
@@ -681,6 +758,39 @@
     "status": "open",
     "summary": "Uppdraget söker en senior BI-utvecklare och lead för att etablera en ny data- och analysplattform med fokus på Power BI, där rollen kombinerar tekniskt ledarskap med arkitekturarbete."
   },
+  "https://upgraded.se/konsultuppdrag/195405-ux-lead-3": {
+    "classified_at": "2026-09-11",
+    "content_hash": "c3e1dbd547333098b6b033e67c35d3dba411bdf9",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en roll som UX Lead med fokus på användarvänliga och tillgängliga digitala gränssnitt, vilket saknar koppling till konsultens profil inom data och BI."
+  },
+  "https://upgraded.se/konsultuppdrag/195471-grafisk-formgivare-2-3-stycken": {
+    "classified_at": "2026-09-11",
+    "content_hash": "4de23a82a48e83155cf2d676f71eaf9625d7fb78",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en illustratör eller grafisk formgivare som ska stödja framtagandet av en slutrapport genom att visualisera processer och innehåll. Rollen saknar helt koppling till data engineering eller BI."
+  },
+  "https://upgraded.se/konsultuppdrag/195534-junior-kommunikator": {
+    "classified_at": "2026-09-11",
+    "content_hash": "438c8f19051e018d7eeebe656492235d60d7694b",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en roll som junior kommunikatör med fokus på kommunikationsstöd, presentationsmaterial och förändringskommunikation (inom försäljning och service)."
+  },
   "https://weworkremotely.com/remote-jobs/databricks-solutions-architect": {
     "classified_at": "2026-09-02",
     "content_hash": "3a0b7a996fdc725f5e9165b077435fba87ae9d40",
@@ -736,6 +846,17 @@
     "status": "open",
     "summary": "Uppdraget avser en teknisk specialist inom databasplattformar med fokus på SQL Server och PostgreSQL, vilket ligger nära men utanför profilens primära fokus på Microsoft Fabric och modern datalagring. Tjänsten är placerad på plats i Göteborg."
   },
+  "https://www.asocietygroup.com/sv/uppdrag/azure-devops-specialist-niv-3-medior-16328": {
+    "classified_at": "2026-09-11",
+    "content_hash": "795f1ec6e2a826d89f80794960d48c10f211f192",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Uppdraget avser en Azure DevOps Specialist på mediornivå (nivå 3) med fokus på utvecklingsplattformar och DevSecOps-flöden i Stockholm, med möjlighet till överrekrytering efter cirka 6 månader."
+  },
   "https://www.asocietygroup.com/sv/uppdrag/business-operations-partner-dach-16272": {
     "classified_at": "2026-09-02",
     "content_hash": "7b6099e2d20e87dd9a68876ed327563d3a89f378",
@@ -779,6 +900,17 @@
     "score": 1,
     "status": "open",
     "summary": "Annonsen söker en senior fullstack-utvecklare med fokus på AI-drivna verktyg och agentbaserad utveckling för marknadsteam."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/senior-platform-engineer-remote-100-ok-16642": {
+    "classified_at": "2026-09-11",
+    "content_hash": "76ac9352ae2c499c36a7e571e20ca9fdc6e04d38",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "Roll som Senior Platform Engineer med inriktning mot Google Cloud Platform och molninfrastruktur, vilket ligger ganska långt från konsultens fokus på Microsoft Fabric och data engineering."
   },
   "https://www.asocietygroup.com/sv/uppdrag/senior-technical-lead-till-arbetsf-rmedlingen-100-sthlm-16600": {
     "classified_at": "2026-09-08",
