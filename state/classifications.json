@@ -208,6 +208,17 @@
     "status": "open",
     "summary": "H&M söker en Senior Platform Engineer för att arbeta med molnplattformar i GCP, infrastruktur som kod samt CI/CD-pipeliner. Rollen fokuserar starkt på mjukvaruutveckling och plattformsdrift snarare dän traditionell data engineering."
   },
+  "https://app.verama.com/en/job-requests/83690": {
+    "classified_at": "2026-09-14",
+    "content_hash": "495a1cff65b351afd018e0c276f80aa7b55516c5",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Swedavia söker en integrationsutvecklare med fokus på Microsoft Azure och BizTalk (med erfarenhet av .NET och API-utveckling). Rollen ligger ganska hängt ifrån konsultens profil som fokuserar på data engineering och BI, men har viss beröringspunkt i Azure och SQL."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -384,6 +395,17 @@
     "status": "open",
     "summary": "Listing avser en roll som Data Engineer inom mjukvaruutveckling och teknik med hybrid uppskattning i Stockholm."
   },
+  "https://career.nionit.com/jobs/8325044-data-engineer": {
+    "classified_at": "2026-09-14",
+    "content_hash": "6062f24fe85be8e526991575673d6a6a3a619aeb",
+    "employment_type": "permanent",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Listing avser en roll som Data Engineer med placering i Sofia, Bulgarien (hybrid). Positionen efterfråger kompetens inom mjukvaruutveckling och datateknik."
+  },
   "https://enmanskonsulterna.se/uppdrag/110008": {
     "classified_at": "2026-09-08",
     "content_hash": "1b9720e88792baf655bfd6994c1eb6efd69fd04b",
@@ -493,6 +515,17 @@
     "score": 8,
     "status": "open",
     "summary": "Uppdraget avser en senior expert inom datalager och Data Vault, med krav på bland annat Snowflake och dbt, men det utförs i Helsingfors med omnejd."
+  },
+  "https://market.cinode.com/requests/22450": {
+    "classified_at": "2026-09-14",
+    "content_hash": "c7ffe0fcf9e38920610c2c7ac52f9faa61232d2c",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 6,
+    "status": "open",
+    "summary": "Uppdraget söker en senior dataarkitekt med fokus på Databricks och moderna data plattformar, vilket matchar profilens kompetens inom data warehouse och datalagerlösningar."
   },
   "https://upgraded.se/konsultuppdrag/184446-utredare-behorighetslosning": {
     "classified_at": "2026-09-02",
@@ -790,6 +823,39 @@
     "score": 1,
     "status": "open",
     "summary": "Uppdraget avser en roll som junior kommunikatör med fokus på kommunikationsstöd, presentationsmaterial och förändringskommunikation (inom försäljning och service)."
+  },
+  "https://upgraded.se/konsultuppdrag/195644-sap-btp-is-developer": {
+    "classified_at": "2026-09-14",
+    "content_hash": "d649a821f1b25a3b27720a7ce6bbbec949ed161c",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget söker en utvecklare för SAP BTP Integration Suite för att hantera migration och integrationer. Rollen saknar koppling till datateknik, Microsoft Fabric eller moderna datalager."
+  },
+  "https://upgraded.se/konsultuppdrag/195704-integration-specialist-4": {
+    "classified_at": "2026-09-14",
+    "content_hash": "821b4d8a1f316c4d45a76604c78fda8745bad49a",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Uppdraget som integration specialist fokuserar på plattformsstabilitet, automatisering samt administration av Kafka- och HiveMQ-kluster. Rollen har en mer systemintegrations- och driftinriktad prägel än konsultens expertis inom modern datalagring."
+  },
+  "https://upgraded.se/konsultuppdrag/195819-erfaren-projektledare-for-regeringsuppdrag": {
+    "classified_at": "2026-09-14",
+    "content_hash": "bed0b32bc025f59745c780ca27da3dd9ff55afd3",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en senior projektledare för ett regeringsuppdrag hos Inspektionen för vård och omsorg, med fokus på styrning och uppföljning av handläggningstider."
   },
   "https://weworkremotely.com/remote-jobs/databricks-solutions-architect": {
     "classified_at": "2026-09-02",
