@@ -362,6 +362,17 @@
     "status": "open",
     "summary": "Norconsult söker en vikarierande Business Controller till sitt kontor i Stockholm, med fokus på att utveckla verksamhetsnära arbetssätt och Power BI-rapportering."
   },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31465319": {
+    "classified_at": "2026-09-15",
+    "content_hash": "93e617f99d5153ad865790a187e59f1a9bf235b6",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Listing avser en roll som senior backendutvecklare inom .NET och DevOps i Stockholm, vilket inte matchar profilens fokus på data engineering och BI."
+  },
   "https://assignment.levigo.se/Z4tgl3xo/senior-data-engineer": {
     "classified_at": "2026-09-08",
     "content_hash": "e9d42679c66afc4d7a803acb55e58c35cc449348",
@@ -869,15 +880,15 @@
     "summary": "Databricks söker en Solutions Architect för en fast anställning (baserad i USA), vilket inte matchar konsultens profil för frilansuppdrag i Sverige."
   },
   "https://www.alphadev.se/lediga-uppdrag/azure-devops-specialist-a30ff163": {
-    "classified_at": "2026-09-08",
-    "content_hash": "e8cb8ba7d9e68e4b0a934f01db67921834f725a3",
-    "employment_type": "contract",
+    "classified_at": "2026-09-15",
+    "content_hash": "f9925b0cf9da08c64be379753be9d1fbfa24c2e0",
+    "employment_type": "permanent",
     "location_ok": true,
     "prompt_version": 1,
     "role_match": "adjacent",
     "score": 3,
     "status": "open",
-    "summary": "Uppdraget avser en roll som Azure DevOps Specialist med fokus på att förbättra utvecklings- och leveransflöden i Stockholm, vilket endast delvis överlappar med konsultens primära kompetens inom data och analys."
+    "summary": "Uppdraget som Azure DevOps Specialist fokuserar på utvecklings- och leveransflöden, vilket ligger ganska långt ifrån konsultens primära fokus inom data engineering och BI."
   },
   "https://www.asociety.se/sv/uppdrag/data-engineer-16543": {
     "classified_at": "2026-09-07",
@@ -1021,6 +1032,17 @@
     "score": 1,
     "status": "open",
     "summary": "Annonsen gäller en roll som underhållsingenjör inom läkemedelstillverkning, vilket saknar koppling till datateknik."
+  },
+  "https://www.keyman.se/sv/administration-ekonomi-juridik/konsult-inom-informationsforvaltning-registrator-till-skr-sveriges-kommuner-och-regioner-16301": {
+    "classified_at": "2026-09-15",
+    "content_hash": "275575dbc335998f75b5370e36e0ac1b881dfae8",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en konsult inom informationsförvaltning och registraturskap för att stödja Sveriges Kommuner och Regioner. Det finns ingen koppling till data engineering, BI eller analys."
   },
   "https://www.sigma.se/assignment/senior-etl-developer-sweden-en-20260828": {
     "classified_at": "2026-09-02",
