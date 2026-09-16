@@ -219,6 +219,17 @@
     "status": "open",
     "summary": "Swedavia söker en integrationsutvecklare med fokus på Microsoft Azure och BizTalk (med erfarenhet av .NET och API-utveckling). Rollen ligger ganska hängt ifrån konsultens profil som fokuserar på data engineering och BI, men har viss beröringspunkt i Azure och SQL."
   },
+  "https://app.verama.com/en/job-requests/83779": {
+    "classified_at": "2026-09-16",
+    "content_hash": "8810cd0514f23dea145903523f9bd71cf2201afb",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "ICA Sverige AB söker en senior BI-utvecklare med erfarenhet av Databricks och Power BI för att bygga upp en ny analysplattform och driva self-servicearbete i Stockholm."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -868,6 +879,50 @@
     "status": "open",
     "summary": "Uppdraget avser en senior projektledare för ett regeringsuppdrag hos Inspektionen för vård och omsorg, med fokus på styrning och uppföljning av handläggningstider."
   },
+  "https://upgraded.se/konsultuppdrag/196085-marknadsstudie-av-leverantorer-av-formedlingstjanster-enligt-dsa": {
+    "classified_at": "2026-09-16",
+    "content_hash": "8af57cde42d4077a104c327ec1ee4e743cb30df8",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en marknadsstudie av leverantörer för förmedlingstjänster enligt EU:s förordning Digital Services Act."
+  },
+  "https://upgraded.se/konsultuppdrag/196086-integrations-specialist": {
+    "classified_at": "2026-09-16",
+    "content_hash": "9eedb6107a9e9aebcea451ad89c9b245e041153e",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget söker en integrationsspecialist med starka kunskaper i Java för att sätta upp och konfigurera integrationer. Rollen saknar fokus på datateknik, modern datalagring och business intelligence."
+  },
+  "https://upgraded.se/konsultuppdrag/196117-konsultteam-inom-data-molnplattform-och-digital-utveckling": {
+    "classified_at": "2026-09-16",
+    "content_hash": "a1f3afe75152097ec153d1b7dccaae6f12a1c50a",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 10,
+    "status": "open",
+    "summary": "Uppdraget söker ett konsultteam inom data och molnplattform med inriktning mot Microsoft Fabric, Azure och Power BI. Det passar perfekt för konsultens expertis inom modern datalagring och analys."
+  },
+  "https://upgraded.se/konsultuppdrag/196167-supply-chain-developer-ssp": {
+    "classified_at": "2026-09-16",
+    "content_hash": "4a42727457afb3f9ccfef50707f40dd6eb063ad6",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget som Supply Chain Developer fokuserar på att driva verksamhetsutveckling inom supply chain och sälj- och driftsplanering. Rollen ligger utanör konsultens primära tekniska expertis inom datateknik."
+  },
   "https://weworkremotely.com/remote-jobs/databricks-solutions-architect": {
     "classified_at": "2026-09-02",
     "content_hash": "3a0b7a996fdc725f5e9165b077435fba87ae9d40",
@@ -878,6 +933,17 @@
     "score": 2,
     "status": "open",
     "summary": "Databricks söker en Solutions Architect för en fast anställning (baserad i USA), vilket inte matchar konsultens profil för frilansuppdrag i Sverige."
+  },
+  "https://www.alphadev.se/lediga-uppdrag/azure-devops-specialist-57599023": {
+    "classified_at": "2026-09-16",
+    "content_hash": "69e2b8625cc965b33e806a3cf04bfc48a50fdd43",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Uppdraget som Azure DevOps Specialist fokuserar på utvecklings- och leveransförmåga inom utvecklingsplattformar. Rollen matchar konsultens erfarenhet av Azure DevOps, men saknar det primära fokuset på data- och BI-området."
   },
   "https://www.alphadev.se/lediga-uppdrag/azure-devops-specialist-a30ff163": {
     "classified_at": "2026-09-15",
@@ -955,6 +1021,17 @@
     "score": 9,
     "status": "open",
     "summary": "Uppdraget söker en senior dataingenjör (via A Society) i Stockholm för att vidareutveckla en modern, AI-klar dataplattform med högt självständigt ansvar."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/fyra-arkitekter-till-produktomr-de-rendehantering-till-transportstyrelsen-rebro-norrk-ping-eller-stockholm-16678": {
+    "classified_at": "2026-09-16",
+    "content_hash": "aeaa1f370c06ee6cad7c6cd9293c3ebc8b8718db",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Transportstyrelsen söker en lösningsarkitekt och tre mjukvaruarkitekter till produktområde Ärendehantering, med placering i Stockholm, Norrköping eller Örebro."
   },
   "https://www.asocietygroup.com/sv/uppdrag/platform-engineer-remote-100-ok-16519": {
     "classified_at": "2026-09-02",
