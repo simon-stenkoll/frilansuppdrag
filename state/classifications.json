@@ -230,6 +230,17 @@
     "status": "open",
     "summary": "ICA Sverige AB söker en senior BI-utvecklare med erfarenhet av Databricks och Power BI för att bygga upp en ny analysplattform och driva self-servicearbete i Stockholm."
   },
+  "https://app.verama.com/en/job-requests/83851": {
+    "classified_at": "2026-09-17",
+    "content_hash": "393d7ce2de775da1a116174329c9f4334d4f54f6",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "ICA söker en teknisk testare och automatiserare med inriktning mot prestandatester och integrationer i ett ERP-projekt. Rollen saknar fokus på data engineering, modern datalagring och BI."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -923,6 +934,28 @@
     "status": "open",
     "summary": "Uppdraget som Supply Chain Developer fokuserar på att driva verksamhetsutveckling inom supply chain och sälj- och driftsplanering. Rollen ligger utanör konsultens primära tekniska expertis inom datateknik."
   },
+  "https://upgraded.se/konsultuppdrag/196293-testautomatiserare-7": {
+    "classified_at": "2026-09-17",
+    "content_hash": "4610c5e498097e8fbafc599b5768fb36c524301a",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "Uppdraget som testautomatiserare fokuserar på kvalitetssäkring, integration och validering av dataflöden i en Data Warehouse-miljö. Rollen innefattar arbete med datamodellering och testning i Data Vault."
+  },
+  "https://upgraded.se/konsultuppdrag/196314-teknisk-testare-16": {
+    "classified_at": "2026-09-17",
+    "content_hash": "74f6ac3eb14e6fff70125bde3f404cfce2731284",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget söker en teknisk testare till ett omfattande transformationsinitiativ, med fokus på kvalitetssäkring, integrationstester och prestandatester i en logistik och finansplattform."
+  },
   "https://weworkremotely.com/remote-jobs/databricks-solutions-architect": {
     "classified_at": "2026-09-02",
     "content_hash": "3a0b7a996fdc725f5e9165b077435fba87ae9d40",
@@ -1043,6 +1076,17 @@
     "score": 3,
     "status": "open",
     "summary": "Uppdraget söker en plattformsingenjör med fokus på Google Cloud Platform och DevOps-verktyg som Terraform. Konsultens profil är mer inriktad mot Microsoft-ekosystemet och modern datalagring."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/produktionsplanerare-16692": {
+    "classified_at": "2026-09-17",
+    "content_hash": "31f516701170b662eac10e74a5bd9664605ec441",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Rollen som produktionsplanerare inom försvarsindustrin fokuserar på att koordinera tillverkningsflöden och resurser, vilket saknar koppling till datateknik och analys."
   },
   "https://www.asocietygroup.com/sv/uppdrag/senior-ai-driven-full-stack-developer-16586": {
     "classified_at": "2026-09-07",
