@@ -241,6 +241,17 @@
     "status": "open",
     "summary": "ICA söker en teknisk testare och automatiserare med inriktning mot prestandatester och integrationer i ett ERP-projekt. Rollen saknar fokus på data engineering, modern datalagring och BI."
   },
+  "https://app.verama.com/en/job-requests/83923": {
+    "classified_at": "2026-09-18",
+    "content_hash": "a4560f8dec2105d9fd4327fdd25a24c345b3d25a",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget söker en erfaren Software Configuration Manager eller DevOps Lead för att leda konfigurationshantering inom ett stort redovisnings- och transformationsprogram (ART) hos Swedbank."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -395,6 +406,28 @@
     "status": "open",
     "summary": "Listing avser en roll som senior backendutvecklare inom .NET och DevOps i Stockholm, vilket inte matchar profilens fokus på data engineering och BI."
   },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31489984": {
+    "classified_at": "2026-09-18",
+    "content_hash": "405bccb82fb18cc9c0807391890255277189a753",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget som Business Controller fokuserar på finansiell styrning och analys inom batteri- och laddningsutveckling, vilket ligger utanför konsulternas kärnområde inom data engineering."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31491563": {
+    "classified_at": "2026-09-18",
+    "content_hash": "147886a3c57090f438d5fe32e3712d4bfe8dee30",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 9,
+    "status": "open",
+    "summary": "Uppdraget söker en senior Power BI-utvecklare för att stärka organisationens förmåga inom dataanalys och beslutsstöd. Arbetet innefattar utveckling och förvaltning av analys- och visualiseringslösningar."
+  },
   "https://assignment.levigo.se/Z4tgl3xo/senior-data-engineer": {
     "classified_at": "2026-09-08",
     "content_hash": "e9d42679c66afc4d7a803acb55e58c35cc449348",
@@ -460,6 +493,17 @@
     "score": 6,
     "status": "open",
     "summary": "Listing för en roll som Business Intelligence Analyst inom ett kandidatnätverk (interim). Uppdraget rör analys och BI, vilket ligger nära konsultens kompetens inom Power BI."
+  },
+  "https://jobb.senterprise.se/jobs/8244924-konsultuppdrag-cloud-engineer-data-platform": {
+    "classified_at": "2026-09-18",
+    "content_hash": "95d53bdf450df05dfc60de0a058f180419f51b02",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Detta är ett konsultuppdrag som Cloud Engineer inom data- och plattformsarkitektur, med en hybridarbetsmodell i Stockholm."
   },
   "https://jobb.senterprise.se/jobs/8353014-konsultuppdrag-data-analyst-analytics-engineer": {
     "classified_at": "2026-09-10",
@@ -956,6 +1000,17 @@
     "status": "open",
     "summary": "Uppdraget söker en teknisk testare till ett omfattande transformationsinitiativ, med fokus på kvalitetssäkring, integrationstester och prestandatester i en logistik och finansplattform."
   },
+  "https://upgraded.se/konsultuppdrag/196641-integrationsutvecklare-dds-domain-data-services": {
+    "classified_at": "2026-09-18",
+    "content_hash": "2703289ba3855b11cb3e1db047e615c235f6a51e",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 6,
+    "status": "open",
+    "summary": "Uppdraget som integrationsutvecklare fokuserar på data, integrationer och moderna plattformstjänster (med kopplingar till SAP och API-utveckling). Det ligger ganska nära konsultens kompetens inom data och plattformar, även om det lutar mer åt integration snarare än ren data engineering."
+  },
   "https://weworkremotely.com/remote-jobs/databricks-solutions-architect": {
     "classified_at": "2026-09-02",
     "content_hash": "3a0b7a996fdc725f5e9165b077435fba87ae9d40",
@@ -1065,6 +1120,17 @@
     "score": 3,
     "status": "open",
     "summary": "Transportstyrelsen söker en lösningsarkitekt och tre mjukvaruarkitekter till produktområde Ärendehantering, med placering i Stockholm, Norrköping eller Örebro."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/konsult-inom-kvalitetsledning-f-r-swexia-software-quality-management-16708": {
+    "classified_at": "2026-09-18",
+    "content_hash": "edc72e1bcaf39d0d2566e2e47ea386323138026e",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en konsult inom kvalitetsledning för att etablera och utveckla ramverk enligt ISO 9001 hos SWEXIA Software."
   },
   "https://www.asocietygroup.com/sv/uppdrag/platform-engineer-remote-100-ok-16519": {
     "classified_at": "2026-09-02",
