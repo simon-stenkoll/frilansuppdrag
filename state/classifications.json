@@ -241,6 +241,17 @@
     "status": "open",
     "summary": "ICA söker en teknisk testare och automatiserare med inriktning mot prestandatester och integrationer i ett ERP-projekt. Rollen saknar fokus på data engineering, modern datalagring och BI."
   },
+  "https://app.verama.com/en/job-requests/83852": {
+    "classified_at": "2026-09-21",
+    "content_hash": "f3e25dbe723b0bc814356a384a42d5ce97455d19",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Uppdraget avser en roll som testautomatiserare med fokus på data warehouse och data lake, där Python, SQL samt testautomatisering efterfrågas."
+  },
   "https://app.verama.com/en/job-requests/83923": {
     "classified_at": "2026-09-18",
     "content_hash": "a4560f8dec2105d9fd4327fdd25a24c345b3d25a",
@@ -427,6 +438,17 @@
     "score": 9,
     "status": "open",
     "summary": "Uppdraget söker en senior Power BI-utvecklare för att stärka organisationens förmåga inom dataanalys och beslutsstöd. Arbetet innefattar utveckling och förvaltning av analys- och visualiseringslösningar."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31496148": {
+    "classified_at": "2026-09-21",
+    "content_hash": "73bbd470fb504145bb75e96daf7f42572f59bbdd",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Uppdraget avser en roll som senior datalagerutvecklare med fokus på vidareutveckling och förvaltning av datalager, informationsplattformar och ETL-flöden för myndighetsrapportering."
   },
   "https://assignment.levigo.se/Z4tgl3xo/senior-data-engineer": {
     "classified_at": "2026-09-08",
@@ -1011,16 +1033,60 @@
     "status": "open",
     "summary": "Uppdraget som integrationsutvecklare fokuserar på data, integrationer och moderna plattformstjänster (med kopplingar till SAP och API-utveckling). Det ligger ganska nära konsultens kompetens inom data och plattformar, även om det lutar mer åt integration snarare än ren data engineering."
   },
+  "https://upgraded.se/konsultuppdrag/197015-databasutvecklare-concise": {
+    "classified_at": "2026-09-21",
+    "content_hash": "964131c02a89da20f0fa45e76862c28fbade033a",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "E-hälsomyndigheten söker en databasutvecklare med kunskap om databasen Concise, med möjlighet att arbeta i Stockholm."
+  },
+  "https://upgraded.se/konsultuppdrag/197029-testspecialist-4": {
+    "classified_at": "2026-09-21",
+    "content_hash": "4661c74d89616956e4cdfc03edda83e2fcaa5e4c",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "E-hälsomyndigheten söker en testspecialist för arbete med verksamhetskritiska system inom läkemedelsområdet. Uppdraget omfattar utveckling, test och förvaltning i ett agilt team."
+  },
+  "https://upgraded.se/konsultuppdrag/197035-systemutvecklare-3-4-konsulter": {
+    "classified_at": "2026-09-21",
+    "content_hash": "8767b332ab5cc79606e2daae23fd0cbce3a8c38e",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 2,
+    "status": "open",
+    "summary": "E-hälsomyndigheten söker systemutvecklare för arbete i ett agilt team inom läkemedelsområdet, med fokus på utveckling och förvaltning av verksamhetskritiska tjänster."
+  },
+  "https://upgraded.se/konsultuppdrag/197043-verksamhetsarkitekt-11": {
+    "classified_at": "2026-09-21",
+    "content_hash": "ca33bba070cd14c9f2b2da95fa9a55c1f9fcdfd3",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Uppdraget avser en verksamhetsarkitekt inom finanssektorn med fokus på utredningsarbete kring datahantering och kundinformation, vilket ligger lite vid sidan av den primära datatekniska profilen."
+  },
   "https://weworkremotely.com/remote-jobs/databricks-solutions-architect": {
-    "classified_at": "2026-09-02",
-    "content_hash": "3a0b7a996fdc725f5e9165b077435fba87ae9d40",
+    "classified_at": "2026-09-21",
+    "content_hash": "3ffaee2cca7abb7413fb97be19bb0e90a512c885",
     "employment_type": "permanent",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "adjacent",
     "score": 2,
     "status": "open",
-    "summary": "Databricks söker en Solutions Architect för en fast anställning (baserad i USA), vilket inte matchar konsultens profil för frilansuppdrag i Sverige."
+    "summary": "Databricks söker en Solutions Architect för en fast roll i USA, vilket ligger utanör konsultens geografiska och arbetsformsmässiga preferenser."
   },
   "https://www.alphadev.se/lediga-uppdrag/azure-devops-specialist-57599023": {
     "classified_at": "2026-09-16",
@@ -1230,6 +1296,17 @@
     "score": 1,
     "status": "open",
     "summary": "Uppdraget avser en konsult inom informationsförvaltning och registraturskap för att stödja Sveriges Kommuner och Regioner. Det finns ingen koppling till data engineering, BI eller analys."
+  },
+  "https://www.keyman.se/sv/administration-ekonomi-juridik/konsult-inom-informationsforvaltning-registrator-till-skr-sveriges-kommuner-och-regioner-offert-skickad-till-kund-16301": {
+    "classified_at": "2026-09-21",
+    "content_hash": "22aba842f6d49bcef9476fc171b9c0d6c071e6d1",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "SKR söker en konsult inom informationsförvaltning som registrator för att stödja verksamheten under en organisationsjustering. Rollen saknar koppling till datateknik och analys."
   },
   "https://www.sigma.se/assignment/senior-etl-developer-sweden-en-20260828": {
     "classified_at": "2026-09-02",
