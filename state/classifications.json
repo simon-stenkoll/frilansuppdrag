@@ -263,6 +263,28 @@
     "status": "open",
     "summary": "Uppdraget söker en erfaren Software Configuration Manager eller DevOps Lead för att leda konfigurationshantering inom ett stort redovisnings- och transformationsprogram (ART) hos Swedbank."
   },
+  "https://app.verama.com/en/job-requests/84070": {
+    "classified_at": "2026-09-22",
+    "content_hash": "7578bcef1789033b4094100c24defedb394aaa52",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "Uppdraget avser en ESG-rapporteringstjänst med fokus på processutveckling, datahantering och finansiell rapportering inom banksektoren. Rollen efterfrågar erfarenhet av datahantering och SQL, men har ett primärt fokus på ESG-regelverk snarare än ren data engineering."
+  },
+  "https://app.verama.com/en/job-requests/84095": {
+    "classified_at": "2026-09-22",
+    "content_hash": "149ac208ce5a6d1bdbebbbe40c082dfa4a51ffc0",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget avser en CRM-utvecklare med fokus på plattformar som HubSpot eller Salesforce, vilket ligger utanför konsultens expertis inom datateknik och BI."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -625,6 +647,28 @@
     "score": 6,
     "status": "open",
     "summary": "Uppdraget söker en senior dataarkitekt med fokus på Databricks och moderna data plattformar, vilket matchar profilens kompetens inom data warehouse och datalagerlösningar."
+  },
+  "https://market.cinode.com/requests/22622": {
+    "classified_at": "2026-09-22",
+    "content_hash": "ca8d2d5b72f07d585f29f6301ecaed26d59c375c",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 6,
+    "status": "open",
+    "summary": "Uppdraget avser en senior dataingenjör med expertis inom Apache Airflow för att utveckla och förvalta dataflöden i en säkerhetsmedveten miljö i Stockholm."
+  },
+  "https://market.cinode.com/requests/22624": {
+    "classified_at": "2026-09-22",
+    "content_hash": "5670ca0a8e34e6e7b651366af32dfe25b8d0e9da",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 9,
+    "status": "open",
+    "summary": "Uppdraget som senior analytics engineer hos Aliant AB i Stockholm fokuserar på modern dataplattformsutveckling, datamodellering och dbt, vilket passar konsultens profil utmärkt."
   },
   "https://upgraded.se/konsultuppdrag/184446-utredare-behorighetslosning": {
     "classified_at": "2026-09-02",
@@ -1110,6 +1154,17 @@
     "status": "open",
     "summary": "Uppdraget som Azure DevOps Specialist fokuserar på utvecklings- och leveransflöden, vilket ligger ganska långt ifrån konsultens primära fokus inom data engineering och BI."
   },
+  "https://www.alphadev.se/lediga-uppdrag/fullstack-net-angular-9b93500b": {
+    "classified_at": "2026-09-22",
+    "content_hash": "3242fdbe756246977d8fe1bb16fb1d3532f187c7",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Detta är ett uppdrag som fullstackutvecklare med fokus på .NET och Angular, vilket ligger utanför konsultens expertis inom data och BI."
+  },
   "https://www.asociety.se/sv/uppdrag/data-engineer-16543": {
     "classified_at": "2026-09-07",
     "content_hash": "21316ac58c37cf2bacad91414f2eb88a1ba7de98",
@@ -1175,6 +1230,17 @@
     "score": 9,
     "status": "open",
     "summary": "Uppdraget söker en senior dataingenjör (via A Society) i Stockholm för att vidareutveckla en modern, AI-klar dataplattform med högt självständigt ansvar."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/devops-sysadmin-engineer-16739": {
+    "classified_at": "2026-09-22",
+    "content_hash": "b595811bd869746f09bc3c3a62837549811e3eae",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en DevOps- och systemadministratör med fokus på utveckling, testning och driftsättning av miljöer för mjukvaruutveckling."
   },
   "https://www.asocietygroup.com/sv/uppdrag/fyra-arkitekter-till-produktomr-de-rendehantering-till-transportstyrelsen-rebro-norrk-ping-eller-stockholm-16678": {
     "classified_at": "2026-09-16",
