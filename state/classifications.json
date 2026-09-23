@@ -285,6 +285,17 @@
     "status": "open",
     "summary": "Uppdraget avser en CRM-utvecklare med fokus på plattformar som HubSpot eller Salesforce, vilket ligger utanför konsultens expertis inom datateknik och BI."
   },
+  "https://app.verama.com/en/job-requests/84111": {
+    "classified_at": "2026-09-23",
+    "content_hash": "7649eed672d29a3b75499eda7b67a6532a1a9d8c",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "Uppdraget som lösningsarkitekt innebär förvaltning och utveckling av plattformen OAS, inklusive tillhörande integrationer, dataleveranser och rapporteringslösningar. Arbetet sker i nära samarbete med verksamheten inom logistik, raffinaderi och supply chain."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -471,6 +482,17 @@
     "score": 8,
     "status": "open",
     "summary": "Uppdraget avser en roll som senior datalagerutvecklare med fokus på vidareutveckling och förvaltning av datalager, informationsplattformar och ETL-flöden för myndighetsrapportering."
+  },
+  "https://assignment.levigo.se/CNh3q8Ns/data-engineer": {
+    "classified_at": "2026-09-23",
+    "content_hash": "a7e27f5683c2a24c9524a0815360515fbf7c45dd",
+    "employment_type": "unclear",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Uppdraget avser en roll som Data Engineer i Helsingborg, med fokus på datateknik och plattformsutveckling."
   },
   "https://assignment.levigo.se/Z4tgl3xo/senior-data-engineer": {
     "classified_at": "2026-09-08",
@@ -1121,16 +1143,27 @@
     "status": "open",
     "summary": "Uppdraget avser en verksamhetsarkitekt inom finanssektorn med fokus på utredningsarbete kring datahantering och kundinformation, vilket ligger lite vid sidan av den primära datatekniska profilen."
   },
+  "https://upgraded.se/konsultuppdrag/197677-systemtekniker-10": {
+    "classified_at": "2026-09-23",
+    "content_hash": "1fc20acab3dae46d78f10069ed33496fd6e73a7b",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget söker en erfaren DevOps-ingenjör med fokus på källkodshantering och CI/CD-pipelines i en offentlig organisation (via Upgraded People)."
+  },
   "https://weworkremotely.com/remote-jobs/databricks-solutions-architect": {
-    "classified_at": "2026-09-21",
-    "content_hash": "3ffaee2cca7abb7413fb97be19bb0e90a512c885",
+    "classified_at": "2026-09-23",
+    "content_hash": "ece48010e764aee21c6454ce6eac3091f042d996",
     "employment_type": "permanent",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "adjacent",
-    "score": 2,
+    "score": 4,
     "status": "open",
-    "summary": "Databricks söker en Solutions Architect för en fast roll i USA, vilket ligger utanör konsultens geografiska och arbetsformsmässiga preferenser."
+    "summary": "Databricks söker en lösningsarkitekt på heltid för en roll i USA, med fokus på plattformen Databricks (vilket ligger utanför konsultens huvudsakliga kompetensområde)."
   },
   "https://www.alphadev.se/lediga-uppdrag/azure-devops-specialist-57599023": {
     "classified_at": "2026-09-16",
@@ -1252,6 +1285,17 @@
     "score": 3,
     "status": "open",
     "summary": "Transportstyrelsen söker en lösningsarkitekt och tre mjukvaruarkitekter till produktområde Ärendehantering, med placering i Stockholm, Norrköping eller Örebro."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/junior-mjukvaruutvecklare-16741": {
+    "classified_at": "2026-09-23",
+    "content_hash": "e348cff2f1ab24cee9c2b07ec13b2dc16795e47b",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Annonsen söker en junior mjukvaruutvecklare med fokus på testutveckling och programmering i Java samt Csharp (via A Society) i Järfälla."
   },
   "https://www.asocietygroup.com/sv/uppdrag/konsult-inom-kvalitetsledning-f-r-swexia-software-quality-management-16708": {
     "classified_at": "2026-09-18",
