@@ -296,6 +296,28 @@
     "status": "open",
     "summary": "Uppdraget som lösningsarkitekt innebär förvaltning och utveckling av plattformen OAS, inklusive tillhörande integrationer, dataleveranser och rapporteringslösningar. Arbetet sker i nära samarbete med verksamheten inom logistik, raffinaderi och supply chain."
   },
+  "https://app.verama.com/en/job-requests/84181": {
+    "classified_at": "2026-09-24",
+    "content_hash": "a5916948a762b0a65885f239bf60fb17bfbc6b72",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "Länsförsäkringar söker en integrationsutvecklare med fokus på data och analysplattformar, inklusive arbete med Kafka, CDC-pipelines och dataströmmar till Databricks. Rollen har en mer traditionell integrationsinriktning än konsultens spetskompetens inom modern datalagring, Microsoft Fabric och BI."
+  },
+  "https://app.verama.com/en/job-requests/84209": {
+    "classified_at": "2026-09-24",
+    "content_hash": "38ff0c55af2adefdbcc53aec29d59569332080f0",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "ICA Sverige AB söker en integrationsspecialist med fokus på Kafka- och HiveMQ-administration, plattformsstabilitet samt automatisering (inom infrastruktur och meddelandehantering)."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -1154,6 +1176,39 @@
     "status": "open",
     "summary": "Uppdraget söker en erfaren DevOps-ingenjör med fokus på källkodshantering och CI/CD-pipelines i en offentlig organisation (via Upgraded People)."
   },
+  "https://upgraded.se/konsultuppdrag/197907-it-utvecklare": {
+    "classified_at": "2026-09-24",
+    "content_hash": "400392a0803036473cfc81679cc3d6006e7987f4",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Uppdraget som integreringsutvecklare innebär att arbeta med data och analysplattformar, vilket matchar konsultens profil inom data engineering väl."
+  },
+  "https://upgraded.se/konsultuppdrag/197943-databasadministrator-mainframe-och-postgresql": {
+    "classified_at": "2026-09-24",
+    "content_hash": "ca8c41cddde29c0202c6bd51ac7e9d267f134d41",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Uppdraget som databasadministratör fokuserar på drift och vidareutveckling av databasplattformar såsom Db2 och PostgreSQL i en miljlö där stordatorer samverkar med moderna system, vilket ligger utanför konsultens huvudsakliga expertis."
+  },
+  "https://upgraded.se/konsultuppdrag/198095-testare-27": {
+    "classified_at": "2026-09-24",
+    "content_hash": "a1e135006da0e6a61a441c84ebafb2a014775b80",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget avser en testare som ska arbeta med att ta fram teststrategier och verifiera data i relations- och grafdatabaser, vilket ligger ganska långt från konsultens kärnkompetens inom data engineering och BI."
+  },
   "https://weworkremotely.com/remote-jobs/databricks-solutions-architect": {
     "classified_at": "2026-09-23",
     "content_hash": "ece48010e764aee21c6454ce6eac3091f042d996",
@@ -1363,6 +1418,17 @@
     "status": "open",
     "summary": "Uppdraget som teknisk team lead fokuserar på att leda och stödja utvecklingsteam inom Data Warehouse, vilket matchar konsultens erfarenhet av ledarskap och dataplattformar."
   },
+  "https://www.asocietygroup.com/sv/uppdrag/solution-architecture-senior-t24-architect-16753": {
+    "classified_at": "2026-09-24",
+    "content_hash": "9357637a862cf9759c00acbcd586ceb7afbc9a82",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en senior T24-arkitekt med fokus på bankmiljöer och Temenos-plattformen, vilket ligger utanför konsultens kompetens inom data och BI."
+  },
   "https://www.asocietygroup.com/sv/uppdrag/systemutvecklare-qlik-sense-till-arbetsf-rmedlingen-16622": {
     "classified_at": "2026-09-09",
     "content_hash": "1c03152f33b2f4cba60f3a1e8cf640748085de2f",
@@ -1396,6 +1462,17 @@
     "status": "open",
     "summary": "Annonsen gäller en roll som underhållsingenjör inom läkemedelstillverkning, vilket saknar koppling till datateknik."
   },
+  "https://www.jappa.jobs/jobb/j6ab3869f5b13cd001483a6a8-senior-data-and-marketing-automation-engineer": {
+    "classified_at": "2026-09-24",
+    "content_hash": "9bffdf907e25eee5fdef9003e95b89d50a802b95",
+    "employment_type": "permanent",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 5,
+    "status": "open",
+    "summary": "Roll som Senior Data and Marketing Automation Engineer med fokus på Snowflake och Salesforce Marketing Cloud i Göteborg. Uppdraget hanterar dataintegration och automatisering i en central roll hos en global aktör."
+  },
   "https://www.keyman.se/sv/administration-ekonomi-juridik/konsult-inom-informationsforvaltning-registrator-till-skr-sveriges-kommuner-och-regioner-16301": {
     "classified_at": "2026-09-15",
     "content_hash": "275575dbc335998f75b5370e36e0ac1b881dfae8",
@@ -1417,6 +1494,17 @@
     "score": 1,
     "status": "open",
     "summary": "SKR söker en konsult inom informationsförvaltning som registrator för att stödja verksamheten under en organisationsjustering. Rollen saknar koppling till datateknik och analys."
+  },
+  "https://www.progressiverecruitment.com/en-gb/job/mechanical-technician/4074161": {
+    "classified_at": "2026-09-24",
+    "content_hash": "e113e3f2980282bb216b1b5c70135f0390bd1aac",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Annonsen söker en mekanisk tekniker med inriktning på mekanik och hydraulik för ett uppdrag i Storbritannien. Rollen har ingen koppling till data- eller BI-området."
   },
   "https://www.sigma.se/assignment/senior-etl-developer-sweden-en-20260828": {
     "classified_at": "2026-09-02",
