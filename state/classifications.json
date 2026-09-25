@@ -318,6 +318,17 @@
     "status": "open",
     "summary": "ICA Sverige AB söker en integrationsspecialist med fokus på Kafka- och HiveMQ-administration, plattformsstabilitet samt automatisering (inom infrastruktur och meddelandehantering)."
   },
+  "https://app.verama.com/en/job-requests/84267": {
+    "classified_at": "2026-09-25",
+    "content_hash": "1acf103794379f9be9fa2980ab5919bbacd5bdc1",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Detta är ett uppdrag som Identity and Access Management Developer med fokus på One Identity Manager och systemspecifikationer, vilket inte matchar konsultens kompetens inom data och BI."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -504,6 +515,28 @@
     "score": 8,
     "status": "open",
     "summary": "Uppdraget avser en roll som senior datalagerutvecklare med fokus på vidareutveckling och förvaltning av datalager, informationsplattformar och ETL-flöden för myndighetsrapportering."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31514711": {
+    "classified_at": "2026-09-25",
+    "content_hash": "2c2529fce45226ad1eca8933d3479090dcc93934",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 6,
+    "status": "open",
+    "summary": "Uppdraget söker en dataanalytiker och produktledare för dataprodukter inom ett större transformationsprogram i Stockholm. Rollen kombinerar dataanalys med ansvar för utveckling och prioritering."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31517624": {
+    "classified_at": "2026-09-25",
+    "content_hash": "2af1ed06b70287e4a18b43950ead98b972f67f75",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Detta är en praktikplats inom HR, Talent Acquisition och AI hos ECIT Services AB i Stockholm, vilket inte matchar konsultens profil inom data engineering."
   },
   "https://assignment.levigo.se/CNh3q8Ns/data-engineer": {
     "classified_at": "2026-09-23",
@@ -1396,6 +1429,17 @@
     "status": "open",
     "summary": "Annonsen söker en senior fullstack-utvecklare med fokus på AI-drivna verktyg och agentbaserad utveckling för marknadsteam."
   },
+  "https://www.asocietygroup.com/sv/uppdrag/senior-mjukvaruutvecklare-java-16777": {
+    "classified_at": "2026-09-25",
+    "content_hash": "98cf24631298c900a389e5c95f2735642eea73e3",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en roll som senior mjukvaruutvecklare inom Java med fokus på avancerade desktopapplikationer och signaldata."
+  },
   "https://www.asocietygroup.com/sv/uppdrag/senior-platform-engineer-remote-100-ok-16642": {
     "classified_at": "2026-09-11",
     "content_hash": "76ac9352ae2c499c36a7e571e20ca9fdc6e04d38",
@@ -1450,6 +1494,17 @@
     "score": 4,
     "status": "open",
     "summary": "Uppdraget söker en systemutvecklare till SCB i Solna för arbete med bearbetning och analys av data. Arbetet omfattar en gemensam produktionsmiljö med fokus på open source."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/testare-till-arbetsf-rmedlingen-kontrollplattformen-16767": {
+    "classified_at": "2026-09-25",
+    "content_hash": "ba73fe480ca197948defe06da1cc4f48f3f21415",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Arbetsförmedlingen söker en erfaren testare för ett konsultuppdrag inom kontrollplattformen, som fokuserar på kvalitetssäkring och dataflöden."
   },
   "https://www.asocietygroup.com/sv/uppdrag/underh-llsingenj-r-16528": {
     "classified_at": "2026-09-02",
