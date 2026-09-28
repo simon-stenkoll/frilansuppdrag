@@ -747,6 +747,17 @@
     "status": "open",
     "summary": "Uppdraget som senior analytics engineer hos Aliant AB i Stockholm fokuserar på modern dataplattformsutveckling, datamodellering och dbt, vilket passar konsultens profil utmärkt."
   },
+  "https://market.cinode.com/requests/22748": {
+    "classified_at": "2026-09-28",
+    "content_hash": "5d9540b4fc84551a5ab95651dac0ef6db2c6eeac",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Uppdraget söker en erfaren Power BI-konsult i Stockholm för att utveckla en ny lösning för kommunrankning (inklusive datatransformering och styrning)."
+  },
   "https://upgraded.se/konsultuppdrag/184446-utredare-behorighetslosning": {
     "classified_at": "2026-09-02",
     "content_hash": "310228dc47a31f068cc1ba09618810d5f14174c1",
@@ -1242,6 +1253,50 @@
     "status": "open",
     "summary": "Uppdraget avser en testare som ska arbeta med att ta fram teststrategier och verifiera data i relations- och grafdatabaser, vilket ligger ganska långt från konsultens kärnkompetens inom data engineering och BI."
   },
+  "https://upgraded.se/konsultuppdrag/198486-kravalytiker": {
+    "classified_at": "2026-09-28",
+    "content_hash": "d6b10f2672a543503734cd728437381ac50df54e",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget som kravanalytiker fokuserar på att omsätta verksamhetsbehov till testbara krav (och saknar teknisk överlappning med konsultens dataprofil)."
+  },
+  "https://upgraded.se/konsultuppdrag/198491-infrastrukturarkitekt-4": {
+    "classified_at": "2026-09-28",
+    "content_hash": "cdf903956e5f13fffc9d2111b468497a437aff4e",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget avser en senior infrastrukturarkitekt med fokus på migrering och modernisering inom Microsofts ekosystem, såsom servrar, Active Directory och Azure."
+  },
+  "https://upgraded.se/konsultuppdrag/198493-infrastrukturarkitekt-5": {
+    "classified_at": "2026-09-28",
+    "content_hash": "2433405915b743a65a6b4f297e9182bdda976503",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en senior arkitekt inom nät och Linux med fokus på datacentermigrering, vilket ligger utanör konsultens expertis inom data engineering och BI."
+  },
+  "https://upgraded.se/konsultuppdrag/198657-senior-testledare-testprojektledare": {
+    "classified_at": "2026-09-28",
+    "content_hash": "3a0dcec2ff0bba69d4d33634210195bc48f51412",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en senior testledare eller testprojektledare med ansvar för testplanering och samordning i Stockholm. Rollen har ingen koppling till data engineering eller BI."
+  },
   "https://weworkremotely.com/remote-jobs/databricks-solutions-architect": {
     "classified_at": "2026-09-23",
     "content_hash": "ece48010e764aee21c6454ce6eac3091f042d996",
@@ -1286,6 +1341,17 @@
     "status": "open",
     "summary": "Detta är ett uppdrag som fullstackutvecklare med fokus på .NET och Angular, vilket ligger utanför konsultens expertis inom data och BI."
   },
+  "https://www.asociety.se/sv/uppdrag/azure-devops-specialist-hyrkp-16785": {
+    "classified_at": "2026-09-28",
+    "content_hash": "1f677cd10924655971fa581db06ac5503a3f67ff",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Annonsen gäller en roll som Azure DevOps Specialist i Stockholm med hybrid upplägg. Det är en permanent anställning eller hyrköp snarare än ett rent frilansuppdrag."
+  },
   "https://www.asociety.se/sv/uppdrag/data-engineer-16543": {
     "classified_at": "2026-09-07",
     "content_hash": "21316ac58c37cf2bacad91414f2eb88a1ba7de98",
@@ -1318,6 +1384,17 @@
     "score": 4,
     "status": "open",
     "summary": "Uppdraget avser en teknisk specialist inom databasplattformar med fokus på SQL Server och PostgreSQL, vilket ligger nära men utanför profilens primära fokus på Microsoft Fabric och modern datalagring. Tjänsten är placerad på plats i Göteborg."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/azure-devops-specialist-hyrk-p-16785": {
+    "classified_at": "2026-09-28",
+    "content_hash": "38c6f8954f46c0bd9a75af08b0f78d2bb7b2697e",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget avser en Azure DevOps Specialist inom ramen för ett hyrköpsupplägg med fokus på automation och leveransflöden. Rollen ligger utanför konsultens huvudsakliga expertis inom data engineering och BI."
   },
   "https://www.asocietygroup.com/sv/uppdrag/azure-devops-specialist-niv-3-medior-16328": {
     "classified_at": "2026-09-11",
