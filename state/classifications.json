@@ -571,6 +571,17 @@
     "status": "open",
     "summary": "Detta är en praktikplats inom HR, Talent Acquisition och AI hos ECIT Services AB i Stockholm, vilket inte matchar konsultens profil inom data engineering."
   },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31531020": {
+    "classified_at": "2026-09-30",
+    "content_hash": "f8d6f2916d7004b0ae426eeeb4f139288194716b",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "Uppdraget söker en senior IT-arkitekt med fokus på data och informationsarkitektur (för att skapa en målbild för datahantering i en komplex IT-miljö)."
+  },
   "https://assignment.levigo.se/CNh3q8Ns/data-engineer": {
     "classified_at": "2026-09-23",
     "content_hash": "a7e27f5683c2a24c9524a0815360515fbf7c45dd",
@@ -625,6 +636,17 @@
     "score": 8,
     "status": "open",
     "summary": "Listing avser en roll som Data Engineer med placering i Sofia, Bulgarien (hybrid). Positionen efterfråger kompetens inom mjukvaruutveckling och datateknik."
+  },
+  "https://datakonsulter.info/WiseDki/StartController": {
+    "classified_at": "2026-09-30",
+    "content_hash": "e7dd838377ddb27f957a49c21713ad5ec3eb63c3",
+    "employment_type": "unclear",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 6,
+    "status": "open",
+    "summary": "Annonsen gäller en roll som dataanalytiker i Stockholm. Det framgår inte om det rör sig om ett uppdrag eller en anställning."
   },
   "https://enmanskonsulterna.se/uppdrag/110008": {
     "classified_at": "2026-09-08",
@@ -790,6 +812,17 @@
     "score": 8,
     "status": "open",
     "summary": "Uppdraget söker en erfaren Power BI-konsult i Stockholm för att utveckla en ny lösning för kommunrankning (inklusive datatransformering och styrning)."
+  },
+  "https://market.cinode.com/requests/22780": {
+    "classified_at": "2026-09-30",
+    "content_hash": "84758b4adf70df40c71c2989c3a9e1123d7dcd96",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 7,
+    "status": "open",
+    "summary": "Nexer Group söker en dataanalytiker till ett team i Stockholm som arbetar med produktutveckling, datamodellering i dbt och AI-integrerade analysverktyg. Rollen kräver erfarenhet av SQL, Python och semantiska lager."
   },
   "https://upgraded.se/konsultuppdrag/184446-utredare-behorighetslosning": {
     "classified_at": "2026-09-02",
@@ -1363,6 +1396,127 @@
     "status": "open",
     "summary": "E-hälsomyndigheten söker en senior kommunikatör för stöd vid införande av nationella tjänster, med placeringsort i Kalmar eller Stockholm."
   },
+  "https://upgraded.se/konsultuppdrag/databasadministrator-mainframe-och-postgresql": {
+    "classified_at": "2026-09-30",
+    "content_hash": "ca8c41cddde29c0202c6bd51ac7e9d267f134d41",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget söker en erfaren databasadministratör med ansvar för drift och vidareutveckling inom Db2 för z/OS och PostgreSQL."
+  },
+  "https://upgraded.se/konsultuppdrag/devops-ingenjor": {
+    "classified_at": "2026-09-30",
+    "content_hash": "1fc20acab3dae46d78f10069ed33496fd6e73a7b",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en erfaren DevOps-ingenjör med fokus på källkodshantering, CI/CD-pipelines och stöd till utvecklingsteam inom en större offentlig organisation i Stockholm."
+  },
+  "https://upgraded.se/konsultuppdrag/infrastrukturarkitekt": {
+    "classified_at": "2026-09-30",
+    "content_hash": "cdf903956e5f13fffc9d2111b468497a437aff4e",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget som infrastrukturarkitekt fokuserar på migrering och modernisering inom Microsofts ekosystem, inklusive Azure och on-prem-miljöer. Rollen ligger dock utanför konsultens primära fokus på data engineering och BI."
+  },
+  "https://upgraded.se/konsultuppdrag/kravanalytiker-5": {
+    "classified_at": "2026-09-30",
+    "content_hash": "4ec923eca0b55a9f0cdf9dacfb0744aec0fec17c",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget avser en erfaren kravanalytiker i Stockholm med fokus på att omsätta verksamhetsbehov och regelverk till testbara krav inom en agil miljö."
+  },
+  "https://upgraded.se/konsultuppdrag/senior-kommunikator-for-inforande-av-nationella-tjanster": {
+    "classified_at": "2026-09-30",
+    "content_hash": "a16b27cdf72f467edfc355bf4298e5217b94f07d",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "E-hälsomyndigheten söker en senior kommunikatör för stöd vid införande av nationella tjänster, vilket inte matchar konsultens profil inom data och analys."
+  },
+  "https://upgraded.se/konsultuppdrag/senior-nat-och-linux-migreringsarkitekt": {
+    "classified_at": "2026-09-30",
+    "content_hash": "2433405915b743a65a6b4f297e9182bdda976503",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en senior arkitekt inom nätverk och Linux-migrering, vilket inte matchar konsultens kompetensområde inom data engineering och BI."
+  },
+  "https://upgraded.se/konsultuppdrag/senior-testledare-testprojektledare": {
+    "classified_at": "2026-09-30",
+    "content_hash": "3a0dcec2ff0bba69d4d33634210195bc48f51412",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en roll som senior testledare med ansvar för testplanering, koordinering och genomförande av tester i en komplex miljö (via Upgraded People)."
+  },
+  "https://upgraded.se/konsultuppdrag/seniora-utvecklare-med-kompetens-inom-testautomation": {
+    "classified_at": "2026-09-30",
+    "content_hash": "2130ac946f8481f636fb97d8eeb93defff9b7709",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget söker en senior utvecklare med fokus på testautomatisering och systemutveckling inom Java, vilket inte matchar konsultens profil inom data engineering och BI."
+  },
+  "https://upgraded.se/konsultuppdrag/supply-chain-developer-ssp": {
+    "classified_at": "2026-09-30",
+    "content_hash": "4a42727457afb3f9ccfef50707f40dd6eb063ad6",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Uppdraget som Supply Chain Developer fokuserar på att driva verksamhetsutveckling inom supply chain och S&OP, snarare än kärnkompetenser inom data engineering eller BI."
+  },
+  "https://upgraded.se/konsultuppdrag/testare": {
+    "classified_at": "2026-09-30",
+    "content_hash": "a1e135006da0e6a61a441c84ebafb2a014775b80",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget söker en testare för att arbeta med testplaner, teststrategier och dataverifiering i databaser. Rollen har låg teknisk överlappning med konsultens profil inom data engineering och BI."
+  },
+  "https://upgraded.se/konsultuppdrag/testautomatiserare-qa-engineer": {
+    "classified_at": "2026-09-30",
+    "content_hash": "b7c74d74f21242d95d8e9aaec447878a50f4322e",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en roll som testautomatiserare och QA engineer med fokus på API-, integrations- och backendtestning. Det finns ingen överlappning med konsultens profil inom data engineering och BI."
+  },
   "https://weworkremotely.com/remote-jobs/databricks-solutions-architect": {
     "classified_at": "2026-09-23",
     "content_hash": "ece48010e764aee21c6454ce6eac3091f042d996",
@@ -1375,15 +1529,15 @@
     "summary": "Databricks söker en lösningsarkitekt på heltid för en roll i USA, med fokus på plattformen Databricks (vilket ligger utanför konsultens huvudsakliga kompetensområde)."
   },
   "https://weworkremotely.com/remote-jobs/lawnstarter-analytics-engineering-manager-data-platform-governance-1": {
-    "classified_at": "2026-09-29",
-    "content_hash": "0b26aaedfc3d7ae649d7704eb70130c9f3ebd744",
+    "classified_at": "2026-09-30",
+    "content_hash": "debb055c9c4398f01273434228fecb8d6b932d30",
     "employment_type": "permanent",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "adjacent",
     "score": 3,
     "status": "open",
-    "summary": "LawnStarter söker en Analytics Engineering Manager med ansvar för dataplattform och styrning. Rollen är placerad i Mexiko med möjlighet till distansarbete från andra platser."
+    "summary": "LawnStarter söker en Analytics Engineering Manager med fokus på dataplattform och styrning. Rollen är placerad i Mexiko med möjlighet till distansarbete från hela världen."
   },
   "https://www.alphadev.se/lediga-uppdrag/azure-devops-specialist-57599023": {
     "classified_at": "2026-09-16",
@@ -1408,15 +1562,15 @@
     "summary": "Uppdraget som Azure DevOps Specialist fokuserar på utvecklings- och leveransflöden, vilket ligger ganska långt ifrån konsultens primära fokus inom data engineering och BI."
   },
   "https://www.alphadev.se/lediga-uppdrag/data-analyst-med-ai-fokus-a822d4a8": {
-    "classified_at": "2026-09-29",
-    "content_hash": "2a52d2ab43f0f0c37ff5a17c03338cda714eb76b",
+    "classified_at": "2026-09-30",
+    "content_hash": "13b666736c14f5c9fc816f7d016ca66c572f14a8",
     "employment_type": "contract",
     "location_ok": true,
     "prompt_version": 1,
     "role_match": "adjacent",
-    "score": 5,
+    "score": 6,
     "status": "open",
-    "summary": "Uppdraget söker en erfaren dataanalytiker (med AI-fokus) till ett tvärfunktionellt team för att analysera användarbeteenden och utveckla en stor digital tjänst."
+    "summary": "Uppdraget söker en erfaren dataanalytiker med fokus på AI för att arbeta i ett tvärfunktionellt team med stora datamängder. Rollen ligger nära konsultens kompetens inom BI och analys, även om tyngdpunkten ligger på analys och AI snarare än ren datateknik."
   },
   "https://www.alphadev.se/lediga-uppdrag/fullstack-net-angular-9b93500b": {
     "classified_at": "2026-09-22",
@@ -1538,6 +1692,17 @@
     "score": 1,
     "status": "open",
     "summary": "Uppdraget avser en DevOps- och systemadministratör med fokus på utveckling, testning och driftsättning av miljöer för mjukvaruutveckling."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/devops-sysadmin-engineer-16817": {
+    "classified_at": "2026-09-30",
+    "content_hash": "68e5d47decaaba70a45712b96b71f56a14a7f888",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Annonsen söker en DevOps och Sysadmin Engineer med fokus på utvecklingsmiljöer, vilket ligger utanför konsultens expertis inom data och BI."
   },
   "https://www.asocietygroup.com/sv/uppdrag/fyra-arkitekter-till-produktomr-de-rendehantering-till-transportstyrelsen-rebro-norrk-ping-eller-stockholm-16678": {
     "classified_at": "2026-09-16",
@@ -1705,15 +1870,15 @@
     "summary": "Annonsen gäller en roll som underhållsingenjör inom läkemedelstillverkning, vilket saknar koppling till datateknik."
   },
   "https://www.jappa.jobs/jobb/j6ab3869f5b13cd001483a6a8-senior-data-and-marketing-automation-engineer": {
-    "classified_at": "2026-09-24",
-    "content_hash": "9bffdf907e25eee5fdef9003e95b89d50a802b95",
+    "classified_at": "2026-09-30",
+    "content_hash": "570dc2f9ecec6b689e0711709687dc13309a36c3",
     "employment_type": "permanent",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "adjacent",
-    "score": 5,
+    "score": 4,
     "status": "open",
-    "summary": "Roll som Senior Data and Marketing Automation Engineer med fokus på Snowflake och Salesforce Marketing Cloud i Göteborg. Uppdraget hanterar dataintegration och automatisering i en central roll hos en global aktör."
+    "summary": "Detta är en roll inom marketing automation hos en global fordonsaktör med fokus på verktyg som Salesforce Marketing Cloud, Snowflake och Segment."
   },
   "https://www.keyman.se/sv/administration-ekonomi-juridik/konsult-inom-informationsforvaltning-registrator-till-skr-sveriges-kommuner-och-regioner-16301": {
     "classified_at": "2026-09-15",
