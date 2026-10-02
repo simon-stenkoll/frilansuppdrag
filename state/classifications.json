@@ -384,6 +384,17 @@
     "status": "open",
     "summary": "Uppdraget avser en mjukvaruutvecklare med fokus på Java, Spring Boot och identitetstjänster, vilket inte matchar konsultens profil inom data engineering och BI."
   },
+  "https://app.verama.com/en/job-requests/84538": {
+    "classified_at": "2026-10-02",
+    "content_hash": "f9707ad9331aae666ec2358e362d89cfff389e9f",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Detta är en roll som senior utvecklare inom Java med inriktning på plattformar för fondhandel, vilket ligger helt utanför konsultens expertis inom data och BI."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -1616,6 +1627,61 @@
     "status": "open",
     "summary": "LawnStarter söker en Analytics Engineering Manager med fokus på dataplattform och styrning. Rollen är placerad i Mexiko med möjlighet till distansarbete från hela världen."
   },
+  "https://weworkremotely.com/remote-jobs/lawnstarter-analytics-engineering-manager-data-platform-governance-2": {
+    "classified_at": "2026-10-02",
+    "content_hash": "5153f6ec3b155412de444a353a2a418c39af31f9",
+    "employment_type": "permanent",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "LawnStarter söker en Analytics Engineering Manager med fokus på dataplattform och styrning. Rollen är baserad i Mexiko med Möjlighet till distansarbete från hela världen."
+  },
+  "https://witted.com/projects/1-2-sw-developers-financial-management-saas-3237fcdf": {
+    "classified_at": "2026-10-02",
+    "content_hash": "b8c9f9643ccc3e8a7228f31d941663c069d55921",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget söker seniora mjukvaruutvecklare inom .NET, C# och JavaScript för en finansiell SaaS-plattform. Rollen har låg överlappning med konsultens profil inom data engineering och BI."
+  },
+  "https://witted.com/projects/ai-development-architect-governance-competence-quality-99c4c48e": {
+    "classified_at": "2026-10-02",
+    "content_hash": "cecaf4b3a445d6f1d9d2d3e133858122ed46de86",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Uppdraget söker en AI Development Architect med fokus på styrning, riskbedömning och AI-styrramar inom läkemedelsindustrin i Finland."
+  },
+  "https://witted.com/projects/data-catalogue-expert-purview-a864a139": {
+    "classified_at": "2026-10-02",
+    "content_hash": "37e5cc9ba24b1a6750f2b26e04f02ae66e418ada",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "Uppdraget avser en expert på datakataloger och styrning med Microsoft Purview för en kund inom läkemedelsindustrin i Finland. Fokus ligger på Azure Databricks, data governance och master data management i stället för konsultens kärnområden inom data engineering och Power BI."
+  },
+  "https://witted.com/projects/senior-data-scientist-credit-risk-collateral-analytics-confidential-client-candidate-deadline-5-october-27246497": {
+    "classified_at": "2026-10-02",
+    "content_hash": "11ca05439c3624cb9fd03ef2f16ddbae21ab2d99",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Uppdraget avser en roll som Senior Data Scientist med fokus pa kreditrisk och molnmigrering, placerad i Finland."
+  },
   "https://www.alphadev.se/lediga-uppdrag/azure-devops-specialist-57599023": {
     "classified_at": "2026-09-16",
     "content_hash": "69e2b8625cc965b33e806a3cf04bfc48a50fdd43",
@@ -1747,6 +1813,17 @@
     "score": 1,
     "status": "open",
     "summary": "Uppdraget avser en roll som Business Operations Partner för DACH-regionen med fokus på processer och datahantering, vilket ligger utanför konsultens tekniska expertis inom data engineering och BI."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/bussiness-analyst-med-produkt-garkompetens-till-finansinspketionen-100-sthlm-16850": {
+    "classified_at": "2026-10-02",
+    "content_hash": "1e8d2536988343de312dab9e79b29294524c99c3",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Finansinspektionen söker en Business Analyst med produktägarkompetens för ett uppdrag på plats i Stockholm, med möjlighet till hemarbete upp till två dagar i veckan."
   },
   "https://www.asocietygroup.com/sv/uppdrag/data-engineer-l4-16615": {
     "classified_at": "2026-09-09",
@@ -1946,16 +2023,27 @@
     "status": "open",
     "summary": "Annonsen gäller en roll som underhållsingenjör inom läkemedelstillverkning, vilket saknar koppling till datateknik."
   },
-  "https://www.jappa.jobs/jobb/j6ab3869f5b13cd001483a6a8-senior-data-and-marketing-automation-engineer": {
-    "classified_at": "2026-10-01",
-    "content_hash": "9bffdf907e25eee5fdef9003e95b89d50a802b95",
+  "https://www.houseofskills.se/senior-dba-mainframe-och-postgresql": {
+    "classified_at": "2026-10-02",
+    "content_hash": "27fdf26f1f32e7a69617130efc5fa2a1111e1243",
     "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 2,
+    "status": "open",
+    "summary": "Rollen som senior DBA (database administrator) fokuserar på mainframe och PostgreSQL, vilket ligger utanför konsultens primära expertis inom modern data engineering och BI."
+  },
+  "https://www.jappa.jobs/jobb/j6ab3869f5b13cd001483a6a8-senior-data-and-marketing-automation-engineer": {
+    "classified_at": "2026-10-02",
+    "content_hash": "34d2e49dd76855d248182e0cd50da305069cce60",
+    "employment_type": "permanent",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "adjacent",
     "score": 6,
     "status": "open",
-    "summary": "Rollen som Senior Data and Marketing Automation Engineer fokuserar på Snowflake och dataflöden hos en global aktör, med placering i Göteborg."
+    "summary": "Rollen som Senior Data and Marketing Automation Engineer i Göteborg fokuserar på Salesforce Marketing Cloud och Snowflake. Uppdraget innebär att hantera data och automatisering hos en global fordonsaktör."
   },
   "https://www.keyman.se/sv/administration-ekonomi-juridik/konsult-inom-informationsforvaltning-registrator-till-skr-sveriges-kommuner-och-regioner-16301": {
     "classified_at": "2026-09-15",
@@ -1989,6 +2077,17 @@
     "score": 1,
     "status": "open",
     "summary": "Annonsen söker en mekanisk tekniker med inriktning på mekanik och hydraulik för ett uppdrag i Storbritannien. Rollen har ingen koppling till data- eller BI-området."
+  },
+  "https://www.progressiverecruitment.com/en-gb/job/project-manager---nuclear-module-fabrication--assembly/4075522": {
+    "classified_at": "2026-10-02",
+    "content_hash": "88e04d1607c3483efc0a287fe626c9f7a713b009",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Detta är en roll som projektledare inom tillverkning och montering av kärnkraftsmoduler (baserad i England), vilket saknar koppling till datateknik och konsultens profil."
   },
   "https://www.sigma.se/assignment/senior-etl-developer-sweden-en-20260828": {
     "classified_at": "2026-09-02",
