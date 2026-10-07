@@ -461,6 +461,28 @@
     "status": "open",
     "summary": "Detta är en roll som Senior Java-utvecklare för en plattform för fondhandel (hos Nordea Bank), vilket ligger helt utanför konsultens expertis inom data och BI."
   },
+  "https://app.verama.com/en/job-requests/84740": {
+    "classified_at": "2026-10-07",
+    "content_hash": "edcf0d2a48b33c863b1e244ce4343fddc34c1d05",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Jordbruksverket söker en senior systemutvecklar med inriktning mot Oracle, Java samt systemförvaltning. Uppdraget har ingen överlappning med konsultens expertis inom modern datateknologi."
+  },
+  "https://app.verama.com/en/job-requests/84754": {
+    "classified_at": "2026-10-07",
+    "content_hash": "8d1e4bf3399a165a1d049b2437bc9fa12775cdfa",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Detta är ett uppdrag som systemutvecklare med fokus på Java, SQL och Angular hos Polismyndigheten i Stockholm. Rollen saknar koppling till konsultens expertis inom data engineering och BI."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -1826,48 +1848,59 @@
     "summary": "Uppdraget söker seniora mjukvaruutvecklare inom .NET, C# och JavaScript för en finansiell SaaS-plattform. Rollen har låg överlappning med konsultens profil inom data engineering och BI."
   },
   "https://witted.com/projects/ai-development-architect-governance-competence-quality-99c4c48e": {
-    "classified_at": "2026-10-02",
-    "content_hash": "cecaf4b3a445d6f1d9d2d3e133858122ed46de86",
+    "classified_at": "2026-10-07",
+    "content_hash": "91efa5619d83e76955fdeba7df7cb4b61889ecf8",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget avser en AI-utvecklingsarkitekt inom läkemedelsindustrin i Finland, med fokus på styrning, kvalitet och riskbedömning av AI-verktyg."
+  },
+  "https://witted.com/projects/data-catalogue-expert-purview-a864a139": {
+    "classified_at": "2026-10-07",
+    "content_hash": "a0157b331f4785f737bbb9e663e54d21560e808e",
     "employment_type": "contract",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "adjacent",
     "score": 3,
     "status": "open",
-    "summary": "Uppdraget söker en AI Development Architect med fokus på styrning, riskbedömning och AI-styrramar inom läkemedelsindustrin i Finland."
-  },
-  "https://witted.com/projects/data-catalogue-expert-purview-a864a139": {
-    "classified_at": "2026-10-06",
-    "content_hash": "37e5cc9ba24b1a6750f2b26e04f02ae66e418ada",
-    "employment_type": "contract",
-    "location_ok": false,
-    "prompt_version": 1,
-    "role_match": "adjacent",
-    "score": 4,
-    "status": "open",
-    "summary": "Uppdraget avser en expert inom datakataloger och styrning med fokus på Azure Purview och Databricks inom läkemedelsindustrin, vilket ligger utanför konsulttjänstens primära fokusområden inom data engineering och Power BI."
+    "summary": "Uppdraget avser en expert inom datakataloger och Purview (via Witted) med placering i Finland, vilket ligger utanför konsultens geografiska fokus."
   },
   "https://witted.com/projects/data-platform-engineer-enterprise-saas-start-asap-c027e31f": {
-    "classified_at": "2026-10-06",
-    "content_hash": "d41ce97215ac9fd31b6b2ae219dc679e8deeec2c",
+    "classified_at": "2026-10-07",
+    "content_hash": "043bf48ea0bb07eda6705e0ca810ef5de63413b5",
     "employment_type": "contract",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "core",
     "score": 6,
     "status": "open",
-    "summary": "Företaget söker en Data Platform Engineer inom enterprise SaaS med fokus på datamodellering, Python, Databricks och SQL. Uppdraget är placerat i Finland, vilket gör att det hamnar utanför konsultens geografiska preferenser."
+    "summary": "Ett SaaS-företag söker en Data Platform Engineer (via Witted) för att bygga och utveckla en delad dataplattform. Uppdraget är placerat i Finland och kräver erfarenhet av bland annat Python, Databricks, SQL och ETL."
   },
   "https://witted.com/projects/databricks-data-ai-platform-engineer-marine-energy-industry-9a226460": {
-    "classified_at": "2026-10-06",
-    "content_hash": "44c1e5447c1d3bb2e6c30e03bd3005f62f46a08b",
+    "classified_at": "2026-10-07",
+    "content_hash": "4c07d7833d36ef23f483f6312fa890c386fd94fb",
     "employment_type": "contract",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "core",
-    "score": 3,
+    "score": 2,
     "status": "open",
-    "summary": "Uppdraget avser en Databricks- och plattformsingenjör inom marin- och energibranschen, med fokus på molntjänster som AWS och Terraform. Profilen matchar svagt då konsulten främst har erfarenhet av Microsoft-ekosystemet och Snowflake."
+    "summary": "Uppdraget som Databricks Data och AI Platform Engineer i Finland fokuserar på AWS och Databricks, vilket ligger utanför konsultens huvudsakliga kompetens inom Microsoft Fabric och Snowflake."
+  },
+  "https://witted.com/projects/senior-data-engineer-azure-databricks-91f11fb3": {
+    "classified_at": "2026-10-07",
+    "content_hash": "0df7ebee8499cddf9418194083281b89e1f21bc2",
+    "employment_type": "unclear",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 7,
+    "status": "open",
+    "summary": "Listing avser en senior dataingenjör med fokus på Azure och Databricks för att bygga en ny dataplattform. Uppdraget är dock baserat i Oslo i Norge."
   },
   "https://witted.com/projects/senior-data-scientist-credit-risk-collateral-analytics-confidential-client-candidate-deadline-5-october-27246497": {
     "classified_at": "2026-10-02",
@@ -1901,6 +1934,17 @@
     "score": 3,
     "status": "open",
     "summary": "Uppdraget som Azure DevOps Specialist fokuserar på utvecklings- och leveransflöden, vilket ligger ganska långt ifrån konsultens primära fokus inom data engineering och BI."
+  },
+  "https://www.alphadev.se/lediga-uppdrag/data-": {
+    "classified_at": "2026-10-07",
+    "content_hash": "2a52d2ab43f0f0c37ff5a17c03338cda714eb76b",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "Uppdrag som Data Analyst med fokus på AI och användarbeteenden i ett tvärfunktionellt team. Rollen innebär arbete med stora datamängder för att utveckla en digital tjänst."
   },
   "https://www.alphadev.se/lediga-uppdrag/data-analyst-med-ai-fokus-a822d4a8": {
     "classified_at": "2026-09-30",
