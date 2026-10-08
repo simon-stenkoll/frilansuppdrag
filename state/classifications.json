@@ -483,6 +483,17 @@
     "status": "open",
     "summary": "Detta är ett uppdrag som systemutvecklare med fokus på Java, SQL och Angular hos Polismyndigheten i Stockholm. Rollen saknar koppling till konsultens expertis inom data engineering och BI."
   },
+  "https://app.verama.com/en/job-requests/84805": {
+    "classified_at": "2026-10-08",
+    "content_hash": "744ab491c4dc9eff1fa4441ed68626f2ef56d3c6",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "ICA Sverige söker en Tech Lead med ansvar för teknisk arkitektur och utvecklingsteamet, med krav på kompetens inom bland annat Python, FastAPI, BigQuery och Google Cloud Platform."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -746,6 +757,39 @@
     "score": 6,
     "status": "open",
     "summary": "Rollen som Data Business Analyst innebär att bygga och skala upp en analyslösning för produkt- och kommersiella data. Tjänsten kräver nära samarbete mellan verksamheten och tekniska datateam."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31566494": {
+    "classified_at": "2026-10-08",
+    "content_hash": "b407635b32a2f7f4653762fcc7abc907c4b4faf1",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 4,
+    "status": "open",
+    "summary": "Veritaz AB söker en Senior GCP Platform Engineer med fokus på Google Cloud Platform, Kubernetes och Terraform. Rollen innebär att bygga molnplattformar inom data och analys."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31568049": {
+    "classified_at": "2026-10-08",
+    "content_hash": "16c642c0542bcd162a038b65f561d1e6251e8901",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Digitalenta AB söker en senior data engineer för att ansvara för datakvalitet, modellering och strukturering av källdata samt datalager."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31568490": {
+    "classified_at": "2026-10-08",
+    "content_hash": "56af821f6f52ee2a7e92dec4609d93b514b616bd",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Ericsson AB söker en person till en roll inom AI och business analytics i Stockholm. Annonsen riktar sig till nyexaminerade och fokuserar på breda digitala lösningar snarare än specifik datateknisk utveckling."
   },
   "https://assignment.levigo.se/CNh3q8Ns/data-engineer": {
     "classified_at": "2026-09-23",
@@ -1594,6 +1638,17 @@
     "status": "open",
     "summary": "Uppdraget söker en senior plattformsingenjör med stark erfarenhet av Google Cloud Platform för att arbeta med data och analys, vilket ligger utanför konsultens primära Microsoft- och Snowflake-stack."
   },
+  "https://upgraded.se/konsultuppdrag/data-engineer-4": {
+    "classified_at": "2026-10-08",
+    "content_hash": "04d52019213dface6c2fabe7ebb8ffc6f903c837",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Uppdraget som dataingenjör fokuserar på att säkerställa korrekt källdata, strukturering och modellering för en central plattform i Stockholm."
+  },
   "https://upgraded.se/konsultuppdrag/data-scientist": {
     "classified_at": "2026-10-06",
     "content_hash": "12432fdfed19033040c392554bc5298fb3208a76",
@@ -1681,6 +1736,17 @@
     "score": 2,
     "status": "open",
     "summary": "Uppdraget avser en erfaren kravanalytiker i Stockholm med fokus på att omsätta verksamhetsbehov och regelverk till testbara krav inom en agil miljö."
+  },
+  "https://upgraded.se/konsultuppdrag/losningsarkitekt-3": {
+    "classified_at": "2026-10-08",
+    "content_hash": "7142b9f52b227b6fb87104d8ce05a272a508c831",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "Uppdraget söker en lösningsarkitekt eller tech lead för att leda utvecklingen av en central plattform, med ansvar för tekniska vägval och arkitektur."
   },
   "https://upgraded.se/konsultuppdrag/produktagare-datalager-och-bi": {
     "classified_at": "2026-10-06",
@@ -1859,48 +1925,48 @@
     "summary": "Uppdraget avser en AI-utvecklingsarkitekt inom läkemedelsindustrin i Finland, med fokus på styrning, kvalitet och riskbedömning av AI-verktyg."
   },
   "https://witted.com/projects/data-catalogue-expert-purview-a864a139": {
-    "classified_at": "2026-10-07",
-    "content_hash": "a0157b331f4785f737bbb9e663e54d21560e808e",
+    "classified_at": "2026-10-08",
+    "content_hash": "522a21acfdac43c7e11476dfa95d0b12b5d0728d",
     "employment_type": "contract",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "adjacent",
     "score": 3,
     "status": "open",
-    "summary": "Uppdraget avser en expert inom datakataloger och Purview (via Witted) med placering i Finland, vilket ligger utanför konsultens geografiska fokus."
+    "summary": "Uppdraget avser en expert inom Microsoft Purview och datastyrning (data governance) för en kund inom läkemedelsindustrin i Finland."
   },
   "https://witted.com/projects/data-platform-engineer-enterprise-saas-start-asap-c027e31f": {
-    "classified_at": "2026-10-07",
-    "content_hash": "043bf48ea0bb07eda6705e0ca810ef5de63413b5",
+    "classified_at": "2026-10-08",
+    "content_hash": "2266db168840a37897fda6899838769011a2b197",
     "employment_type": "contract",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "core",
     "score": 6,
     "status": "open",
-    "summary": "Ett SaaS-företag söker en Data Platform Engineer (via Witted) för att bygga och utveckla en delad dataplattform. Uppdraget är placerat i Finland och kräver erfarenhet av bland annat Python, Databricks, SQL och ETL."
+    "summary": "Ett mjukvaruföretag söker en Data Platform Engineer för att bygga och utveckla deras delade dataplattform (via Witted i Finland)."
   },
   "https://witted.com/projects/databricks-data-ai-platform-engineer-marine-energy-industry-9a226460": {
-    "classified_at": "2026-10-07",
-    "content_hash": "4c07d7833d36ef23f483f6312fa890c386fd94fb",
+    "classified_at": "2026-10-08",
+    "content_hash": "44c1e5447c1d3bb2e6c30e03bd3005f62f46a08b",
     "employment_type": "contract",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "core",
-    "score": 2,
+    "score": 3,
     "status": "open",
-    "summary": "Uppdraget som Databricks Data och AI Platform Engineer i Finland fokuserar på AWS och Databricks, vilket ligger utanför konsultens huvudsakliga kompetens inom Microsoft Fabric och Snowflake."
+    "summary": "Uppdraget avser en Databricks och AI Platform Engineer med fokus på molntjänster som AWS och Terraform (i Finland). Profilens expertis ligger snarare inom Microsoft, Snowflake och dbt, varför teknikstacken inte matchar fullt ut."
   },
   "https://witted.com/projects/senior-data-engineer-azure-databricks-91f11fb3": {
-    "classified_at": "2026-10-07",
-    "content_hash": "0df7ebee8499cddf9418194083281b89e1f21bc2",
-    "employment_type": "unclear",
+    "classified_at": "2026-10-08",
+    "content_hash": "4f996535cb601d017d67ccc4fcf970ac1e7beefd",
+    "employment_type": "contract",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "core",
-    "score": 7,
+    "score": 8,
     "status": "open",
-    "summary": "Listing avser en senior dataingenjör med fokus på Azure och Databricks för att bygga en ny dataplattform. Uppdraget är dock baserat i Oslo i Norge."
+    "summary": "Uppdraget avser en senior data engineer med erfarenhet av Azure och Databricks for att bygga en ny dataplattform. Placeringsorten ar Oslo i Norge, vilket ligger utanfor konsultens geografiska omrade."
   },
   "https://witted.com/projects/senior-data-scientist-credit-risk-collateral-analytics-confidential-client-candidate-deadline-5-october-27246497": {
     "classified_at": "2026-10-02",
@@ -2155,6 +2221,17 @@
     "status": "open",
     "summary": "Uppdraget söker en plattformsingenjör med fokus på Google Cloud Platform och DevOps-verktyg som Terraform. Konsultens profil är mer inriktad mot Microsoft-ekosystemet och modern datalagring."
   },
+  "https://www.asocietygroup.com/sv/uppdrag/po-coach-project-leader-16904": {
+    "classified_at": "2026-10-08",
+    "content_hash": "b19fa0b06b4548e45f7dcea152ccadad0bac9744",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en roll som PO Coach och projektledare med fokus på agil transformation, vilket ligger utanför konsultens kärnområde inom datateknik."
+  },
   "https://www.asocietygroup.com/sv/uppdrag/produktionsplanerare-16692": {
     "classified_at": "2026-09-17",
     "content_hash": "31f516701170b662eac10e74a5bd9664605ec441",
@@ -2232,6 +2309,17 @@
     "status": "open",
     "summary": "Uppdraget avser en senior T24-arkitekt med fokus på bankmiljöer och Temenos-plattformen, vilket ligger utanför konsultens kompetens inom data och BI."
   },
+  "https://www.asocietygroup.com/sv/uppdrag/systems-engineer-vulnerability-research-16925": {
+    "classified_at": "2026-10-08",
+    "content_hash": "5ea79384e94873c8378bb49d2312576c5722ab3c",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Annonsen söker en systemingenjör för sårbarhetsforskning inom Digital Battlespace Solutions, vilket inte matchar profilens kompetens inom data engineering och BI."
+  },
   "https://www.asocietygroup.com/sv/uppdrag/systemutvecklare-inom-c-net-till-s-kerhetspolisen-100-sthlm-16861": {
     "classified_at": "2026-10-05",
     "content_hash": "1be19b8bd42736b122f1192227fd27f0b2bf343a",
@@ -2242,6 +2330,17 @@
     "score": 1,
     "status": "open",
     "summary": "Uppdraget avser en roll som systemutvecklare inom C#.Net till Säkerhetspolisen i Stockholm. Detta ligger utanför konsultens kärnområde inom data och BI."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/systemutvecklare-platina-till-s-kerhetspolisen-16895": {
+    "classified_at": "2026-10-08",
+    "content_hash": "c9769564890514f0e1486e135417e2fe2438844e",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Säkerhetspolisen söker en systemutvecklare för arbete med ärendehanteringssystemet Platina, vilket ligger utanör konsultens fokusområde inom data och BI."
   },
   "https://www.asocietygroup.com/sv/uppdrag/systemutvecklare-qlik-sense-till-arbetsf-rmedlingen-16622": {
     "classified_at": "2026-09-09",
@@ -2276,6 +2375,17 @@
     "status": "open",
     "summary": "Arbetsförmedlingen söker en erfaren testare för ett konsultuppdrag inom kontrollplattformen, som fokuserar på kvalitetssäkring och dataflöden."
   },
+  "https://www.asocietygroup.com/sv/uppdrag/tre-st-l-sningsarkitekter-till-polismyndigheten-16913": {
+    "classified_at": "2026-10-08",
+    "content_hash": "297633f92562c4a51a950444e5dc9b082c59109d",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 2,
+    "status": "open",
+    "summary": "Polismyndigheten söker lösningsarkitekter för att utveckla och förvalta system kopplade till rese- och identitetshandlingar. Uppdraget innebär tekniskt ledarskap och programvaruutveckling i Stockholm."
+  },
   "https://www.asocietygroup.com/sv/uppdrag/underh-llsingenj-r-16528": {
     "classified_at": "2026-09-02",
     "content_hash": "5bc6a6e7ca81e49e20d92ac88a3ab42d11662309",
@@ -2288,15 +2398,15 @@
     "summary": "Annonsen gäller en roll som underhållsingenjör inom läkemedelstillverkning, vilket saknar koppling till datateknik."
   },
   "https://www.houseofskills.se/senior-dba-mainframe-och-postgresql": {
-    "classified_at": "2026-10-02",
-    "content_hash": "27fdf26f1f32e7a69617130efc5fa2a1111e1243",
-    "employment_type": "contract",
+    "classified_at": "2026-10-08",
+    "content_hash": "c440b49fe136008ec82bbb39af466fb090136723",
+    "employment_type": "permanent",
     "location_ok": true,
     "prompt_version": 1,
     "role_match": "adjacent",
     "score": 2,
     "status": "open",
-    "summary": "Rollen som senior DBA (database administrator) fokuserar på mainframe och PostgreSQL, vilket ligger utanför konsultens primära expertis inom modern data engineering och BI."
+    "summary": "Listing avser en roll som Senior DBA med fokus på Mainframe och Postgresql (via House of Skills) i Stockholm."
   },
   "https://www.jappa.jobs/jobb/j6ab3869f5b13cd001483a6a8-senior-data-and-marketing-automation-engineer": {
     "classified_at": "2026-10-02",
