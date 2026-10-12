@@ -505,6 +505,17 @@
     "status": "open",
     "summary": "Polismyndigheten söker en senior systemutvecklare för arbete med Qlik Sense plattformen i Stockholm. Uppdraget kräver omfattande specialistkompetens inom BI och Qlik, vilket ligger utanför konsultens huvudsakliga teknikstack."
   },
+  "https://app.verama.com/en/job-requests/84879": {
+    "classified_at": "2026-10-12",
+    "content_hash": "18acdb92aeea8c9b5afa41a67d1ee6547f0c65dc",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget söker en IFS-utvecklare med erfarenhet av .NET, SQL och affärssystemet IFS Cloud, vilket ligger utanför konsulttjänstens datatekniska fokus. Arbetet är placerat i Linköping med möjlighet till distans."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -812,6 +823,39 @@
     "score": 4,
     "status": "open",
     "summary": "Perido söker en IT Business and System Analyst till ett fordonsföretag i Stockholm för att arbeta med HR-processer, dataanalys och IT-lösningar."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31579053": {
+    "classified_at": "2026-10-12",
+    "content_hash": "1127cf2e56bd4ab8049fead8c759b26995f4aea7",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Annonsen gäller en roll som senior tidplanesamordnare för ett industriprojekt i Stockholm, vilket saknar koppling till datateknik och analys."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31579723": {
+    "classified_at": "2026-10-12",
+    "content_hash": "2c264de888c0e7fdcd67aa5e4a56e6c2d3fb04cb",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser stöd inom moms- och skatteprocesser (VAT & Tax) med fokus på operativt ekonomiarbete och processutveckling."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31579996": {
+    "classified_at": "2026-10-12",
+    "content_hash": "9e70a72ed3b1088479246baab47722a1ae6ade4e",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 2,
+    "status": "open",
+    "summary": "Kia Sweden söker en Sales Controller för ett konsultuppdrag via SJR med fokus på analys och kommersiell uppföljning inom försäljning. Rollen ligger närmare traditionell finansiell styrning än data engineering och BI, men har inslag av affärsanalys."
   },
   "https://assignment.levigo.se/CNh3q8Ns/data-engineer": {
     "classified_at": "2026-09-23",
@@ -1715,6 +1759,17 @@
     "status": "open",
     "summary": "Uppdraget avser en erfaren DevOps-ingenjör med fokus på källkodshantering, CI/CD-pipelines och stöd till utvecklingsteam inom en större offentlig organisation i Stockholm."
   },
+  "https://upgraded.se/konsultuppdrag/enterprise-architect": {
+    "classified_at": "2026-10-12",
+    "content_hash": "dba60fee724cf1a6f0598ea9910fb81a4191a929",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Uppdraget som Enterprise Architect fokuserar på övergripande arkitektur och systemkonsolidering efter en bolagssammanslagning, vilket ligger utanför konsultens huvudsakliga fokus inom data engineering och BI."
+  },
   "https://upgraded.se/konsultuppdrag/fullstack-developer": {
     "classified_at": "2026-10-01",
     "content_hash": "c5cba7076305f817232ac8a2cb84e1460929121f",
@@ -1782,15 +1837,26 @@
     "summary": "Uppdraget avser en erfaren kravanalytiker i Stockholm med fokus på att omsätta verksamhetsbehov och regelverk till testbara krav inom en agil miljö."
   },
   "https://upgraded.se/konsultuppdrag/losningsarkitekt-3": {
-    "classified_at": "2026-10-08",
-    "content_hash": "7142b9f52b227b6fb87104d8ce05a272a508c831",
+    "classified_at": "2026-10-12",
+    "content_hash": "031c263b1279ed05f1fcb7ee25ac3c5812bf0314",
     "employment_type": "contract",
     "location_ok": true,
     "prompt_version": 1,
     "role_match": "adjacent",
     "score": 4,
     "status": "open",
-    "summary": "Uppdraget söker en lösningsarkitekt eller tech lead för att leda utvecklingen av en central plattform, med ansvar för tekniska vägval och arkitektur."
+    "summary": "Uppdraget söker en Tech Lead med ansvar för att leda utvecklingsteamet och driva den tekniska utvecklingen av en central plattform, inklusive arbete med GenAI."
+  },
+  "https://upgraded.se/konsultuppdrag/losningsarkitekt-4": {
+    "classified_at": "2026-10-12",
+    "content_hash": "10d30854e4dab87f64c09f3d915ea328efec5642",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 6,
+    "status": "open",
+    "summary": "Uppdraget som lösningsarkitekt fokuserar på digitaliseringsinitiativ och systemstöd inom produkt- och verksamhetsutveckling i Stockholm. Rollen innebär nära samarbete med utvecklingsteam och verksamheten för att knyta samman system och processer."
   },
   "https://upgraded.se/konsultuppdrag/produktagare-datalager-och-bi": {
     "classified_at": "2026-10-06",
@@ -1890,6 +1956,28 @@
     "score": 3,
     "status": "open",
     "summary": "Uppdraget som Supply Chain Developer fokuserar på att driva verksamhetsutveckling inom supply chain och S&OP, snarare än kärnkompetenser inom data engineering eller BI."
+  },
+  "https://upgraded.se/konsultuppdrag/systemutvecklare-5": {
+    "classified_at": "2026-10-12",
+    "content_hash": "76afb5c0993ad744c78ab836d332e56de40aca02",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 7,
+    "status": "open",
+    "summary": "Uppdraget som systemutvecklare inom BI och DW innefattar ETL-utveckling, datamodellering och arbete med moderna dataverktyg som GCP och BigQuery, vilket ligger nära konsultens kompetens inom datalagring."
+  },
+  "https://upgraded.se/konsultuppdrag/systemutvecklare-backend-middleware-backend-c-net": {
+    "classified_at": "2026-10-12",
+    "content_hash": "e65a2f150afa43bdaf2b33d5fcb268d62af3b42f",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Detta är ett uppdrag som systemutvecklare inom backend och middleware, med primärt fokus på C# och .NET. Tjänsten ligger utanför konsultens kärnområde inom data och BI."
   },
   "https://upgraded.se/konsultuppdrag/testare": {
     "classified_at": "2026-09-30",
