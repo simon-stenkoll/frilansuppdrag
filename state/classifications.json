@@ -506,15 +506,26 @@
     "summary": "Polismyndigheten söker en senior systemutvecklare för arbete med Qlik Sense plattformen i Stockholm. Uppdraget kräver omfattande specialistkompetens inom BI och Qlik, vilket ligger utanför konsultens huvudsakliga teknikstack."
   },
   "https://app.verama.com/en/job-requests/84879": {
-    "classified_at": "2026-10-12",
-    "content_hash": "18acdb92aeea8c9b5afa41a67d1ee6547f0c65dc",
+    "classified_at": "2026-10-13",
+    "content_hash": "7261ef0e72d25f6609ca5458c4cf8f80dad46446",
     "employment_type": "contract",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "none",
     "score": 2,
     "status": "open",
-    "summary": "Uppdraget söker en IFS-utvecklare med erfarenhet av .NET, SQL och affärssystemet IFS Cloud, vilket ligger utanför konsulttjänstens datatekniska fokus. Arbetet är placerat i Linköping med möjlighet till distans."
+    "summary": "Uppdraget avser en IFS-utvecklare med fokus på affärssystem, SQL och .NET, vilket inte matchar konsultens profil inom modern datateknik."
+  },
+  "https://app.verama.com/en/job-requests/84971": {
+    "classified_at": "2026-10-13",
+    "content_hash": "7ba9da618b33d59ee567c5ec563d53b8de660d6e",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget avser tekniskt utvecklingsstöd i systemet SnowPO hos Jönköpings kommun, med krav på kunskaper inom bland annat HTML, PowerShell och SQL."
   },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
@@ -856,6 +867,28 @@
     "score": 2,
     "status": "open",
     "summary": "Kia Sweden söker en Sales Controller för ett konsultuppdrag via SJR med fokus på analys och kommersiell uppföljning inom försäljning. Rollen ligger närmare traditionell finansiell styrning än data engineering och BI, men har inslag av affärsanalys."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31585789": {
+    "classified_at": "2026-10-13",
+    "content_hash": "4fd0f05a7a5a1694d511c41ed11f140f4fc0c965",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget söker en senior SAP BW-utvecklare för en roll inom data och analytics hos en större organisation i Stockholm."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31587042": {
+    "classified_at": "2026-10-13",
+    "content_hash": "d7bc952f61145fbc90f14c21e9afbbf1fa2feb98",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 6,
+    "status": "open",
+    "summary": "Uppdraget som Business Analyst fokuserar på Power BI-operationer och rapportering för en central organisation i Stockholm. Rollen innebär löpande rapportcykler, ad hoc-analyser och resultatvalidering."
   },
   "https://assignment.levigo.se/CNh3q8Ns/data-engineer": {
     "classified_at": "2026-09-23",
@@ -2276,6 +2309,17 @@
     "status": "open",
     "summary": "Uppdraget avser en Azure DevOps Specialist på mediornivå (nivå 3) med fokus på utvecklingsplattformar och DevSecOps-flöden i Stockholm, med möjlighet till överrekrytering efter cirka 6 månader."
   },
+  "https://www.asocietygroup.com/sv/uppdrag/business-analyst-power-bi-16963": {
+    "classified_at": "2026-10-13",
+    "content_hash": "9ec1cce5361421d937876c4cd1d5e2fa6d14a831",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 6,
+    "status": "open",
+    "summary": "Uppdraget avser en Business Analyst med fokus på Power BI och daglig rapportering. Rollen innebär hantering av uppdateringar, ad hoc-analyser och felsökning av datakvalitet."
+  },
   "https://www.asocietygroup.com/sv/uppdrag/business-operations-partner-dach-16272": {
     "classified_at": "2026-09-02",
     "content_hash": "7b6099e2d20e87dd9a68876ed327563d3a89f378",
@@ -2585,15 +2629,15 @@
     "summary": "Listing avser en roll som Senior DBA med fokus på Mainframe och Postgresql (via House of Skills) i Stockholm."
   },
   "https://www.jappa.jobs/jobb/j6ab3869f5b13cd001483a6a8-senior-data-and-marketing-automation-engineer": {
-    "classified_at": "2026-10-02",
-    "content_hash": "34d2e49dd76855d248182e0cd50da305069cce60",
+    "classified_at": "2026-10-13",
+    "content_hash": "bba5f1ae447e585a19cbaa1154b7f60f2bdf805c",
     "employment_type": "permanent",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "adjacent",
     "score": 6,
     "status": "open",
-    "summary": "Rollen som Senior Data and Marketing Automation Engineer i Göteborg fokuserar på Salesforce Marketing Cloud och Snowflake. Uppdraget innebär att hantera data och automatisering hos en global fordonsaktör."
+    "summary": "Rollen som Senior Data and Marketing Automation Engineer fokuserar pa arbeta med data och automation i Salesforce Marketing Cloud samt Snowflake. Tjänsten är placerad i Göteborg och utannonserare söker en person för digital marknadsföring."
   },
   "https://www.keyman.se/sv/administration-ekonomi-juridik/konsult-inom-informationsforvaltning-registrator-till-skr-sveriges-kommuner-och-regioner-16301": {
     "classified_at": "2026-09-15",
