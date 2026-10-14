@@ -506,26 +506,26 @@
     "summary": "Polismyndigheten söker en senior systemutvecklare för arbete med Qlik Sense plattformen i Stockholm. Uppdraget kräver omfattande specialistkompetens inom BI och Qlik, vilket ligger utanför konsultens huvudsakliga teknikstack."
   },
   "https://app.verama.com/en/job-requests/84879": {
-    "classified_at": "2026-10-13",
-    "content_hash": "7261ef0e72d25f6609ca5458c4cf8f80dad46446",
+    "classified_at": "2026-10-14",
+    "content_hash": "e19eb71b65ff2d9ea9636a96712445e1f89f907b",
     "employment_type": "contract",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "none",
     "score": 2,
     "status": "open",
-    "summary": "Uppdraget avser en IFS-utvecklare med fokus på affärssystem, SQL och .NET, vilket inte matchar konsultens profil inom modern datateknik."
+    "summary": "Uppdraget avser en IFS-utvecklare med fokus på affärssystem, SQL och .NET, vilket ligger utanför konsultens primära inriktning inom data engineering och BI."
   },
   "https://app.verama.com/en/job-requests/84971": {
-    "classified_at": "2026-10-13",
-    "content_hash": "7ba9da618b33d59ee567c5ec563d53b8de660d6e",
+    "classified_at": "2026-10-14",
+    "content_hash": "af1a684c624e91051d4652d457481a52d8b95042",
     "employment_type": "contract",
     "location_ok": true,
     "prompt_version": 1,
-    "role_match": "none",
-    "score": 2,
+    "role_match": "adjacent",
+    "score": 3,
     "status": "open",
-    "summary": "Uppdraget avser tekniskt utvecklingsstöd i systemet SnowPO hos Jönköpings kommun, med krav på kunskaper inom bland annat HTML, PowerShell och SQL."
+    "summary": "Detta är ett konsultuppdrag som systemutvecklare med inriktning mot SnowPO, HTML, PowerShell, SQL och Java hos Jönköpings kommun, med möjlighet till distansarbete."
   },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
@@ -935,26 +935,26 @@
     "summary": "Listing avser en roll som Data Engineer inom mjukvaruutveckling och teknik med hybrid uppskattning i Stockholm."
   },
   "https://career.nionit.com/jobs/8325044-data-engineer": {
-    "classified_at": "2026-09-14",
-    "content_hash": "6062f24fe85be8e526991575673d6a6a3a619aeb",
+    "classified_at": "2026-10-14",
+    "content_hash": "04637a259a81cd88c95f6d37a350d612e2dd82c4",
     "employment_type": "permanent",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "core",
     "score": 8,
     "status": "open",
-    "summary": "Listing avser en roll som Data Engineer med placering i Sofia, Bulgarien (hybrid). Positionen efterfråger kompetens inom mjukvaruutveckling och datateknik."
+    "summary": "Annonsen gäller en tjänst som dataingenjör med placering i Sofia, och innebär arbete inom mjukvaruutveckling och datateknik."
   },
   "https://datakonsulter.info/WiseDki/StartController": {
-    "classified_at": "2026-09-30",
-    "content_hash": "e7dd838377ddb27f957a49c21713ad5ec3eb63c3",
+    "classified_at": "2026-10-14",
+    "content_hash": "03541f9e6e5f7b670a8db94bbe7766e89af0aebb",
     "employment_type": "unclear",
     "location_ok": true,
     "prompt_version": 1,
-    "role_match": "adjacent",
-    "score": 6,
+    "role_match": "core",
+    "score": 7,
     "status": "open",
-    "summary": "Annonsen gäller en roll som dataanalytiker i Stockholm. Det framgår inte om det rör sig om ett uppdrag eller en anställning."
+    "summary": "Uppdraget avser en roll som Data Engineer med placering i Södertälje. Annonsen ger dock begränsad information om teknisk stack och omfattning."
   },
   "https://enmanskonsulterna.se/uppdrag/110008": {
     "classified_at": "2026-09-08",
@@ -1164,6 +1164,17 @@
     "score": 6,
     "status": "open",
     "summary": "Uppdraget som senior Data Platform Engineer i Stockholm fokuserar på att inventera och utveckla data och systemlösningar. Rollen kräver erfarenhet av molnbaserade dataplattformar och data engineering, vilket delvis matchar konsultens profil."
+  },
+  "https://market.cinode.com/requests/23104": {
+    "classified_at": "2026-10-14",
+    "content_hash": "38f1602da49422cf056721121e37df43c2292a33",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 6,
+    "status": "open",
+    "summary": "Castra söker en senior lösningsarkitekt inom Microsoft BI för ett uppdrag hos en statlig organisation i Stockholm. Rollen fokuserar på arkitekturarbete kring SQL Server, SSAS och Power BI Report Server."
   },
   "https://upgraded.se/konsultuppdrag/184446-utredare-behorighetslosning": {
     "classified_at": "2026-09-02",
@@ -2134,15 +2145,15 @@
     "summary": "Uppdraget som Data Platform Engineer fokuserar på datamodellering, ETL och plattformsutveckling med teknik som Python, Databricks och SQL (via Witted)."
   },
   "https://witted.com/projects/databricks-data-ai-platform-engineer-marine-energy-industry-9a226460": {
-    "classified_at": "2026-10-08",
-    "content_hash": "44c1e5447c1d3bb2e6c30e03bd3005f62f46a08b",
+    "classified_at": "2026-10-14",
+    "content_hash": "6a0e0f69af63603e7ac06b0246fe7ad45f638d47",
     "employment_type": "contract",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "core",
     "score": 3,
     "status": "open",
-    "summary": "Uppdraget avser en Databricks och AI Platform Engineer med fokus på molntjänster som AWS och Terraform (i Finland). Profilens expertis ligger snarare inom Microsoft, Snowflake och dbt, varför teknikstacken inte matchar fullt ut."
+    "summary": "Uppdraget söker en Databricks och AI Platform Engineer inom marin- och energibranschen, med fokus på AWS, Terraform och MLflow. Rollen ligger utanför konsultens primära teknikstack inom Microsoft-miljön och Snowflake."
   },
   "https://witted.com/projects/senior-data-engineer-azure-databricks-91f11fb3": {
     "classified_at": "2026-10-09",
@@ -2341,6 +2352,17 @@
     "score": 4,
     "status": "open",
     "summary": "Finansinspektionen söker en Business Analyst med produktägarkompetens för verksamhetskritiska system (Platina), med fokus på att fungera som länk mellan verksamhet och IT."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/customer-operations-engineer-16975": {
+    "classified_at": "2026-10-14",
+    "content_hash": "42cd128fb15b9bb8c915146bbafbe4230bde7988",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Uppdraget som Customer Operations Engineer fokuserar på systemtekniskt arbete, där analytisk förmåga och akademisk bakgrund prioriteras framför specifik datateknisk erfarenhet."
   },
   "https://www.asocietygroup.com/sv/uppdrag/data-engineer-l4-16615": {
     "classified_at": "2026-09-09",
