@@ -506,26 +506,37 @@
     "summary": "Polismyndigheten söker en senior systemutvecklare för arbete med Qlik Sense plattformen i Stockholm. Uppdraget kräver omfattande specialistkompetens inom BI och Qlik, vilket ligger utanför konsultens huvudsakliga teknikstack."
   },
   "https://app.verama.com/en/job-requests/84879": {
-    "classified_at": "2026-10-14",
-    "content_hash": "e19eb71b65ff2d9ea9636a96712445e1f89f907b",
+    "classified_at": "2026-10-15",
+    "content_hash": "5092a6e38d145d8ee26d60ca22b70abb01812274",
     "employment_type": "contract",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "none",
-    "score": 2,
+    "score": 1,
     "status": "open",
-    "summary": "Uppdraget avser en IFS-utvecklare med fokus på affärssystem, SQL och .NET, vilket ligger utanför konsultens primära inriktning inom data engineering och BI."
+    "summary": "Detta är ett konsultuppdrag som IFS-utvecklare i Linköping, med krav på erfarenhet av affärssystemet IFS och .NET."
   },
   "https://app.verama.com/en/job-requests/84971": {
-    "classified_at": "2026-10-14",
-    "content_hash": "af1a684c624e91051d4652d457481a52d8b95042",
+    "classified_at": "2026-10-15",
+    "content_hash": "afbef86dd4f81013d61e2153638e1ed13d24c910",
     "employment_type": "contract",
     "location_ok": true,
     "prompt_version": 1,
     "role_match": "adjacent",
     "score": 3,
     "status": "open",
-    "summary": "Detta är ett konsultuppdrag som systemutvecklare med inriktning mot SnowPO, HTML, PowerShell, SQL och Java hos Jönköpings kommun, med möjlighet till distansarbete."
+    "summary": "Uppdraget avser en systemutvecklare för tekniskt stöd och utveckling i en beställningsportal baserad på SnowPO. Det kräver kunskaper inom bland annat SQL, HTML, PowerShell och Java."
+  },
+  "https://app.verama.com/en/job-requests/85059": {
+    "classified_at": "2026-10-15",
+    "content_hash": "efd2ee1bd745ecd91d7ef60fe70e68102348f1d1",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "ICA Sverige söker en backend-utvecklare med fokus på Python, FastAPI och GCP för ett uppdrag i Stockholm."
   },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
@@ -890,16 +901,27 @@
     "status": "open",
     "summary": "Uppdraget som Business Analyst fokuserar på Power BI-operationer och rapportering för en central organisation i Stockholm. Rollen innebär löpande rapportcykler, ad hoc-analyser och resultatvalidering."
   },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31598339": {
+    "classified_at": "2026-10-15",
+    "content_hash": "e4ee992b470eb3c3d6accfad5c3d6f6e148e9a6c",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en specialist inom IAM och IGA med fokus på SailPoint IdentityIQ, vilket ligger utanför konsultens expertis inom data engineering och BI."
+  },
   "https://assignment.levigo.se/CNh3q8Ns/data-engineer": {
-    "classified_at": "2026-09-23",
-    "content_hash": "a7e27f5683c2a24c9524a0815360515fbf7c45dd",
+    "classified_at": "2026-10-15",
+    "content_hash": "c6eb1f0b63e42611abaa08a358588e9495add3f5",
     "employment_type": "unclear",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "core",
     "score": 8,
     "status": "open",
-    "summary": "Uppdraget avser en roll som Data Engineer i Helsingborg, med fokus på datateknik och plattformsutveckling."
+    "summary": "Listing avser en roll som Data Engineer i Helsingborg. Arbetsuppgifterna specificeras inte närmare i texten."
   },
   "https://assignment.levigo.se/Z4tgl3xo/senior-data-engineer": {
     "classified_at": "2026-09-08",
@@ -1032,6 +1054,17 @@
     "score": 3,
     "status": "open",
     "summary": "Roll som Data Analytics Project Manager baserad i Köpenhamn med hybridmöjlighet. Uppdraget fokuserar på projektledning inom data och analys snarare än hands-on data engineering."
+  },
+  "https://jobs.epico.se/jobs/8544346-databricks-consultant-implementation-architecture": {
+    "classified_at": "2026-10-15",
+    "content_hash": "2cdb9aa55482a4b30b8064778eb6e0340caa9e82",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget avser en Databricks-konsult för implementation och arkitektur i Göteborg. Eftersom profilen fokuserar på Microsoft Fabric, Snowflake och Azure samt att platsen är Göteborg, är matchningen svag."
   },
   "https://market.cinode.com/requests/22193": {
     "classified_at": "2026-09-02",
@@ -1175,6 +1208,17 @@
     "score": 6,
     "status": "open",
     "summary": "Castra söker en senior lösningsarkitekt inom Microsoft BI för ett uppdrag hos en statlig organisation i Stockholm. Rollen fokuserar på arkitekturarbete kring SQL Server, SSAS och Power BI Report Server."
+  },
+  "https://market.cinode.com/requests/23139": {
+    "classified_at": "2026-10-15",
+    "content_hash": "8bbb6b075cebc89c9b2436a97957254d73e9a6f1",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Detta är ett konsultuppdrag som Data Analyst i Sundsvall, (med viss möjlighet till distansarbete), med fokus på webbanalys, SEO och användarbeteenden för verksamt.se."
   },
   "https://upgraded.se/konsultuppdrag/184446-utredare-behorighetslosning": {
     "classified_at": "2026-09-02",
@@ -1747,6 +1791,28 @@
     "score": 1,
     "status": "open",
     "summary": "E-hälsomyndigheten söker en senior kommunikatör för stöd vid införande av nationella tjänster, med placeringsort i Kalmar eller Stockholm."
+  },
+  "https://upgraded.se/konsultuppdrag/ai-adoption-specialist-ai-evangelist-for-utvecklingsteam": {
+    "classified_at": "2026-10-15",
+    "content_hash": "adf7e276be19538185e6114b12ecdda74b471555",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget söker en AI Adoption Specialist för att driva praktisk AI-användning och utbildning inom utvecklingsteam (via Upgraded People i Stockholm). Rollen fokuserar på generativ AI och GitHub Copilot snarare än traditionell datateknik."
+  },
+  "https://upgraded.se/konsultuppdrag/backend-utvecklare-och-devops-digital-services": {
+    "classified_at": "2026-10-15",
+    "content_hash": "b8f6adc0774831c001125887599231e37e643bd1",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Uppdraget söker en backend-utvecklare och DevOps-resurs med fokus på Python, integrationer samt CI/CD flöden i Stockholm (via Upgraded People)."
   },
   "https://upgraded.se/konsultuppdrag/data-engineer-3": {
     "classified_at": "2026-10-06",
@@ -2682,6 +2748,17 @@
     "score": 1,
     "status": "open",
     "summary": "SKR söker en konsult inom informationsförvaltning som registrator för att stödja verksamheten under en organisationsjustering. Rollen saknar koppling till datateknik och analys."
+  },
+  "https://www.keyman.se/sv/data-it/erfaren-javautvecklare-med-backendprofil-till-pensionsmyndigheten-16541": {
+    "classified_at": "2026-10-15",
+    "content_hash": "df6e242813c057a4f498f48c8f998ef80359e656",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Pensionsmyndigheten söker en erfaren Javautvecklare med backendprofil till sitt agila releaståg för utveckling av nästa generations pensionssystem. Uppdraget innebär arbete med tunga backendsystem och stora datamängder, men tekniken är inriktad på Java snarare än data engineering."
   },
   "https://www.progressiverecruitment.com/en-gb/job/mechanical-technician/4074161": {
     "classified_at": "2026-09-24",
