@@ -538,6 +538,28 @@
     "status": "open",
     "summary": "ICA Sverige söker en backend-utvecklare med fokus på Python, FastAPI och GCP för ett uppdrag i Stockholm."
   },
+  "https://app.verama.com/en/job-requests/85103": {
+    "classified_at": "2026-10-16",
+    "content_hash": "d6f8457606342d6d527880e32c8dc923fbd50156",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 2,
+    "status": "open",
+    "summary": "Polismyndigheten söker en systemförvaltare och teknisk produktspecialist med fokus på drift, integrationer och support för specifika affärssystem. Rollen innebär arbete med bland annat Windows-miljöer, databaser (MSSQL, Oracle) och felsökning."
+  },
+  "https://app.verama.com/en/job-requests/85111": {
+    "classified_at": "2026-10-16",
+    "content_hash": "d5c3c1266acc5a8c4f46da9febc6f3115dbe29ad",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Telenor söker en Fullstack Software Developer med erfarenhet av Python och PHP, för att arbeta med applikationsförvaltning och systemutveckling i Stockholm."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -913,15 +935,15 @@
     "summary": "Uppdraget avser en specialist inom IAM och IGA med fokus på SailPoint IdentityIQ, vilket ligger utanför konsultens expertis inom data engineering och BI."
   },
   "https://assignment.levigo.se/CNh3q8Ns/data-engineer": {
-    "classified_at": "2026-10-15",
-    "content_hash": "c6eb1f0b63e42611abaa08a358588e9495add3f5",
+    "classified_at": "2026-10-16",
+    "content_hash": "a7e27f5683c2a24c9524a0815360515fbf7c45dd",
     "employment_type": "unclear",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "core",
     "score": 8,
     "status": "open",
-    "summary": "Listing avser en roll som Data Engineer i Helsingborg. Arbetsuppgifterna specificeras inte närmare i texten."
+    "summary": "Listing avser en roll som Data Engineer med placering i Helsingborg, vilket ligger utanför konsultens primära region."
   },
   "https://assignment.levigo.se/Z4tgl3xo/senior-data-engineer": {
     "classified_at": "2026-09-08",
@@ -957,15 +979,15 @@
     "summary": "Listing avser en roll som Data Engineer inom mjukvaruutveckling och teknik med hybrid uppskattning i Stockholm."
   },
   "https://career.nionit.com/jobs/8325044-data-engineer": {
-    "classified_at": "2026-10-14",
-    "content_hash": "04637a259a81cd88c95f6d37a350d612e2dd82c4",
+    "classified_at": "2026-10-16",
+    "content_hash": "6062f24fe85be8e526991575673d6a6a3a619aeb",
     "employment_type": "permanent",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "core",
     "score": 8,
     "status": "open",
-    "summary": "Annonsen gäller en tjänst som dataingenjör med placering i Sofia, och innebär arbete inom mjukvaruutveckling och datateknik."
+    "summary": "Listing avser en fast roll som Data Engineer hos One Agency med hybrid arbetsplats i Sofia, vilket inte matchar konsultens geografiska preferenser."
   },
   "https://datakonsulter.info/WiseDki/StartController": {
     "classified_at": "2026-10-14",
@@ -1924,6 +1946,17 @@
     "status": "open",
     "summary": "Uppdraget som integrationsspecialist fokuserar på WSO2 och API-hantering, vilket ligger utanför konsultens expertis inom datateknik och analys."
   },
+  "https://upgraded.se/konsultuppdrag/integrationsutvecklare-dds-domain-data-services": {
+    "classified_at": "2026-10-16",
+    "content_hash": "2703289ba3855b11cb3e1db047e615c235f6a51e",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "Uppdraget som integrationsutvecklare fokuserar på att bygga en ny integrations och API plattform för masterdata, där data från bland annat SAP hanteras och exponeras genom domän API er."
+  },
   "https://upgraded.se/konsultuppdrag/javautvecklare-fullstack": {
     "classified_at": "2026-10-09",
     "content_hash": "b78dd890bd6eaea686baf3eb9bcc717868c95e82",
@@ -1967,6 +2000,17 @@
     "score": 6,
     "status": "open",
     "summary": "Uppdraget som lösningsarkitekt fokuserar på digitaliseringsinitiativ och systemstöd inom produkt- och verksamhetsutveckling i Stockholm. Rollen innebär nära samarbete med utvecklingsteam och verksamheten för att knyta samman system och processer."
+  },
+  "https://upgraded.se/konsultuppdrag/performance-management-data-mediation-engineer": {
+    "classified_at": "2026-10-16",
+    "content_hash": "2c1c79b5c16b357ec79692490afce42637493dbf",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "Uppdraget som Performance Management / Data Mediation Engineer innebär att utveckla och förvalta datapipelines för prestandadata i en komplex nätverksmiljö. Rollen fokuserar på integration och dataflöden snarare än modern datalagring och BI."
   },
   "https://upgraded.se/konsultuppdrag/produktagare-datalager-och-bi": {
     "classified_at": "2026-10-06",

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contract Assignments – 2026-10-16</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --border: #2a2d3e;
+    --accent: #7c6af7;
+    --accent2: #4fc3f7;
+    --new: #43d68c;
+    --text: #e2e4f0;
+    --muted: #8b8fa8;
+    --score-high: #43d68c;
+    --score-mid: #ffd740;
+    --score-low: #ff6b6b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 15px; line-height: 1.6; }
+  header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 20px 32px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  header h1 { font-size: 1.3rem; font-weight: 700; color: var(--accent); }
+  header .meta { color: var(--muted); font-size: 0.85rem; }
+  .badge { background: var(--accent); color: #fff; border-radius: 999px; padding: 2px 10px; font-size: 0.78rem; font-weight: 600; }
+  .badge.new { background: var(--new); color: #0f1117; }
+  .badge.muted { background: var(--border); color: var(--muted); }
+  main { max-width: 980px; margin: 0 auto; padding: 24px 16px; }
+  .toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; align-items: center; }
+  .source-tag { background: var(--border); color: var(--muted); border-radius: 6px; padding: 3px 10px; font-size: 0.78rem; }
+  .new-strip { background: rgba(67,214,140,0.07); border: 1px solid rgba(67,214,140,0.3); border-radius: 12px; padding: 14px 18px; margin-bottom: 24px; }
+  .new-strip-header { color: var(--new); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.04em; margin-bottom: 8px; }
+  .new-strip-list { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+  .new-strip-list li { font-size: 0.88rem; }
+  .new-strip-list a { color: var(--text); text-decoration: none; }
+  .new-strip-list a:hover { color: var(--accent2); }
+  .strip-score { font-size: 0.72rem; font-weight: 700; border-radius: 4px; padding: 1px 5px; margin-left: 6px; vertical-align: middle; }
+  .strip-src { color: var(--muted); font-size: 0.75rem; margin-left: 6px; }
+  .section { margin-bottom: 36px; }
+  .section-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  .section-head h2 { font-size: 1.05rem; font-weight: 700; color: var(--text); }
+  .section-count { background: var(--border); color: var(--muted); border-radius: 999px; padding: 1px 9px; font-size: 0.75rem; font-weight: 700; }
+  .section-sub { color: var(--muted); font-size: 0.8rem; }
+  .section-muted { border-top: 1px dashed var(--border); padding-top: 24px; }
+  .section-muted .section-head h2 { color: var(--muted); }
+  .section-muted .card { opacity: 0.72; }
+  .section-muted .card:hover { opacity: 1; }
+  .grid { display: grid; gap: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: border-color 0.15s, opacity 0.15s; }
+  .card:hover { border-color: var(--accent); }
+  .card.is-new { border-left: 3px solid var(--new); background: rgba(67,214,140,0.04); }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
+  .card-title { font-size: 1rem; font-weight: 600; }
+  .card-title a { color: var(--text); text-decoration: none; }
+  .card-title a:hover { color: var(--accent2); }
+  .reason { background: rgba(139,143,168,0.15); color: var(--muted); border: 1px solid var(--border); border-radius: 999px; padding: 1px 9px; font-size: 0.72rem; font-weight: 600; vertical-align: middle; margin-left: 6px; white-space: nowrap; }
+  .score { font-size: 0.78rem; font-weight: 700; border-radius: 6px; padding: 2px 8px; white-space: nowrap; }
+  .score-high { background: rgba(67,214,140,0.15); color: var(--score-high); }
+  .score-mid { background: rgba(255,215,64,0.15); color: var(--score-mid); }
+  .score-low { background: rgba(255,107,107,0.15); color: var(--score-low); }
+  .score-none { background: rgba(139,143,168,0.15); color: var(--muted); }
+  .warning-banner { background: rgba(255,215,64,0.1); border: 1px solid rgba(255,215,64,0.4); color: var(--score-mid); border-radius: 12px; padding: 12px 18px; margin-bottom: 20px; font-size: 0.88rem; }
+  .card-meta { color: var(--muted); font-size: 0.82rem; margin-bottom: 8px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .card-meta span::before { content: ''; }
+  .card-summary { font-size: 0.88rem; color: #bbbdd6; margin-top: 6px; }
+  .new-pill { background: var(--new); color: #0f1117; border-radius: 999px; padding: 1px 8px; font-size: 0.72rem; font-weight: 700; vertical-align: middle; margin-left: 6px; }
+  .empty { color: var(--muted); text-align: center; padding: 40px 0; }
+  footer { text-align: center; color: var(--muted); font-size: 0.78rem; padding: 32px 16px; border-top: 1px solid var(--border); margin-top: 32px; }
+  @media (max-width: 600px) { header { padding: 14px 16px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>&#x1F4CB; Contract Assignments</h1>
+  <span class="meta">Stockholm · Data Engineering / BI / Analytics</span>
+  <span class="badge">3 uppdrag</span>
+  <span class="badge muted">37 osäkra</span>
+  
+  <span class="meta" style="margin-left:auto">2026-10-16</span>
+</header>
+<main>
+  <div class="toolbar">
+    <span style="color:var(--muted);font-size:0.82rem">Sources:</span>
+    <span class="source-tag">A Society</span> <span class="source-tag">Cinode Market</span> <span class="source-tag">Epico</span> <span class="source-tag">House of Skills</span> <span class="source-tag">Jappa</span> <span class="source-tag">KeyMan</span> <span class="source-tag">Levigo</span> <span class="source-tag">One Agency</span> <span class="source-tag">Platsbanken</span> <span class="source-tag">Upgraded People</span> <span class="source-tag">Verama</span>
+    <a href="archive/" style="margin-left:auto;color:var(--muted);font-size:0.82rem;text-decoration:none">&#x1F4C1; Archive</a>
+  </div>
+  
+  
+  <section class="section">
+  <div class="section-head">
+    <h2>Uppdrag</h2>
+    <span class="section-count">3</span>
+    <span class="section-sub">konsultuppdrag som matchar profilen</span>
+  </div>
+  <div class="grid">
+    <div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://jobs.epico.se/jobs/7998079-epico-tech-soker-3-seniora-data-engineer-uppstart-under-hosten" target="_blank" rel="noopener">Epico Tech söker 3 Seniora Data Engineer – upps...</a></div>
+    <span class="score score-high">9/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Epico Tech</span>
+    <span>📍 Stockholm · Hybrid</span>
+    <span>🔗 Epico</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Epico Tech söker tre seniora Data Engineers för ett uppdrag med hybridplacering i Stockholm, vilket matchar konsultens tekniska profiler inom data engineering väl.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://upgraded.se/konsultuppdrag/systemutvecklare-5/" target="_blank" rel="noopener">Systemutvecklare BI/DW</a></div>
+    <span class="score score-high">7/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Upgraded People)</span>
+    <span>📍 SE, Stockholm, Visby</span>
+    <span>🔗 Upgraded People</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Uppdraget som systemutvecklare inom BI och DW innefattar ETL-utveckling, datamodellering och arbete med moderna dataverktyg som GCP och BigQuery, vilket ligger nära konsultens kompetens inom datalagring.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31566494" target="_blank" rel="noopener">Senior GCP Platform Engineer - 19864</a></div>
+    <span class="score score-mid">4/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Veritaz AB</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Platsbanken</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Veritaz AB söker en Senior GCP Platform Engineer med fokus på Google Cloud Platform, Kubernetes och Terraform. Rollen innebär att bygga molnplattformar inom data och analys.</div>
+</div>
+  </div>
+</section>
+  <section class="section section-muted">
+  <div class="section-head">
+    <h2>Osäkra / anställningar</h2>
+    <span class="section-count">37</span>
+    <span class="section-sub">filtrerade bort från mailet</span>
+  </div>
+  <div class="grid">
+    <div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31292698" target="_blank" rel="noopener">Senior Data Engineer</a><span class="reason">Anställning</span></div>
+    <span class="score score-high">8/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Edge of Talent AB</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Platsbanken</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Edge of Talent söker en Senior Data Engineer för att utveckla moderna dataplattformar och skapa lösningar hos ledande kunder i Stockholm, (vilket matchar profilens kompetens inom datateknik).</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://assignment.levigo.se/CNh3q8Ns/data-engineer" target="_blank" rel="noopener">Data Engineer Helsingborg</a><span class="reason">Oklar uppdragsform</span></div>
+    <span class="score score-high">8/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Levigo)</span>
+    <span>📍 Sweden</span>
+    <span>🔗 Levigo</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Listing avser en roll som Data Engineer med placering i Helsingborg, vilket ligger utanför konsultens primära region.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://career.nionit.com/jobs/8325044-data-engineer" target="_blank" rel="noopener">Data engineer</a><span class="reason">Anställning</span></div>
+    <span class="score score-high">8/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via One Agency)</span>
+    <span>📍 Sofia</span>
+    <span>🔗 One Agency</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Listing avser en fast roll som Data Engineer hos One Agency med hybrid arbetsplats i Sofia, vilket inte matchar konsultens geografiska preferenser.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31556336" target="_blank" rel="noopener">Data Business Analyst</a><span class="reason">Anställning</span></div>
+    <span class="score score-mid">6/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Rasulson Consulting AB</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Platsbanken</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Rollen som Data Business Analyst innebär att bygga och skala upp en analyslösning för produkt- och kommersiella data. Tjänsten kräver nära samarbete mellan verksamheten och tekniska datateam.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://www.asocietygroup.com/sv/uppdrag/business-analyst-power-bi-16963" target="_blank" rel="noopener">Business Analyst- Power BI</a><span class="reason">Angränsande roll</span></div>
+    <span class="score score-mid">6/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via A Society)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 A Society</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Uppdraget avser en Business Analyst med fokus på Power BI och daglig rapportering. Rollen innebär hantering av uppdateringar, ad hoc-analyser och felsökning av datakvalitet.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://www.jappa.jobs/jobb/j6ab3869f5b13cd001483a6a8-senior-data-and-marketing-automation-engineer" target="_blank" rel="noopener">Senior Data and Marketing Automation Engineer Ägd end-to-end – data till automation, inga handoffs · Central roll hos global fordonsaktör · Salesforce</a><span class="reason">Anställning</span></div>
+    <span class="score score-mid">6/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Jappa)</span>
+    <span>📍 Göteborg</span>
+    <span>🔗 Jappa</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Rollen som Senior Data and Marketing Automation Engineer fokuserar pa arbeta med data och automation i Salesforce Marketing Cloud samt Snowflake. Tjänsten är placerad i Göteborg och utannonserare söker en person för digital marknadsföring.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://market.cinode.com/requests/23104" target="_blank" rel="noopener">Senior lösningsarkitekt – Microsoft BI / SSAS / Power BI Report Server</a><span class="reason">Anställning</span></div>
+    <span class="score score-mid">6/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Castra</span>
+    <span>📍 Stockholm (Onsite)</span>
+    <span>🔗 Cinode Market</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Castra söker en senior lösningsarkitekt inom Microsoft BI för ett uppdrag hos en statlig organisation i Stockholm. Rollen fokuserar på arkitekturarbete kring SQL Server, SSAS och Power BI Report Server.</div>
+</div>
+<div class="card is-new">
+  <div class="card-header">
+    <div class="card-title"><a href="https://upgraded.se/konsultuppdrag/integrationsutvecklare-dds-domain-data-services/" target="_blank" rel="noopener">Integrationsutvecklare – DDS Domain Data Services</a><span class="new-pill">NEW</span><span class="reason">Angränsande roll</span></div>
+    <span class="score score-mid">4/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Upgraded People)</span>
+    <span>📍 SE, Stockholm</span>
+    <span>🔗 Upgraded People</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Uppdraget som integrationsutvecklare fokuserar på att bygga en ny integrations och API plattform för masterdata, där data från bland annat SAP hanteras och exponeras genom domän API er.</div>
+</div>
+<div class="card is-new">
+  <div class="card-header">
+    <div class="card-title"><a href="https://upgraded.se/konsultuppdrag/performance-management-data-mediation-engineer/" target="_blank" rel="noopener">Performance Management / Data Mediation Engineer</a><span class="new-pill">NEW</span><span class="reason">Angränsande roll</span></div>
+    <span class="score score-mid">4/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Upgraded People)</span>
+    <span>📍 SE, Stockholm</span>
+    <span>🔗 Upgraded People</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Uppdraget som Performance Management / Data Mediation Engineer innebär att utveckla och förvalta datapipelines för prestandadata i en komplex nätverksmiljö. Rollen fokuserar på integration och dataflöden snarare än modern datalagring och BI.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31572717" target="_blank" rel="noopener">IT Business and System Analyst to automotive company!</a><span class="reason">Anställning</span></div>
+    <span class="score score-mid">4/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Perido AB</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Platsbanken</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Perido söker en IT Business and System Analyst till ett fordonsföretag i Stockholm för att arbeta med HR-processer, dataanalys och IT-lösningar.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31274667" target="_blank" rel="noopener">AI &amp; Data Project Manager</a><span class="reason">Anställning</span></div>
+    <span class="score score-low">3/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Edge of Talent AB</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Platsbanken</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Edge of Talent Söker en projektledare inom AI och data med fokus på att leda komplexa förändringsinitiativ. Rollen innebär att driva initiativ där teknik, verksamhet och människor utvecklas tillsammans.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://www.asocietygroup.com/sv/uppdrag/customer-operations-engineer-16975" target="_blank" rel="noopener">Customer Operations Engineer</a><span class="reason">Angränsande roll</span></div>
+    <span class="score score-low">3/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via A Society)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 A Society</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Uppdraget som Customer Operations Engineer fokuserar på systemtekniskt arbete, där analytisk förmåga och akademisk bakgrund prioriteras framför specifik datateknisk erfarenhet.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://upgraded.se/konsultuppdrag/backend-utvecklare-och-devops-digital-services/" target="_blank" rel="noopener">Backend-utvecklare och DevOps Digital Services</a><span class="reason">Angränsande roll</span></div>
+    <span class="score score-low">3/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Upgraded People)</span>
+    <span>📍 SE, Stockholm</span>
+    <span>🔗 Upgraded People</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Uppdraget söker en backend-utvecklare och DevOps-resurs med fokus på Python, integrationer samt CI/CD flöden i Stockholm (via Upgraded People).</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://www.keyman.se/sv/data-it/erfaren-javautvecklare-med-backendprofil-till-pensionsmyndigheten-16541/" target="_blank" rel="noopener">Erfaren Javautvecklare med backendprofil till Pensionsmyndigheten</a><span class="reason">Angränsande roll</span></div>
+    <span class="score score-low">3/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via KeyMan)</span>
+    <span>📍 STOCKHOLM</span>
+    <span>🔗 KeyMan</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Pensionsmyndigheten söker en erfaren Javautvecklare med backendprofil till sitt agila releaståg för utveckling av nästa generations pensionssystem. Uppdraget innebär arbete med tunga backendsystem och stora datamängder, men tekniken är inriktad på Java snarare än data engineering.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://jobs.epico.se/jobs/8499298-data-analytics-project-manager" target="_blank" rel="noopener">Data Analytics Project Manager</a><span class="reason">Angränsande roll</span></div>
+    <span class="score score-low">3/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Epico)</span>
+    <span>📍 Köpenhamn · Hybrid</span>
+    <span>🔗 Epico</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Roll som Data Analytics Project Manager baserad i Köpenhamn med hybridmöjlighet. Uppdraget fokuserar på projektledning inom data och analys snarare än hands-on data engineering.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://market.cinode.com/requests/23139" target="_blank" rel="noopener">Data Analyst</a><span class="reason">Angränsande roll</span></div>
+    <span class="score score-low">3/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Nexer Group</span>
+    <span>📍 Sundsvall (60% remote)</span>
+    <span>🔗 Cinode Market</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Detta är ett konsultuppdrag som Data Analyst i Sundsvall, (med viss möjlighet till distansarbete), med fokus på webbanalys, SEO och användarbeteenden för verksamt.se.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://app.verama.com/en/job-requests/85059" target="_blank" rel="noopener">Backend Utvecklare</a><span class="reason">Angränsande roll</span></div>
+    <span class="score score-low">3/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 ICA Sverige AB</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Verama</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">ICA Sverige söker en backend-utvecklare med fokus på Python, FastAPI och GCP för ett uppdrag i Stockholm.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://app.verama.com/en/job-requests/84971" target="_blank" rel="noopener">Systemutvecklare SnowPO</a><span class="reason">Angränsande roll</span></div>
+    <span class="score score-low">3/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Jönköpings kommun</span>
+    <span>📍 Jönköping, Remote</span>
+    <span>🔗 Verama</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Uppdraget avser en systemutvecklare för tekniskt stöd och utveckling i en beställningsportal baserad på SnowPO. Det kräver kunskaper inom bland annat SQL, HTML, PowerShell och Java.</div>
+</div>
+<div class="card is-new">
+  <div class="card-header">
+    <div class="card-title"><a href="https://app.verama.com/en/job-requests/85103" target="_blank" rel="noopener">Systemförvaltare</a><span class="new-pill">NEW</span><span class="reason">Angränsande roll</span></div>
+    <span class="score score-low">2/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Polismyndigheten</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Verama</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Polismyndigheten söker en systemförvaltare och teknisk produktspecialist med fokus på drift, integrationer och support för specifika affärssystem. Rollen innebär arbete med bland annat Windows-miljöer, databaser (MSSQL, Oracle) och felsökning.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31579996" target="_blank" rel="noopener">Sales controller till Kia Sweden</a><span class="reason">Angränsande roll</span></div>
+    <span class="score score-low">2/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 SJR in Sweden AB</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Platsbanken</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Kia Sweden söker en Sales Controller för ett konsultuppdrag via SJR med fokus på analys och kommersiell uppföljning inom försäljning. Rollen ligger närmare traditionell finansiell styrning än data engineering och BI, men har inslag av affärsanalys.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://www.asocietygroup.com/sv/uppdrag/azure-devops-specialist-hyrk-p-16785" target="_blank" rel="noopener">Azure DevOps Specialist - Hyrköp</a><span class="reason">Anställning</span></div>
+    <span class="score score-low">2/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via A Society)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 A Society</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Uppdraget avser en Azure DevOps Specialist inom ramen för ett hyrköpsupplägg med fokus på automation och leveransflöden. Rollen ligger utanför konsultens huvudsakliga expertis inom data engineering och BI.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://upgraded.se/konsultuppdrag/ai-adoption-specialist-ai-evangelist-for-utvecklingsteam/" target="_blank" rel="noopener">AI Adoption Specialist / AI-evangelist för utvecklingsteam</a><span class="reason">Fel roll</span></div>
+    <span class="score score-low">2/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Upgraded People)</span>
+    <span>📍 SE, Stockholm</span>
+    <span>🔗 Upgraded People</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Uppdraget söker en AI Adoption Specialist för att driva praktisk AI-användning och utbildning inom utvecklingsteam (via Upgraded People i Stockholm). Rollen fokuserar på generativ AI och GitHub Copilot snarare än traditionell datateknik.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://upgraded.se/konsultuppdrag/systemutvecklare-backend-middleware-backend-c-net/" target="_blank" rel="noopener">Systemutvecklare Backend (Middleware/Backend, C# &amp; .NET)</a><span class="reason">Fel roll</span></div>
+    <span class="score score-low">2/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Upgraded People)</span>
+    <span>📍 SE, Stockholm, Visby</span>
+    <span>🔗 Upgraded People</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Detta är ett uppdrag som systemutvecklare inom backend och middleware, med primärt fokus på C# och .NET. Tjänsten ligger utanför konsultens kärnområde inom data och BI.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://upgraded.se/konsultuppdrag/databasadministrator-mainframe-och-postgresql/" target="_blank" rel="noopener">Databasadministratör – Mainframe och PostgreSQL</a><span class="reason">Angränsande roll</span></div>
+    <span class="score score-low">2/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Upgraded People)</span>
+    <span>📍 SE, Stockholm</span>
+    <span>🔗 Upgraded People</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Uppdraget söker en erfaren databasadministratör med ansvar för drift och vidareutveckling inom Db2 för z/OS och PostgreSQL.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://jobs.epico.se/jobs/8544346-databricks-consultant-implementation-architecture" target="_blank" rel="noopener">Databricks Consultant – Implementation &amp; Archit...</a><span class="reason">Fel ort</span></div>
+    <span class="score score-low">2/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Epico)</span>
+    <span>📍 Göteborg · Hybrid</span>
+    <span>🔗 Epico</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Uppdraget avser en Databricks-konsult för implementation och arkitektur i Göteborg. Eftersom profilen fokuserar på Microsoft Fabric, Snowflake och Azure samt att platsen är Göteborg, är matchningen svag.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://www.houseofskills.se/senior-dba-mainframe-och-postgresql/" target="_blank" rel="noopener">Senior DBA – Mainframe och Postgresql</a><span class="reason">Anställning</span></div>
+    <span class="score score-low">2/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via House of Skills)</span>
+    <span>📍 Sweden</span>
+    <span>🔗 House of Skills</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Listing avser en roll som Senior DBA med fokus på Mainframe och Postgresql (via House of Skills) i Stockholm.</div>
+</div>
+<div class="card is-new">
+  <div class="card-header">
+    <div class="card-title"><a href="https://app.verama.com/en/job-requests/85111" target="_blank" rel="noopener">Fullstack Software Developer </a><span class="new-pill">NEW</span><span class="reason">Fel roll</span></div>
+    <span class="score score-low">1/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Telenor Sverige AB</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Verama</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Telenor söker en Fullstack Software Developer med erfarenhet av Python och PHP, för att arbeta med applikationsförvaltning och systemutveckling i Stockholm.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31585789" target="_blank" rel="noopener">Senior SAP BW utvecklare Konsultuppdrag i Stockholm minst 8 månader</a><span class="reason">Fel roll</span></div>
+    <span class="score score-low">1/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 LH Affärsutveckling AB</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Platsbanken</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Uppdraget söker en senior SAP BW-utvecklare för en roll inom data och analytics hos en större organisation i Stockholm.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://arbetsformedlingen.se/platsbanken/annonser/31598339" target="_blank" rel="noopener">IAM/IGA specialist</a><span class="reason">Fel roll</span></div>
+    <span class="score score-low">1/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Rasulson Consulting AB</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 Platsbanken</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Uppdraget avser en specialist inom IAM och IGA med fokus på SailPoint IdentityIQ, vilket ligger utanför konsultens expertis inom data engineering och BI.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://www.asocietygroup.com/sv/uppdrag/product-marketing-manager-specialist-l-sningar-s-kerhet-commercial-product-specialist-s-ljst-dsansvarig-f-r-s-kerhetsportf-lj-16934" target="_blank" rel="noopener">Product Marketing Manager - specialist lösningar &amp; säkerhet / Commercial Product Specialist - Säljstödsansvarig för säkerhetsportfölj.</a><span class="reason">Fel roll</span></div>
+    <span class="score score-low">1/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via A Society)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 A Society</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Detta är en roll som Product Marketing Manager med fokus på säkerhetslösningar och säljstöd, vilket inte matchar profilens kompetens inom data och BI.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://www.asocietygroup.com/sv/uppdrag/systems-engineer-vulnerability-research-16925" target="_blank" rel="noopener">Systems engineer - vulnerability research</a><span class="reason">Fel roll</span></div>
+    <span class="score score-low">1/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via A Society)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 A Society</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Annonsen söker en systemingenjör för sårbarhetsforskning inom Digital Battlespace Solutions, vilket inte matchar profilens kompetens inom data engineering och BI.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://www.asocietygroup.com/sv/uppdrag/po-coach-project-leader-16904" target="_blank" rel="noopener">PO Coach / Project Leader</a><span class="reason">Fel roll</span></div>
+    <span class="score score-low">1/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via A Society)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 A Society</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Uppdraget avser en roll som PO Coach och projektledare med fokus på agil transformation, vilket ligger utanför konsultens kärnområde inom datateknik.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://www.asocietygroup.com/sv/uppdrag/esd-koordinator-16868" target="_blank" rel="noopener">ESD-koordinator</a><span class="reason">Fel roll</span></div>
+    <span class="score score-low">1/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via A Society)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 A Society</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Uppdraget avser en roll som ESD-koordinator med ansvar for kvalitet och standardefterlevnad, vilket saknar koppling till datateknik och analys.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://www.asocietygroup.com/sv/uppdrag/konsult-inom-kvalitetsledning-f-r-swexia-software-quality-management-16708" target="_blank" rel="noopener">Konsult inom kvalitetsledning för SWEXIA Software ( Quality Management)</a><span class="reason">Fel roll</span></div>
+    <span class="score score-low">1/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via A Society)</span>
+    <span>📍 Stockholm</span>
+    <span>🔗 A Society</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Uppdraget avser en konsult inom kvalitetsledning för att etablera och utveckla ramverk enligt ISO 9001 hos SWEXIA Software.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://upgraded.se/konsultuppdrag/integrations-specialist-wso2/" target="_blank" rel="noopener">Integrations Specialist (WSO2)</a><span class="reason">Fel roll</span></div>
+    <span class="score score-low">1/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via Upgraded People)</span>
+    <span>📍 SE, Stockholm</span>
+    <span>🔗 Upgraded People</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Uppdraget som integrationsspecialist fokuserar på WSO2 och API-hantering, vilket ligger utanför konsultens expertis inom datateknik och analys.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://www.keyman.se/sv/administration-ekonomi-juridik/konsult-inom-informationsforvaltning-registrator-till-skr-sveriges-kommuner-och-regioner-offert-skickad-till-kund-16301/" target="_blank" rel="noopener">Konsult inom informationsförvaltning – registrator, till SKR Sveriges Kommuner och Regioner – Offert skickad till kund</a><span class="reason">Fel roll</span></div>
+    <span class="score score-low">1/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 (via KeyMan)</span>
+    <span>📍 STOCKHOLM</span>
+    <span>🔗 KeyMan</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">SKR söker en konsult inom informationsförvaltning som registrator för att stödja verksamheten under en organisationsjustering. Rollen saknar koppling till datateknik och analys.</div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title"><a href="https://app.verama.com/en/job-requests/84879" target="_blank" rel="noopener">IFS Utvecklare </a><span class="reason">Fel roll</span></div>
+    <span class="score score-low">1/10</span>
+  </div>
+  <div class="card-meta">
+    <span>🏢 Vivicta AB</span>
+    <span>📍 Linköping, Remote</span>
+    <span>🔗 Verama</span>
+    <span>🗓 2026-10-16</span>
+  </div>
+  <div class="card-summary">Detta är ett konsultuppdrag som IFS-utvecklare i Linköping, med krav på erfarenhet av affärssystemet IFS och .NET.</div>
+</div>
+  </div>
+</section>
+</main>
+<footer>Generated 2026-10-16 · <a href="https://github.com" style="color:var(--muted)">NI-Contracts</a></footer>
+</body>
+</html>
