@@ -506,26 +506,26 @@
     "summary": "Polismyndigheten söker en senior systemutvecklare för arbete med Qlik Sense plattformen i Stockholm. Uppdraget kräver omfattande specialistkompetens inom BI och Qlik, vilket ligger utanför konsultens huvudsakliga teknikstack."
   },
   "https://app.verama.com/en/job-requests/84879": {
-    "classified_at": "2026-10-15",
-    "content_hash": "5092a6e38d145d8ee26d60ca22b70abb01812274",
+    "classified_at": "2026-10-19",
+    "content_hash": "6b27478cb2536f8b3721fe0fc79a1d4a4c15707c",
     "employment_type": "contract",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "none",
-    "score": 1,
+    "score": 2,
     "status": "open",
-    "summary": "Detta är ett konsultuppdrag som IFS-utvecklare i Linköping, med krav på erfarenhet av affärssystemet IFS och .NET."
+    "summary": "Uppdraget gäller en IFS-utvecklare med fokus på .NET, PL/SQL och affärssystemet IFS Cloud, vilket ligger utanför konsultens kärnområde inom data engineering och modern datalagring. Arbetet ska utföras på plats i Linköping."
   },
   "https://app.verama.com/en/job-requests/84971": {
-    "classified_at": "2026-10-15",
-    "content_hash": "afbef86dd4f81013d61e2153638e1ed13d24c910",
+    "classified_at": "2026-10-19",
+    "content_hash": "7dae929e38f4edfc1b6d6ab65af1a84353aa3fc5",
     "employment_type": "contract",
     "location_ok": true,
     "prompt_version": 1,
-    "role_match": "adjacent",
-    "score": 3,
+    "role_match": "none",
+    "score": 2,
     "status": "open",
-    "summary": "Uppdraget avser en systemutvecklare för tekniskt stöd och utveckling i en beställningsportal baserad på SnowPO. Det kräver kunskaper inom bland annat SQL, HTML, PowerShell och Java."
+    "summary": "Uppdraget avser en systemutvecklare för tekniskt stöd och utveckling i kommunens beställningsportal baserad på SnowPO, med krav på kunskaper inom HTML, PowerShell, SQL och Java."
   },
   "https://app.verama.com/en/job-requests/85059": {
     "classified_at": "2026-10-15",
@@ -559,6 +559,17 @@
     "score": 1,
     "status": "open",
     "summary": "Telenor söker en Fullstack Software Developer med erfarenhet av Python och PHP, för att arbeta med applikationsförvaltning och systemutveckling i Stockholm."
+  },
+  "https://app.verama.com/en/job-requests/85169": {
+    "classified_at": "2026-10-19",
+    "content_hash": "2243a94de7bed435598c6c1f4322f1dc09ccc919",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Sandvik Group IT söker en Lead Data Engineer för att bygga och utveckla plattformar med Azure Data Factory, Databricks och modern datalagring. Rollen fokuserar på att leverera kvalitetssäkrade dataflöden och semantiska modeller för HR-domänen."
   },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
@@ -713,6 +724,17 @@
     "score": 1,
     "status": "open",
     "summary": "Listing avser en roll som senior backendutvecklare inom .NET och DevOps i Stockholm, vilket inte matchar profilens fokus på data engineering och BI."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31489376": {
+    "classified_at": "2026-10-19",
+    "content_hash": "6a8dac4519f2063558d0e0c6b7cc6d263de2375e",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Ett offentligt företag i Stockholm söker förstärkning inom data, molnplattform och digital utveckling för ett längre konsultuppdrag."
   },
   "https://arbetsformedlingen.se/platsbanken/annonser/31489984": {
     "classified_at": "2026-09-18",
@@ -933,6 +955,39 @@
     "score": 1,
     "status": "open",
     "summary": "Uppdraget avser en specialist inom IAM och IGA med fokus på SailPoint IdentityIQ, vilket ligger utanför konsultens expertis inom data engineering och BI."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31605712": {
+    "classified_at": "2026-10-19",
+    "content_hash": "541289d17cf2a2735927d661555cf59aa8468b79",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Listing avser en roll som Collaboration Workplace Lead med fokus på Microsoft Teams och digitala mötesmiljöer, vilket ligger utanför konsultens expertis inom data och analytics."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31606576": {
+    "classified_at": "2026-10-19",
+    "content_hash": "73c65a8fecdcd1c08ef7a303fdd6a18b7119446b",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Veritaz söker en integrationsutvecklare för ett konsultuppdrag inom Domain Data Services, med fokus på data och integrationer i Stockholm."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31606673": {
+    "classified_at": "2026-10-19",
+    "content_hash": "4da453d13a9d721e114c0a2f1d68230528e98c6f",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Veritaz söker en erfaren Performance Management (och) Data Mediation Engineer för ett konsultuppdrag i Stockholm."
   },
   "https://assignment.levigo.se/CNh3q8Ns/data-engineer": {
     "classified_at": "2026-10-16",
@@ -2178,26 +2233,26 @@
     "summary": "E-hälsomyndigheten söker en testspecialist för utveckling, test och förvaltning av verksamhetskritiska tjänster inom läkemedelsområdet. Uppdraget innebär arbete i ett agilt team med fokus på kvalitetssäkring och testprocesser."
   },
   "https://weworkremotely.com/remote-jobs/databricks-solutions-architect": {
-    "classified_at": "2026-09-23",
-    "content_hash": "ece48010e764aee21c6454ce6eac3091f042d996",
+    "classified_at": "2026-10-19",
+    "content_hash": "e4ba2837a23c61126ac089e1dc97c36ed5a1cdab",
     "employment_type": "permanent",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "adjacent",
-    "score": 4,
+    "score": 2,
     "status": "open",
-    "summary": "Databricks söker en lösningsarkitekt på heltid för en roll i USA, med fokus på plattformen Databricks (vilket ligger utanför konsultens huvudsakliga kompetensområde)."
+    "summary": "Databricks söker en lösningsarkitekt (Solutions Architect) till sitt huvudkontor i USA. Rollen avser en fast anställning på distans från USA."
   },
   "https://weworkremotely.com/remote-jobs/lawnstarter-analytics-engineering-manager-data-platform-governance-1": {
-    "classified_at": "2026-09-30",
-    "content_hash": "debb055c9c4398f01273434228fecb8d6b932d30",
+    "classified_at": "2026-10-19",
+    "content_hash": "8a5a3142a9c521b0b422371a295b8f015db32afc",
     "employment_type": "permanent",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "adjacent",
-    "score": 3,
+    "score": 2,
     "status": "open",
-    "summary": "LawnStarter söker en Analytics Engineering Manager med fokus på dataplattform och styrning. Rollen är placerad i Mexiko med möjlighet till distansarbete från hela världen."
+    "summary": "LawnStarter söker en Analytics Engineering Manager med fokus på dataplattform och styrning, placerad på distans globalt. Rollen har låg överlappning med konsultens primära tekniska profil inom data engineering och Microsoft-ekosystemet."
   },
   "https://weworkremotely.com/remote-jobs/lawnstarter-analytics-engineering-manager-data-platform-governance-2": {
     "classified_at": "2026-10-02",
@@ -2528,6 +2583,17 @@
     "score": 3,
     "status": "open",
     "summary": "Transportstyrelsen söker en lösningsarkitekt och tre mjukvaruarkitekter till produktområde Ärendehantering, med placering i Stockholm, Norrköping eller Örebro."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/it-arkitekt-och-l-sningsarkitekt-f-r-ny-dataplattform-och-analysl-sning-till-socialstyrelsen-17013": {
+    "classified_at": "2026-10-19",
+    "content_hash": "ed43779de24a014fe8da64b955425a4a7e8fa105",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 8,
+    "status": "open",
+    "summary": "Socialstyrelsen söker en IT- och lösningsarkitekt för att designa och bygga en ny modern dataplattform och analyslösning från grunden, med fokus på integrationer, dataflöden och datalagring."
   },
   "https://www.asocietygroup.com/sv/uppdrag/junior-mjukvaruutvecklare-16741": {
     "classified_at": "2026-09-23",
