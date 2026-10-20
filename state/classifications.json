@@ -571,6 +571,28 @@
     "status": "open",
     "summary": "Sandvik Group IT söker en Lead Data Engineer för att bygga och utveckla plattformar med Azure Data Factory, Databricks och modern datalagring. Rollen fokuserar på att leverera kvalitetssäkrade dataflöden och semantiska modeller för HR-domänen."
   },
+  "https://app.verama.com/en/job-requests/85196": {
+    "classified_at": "2026-10-20",
+    "content_hash": "07f20d5a4e8047fcacf567cb0492f8b1e4d03b85",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 9,
+    "status": "open",
+    "summary": "Uppdraget som Snowflake Data Engineer i Stockholm fokuserar på dataplattformar, modellering med dbt och migrering. Det matchar konsultens profil väl."
+  },
+  "https://app.verama.com/en/job-requests/85211": {
+    "classified_at": "2026-10-20",
+    "content_hash": "79433cc230fa8e06c9bba3019226d63ab17038d0",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Uppdraget avser en systemförvaltare med inriktning mot teknisk drift, kassasystem och Windows-miljöer hos Polismyndigheten. Rollen saknar koppling till datateknik, modern datalagring och analys."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -1913,6 +1935,17 @@
     "status": "open",
     "summary": "Uppdraget som dataingenjör fokuserar på att säkerställa korrekt källdata, strukturering och modellering för en central plattform i Stockholm."
   },
+  "https://upgraded.se/konsultuppdrag/data-engineer-6": {
+    "classified_at": "2026-10-20",
+    "content_hash": "f98bd9936100fcec6535469922df761837c23573",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 9,
+    "status": "open",
+    "summary": "Uppdraget som senior data engineer innebär utveckling av skalbara datalösningar, från ingestion och transformation till kvalitetssäkrad data. Rollen passar väl in i konsultens profil med fokus på moderna dataplattformar och datapipelines."
+  },
   "https://upgraded.se/konsultuppdrag/data-scientist": {
     "classified_at": "2026-10-06",
     "content_hash": "12432fdfed19033040c392554bc5298fb3208a76",
@@ -2012,6 +2045,17 @@
     "status": "open",
     "summary": "Uppdraget som integrationsutvecklare fokuserar på att bygga en ny integrations och API plattform för masterdata, där data från bland annat SAP hanteras och exponeras genom domän API er."
   },
+  "https://upgraded.se/konsultuppdrag/javautvecklare": {
+    "classified_at": "2026-10-20",
+    "content_hash": "d1313f441a811ed2b4433cdbc7863e1503a99fd6",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en roll som Javautvecklare med fokus på förvaltning och vidareutveckling av legitimeringstjänster. Det saknas helt koppling till data engineering, BI eller analys."
+  },
   "https://upgraded.se/konsultuppdrag/javautvecklare-fullstack": {
     "classified_at": "2026-10-09",
     "content_hash": "b78dd890bd6eaea686baf3eb9bcc717868c95e82",
@@ -2057,15 +2101,15 @@
     "summary": "Uppdraget som lösningsarkitekt fokuserar på digitaliseringsinitiativ och systemstöd inom produkt- och verksamhetsutveckling i Stockholm. Rollen innebär nära samarbete med utvecklingsteam och verksamheten för att knyta samman system och processer."
   },
   "https://upgraded.se/konsultuppdrag/performance-management-data-mediation-engineer": {
-    "classified_at": "2026-10-16",
-    "content_hash": "2c1c79b5c16b357ec79692490afce42637493dbf",
+    "classified_at": "2026-10-20",
+    "content_hash": "b47cad8c202777817f453871cf8fd7dcf680a1a4",
     "employment_type": "contract",
     "location_ok": true,
     "prompt_version": 1,
-    "role_match": "adjacent",
-    "score": 4,
+    "role_match": "core",
+    "score": 6,
     "status": "open",
-    "summary": "Uppdraget som Performance Management / Data Mediation Engineer innebär att utveckla och förvalta datapipelines för prestandadata i en komplex nätverksmiljö. Rollen fokuserar på integration och dataflöden snarare än modern datalagring och BI."
+    "summary": "Uppdraget som Performance Management eller Data Mediation Engineer fokuserar på att utveckla och förvalta datapipelines för prestandadata i en komplex nätverksmiljö. Rollen innefattar att bygga robusta flöden för insamling och transformering av data från flera olika källor."
   },
   "https://upgraded.se/konsultuppdrag/produktagare-datalager-och-bi": {
     "classified_at": "2026-10-06",
@@ -2231,6 +2275,17 @@
     "score": 1,
     "status": "open",
     "summary": "E-hälsomyndigheten söker en testspecialist för utveckling, test och förvaltning av verksamhetskritiska tjänster inom läkemedelsområdet. Uppdraget innebär arbete i ett agilt team med fokus på kvalitetssäkring och testprocesser."
+  },
+  "https://weworkremotely.com/remote-jobs/baymard-institute-market-research-data-analyst": {
+    "classified_at": "2026-10-20",
+    "content_hash": "912dc7cec32053c24361f8228859747f6d5d715f",
+    "employment_type": "permanent",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 2,
+    "status": "open",
+    "summary": "Baymard Institute söker en Market Research Data Analyst för marknadsanalys och dataarbete (med placering i Tyskland, Danmark, Storbritannien eller Irland)."
   },
   "https://weworkremotely.com/remote-jobs/databricks-solutions-architect": {
     "classified_at": "2026-10-19",
@@ -2629,15 +2684,15 @@
     "summary": "Uppdraget söker en plattformsingenjör med fokus på Google Cloud Platform och DevOps-verktyg som Terraform. Konsultens profil är mer inriktad mot Microsoft-ekosystemet och modern datalagring."
   },
   "https://www.asocietygroup.com/sv/uppdrag/po-coach-project-leader-16904": {
-    "classified_at": "2026-10-08",
-    "content_hash": "b19fa0b06b4548e45f7dcea152ccadad0bac9744",
+    "classified_at": "2026-10-20",
+    "content_hash": "6119c2e5ea0c5b615da92e749ceec000d101d283",
     "employment_type": "contract",
     "location_ok": true,
     "prompt_version": 1,
     "role_match": "none",
     "score": 1,
     "status": "open",
-    "summary": "Uppdraget avser en roll som PO Coach och projektledare med fokus på agil transformation, vilket ligger utanför konsultens kärnområde inom datateknik."
+    "summary": "Uppdraget avser en roll som Product Owner och PO Coach med fokus pa agil transformation, vilket ligger utanför konsultens tekniska expertis inom data engineering."
   },
   "https://www.asocietygroup.com/sv/uppdrag/product-marketing-manager-specialist-l-sningar-s-kerhet-commercial-product-specialist-s-ljst-dsansvarig-f-r-s-kerhetsportf-lj-16934": {
     "classified_at": "2026-10-09",
