@@ -593,6 +593,28 @@
     "status": "open",
     "summary": "Uppdraget avser en systemförvaltare med inriktning mot teknisk drift, kassasystem och Windows-miljöer hos Polismyndigheten. Rollen saknar koppling till datateknik, modern datalagring och analys."
   },
+  "https://app.verama.com/en/job-requests/85258": {
+    "classified_at": "2026-10-21",
+    "content_hash": "53fe1010d5b8598b5151a2e5e4acbf758e3e5b74",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 2,
+    "status": "open",
+    "summary": "Roll som Senior IT Analyst med fokus på kravanalys, lösningsdesign och datahantering inom finans och trading. Uppdraget kräver kunskap om finansiell rapportering (Corep, Basel IV) samt erfarenhet av Snowflake och SAS."
+  },
+  "https://app.verama.com/en/job-requests/85260": {
+    "classified_at": "2026-10-21",
+    "content_hash": "84a79013ebfdd4a1eb24102aa740df5ac8f1b6d1",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Detta är ett uppdrag som Senior AML och Financial Crime Risk Specialist med fokus på regelefterlevnad, riskbedömning och datakällor inom banksektoren."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -2277,15 +2299,15 @@
     "summary": "E-hälsomyndigheten söker en testspecialist för utveckling, test och förvaltning av verksamhetskritiska tjänster inom läkemedelsområdet. Uppdraget innebär arbete i ett agilt team med fokus på kvalitetssäkring och testprocesser."
   },
   "https://weworkremotely.com/remote-jobs/baymard-institute-market-research-data-analyst": {
-    "classified_at": "2026-10-20",
-    "content_hash": "912dc7cec32053c24361f8228859747f6d5d715f",
+    "classified_at": "2026-10-21",
+    "content_hash": "4bc46e9a9dbccff363e610fccba6098bfa58660e",
     "employment_type": "permanent",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "adjacent",
-    "score": 2,
+    "score": 3,
     "status": "open",
-    "summary": "Baymard Institute söker en Market Research Data Analyst för marknadsanalys och dataarbete (med placering i Tyskland, Danmark, Storbritannien eller Irland)."
+    "summary": "Baymard Institute söker en Market Research Data Analyst med placering i Europa (Tyskland, Danmark, Storbritannien eller Irland). Rollen fokuserar på marknadsundersökningar och dataanalys snarare än den sökandes kärnområde inom data engineering."
   },
   "https://weworkremotely.com/remote-jobs/databricks-solutions-architect": {
     "classified_at": "2026-10-19",
