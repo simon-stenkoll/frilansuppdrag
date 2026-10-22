@@ -1033,6 +1033,39 @@
     "status": "open",
     "summary": "Veritaz söker en erfaren Performance Management (och) Data Mediation Engineer för ett konsultuppdrag i Stockholm."
   },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31626464": {
+    "classified_at": "2026-10-22",
+    "content_hash": "7c75496b0a799d2538f85343f260f4d7fc26cbc7",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 2,
+    "status": "open",
+    "summary": "Rollen som CRM och Data Operations Manager fokuserar på kunddata, målgruppsurval samt kampanjleveranser snarare än modern datateknik, dbt eller molnbaserade datalager."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31628837": {
+    "classified_at": "2026-10-22",
+    "content_hash": "319c48bcb37005d1299540401910e4ac350a2676",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Veritaz söker en erfaren Senior Data Engineer för ett konsultuppdrag i Stockholm. Rollen fokuserar på att utveckla och förbättra dataflöden."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31628877": {
+    "classified_at": "2026-10-22",
+    "content_hash": "5d6fd7cc7f31996b36a183593f062d41e2fd4855",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 6,
+    "status": "open",
+    "summary": "Veritaz söker en erfaren plattformkonsult för ett konsultuppdrag med inriktning mot Azure och integrationer i Stockholm."
+  },
   "https://assignment.levigo.se/CNh3q8Ns/data-engineer": {
     "classified_at": "2026-10-16",
     "content_hash": "a7e27f5683c2a24c9524a0815360515fbf7c45dd",
