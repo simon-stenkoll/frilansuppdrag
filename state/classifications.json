@@ -615,6 +615,17 @@
     "status": "open",
     "summary": "Detta är ett uppdrag som Senior AML och Financial Crime Risk Specialist med fokus på regelefterlevnad, riskbedömning och datakällor inom banksektoren."
   },
+  "https://app.verama.com/en/job-requests/85383": {
+    "classified_at": "2026-10-23",
+    "content_hash": "327bb50e2aa30a6350f3e67e715ea2e1a24240bb",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 6,
+    "status": "open",
+    "summary": "Uppdraget gäller en erfaren Power BI-utvecklare hos Finansinspektionen i Stockholm, med krav på kunskap inom on-prem-lösningar och SSAS."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -1065,6 +1076,17 @@
     "score": 6,
     "status": "open",
     "summary": "Veritaz söker en erfaren plattformkonsult för ett konsultuppdrag med inriktning mot Azure och integrationer i Stockholm."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31630174": {
+    "classified_at": "2026-10-23",
+    "content_hash": "c83f7baaa73e45deb058050fe08a196fe0552c6f",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Listing avser ett frilansuppdrag som Online Merchandiser med fokus på den finska marknaden. Rollen saknar helt koppling till datateknologi och data engineering."
   },
   "https://assignment.levigo.se/CNh3q8Ns/data-engineer": {
     "classified_at": "2026-10-16",
@@ -2814,6 +2836,17 @@
     "score": 4,
     "status": "open",
     "summary": "Roll som Senior Platform Engineer med inriktning mot Google Cloud Platform och molninfrastruktur, vilket ligger ganska långt från konsultens fokus på Microsoft Fabric och data engineering."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/senior-systemutvecklare-net-teknikspecialist-till-stockholms-universitet-100-17100": {
+    "classified_at": "2026-10-23",
+    "content_hash": "0f9d9654d5b15dd1aee2793790efa48a0c16257f",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Stockholms universitet söker en senior systemutvecklare i .NET för arbete med ett webbaserat forskningsadministrativt system. Uppdraget kräver erfarenhet av systemutveckling och teknisk design, vilket ligger utanför konsultens kärnområde inom data och BI."
   },
   "https://www.asocietygroup.com/sv/uppdrag/senior-technical-lead-till-arbetsf-rmedlingen-100-sthlm-16600": {
     "classified_at": "2026-09-08",
