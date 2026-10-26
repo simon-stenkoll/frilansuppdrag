@@ -626,6 +626,28 @@
     "status": "open",
     "summary": "Uppdraget gäller en erfaren Power BI-utvecklare hos Finansinspektionen i Stockholm, med krav på kunskap inom on-prem-lösningar och SSAS."
   },
+  "https://app.verama.com/en/job-requests/85412": {
+    "classified_at": "2026-10-26",
+    "content_hash": "e413aa1be8fa16688e7f77bf1f1a2ca33c788638",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "ICA Sverige AB söker en senior Technical Data Steward för att utveckla och strukturera masterdata. Rollen innebär arbete i gränslandet mellan verksamhet och IT med informationsmodellering och integrationer."
+  },
+  "https://app.verama.com/en/job-requests/85413": {
+    "classified_at": "2026-10-26",
+    "content_hash": "c028a5ff8724e3bd81689af249f3815c1916494f",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Finansinspektionen söker en erfaren Power BI-utvecklare för att ta fram rapporter för finansiell tillsyn, med krav på kunskap inom on-prem lösningar och SQL."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -1087,6 +1109,17 @@
     "score": 1,
     "status": "open",
     "summary": "Listing avser ett frilansuppdrag som Online Merchandiser med fokus på den finska marknaden. Rollen saknar helt koppling till datateknologi och data engineering."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31639817": {
+    "classified_at": "2026-10-26",
+    "content_hash": "7ac63fa47ffffe89a0fb61a1af1277f1c5c814c3",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Veritaz söker en erfaren dataingenjör för ett konsultuppdrag inom data och analys, med fokus på Google Cloud Platform och dbt."
   },
   "https://assignment.levigo.se/CNh3q8Ns/data-engineer": {
     "classified_at": "2026-10-16",
@@ -1968,6 +2001,17 @@
     "status": "open",
     "summary": "E-hälsomyndigheten söker en senior kommunikatör för stöd vid införande av nationella tjänster, med placeringsort i Kalmar eller Stockholm."
   },
+  "https://upgraded.se/konsultuppdrag/affarsanalytiker": {
+    "classified_at": "2026-10-26",
+    "content_hash": "d5cbfd4db1e5eb013a7b8b35e8b8405b81266313",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "Uppdraget som Technical Data Steward fokuserar på att utveckla och kvalitetssäkra masterdata samt arbeta med datamodeller och integrationer i Stockholm."
+  },
   "https://upgraded.se/konsultuppdrag/ai-adoption-specialist-ai-evangelist-for-utvecklingsteam": {
     "classified_at": "2026-10-15",
     "content_hash": "adf7e276be19538185e6114b12ecdda74b471555",
@@ -1978,6 +2022,17 @@
     "score": 2,
     "status": "open",
     "summary": "Uppdraget söker en AI Adoption Specialist för att driva praktisk AI-användning och utbildning inom utvecklingsteam (via Upgraded People i Stockholm). Rollen fokuserar på generativ AI och GitHub Copilot snarare än traditionell datateknik."
+  },
+  "https://upgraded.se/konsultuppdrag/ai-software-engineer-semantic-data-llm": {
+    "classified_at": "2026-10-26",
+    "content_hash": "cf41191854779edbe1a3dfaf25f24dd48c6841b3",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 6,
+    "status": "open",
+    "summary": "Uppdraget söker en AI Software Engineer med fokus på semantisk modellering, LLM och ostrukturerad data (via Upgraded People). Rollen innebär att bygga AI-agenter och pipelines för dokumenttolkning som integrerar med plattformsdata."
   },
   "https://upgraded.se/konsultuppdrag/backend-utvecklare-och-devops-digital-services": {
     "classified_at": "2026-10-15",
@@ -2044,6 +2099,17 @@
     "score": 2,
     "status": "open",
     "summary": "Uppdraget söker en erfaren databasadministratör med ansvar för drift och vidareutveckling inom Db2 för z/OS och PostgreSQL."
+  },
+  "https://upgraded.se/konsultuppdrag/databasarkitekt": {
+    "classified_at": "2026-10-26",
+    "content_hash": "7c7225dd0f22565b7e342aaa4347b0654416e00f",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 6,
+    "status": "open",
+    "summary": "Uppdraget som databasarkitekt i Stockholm fokuserar på datalager och integrationsarkitektur för att bygga upp en ny datafunktion. Rollen innebär att utveckla den interna dataförmågan och stödja verksamheten i utformningen av digitala lösningar."
   },
   "https://upgraded.se/konsultuppdrag/devops-ingenjor": {
     "classified_at": "2026-09-30",
@@ -2419,6 +2485,17 @@
     "status": "open",
     "summary": "Uppdraget söker en AI Development Architect med fokus på styrning, kompetens och kvalitet inom läkemedelsindustrin i Finland. Rollen rör sig främst kring AI-styrning och utvecklingsverktyg snarare än traditionell datateknik."
   },
+  "https://witted.com/projects/data-analyst-4ca2e7a6": {
+    "classified_at": "2026-10-26",
+    "content_hash": "e2a08492ae48c31701095cf2e0e22ab73be19a08",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Uppdraget avser en roll som dataanalytiker (eller forskningsspecialist) inom media, med fokus på SQL och BI i Finland."
+  },
   "https://witted.com/projects/data-catalogue-expert-purview-a864a139": {
     "classified_at": "2026-10-09",
     "content_hash": "37e5cc9ba24b1a6750f2b26e04f02ae66e418ada",
@@ -2671,6 +2748,17 @@
     "score": 9,
     "status": "open",
     "summary": "Uppdraget söker en senior dataingenjör (via A Society) i Stockholm för att vidareutveckla en modern, AI-klar dataplattform med högt självständigt ansvar."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/dataarkitekt-till-skolverket-100-sthlm-17107": {
+    "classified_at": "2026-10-26",
+    "content_hash": "ba522d4ea402790ebf6e00dd38005da4a891a675",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 6,
+    "status": "open",
+    "summary": "Skolverket söker en erfaren dataarkitekt för att utveckla myndighetens datalager, dataflöden och integrationsarkitektur i Stockholm."
   },
   "https://www.asocietygroup.com/sv/uppdrag/devops-sysadmin-engineer-16739": {
     "classified_at": "2026-09-22",
