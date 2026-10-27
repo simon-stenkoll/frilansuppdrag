@@ -615,6 +615,17 @@
     "status": "open",
     "summary": "Detta är ett uppdrag som Senior AML och Financial Crime Risk Specialist med fokus på regelefterlevnad, riskbedömning och datakällor inom banksektoren."
   },
+  "https://app.verama.com/en/job-requests/85308": {
+    "classified_at": "2026-10-27",
+    "content_hash": "8f9ee69c205a55189ab0fe10dbb5fe6837a173cc",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "Telenor söker en CRM och Data Operations Manager för att hantera kampanjdata, kundsegmenteringar och migrering till GCP (Google Cloud Platform). Uppdraget har ett starkt fokus på marknadsföringsteknologi, SQL och legacy-system som Teradata."
+  },
   "https://app.verama.com/en/job-requests/85383": {
     "classified_at": "2026-10-23",
     "content_hash": "327bb50e2aa30a6350f3e67e715ea2e1a24240bb",
@@ -647,6 +658,28 @@
     "score": 8,
     "status": "open",
     "summary": "Finansinspektionen söker en erfaren Power BI-utvecklare för att ta fram rapporter för finansiell tillsyn, med krav på kunskap inom on-prem lösningar och SQL."
+  },
+  "https://app.verama.com/en/job-requests/85457": {
+    "classified_at": "2026-10-27",
+    "content_hash": "dcd179951064662ef1f80d2ee7f146b3c4246770",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 9,
+    "status": "open",
+    "summary": "Skandia söker en senior data engineer för att bygga en ny molnbaserad dataplattform (med Snowflake, dbt och Azure) i Stockholm."
+  },
+  "https://app.verama.com/en/job-requests/85460": {
+    "classified_at": "2026-10-27",
+    "content_hash": "c3039a27d39b9d2b1257430d6105dc10feb67ef0",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Uppdraget som driver av implementering av UNSPSC-klassificering fokuserar på SAP-data, taxonomi och projektkoordinering, vilket ligger ganska långt från konsultens kärnkompetens inom modern datalagring och Microsoft Fabric."
   },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
@@ -1120,6 +1153,50 @@
     "score": 8,
     "status": "open",
     "summary": "Veritaz söker en erfaren dataingenjör för ett konsultuppdrag inom data och analys, med fokus på Google Cloud Platform och dbt."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31644725": {
+    "classified_at": "2026-10-27",
+    "content_hash": "24999f0d0a0aebfff82f6c4531f5c623f94768b6",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Veritaz AB söker en Senior Data Engineer med fokus på Databricks, Azure och People Analytics för ett uppdrag i Stockholm."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31645075": {
+    "classified_at": "2026-10-27",
+    "content_hash": "8888b525ff28c091c3abe4361607600ecb1aa51c",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Veritaz AB söker en erfaren AI-mjukvaruingenjör med fokus på semantisk modellering och stora spraksystem (LLM) till ett dataplattformsteam i Stockholm."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31646539": {
+    "classified_at": "2026-10-27",
+    "content_hash": "b5ad3cfcbe491600019c09268b28c6cb258d8c7e",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Veritaz söker en erfaren Senior Data Engineer för ett konsultuppdrag i Stockholm. Rollen fokuserar på att utveckla och förbättra dataplattformar."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31646553": {
+    "classified_at": "2026-10-27",
+    "content_hash": "661a1fd27f2ca65462679ce64b2ebdb298390977",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 9,
+    "status": "open",
+    "summary": "Veritaz AB söker en erfaren Data Engineer för ett konsultuppdrag med fokus på SQL och dbt i Stockholm."
   },
   "https://assignment.levigo.se/CNh3q8Ns/data-engineer": {
     "classified_at": "2026-10-16",
@@ -2431,15 +2508,15 @@
     "summary": "Baymard Institute söker en Market Research Data Analyst med placering i Europa (Tyskland, Danmark, Storbritannien eller Irland). Rollen fokuserar på marknadsundersökningar och dataanalys snarare än den sökandes kärnområde inom data engineering."
   },
   "https://weworkremotely.com/remote-jobs/databricks-solutions-architect": {
-    "classified_at": "2026-10-19",
-    "content_hash": "e4ba2837a23c61126ac089e1dc97c36ed5a1cdab",
+    "classified_at": "2026-10-27",
+    "content_hash": "50002577b67a44aa87ed019df6bce0530e62ec86",
     "employment_type": "permanent",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "adjacent",
-    "score": 2,
+    "score": 3,
     "status": "open",
-    "summary": "Databricks söker en lösningsarkitekt (Solutions Architect) till sitt huvudkontor i USA. Rollen avser en fast anställning på distans från USA."
+    "summary": "Databricks söker en lösningsarkitekt (Solutions Architect) för en fast heltidsanställning på distans. Rollen har ett visst fokus på dataarkitektur men passar mindre bra där den är placerad i USA och avser en fast anställning istället för frilansuppdrag."
   },
   "https://weworkremotely.com/remote-jobs/lawnstarter-analytics-engineering-manager-data-platform-governance-1": {
     "classified_at": "2026-10-19",
@@ -2528,6 +2605,17 @@
     "score": 3,
     "status": "open",
     "summary": "Uppdraget söker en Databricks och AI Platform Engineer inom marin- och energibranschen, med fokus på AWS, Terraform och MLflow. Rollen ligger utanför konsultens primära teknikstack inom Microsoft-miljön och Snowflake."
+  },
+  "https://witted.com/projects/platform-architect-developer-84aef2ab": {
+    "classified_at": "2026-10-27",
+    "content_hash": "c3bb804e571a207d73cf6b6e608e800c27601c6f",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Listing avser en roll som plattformsarkitekt och utvecklare med inriktning mot Microsoft-teknologi och molntjänster, belägen i Oslo."
   },
   "https://witted.com/projects/senior-data-engineer-azure-databricks-91f11fb3": {
     "classified_at": "2026-10-09",
@@ -2660,6 +2748,17 @@
     "score": 4,
     "status": "open",
     "summary": "Uppdraget avser en teknisk specialist inom databasplattformar med fokus på SQL Server och PostgreSQL, vilket ligger nära men utanför profilens primära fokus på Microsoft Fabric och modern datalagring. Tjänsten är placerad på plats i Göteborg."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/ai-driven-full-stack-developer-17126": {
+    "classified_at": "2026-10-27",
+    "content_hash": "2abb6435735bef1cbe07c18d83589cd3f14fc079",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Annonsen gäller en roll som AI-driven fullstackutvecklar med fokus på interna verktyg och agentbaserade verktyg, vilket ligger helt utanför konsultens kärnområde inom data och BI."
   },
   "https://www.asocietygroup.com/sv/uppdrag/automationsingenj-r-16792": {
     "classified_at": "2026-09-29",
@@ -2902,6 +3001,17 @@
     "score": 1,
     "status": "open",
     "summary": "Annonsen söker en senior fullstack-utvecklare med fokus på AI-drivna verktyg och agentbaserad utveckling för marknadsteam."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/senior-full-stack-mobile-engineer-17124": {
+    "classified_at": "2026-10-27",
+    "content_hash": "a64c5f2f94201600de187df267f4271c4d655323",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en senior fullstack-ingenjör med fokus på mobil utveckling och enhetsadministration, vilket inte matchar konsultens profil inom data och analytics."
   },
   "https://www.asocietygroup.com/sv/uppdrag/senior-mjukvaruutvecklare-java-16777": {
     "classified_at": "2026-09-25",
