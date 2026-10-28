@@ -681,6 +681,17 @@
     "status": "open",
     "summary": "Uppdraget som driver av implementering av UNSPSC-klassificering fokuserar på SAP-data, taxonomi och projektkoordinering, vilket ligger ganska långt från konsultens kärnkompetens inom modern datalagring och Microsoft Fabric."
   },
+  "https://app.verama.com/en/job-requests/85535": {
+    "classified_at": "2026-10-28",
+    "content_hash": "ec3daa5004278b0b94465b11cb6d98af7da63a54",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "Scania söker en Data Scientist med fokus på prisanalys, garantier och kostnadsanalys med Python och Snowflake som centrala verktyg."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -2265,6 +2276,17 @@
     "status": "open",
     "summary": "Uppdraget som integrationsutvecklare fokuserar på att bygga en ny integrations och API plattform för masterdata, där data från bland annat SAP hanteras och exponeras genom domän API er."
   },
+  "https://upgraded.se/konsultuppdrag/it-arkitekt-azure": {
+    "classified_at": "2026-10-28",
+    "content_hash": "900f83d4478cacc020461fef465b3110bf5cb374",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 7,
+    "status": "open",
+    "summary": "Uppdraget söker en IT-arkitekt i Stockholm för att etablera en säker dataöverföring från on-premises till Azure Blob Storage för användning i Power BI."
+  },
   "https://upgraded.se/konsultuppdrag/javautvecklare": {
     "classified_at": "2026-10-20",
     "content_hash": "d1313f441a811ed2b4433cdbc7863e1503a99fd6",
@@ -2385,6 +2407,17 @@
     "score": 1,
     "status": "open",
     "summary": "Uppdraget avser en senior arkitekt inom nätverk och Linux-migrering, vilket inte matchar konsultens kompetensområde inom data engineering och BI."
+  },
+  "https://upgraded.se/konsultuppdrag/senior-oracle-etl-bi-developer": {
+    "classified_at": "2026-10-28",
+    "content_hash": "d6e55dfdbb956d2074ccd43ccb53ac8013206e21",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Uppdraget som senior Oracle ETL och BI-utvecklare fokuserar på Oracle-databaser, prestandaoptimering och SQL, vilket ligger utanför konsultens primära tech-stack."
   },
   "https://upgraded.se/konsultuppdrag/senior-projektledare-for-inforande-av-kompetensplattform-och-utbildningsstyrning": {
     "classified_at": "2026-10-01",
@@ -2563,15 +2596,15 @@
     "summary": "Uppdraget söker en AI Development Architect med fokus på styrning, kompetens och kvalitet inom läkemedelsindustrin i Finland. Rollen rör sig främst kring AI-styrning och utvecklingsverktyg snarare än traditionell datateknik."
   },
   "https://witted.com/projects/data-analyst-4ca2e7a6": {
-    "classified_at": "2026-10-26",
-    "content_hash": "e2a08492ae48c31701095cf2e0e22ab73be19a08",
+    "classified_at": "2026-10-28",
+    "content_hash": "f7c72647b98b0c002966494af47f525ff86aacad",
     "employment_type": "contract",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "adjacent",
-    "score": 3,
+    "score": 4,
     "status": "open",
-    "summary": "Uppdraget avser en roll som dataanalytiker (eller forskningsspecialist) inom media, med fokus på SQL och BI i Finland."
+    "summary": "Annonsen söker en dataanalytiker till ett mediebolag i Finland, vilket ligger utanför konsultens geografiska marknad."
   },
   "https://witted.com/projects/data-catalogue-expert-purview-a864a139": {
     "classified_at": "2026-10-09",
@@ -2607,15 +2640,15 @@
     "summary": "Uppdraget söker en Databricks och AI Platform Engineer inom marin- och energibranschen, med fokus på AWS, Terraform och MLflow. Rollen ligger utanför konsultens primära teknikstack inom Microsoft-miljön och Snowflake."
   },
   "https://witted.com/projects/platform-architect-developer-84aef2ab": {
-    "classified_at": "2026-10-27",
-    "content_hash": "c3bb804e571a207d73cf6b6e608e800c27601c6f",
+    "classified_at": "2026-10-28",
+    "content_hash": "eea80dab33596f17930b2b3f5b1a39159b998fd9",
     "employment_type": "contract",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "adjacent",
     "score": 3,
     "status": "open",
-    "summary": "Listing avser en roll som plattformsarkitekt och utvecklare med inriktning mot Microsoft-teknologi och molntjänster, belägen i Oslo."
+    "summary": "Uppdraget som plattformsarkitekt eller utvecklare i Oslo fokuserar på Microsoft-teknologi samt molntjänster som Azure Kubernetes Services, vilket ligger ganska långt från profilens fokus på data engineering och BI."
   },
   "https://witted.com/projects/senior-data-engineer-azure-databricks-91f11fb3": {
     "classified_at": "2026-10-09",
@@ -3157,15 +3190,15 @@
     "summary": "Annonsen gäller en roll som underhållsingenjör inom läkemedelstillverkning, vilket saknar koppling till datateknik."
   },
   "https://www.houseofskills.se/senior-dba-mainframe-och-postgresql": {
-    "classified_at": "2026-10-08",
-    "content_hash": "c440b49fe136008ec82bbb39af466fb090136723",
-    "employment_type": "permanent",
+    "classified_at": "2026-10-28",
+    "content_hash": "9ba22b78bffe0528a6bf0bb65b80ab9987071258",
+    "employment_type": "contract",
     "location_ok": true,
     "prompt_version": 1,
     "role_match": "adjacent",
     "score": 2,
     "status": "open",
-    "summary": "Listing avser en roll som Senior DBA med fokus på Mainframe och Postgresql (via House of Skills) i Stockholm."
+    "summary": "Uppdraget avser en senior DBA med fokus pa mainframe och Postgresql i Stockholm."
   },
   "https://www.jappa.jobs/jobb/j6ab3869f5b13cd001483a6a8-senior-data-and-marketing-automation-engineer": {
     "classified_at": "2026-10-13",
