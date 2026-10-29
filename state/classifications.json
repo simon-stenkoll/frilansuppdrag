@@ -692,6 +692,17 @@
     "status": "open",
     "summary": "Scania söker en Data Scientist med fokus på prisanalys, garantier och kostnadsanalys med Python och Snowflake som centrala verktyg."
   },
+  "https://app.verama.com/en/job-requests/85613": {
+    "classified_at": "2026-10-29",
+    "content_hash": "aeb1fe199b321ab29efd716694df5e68adaa1ac4",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 7,
+    "status": "open",
+    "summary": "Finansinspektionen söker en BI-utvecklare för att förvalta befintlig SAS-miljö samt migrera till en ny analysplattform med dbt core."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -1209,6 +1220,28 @@
     "status": "open",
     "summary": "Veritaz AB söker en erfaren Data Engineer för ett konsultuppdrag med fokus på SQL och dbt i Stockholm."
   },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31655428": {
+    "classified_at": "2026-10-29",
+    "content_hash": "1ce1141c982a3aca128023b73a08e2575f2418af",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "VIPAS AB söker en Senior Automation Consultant med fokus på UiPath och Power Automate. Rollen innebär att bygga intelligenta automatiseringslösningar för företagskunder i Stockholm."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31657942": {
+    "classified_at": "2026-10-29",
+    "content_hash": "3ca8c3e7512c6bfbd361e975c3ce150514f42dcb",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 3,
+    "status": "open",
+    "summary": "Veritaz söker en Senior Oracle ETL- och BI-utvecklare för ett konsultuppdrag i Stockholm, med fokus på utveckling inom Oracle-miljöer (vilket skiljer sig från konsultens Microsoft- och Snowflake-stack)."
+  },
   "https://assignment.levigo.se/CNh3q8Ns/data-engineer": {
     "classified_at": "2026-10-16",
     "content_hash": "a7e27f5683c2a24c9524a0815360515fbf7c45dd",
@@ -1318,6 +1351,17 @@
     "score": 6,
     "status": "open",
     "summary": "Uppdraget som Data Analyst och Analytics Engineer i Stockholm (via Senterprise) fokuserar på dataanalys och modern databearbetning. Rollen ligger nära konsultens kompetens inom BI och dbt, även om fokus lutar mer åt analys."
+  },
+  "https://jobb.senterprise.se/jobs/8628119-konsultuppdrag-cloud-engineer-data-platform": {
+    "classified_at": "2026-10-29",
+    "content_hash": "95d53bdf450df05dfc60de0a058f180419f51b02",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Listing avser ett konsultuppdrag som Cloud Engineer inom data plattform med placering i Stockholm. Rollen har stark koppling till moderna dataplattformar och molnbaserade dataarkitekturer."
   },
   "https://jobs.epico.se/jobs/7998079-epico-tech-soker-3-seniora-data-engineer-uppstart-under-hosten": {
     "classified_at": "2026-09-02",
@@ -1516,6 +1560,28 @@
     "score": 3,
     "status": "open",
     "summary": "Detta är ett konsultuppdrag som Data Analyst i Sundsvall, (med viss möjlighet till distansarbete), med fokus på webbanalys, SEO och användarbeteenden för verksamt.se."
+  },
+  "https://market.cinode.com/requests/23460": {
+    "classified_at": "2026-10-29",
+    "content_hash": "4158d32ba8a699000495e7a17e79070bf18392d6",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 4,
+    "status": "open",
+    "summary": "Uppdraget avser en molningenjör med fokus på plattformsinfrastruktur, Azure, Terraform och Databricks. Rollen ligger när data engineering, men saknar konsultens primära fokusområden som Microsoft Fabric och Power BI."
+  },
+  "https://regent.se/uppdrag/1178": {
+    "classified_at": "2026-10-29",
+    "content_hash": "eb71636394a729ce2c22d274e2bbbc9a91ec6a83",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 9,
+    "status": "open",
+    "summary": "Detta är ett uppdrag som Senior Data Engineer för att arbeta med en modern molnbaserad dataplattform i Stockholm. Uppdraget matchar konsultens kärnkompetens inom data engineering mycket väl."
   },
   "https://upgraded.se/konsultuppdrag/184446-utredare-behorighetslosning": {
     "classified_at": "2026-09-02",
@@ -2122,6 +2188,17 @@
     "status": "open",
     "summary": "Uppdraget söker en AI Software Engineer med fokus på semantisk modellering, LLM och ostrukturerad data (via Upgraded People). Rollen innebär att bygga AI-agenter och pipelines för dokumenttolkning som integrerar med plattformsdata."
   },
+  "https://upgraded.se/konsultuppdrag/analytics-engineer": {
+    "classified_at": "2026-10-29",
+    "content_hash": "909ce44b7e851322212f029880ece789e822f162",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 9,
+    "status": "open",
+    "summary": "Uppdraget som Analytics Engineer innebär att bygga skalbara analyslösningar och datamodeller i Snowflake, dbt och Power BI, med fokus på självbetjäning och datakvalitet."
+  },
   "https://upgraded.se/konsultuppdrag/backend-utvecklare-och-devops-digital-services": {
     "classified_at": "2026-10-15",
     "content_hash": "b8f6adc0774831c001125887599231e37e643bd1",
@@ -2529,6 +2606,17 @@
     "status": "open",
     "summary": "E-hälsomyndigheten söker en testspecialist för utveckling, test och förvaltning av verksamhetskritiska tjänster inom läkemedelsområdet. Uppdraget innebär arbete i ett agilt team med fokus på kvalitetssäkring och testprocesser."
   },
+  "https://uppdrag.iceberry.se/assignments/MsQ4tOwlHsNrsJJYEAIW": {
+    "classified_at": "2026-10-29",
+    "content_hash": "56a194d6c573103bd5937d86c6fc8680aafa4456",
+    "employment_type": "unclear",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 7,
+    "status": "open",
+    "summary": "Rollen som Cloud Platform Engineer fokuserar på molninfrastruktur, Azure samt Databricks i Stockholm."
+  },
   "https://weworkremotely.com/remote-jobs/baymard-institute-market-research-data-analyst": {
     "classified_at": "2026-10-21",
     "content_hash": "4bc46e9a9dbccff363e610fccba6098bfa58660e",
@@ -2617,6 +2705,17 @@
     "status": "open",
     "summary": "Uppdraget avser en expert pa datakataloger och styrning inom Azure Databricks i Finland, med fokus pa laekemedelsindustrin."
   },
+  "https://witted.com/projects/data-platform-architect-knowledge-graph-ontology-8a886896": {
+    "classified_at": "2026-10-29",
+    "content_hash": "d2c06875778e83d5b0634c8d0e656bd2df4adeb9",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Rollen som data och plattformsarkitekt (med inriktning mot kunskapsgrafer och ontologier) fokuserar primärt på mjukvaruutveckling och plattformsarkitektur inom tunga industrier (i Norge). Det finns en viss överlappning med data engineering, men saknar konsultens kärnteknologier."
+  },
   "https://witted.com/projects/data-platform-engineer-enterprise-saas-start-asap-c027e31f": {
     "classified_at": "2026-10-09",
     "content_hash": "523d48410c4d6c12d800e2babfa764db256b5cba",
@@ -2640,15 +2739,15 @@
     "summary": "Uppdraget söker en Databricks och AI Platform Engineer inom marin- och energibranschen, med fokus på AWS, Terraform och MLflow. Rollen ligger utanför konsultens primära teknikstack inom Microsoft-miljön och Snowflake."
   },
   "https://witted.com/projects/platform-architect-developer-84aef2ab": {
-    "classified_at": "2026-10-28",
-    "content_hash": "eea80dab33596f17930b2b3f5b1a39159b998fd9",
+    "classified_at": "2026-10-29",
+    "content_hash": "c3bb804e571a207d73cf6b6e608e800c27601c6f",
     "employment_type": "contract",
     "location_ok": false,
     "prompt_version": 1,
     "role_match": "adjacent",
-    "score": 3,
+    "score": 4,
     "status": "open",
-    "summary": "Uppdraget som plattformsarkitekt eller utvecklare i Oslo fokuserar på Microsoft-teknologi samt molntjänster som Azure Kubernetes Services, vilket ligger ganska långt från profilens fokus på data engineering och BI."
+    "summary": "Plattformarkitekt eller utvecklare som sökes till Stortingets IT-miljö i Oslo, med fokus på Microsoft-teknologi, Kubernetes och Azure DevOps."
   },
   "https://witted.com/projects/senior-data-engineer-azure-databricks-91f11fb3": {
     "classified_at": "2026-10-09",
@@ -2913,6 +3012,17 @@
     "score": 1,
     "status": "open",
     "summary": "Annonsen söker en DevOps och Sysadmin Engineer med fokus på utvecklingsmiljöer, vilket ligger utanför konsultens expertis inom data och BI."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/devops-sysadmin-engineer-17147": {
+    "classified_at": "2026-10-29",
+    "content_hash": "b595811bd869746f09bc3c3a62837549811e3eae",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en DevOps och systemadministratör som ska fokusera på att utveckla, testa samt distribuera utvecklingsmiljöer (via A Society i Stockholm)."
   },
   "https://www.asocietygroup.com/sv/uppdrag/esd-koordinator-16868": {
     "classified_at": "2026-10-06",
