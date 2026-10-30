@@ -703,6 +703,17 @@
     "status": "open",
     "summary": "Finansinspektionen söker en BI-utvecklare för att förvalta befintlig SAS-miljö samt migrera till en ny analysplattform med dbt core."
   },
+  "https://app.verama.com/en/job-requests/85649": {
+    "classified_at": "2026-10-30",
+    "content_hash": "34bec8f3256e056835d4217e19a100bd31ab22db",
+    "employment_type": "contract",
+    "location_ok": false,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 8,
+    "status": "open",
+    "summary": "Higab söker en Business Analyst och Data Engineer med kompetens inom informationsarkitektur för att utveckla nya användningsområden i deras Data Lakehouse. Uppdraget är placerat i Göteborg, vilket gör att det inte matchar konsultens geografiska preferenser."
+  },
   "https://arbetsformedlingen.se/platsbanken/annonser/31274667": {
     "classified_at": "2026-09-02",
     "content_hash": "231dc0aea66e4e968f7c450c5e1a7b5091f4999d",
@@ -1241,6 +1252,17 @@
     "score": 3,
     "status": "open",
     "summary": "Veritaz söker en Senior Oracle ETL- och BI-utvecklare för ett konsultuppdrag i Stockholm, med fokus på utveckling inom Oracle-miljöer (vilket skiljer sig från konsultens Microsoft- och Snowflake-stack)."
+  },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31662819": {
+    "classified_at": "2026-10-30",
+    "content_hash": "bac95fe6eb8fc10c50d75c2636176535eb51ab51",
+    "employment_type": "permanent",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "JobBusters sökter en Business Controller med tekniskt intresse för att arbeta nära ledningen med strategiska initiativ. Rollen fokuserar på finans och styrning snarare än data engineering."
   },
   "https://assignment.levigo.se/CNh3q8Ns/data-engineer": {
     "classified_at": "2026-10-16",
@@ -2298,6 +2320,17 @@
     "status": "open",
     "summary": "Uppdraget som Enterprise Architect fokuserar på övergripande arkitektur och systemkonsolidering efter en bolagssammanslagning, vilket ligger utanför konsultens huvudsakliga fokus inom data engineering och BI."
   },
+  "https://upgraded.se/konsultuppdrag/frontend-utvecklare": {
+    "classified_at": "2026-10-30",
+    "content_hash": "423a28e475fe540d0fbbaaed8b99fb55d1bb541a",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget söker en senior Frontend-utvecklare med fokus på digitala kundkanaler och frontendplattformar i Stockholm."
+  },
   "https://upgraded.se/konsultuppdrag/fullstack-developer": {
     "classified_at": "2026-10-01",
     "content_hash": "c5cba7076305f817232ac8a2cb84e1460929121f",
@@ -2607,15 +2640,15 @@
     "summary": "E-hälsomyndigheten söker en testspecialist för utveckling, test och förvaltning av verksamhetskritiska tjänster inom läkemedelsområdet. Uppdraget innebär arbete i ett agilt team med fokus på kvalitetssäkring och testprocesser."
   },
   "https://uppdrag.iceberry.se/assignments/MsQ4tOwlHsNrsJJYEAIW": {
-    "classified_at": "2026-10-29",
-    "content_hash": "56a194d6c573103bd5937d86c6fc8680aafa4456",
+    "classified_at": "2026-10-30",
+    "content_hash": "333d779f365f32b00fc86ae3dfded4d4483864d7",
     "employment_type": "unclear",
     "location_ok": true,
     "prompt_version": 1,
     "role_match": "core",
-    "score": 7,
+    "score": 6,
     "status": "open",
-    "summary": "Rollen som Cloud Platform Engineer fokuserar på molninfrastruktur, Azure samt Databricks i Stockholm."
+    "summary": "Roll som molnplattformsingenjör med fokus på Azure och Databricks, belägen i Stockholm."
   },
   "https://weworkremotely.com/remote-jobs/baymard-institute-market-research-data-analyst": {
     "classified_at": "2026-10-21",
@@ -2980,6 +3013,17 @@
     "status": "open",
     "summary": "Uppdraget söker en senior dataingenjör (via A Society) i Stockholm för att vidareutveckla en modern, AI-klar dataplattform med högt självständigt ansvar."
   },
+  "https://www.asocietygroup.com/sv/uppdrag/data-scientist-17166": {
+    "classified_at": "2026-10-30",
+    "content_hash": "33f34c80e29acfbe1d12fd8a774b3f6680bae9ed",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 3,
+    "status": "open",
+    "summary": "Annonsen söker en Data Scientist med stark erfarenhet av maskininlärning, MLOps och molnbaserad driftsättning, vilket ligger utanför konsultens huvudsakliga fokus inom data engineering och BI."
+  },
   "https://www.asocietygroup.com/sv/uppdrag/dataarkitekt-till-skolverket-100-sthlm-17107": {
     "classified_at": "2026-10-26",
     "content_hash": "ba522d4ea402790ebf6e00dd38005da4a891a675",
@@ -3155,6 +3199,17 @@
     "score": 1,
     "status": "open",
     "summary": "Uppdraget avser en senior fullstack-ingenjör med fokus på mobil utveckling och enhetsadministration, vilket inte matchar konsultens profil inom data och analytics."
+  },
+  "https://www.asocietygroup.com/sv/uppdrag/senior-full-stack-mobile-engineer-remote-ok-17124": {
+    "classified_at": "2026-10-30",
+    "content_hash": "80d8bc95cb4c70495f324ba4517c61688c00636e",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Detta är en roll som fullstack- och mobilutveckling med inriktning på enheter som Android, vilket ligger helt utanför konsultens expertis inom data engineering och BI."
   },
   "https://www.asocietygroup.com/sv/uppdrag/senior-mjukvaruutvecklare-java-16777": {
     "classified_at": "2026-09-25",
