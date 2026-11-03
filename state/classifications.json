@@ -1308,6 +1308,17 @@
     "status": "open",
     "summary": "Elgiganten söker en CRM och Loyalty Specialist till sitt backoffice i Stockholm (vikariat). Rollen fokuserar på kundlojalitet och kommunikation snarare än data engineering."
   },
+  "https://arbetsformedlingen.se/platsbanken/annonser/31674016": {
+    "classified_at": "2026-11-03",
+    "content_hash": "9323b4ddbc426c3e35a2f0f874805138106ec52c",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "adjacent",
+    "score": 6,
+    "status": "open",
+    "summary": "Uppdraget som Business Analyst fokuserar på kravinsamling och rapportering i samband med en implementering av SAP S/4HANA. Rollen innebär ett nära samarbete med verksamheten för att ta fram beslutsunderlag och dashboards."
+  },
   "https://assignment.levigo.se/CNh3q8Ns/data-engineer": {
     "classified_at": "2026-10-16",
     "content_hash": "a7e27f5683c2a24c9524a0815360515fbf7c45dd",
@@ -2396,6 +2407,17 @@
     "score": 2,
     "status": "open",
     "summary": "Uppdraget avser en roll som fullstackutvecklare (via Upgraded People) med fokus på webblösningar och integrationer, vilket inte matchar konsultens profil inom data engineering och BI."
+  },
+  "https://upgraded.se/konsultuppdrag/fullstackutvecklare-marketing-automation": {
+    "classified_at": "2026-11-03",
+    "content_hash": "a76a4771c6a3a57fc6e53429d6b31a9b0fb43148",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "none",
+    "score": 1,
+    "status": "open",
+    "summary": "Uppdraget avser en roll som fullstackutvecklare inom marketing automation (med fokus på integrationer och webbutveckling), vilket inte matchar profilens kompetensområde inom data engineering."
   },
   "https://upgraded.se/konsultuppdrag/infrastrukturarkitekt": {
     "classified_at": "2026-09-30",
@@ -3496,6 +3518,17 @@
     "score": 3,
     "status": "open",
     "summary": "Pensionsmyndigheten söker en erfaren Javautvecklare med backendprofil till sitt agila releaståg för utveckling av nästa generations pensionssystem. Uppdraget innebär arbete med tunga backendsystem och stora datamängder, men tekniken är inriktad på Java snarare än data engineering."
+  },
+  "https://www.keyman.se/sv/data-it/konsult-med-expertis-inom-power-bi-embedded-till-skr-sveriges-kommuner-och-regioner-16698": {
+    "classified_at": "2026-11-03",
+    "content_hash": "b923a628a370dcb549584fe23d1c3e5cea34b95e",
+    "employment_type": "contract",
+    "location_ok": true,
+    "prompt_version": 1,
+    "role_match": "core",
+    "score": 9,
+    "status": "open",
+    "summary": "SKR söker en erfaren konsult med expertis inom Power BI Embedded, inklusive autentisering, behörighetsstyrning och Row-Level Security, för att dela datavisualiseringar med medlemmar."
   },
   "https://www.progressiverecruitment.com/en-gb/job/mechanical-technician/4074161": {
     "classified_at": "2026-09-24",

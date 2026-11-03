@@ -1,6 +1,6 @@
 {
   "https://afry.com/sv/bli-en-del-av-afry/afry-partner-network": {
-    "checked": "2026-11-02",
+    "checked": "2026-11-03",
     "items": [
       {
         "company": "",
@@ -38,17 +38,17 @@
         "url": "https://portal.afry.com/available-assignments/search/332830-1"
       }
     ],
-    "page_hash": "e628fa900989337fa7e98c2ead1e138214e0f90d"
+    "page_hash": "0b9d8e1ad69a1a8dc6b0f1c59956171bca307127"
   },
   "https://aliant.recman.se/": {
-    "checked": "2026-11-02",
+    "checked": "2026-11-03",
     "items": [],
-    "page_hash": "55b8c3b41cc63549c14a289bb8b28d931480853f"
+    "page_hash": "8dd08ccd9cf03a637e06be33d11bef1ac4ac8ab7"
   },
   "https://biolit.se/": {
-    "checked": "2026-11-02",
+    "checked": "2026-11-03",
     "items": [],
-    "page_hash": "8facf17250d549f1a22987ab4c2450e15384e840"
+    "page_hash": "fdddd35127cfa26d02f6cb65ae3c0cb2fb14f855"
   },
   "https://career.hemnet.se/jobs": {
     "checked": "2026-09-16",
@@ -56,7 +56,7 @@
     "page_hash": "f215c79e34f9b7c885d8f1bea4bcabbb6c791de1"
   },
   "https://career.nionit.com/#jobs": {
-    "checked": "2026-11-02",
+    "checked": "2026-11-03",
     "items": [
       {
         "company": "",
@@ -95,13 +95,6 @@
       },
       {
         "company": "",
-        "location": "Sofia",
-        "snippet": "Data engineer Software Development and Engineering · Sofia · Hybrid",
-        "title": "Data engineer",
-        "url": "https://career.nionit.com/jobs/8325044-data-engineer"
-      },
-      {
-        "company": "",
         "location": "Malmö",
         "snippet": "Senior Systemutvecklare Software Development and Engineering · Malmö · Hybrid",
         "title": "Senior Systemutvecklare",
@@ -136,10 +129,10 @@
         "url": "https://career.nionit.com/jobs/6518264-data-engineer"
       }
     ],
-    "page_hash": "b919cefa21abbecfe82df6bfea497dbd533f491c"
+    "page_hash": "559e43b094ded66ab05f6fa6395437a398800121"
   },
   "https://career.techlove.se/#jobs": {
-    "checked": "2026-11-02",
+    "checked": "2026-11-03",
     "items": [
       {
         "company": "Techlove",
@@ -156,7 +149,7 @@
         "url": "https://career.techlove.se/jobs/3602514-backendutvecklare-for-kunds-rakning-sokes"
       }
     ],
-    "page_hash": "ce80c0a25d6969b195bf8b76993d541fdecc365e"
+    "page_hash": "cd4130de84703a77f84cb230f247dab98d5fccca"
   },
   "https://careers.centric.eu/se/underkonsult/": {
     "checked": "2026-10-05",
@@ -164,80 +157,80 @@
     "page_hash": "d7f3c7e11ba1f5455c0a5201057ae04f73964c30"
   },
   "https://datakonsulter.info/WiseDki/StartController?assignments=on": {
-    "checked": "2026-11-02",
+    "checked": "2026-11-03",
     "items": [
       {
         "company": "",
         "location": "Stockholm",
-        "snippet": "KYC Delivery Lead publiceringsdatum 2026-10-23 arbetsort Stockholm [Se uppdragsdetaljer](https://datakonsulter.info/WiseDki/StartController?assignmentId=55015)",
+        "snippet": "KYC Delivery Lead publiceringsdatum 2026-10-23 arbetsort Stockholm",
         "title": "KYC Delivery Lead",
         "url": "https://datakonsulter.info/WiseDki/StartController?assignmentId=55015"
       },
       {
         "company": "",
         "location": "Markaryd",
-        "snippet": "Mekanikkonstruktör/p... publiceringsdatum 2026-10-23 arbetsort Markaryd [Se uppdragsdetaljer](https://datakonsulter.info/WiseDki/StartController?assignmentId=54999)",
+        "snippet": "Mekanikkonstruktör/p... publiceringsdatum 2026-10-23 arbetsort Markaryd",
         "title": "Mekanikkonstruktör/p...",
         "url": "https://datakonsulter.info/WiseDki/StartController?assignmentId=54999"
       },
       {
         "company": "",
         "location": "Södertälje",
-        "snippet": "Developer publiceringsdatum 2026-10-22 arbetsort Södertälje [Se uppdragsdetaljer](https://datakonsulter.info/WiseDki/StartController?assignmentId=54998)",
+        "snippet": "Developer publiceringsdatum 2026-10-22 arbetsort Södertälje",
         "title": "Developer",
         "url": "https://datakonsulter.info/WiseDki/StartController?assignmentId=54998"
       },
       {
         "company": "",
         "location": "Stockholm",
-        "snippet": "Tech lead/systemutve... publiceringsdatum 2026-10-22 arbetsort Stockholm [Se uppdragsdetaljer](https://datakonsulter.info/WiseDki/StartController?assignmentId=54997)",
+        "snippet": "Tech lead/systemutve... publiceringsdatum 2026-10-22 arbetsort Stockholm",
         "title": "Tech lead/systemutve...",
         "url": "https://datakonsulter.info/WiseDki/StartController?assignmentId=54997"
       },
       {
         "company": "",
         "location": "Stockholm",
-        "snippet": "Fullstackutvecklare publiceringsdatum 2026-10-22 arbetsort Stockholm [Se uppdragsdetaljer](https://datakonsulter.info/WiseDki/StartController?assignmentId=54995)",
+        "snippet": "Fullstackutvecklare publiceringsdatum 2026-10-22 arbetsort Stockholm",
         "title": "Fullstackutvecklare",
         "url": "https://datakonsulter.info/WiseDki/StartController?assignmentId=54995"
       },
       {
         "company": "",
         "location": "Stockholm",
-        "snippet": "Frontendeutvecklare publiceringsdatum 2026-10-22 arbetsort Stockholm [Se uppdragsdetaljer](https://datakonsulter.info/WiseDki/StartController?assignmentId=54994)",
+        "snippet": "Frontendeutvecklare publiceringsdatum 2026-10-22 arbetsort Stockholm",
         "title": "Frontendeutvecklare",
         "url": "https://datakonsulter.info/WiseDki/StartController?assignmentId=54994"
       },
       {
         "company": "",
-        "location": "Stockholm",
-        "snippet": "Projektledare publiceringsdatum 2026-10-22 arbetsort Stockholm [Se uppdragsdetaljer](https://datakonsulter.info/WiseDki/StartController?assignmentId=54993)",
-        "title": "Projektledare",
-        "url": "https://datakonsulter.info/WiseDki/StartController?assignmentId=54993"
-      },
-      {
-        "company": "",
-        "location": "Stockholm",
-        "snippet": "Nätverksarkitekt publiceringsdatum 2026-10-22 arbetsort Stockholm [Se uppdragsdetaljer](https://datakonsulter.info/WiseDki/StartController?assignmentId=54991)",
-        "title": "Nätverksarkitekt",
-        "url": "https://datakonsulter.info/WiseDki/StartController?assignmentId=54991"
-      },
-      {
-        "company": "",
         "location": "Södertälje",
-        "snippet": "Security Specialist ... publiceringsdatum 2026-10-21 arbetsort Södertälje [Se uppdragsdetaljer](https://datakonsulter.info/WiseDki/StartController?assignmentId=54977)",
+        "snippet": "Security Specialist ... publiceringsdatum 2026-10-21 arbetsort Södertälje",
         "title": "Security Specialist ...",
         "url": "https://datakonsulter.info/WiseDki/StartController?assignmentId=54977"
       },
       {
         "company": "",
         "location": "Stockholm",
-        "snippet": "Plattformskonsult publiceringsdatum 2026-10-21 arbetsort Stockholm [Se uppdragsdetaljer](https://datakonsulter.info/WiseDki/StartController?assignmentId=54976)",
+        "snippet": "Plattformskonsult publiceringsdatum 2026-10-21 arbetsort Stockholm",
         "title": "Plattformskonsult",
         "url": "https://datakonsulter.info/WiseDki/StartController?assignmentId=54976"
+      },
+      {
+        "company": "",
+        "location": "Stockholm",
+        "snippet": "Workplace Technology... publiceringsdatum 2026-10-21 arbetsort Stockholm",
+        "title": "Workplace Technology...",
+        "url": "https://datakonsulter.info/WiseDki/StartController?assignmentId=54975"
+      },
+      {
+        "company": "",
+        "location": "Stockholm",
+        "snippet": "AI-arkitekt publiceringsdatum 2026-10-21 arbetsort Stockholm",
+        "title": "AI-arkitekt",
+        "url": "https://datakonsulter.info/WiseDki/StartController?assignmentId=54974"
       }
     ],
-    "page_hash": "77681465acf84eb512690b28bf10d1df0b932f82"
+    "page_hash": "a1355f13264d73fe7c943c286d8a61bf92969945"
   },
   "https://ddp.se/": {
     "checked": "2026-09-02",
@@ -245,7 +238,7 @@
     "page_hash": "372a70eee202e6776b7dd27468592e8b2b280996"
   },
   "https://enmanskonsulterna.se/": {
-    "checked": "2026-11-02",
+    "checked": "2026-11-03",
     "items": [
       {
         "company": "",
@@ -283,7 +276,7 @@
         "url": "https://enmanskonsulterna.se/uppdrag/110203"
       }
     ],
-    "page_hash": "e4f185000969cc323847fdf8398d9aefc8b5c2cd"
+    "page_hash": "60418324f37a8c481fe638a56bbe54bdfa377e80"
   },
   "https://interimmarketing.se/": {
     "checked": "2026-10-23",
@@ -439,8 +432,29 @@
     "page_hash": "0932b8beaecd0e85ceb4dea46ecce5c12a4c249b"
   },
   "https://jobb.senterprise.se/jobs": {
-    "checked": "2026-11-02",
+    "checked": "2026-11-03",
     "items": [
+      {
+        "company": "",
+        "location": "Stockholm",
+        "snippet": "Konsultuppdrag · Stockholm · Hybridarbete",
+        "title": "Konsultuppdrag | Senior Backend Engineer – Streaming",
+        "url": "https://jobb.senterprise.se/jobs/8650169-konsultuppdrag-senior-backend-engineer-streaming"
+      },
+      {
+        "company": "",
+        "location": "Stockholm",
+        "snippet": "Konsultuppdrag · Stockholm · Hybridarbete",
+        "title": "Konsultuppdrag | Business Analyst",
+        "url": "https://jobb.senterprise.se/jobs/8649770-konsultuppdrag-business-analyst"
+      },
+      {
+        "company": "",
+        "location": "Stockholm",
+        "snippet": "Konsultuppdrag · Stockholm · Hybridarbete",
+        "title": "Konsultuppdrag | IT Procurement consultant / Software Asset Mgr",
+        "url": "https://jobb.senterprise.se/jobs/8649030-konsultuppdrag-it-procurement-consultant-software-asset-mgr"
+      },
       {
         "company": "",
         "location": "Stockholm",
@@ -454,13 +468,6 @@
         "snippet": "Konsultuppdrag · Stockholm · Hybridarbete",
         "title": "Konsultuppdrag | AI Product Engineer",
         "url": "https://jobb.senterprise.se/jobs/8632457-konsultuppdrag-ai-product-engineer"
-      },
-      {
-        "company": "",
-        "location": "Stockholm",
-        "snippet": "Konsultuppdrag · Stockholm · Hybridarbete",
-        "title": "Konsultuppdrag | Cloud Engineer - Data Platform",
-        "url": "https://jobb.senterprise.se/jobs/8628119-konsultuppdrag-cloud-engineer-data-platform"
       },
       {
         "company": "",
@@ -519,11 +526,18 @@
         "url": "https://jobb.senterprise.se/jobs/8446343-konsultuppdrag-ai-platform-engineer"
       }
     ],
-    "page_hash": "fe599e6bb2f74da670ac857e53de1c818cfb6d9d"
+    "page_hash": "b9236ff76f5b9fe2e8f9350c42a37443e291de9d"
   },
   "https://jobs.epico.se/jobs": {
-    "checked": "2026-10-30",
+    "checked": "2026-11-03",
     "items": [
+      {
+        "company": "",
+        "location": "Göteborg · Fully Remote",
+        "snippet": "SAP Basis Consultant – RISE Migration Göteborg · Fully Remote",
+        "title": "SAP Basis Consultant – RISE Migration",
+        "url": "https://jobs.epico.se/jobs/8651534-sap-basis-consultant-rise-migration"
+      },
       {
         "company": "",
         "location": "Göteborg · Hybrid",
@@ -574,7 +588,7 @@
         "url": "https://jobs.epico.se/jobs/8313855-account-manager"
       },
       {
-        "company": "",
+        "company": "Epico Tech",
         "location": "Stockholm · Hybrid",
         "snippet": "Epico Tech söker 3 Seniora Data Engineer – upps... Stockholm · Hybrid",
         "title": "Epico Tech söker 3 Seniora Data Engineer – upps...",
@@ -584,7 +598,7 @@
         "company": "",
         "location": "Network · Göteborg · Hybrid",
         "snippet": "Network Automation Engineer / Developer [Try'n'... Network · Göteborg · Hybrid",
-        "title": "Network Automation Engineer / Developer [Try'n'...",
+        "title": "Network Automation Engineer / Developer [Try'n'",
         "url": "https://jobs.epico.se/jobs/7737122-network-automation-engineer-developer-try-n-hire"
       },
       {
@@ -595,7 +609,7 @@
         "url": "https://jobs.epico.se/jobs/7737077-network-engineer-try-n-hire"
       }
     ],
-    "page_hash": "e63f288e5641d2517ccfc9113c714efdeada35b2"
+    "page_hash": "f62440ff9fd0c41c9b9572b4f0f082e6b86a29d2"
   },
   "https://jobs.paventia.se/jobs/open": {
     "checked": "2026-11-02",
@@ -683,59 +697,66 @@
     "page_hash": "b3f4cc7982445bf0619859dd40c37169a69127cc"
   },
   "https://levigo.se/assignments/": {
-    "checked": "2026-10-30",
+    "checked": "2026-11-03",
     "items": [
       {
         "company": "",
-        "location": "stockholm",
+        "location": "",
+        "snippet": "Registrator/verksamhetsarkivarie Sundbyberg",
+        "title": "Registrator/verksamhetsarkivarie Sundbyberg",
+        "url": "https://assignment.levigo.se/ykRyW7qM/registratorverksamhetsarkivarie"
+      },
+      {
+        "company": "",
+        "location": "",
         "snippet": "Interimschef inom redovisning - Stockholm stockholm, möjlighet till distans",
         "title": "Interimschef inom redovisning - Stockholm stockholm, möjlighet till distans",
         "url": "https://assignment.levigo.se/CB7ujY3b/interimschef-inom-redovisning-stockholm"
       },
       {
         "company": "",
-        "location": "Boden",
+        "location": "",
         "snippet": "Accounts Payable (10845) Boden",
         "title": "Accounts Payable (10845) Boden",
         "url": "https://assignment.levigo.se/SYnJit5M/accounts-payable-10845"
       },
       {
         "company": "",
-        "location": "Solna",
+        "location": "",
         "snippet": "Interimschef Solna",
         "title": "Interimschef Solna",
         "url": "https://assignment.levigo.se/FfS1DOXD/interimschef"
       },
       {
-        "company": "Statens Skolverk",
-        "location": "Stockholm/Solna",
+        "company": "",
+        "location": "",
         "snippet": "Interimchef för inköp och upphandling – Statens Skolverk stockholm Stockholm/Solna, möjlighet till distans vid behov",
         "title": "Interimchef för inköp och upphandling – Statens Skolverk stockholm Stockholm/Solna, möjlighet till distans vid behov",
         "url": "https://assignment.levigo.se/IENTvApD/interimchef-for-inkop-och-upphandling-statens-skolverk-stockholm"
       },
       {
         "company": "",
-        "location": "Norrköping",
+        "location": "",
         "snippet": "It-tekniker (MVA-2026-05214) Norrköping",
         "title": "It-tekniker (MVA-2026-05214) Norrköping",
         "url": "https://assignment.levigo.se/OVOWrq2y/it-tekniker-mva-2026-05214"
       },
       {
         "company": "",
-        "location": "Stockholm",
+        "location": "",
         "snippet": "CSA Lead Stockholm",
         "title": "CSA Lead Stockholm",
         "url": "https://assignment.levigo.se/YCTgXCoZ/csa-lead"
       },
       {
         "company": "",
-        "location": "stockholm",
-        "snippet": "Interim HR-chef till myndighet stockholm",
-        "title": "Interim HR-chef till myndighet stockholm",
-        "url": "https://assignment.levigo.se/slaawufj/interim-hr-chef-till-myndighet"
+        "location": "",
+        "snippet": "Webbutveckling Blekinge",
+        "title": "Webbutveckling Blekinge",
+        "url": "https://assignment.levigo.se/NHLXh4Wu/webbutveckling"
       }
     ],
-    "page_hash": "0e00fa33f76cb185f89b01c5b781eec75c6e8032"
+    "page_hash": "e916bc519973c7dbc0e727706b81a31880a10f52"
   },
   "https://nexergroup.com/career/open-positions/": {
     "checked": "2026-10-02",
@@ -748,9 +769,9 @@
     "page_hash": "52801d03500104815f4538ee20f9ec6b9f86455f"
   },
   "https://partnernetworkportal.azurewebsites.net/": {
-    "checked": "2026-11-02",
+    "checked": "2026-11-03",
     "items": [],
-    "page_hash": "724af6f16da0aa79afb55a4af712e498e8a37c4a"
+    "page_hash": "225f1eff0087ea88ef1e6738e15fb1ce97bf0cb1"
   },
   "https://polarcape.com/": {
     "checked": "2026-10-20",
@@ -763,9 +784,9 @@
     "page_hash": "af6bfcf849d17f209b48054e2a4fe37c1f1b5dd1"
   },
   "https://rightpeoplegroup.com/sv/open-assignments": {
-    "checked": "2026-11-02",
+    "checked": "2026-11-03",
     "items": [],
-    "page_hash": "1067fe164cc39778db2f80693260257244e4e87d"
+    "page_hash": "b44679e189913094b4b97d293c3fbc893c0f8102"
   },
   "https://seequaly.com/": {
     "checked": "2026-10-07",
@@ -773,25 +794,17 @@
     "page_hash": "083d7816b2445d8f273f66c78f0f65dbab33d9bf"
   },
   "https://upgraded.se/": {
-    "checked": "2026-11-02",
+    "checked": "2026-11-03",
     "items": [],
-    "page_hash": "50d11959a9226082086520b2435801c1397d217c"
+    "page_hash": "2b86d9b9c4bc4f5b7aca7aa4245d8ea14f04c591"
   },
   "https://uppdrag.iceberry.se/": {
-    "checked": "2026-11-02",
-    "items": [
-      {
-        "company": "",
-        "location": "Stockholm",
-        "snippet": "Cloud Platform Engineer – Azure & Databricks Stockholm | Ansök senast: 2026-11-02",
-        "title": "Cloud Platform Engineer – Azure & Databricks Stockholm | Ansök senast: 2026-11-02",
-        "url": "https://uppdrag.iceberry.se/assignments/MsQ4tOwlHsNrsJJYEAIW"
-      }
-    ],
-    "page_hash": "3f825f9d99f570623a7fb5049e43c3c8cc380d4f"
+    "checked": "2026-11-03",
+    "items": [],
+    "page_hash": "ae0ed97027835e96a578ddc991acbee640225685"
   },
   "https://weworkremotely.com/remote-jobs/current-freelance-marketo-email-engineer": {
-    "checked": "2026-11-02",
+    "checked": "2026-11-03",
     "items": [
       {
         "company": "Current",
@@ -802,110 +815,32 @@
       },
       {
         "company": "SimpleTiger",
-        "location": "Sarasota, FL / Anywhere in the World",
-        "snippet": "Web Developer: WordPress & HubSpot (U.S. Based, Remote Contractor) 4d SimpleTiger HQ: Sarasota, FL Featured Contract Anywhere in the World",
+        "location": "Anywhere in the World",
+        "snippet": "Web Developer: WordPress & HubSpot (U.S. Based, Remote Contractor) 5d SimpleTiger HQ: Sarasota, FL Featured Contract Anywhere in the World",
         "title": "Web Developer: WordPress & HubSpot (U.S. Based, Remote Contractor)",
         "url": "https://weworkremotely.com/remote-jobs/simpletiger-web-developer-wordpress-hubspot-u-s-based-remote-contractor"
       },
       {
         "company": "MemberSpace",
-        "location": "Hoboken, NJ",
+        "location": "Argentina, Brazil, Canada, Chile, Colombia, Mexico, United States of America, Uruguay",
         "snippet": "Senior React Developer Aug 5 Boosted listing MemberSpace HQ: Hoboken, NJ Boosted Featured Full-Time $100,000 or more USD 🇦🇷 Argentina 🇧🇷 Brazil 🇨🇦 Canada 🇨🇱 Chile 🇨🇴 Colombia 🇲🇽 Mexico 🇺🇸 United States of America 🇺🇾 Uruguay",
         "title": "Senior React Developer",
         "url": "https://weworkremotely.com/remote-jobs/memberspace-senior-react-developer"
       },
       {
         "company": "Yoko Co",
-        "location": "McLean, VA / Anywhere in the World",
+        "location": "Anywhere in the World",
         "snippet": "Front-End WordPress Developer Jul 24 Boosted listing Yoko Co HQ: McLean, VA Boosted Featured Top 100 Full-Time Anywhere in the World",
         "title": "Front-End WordPress Developer",
         "url": "https://weworkremotely.com/remote-jobs/yoko-co-front-end-wordpress-developer"
       }
     ],
-    "page_hash": "123bd12ded26142922c2257099a87a4ee7c48048"
+    "page_hash": "573b504c4ffb36a08ddfef9f94c5243a956ccc79"
   },
   "https://witted.com/projects": {
-    "checked": "2026-11-02",
-    "items": [
-      {
-        "company": "",
-        "location": "Oslo · Norway",
-        "snippet": "Stortingets IT-miljø er i stor grad basert på Microsoft-teknologi og tilhørende utviklingsverktøy. IT-avdelingen forvalter en omfattende portefølje av applikasjoner for både…",
-        "title": "Platform Architect / Developer",
-        "url": "https://witted.com/projects/platform-architect-developer-84aef2ab"
-      },
-      {
-        "company": "",
-        "location": "Norway",
-        "snippet": "A client is looking for a senior C++ developer to join their aviation project in Kongsberg. They need at least one person right now, and possibly more as the project moves…",
-        "title": "Senior C++ Utvikler (Kongsberg)",
-        "url": "https://witted.com/projects/senior-c-utvikler-kongsberg-ee1b2086"
-      },
-      {
-        "company": "",
-        "location": "Norway",
-        "snippet": "Til et spennende prosjekt innen system engineering ute i Kongsberg søker vi en fremoverlent testingeniør med fokus på verifikasjon og funksjonell testing av applikasjoner og…",
-        "title": "Testingeniør – Applikasjon og Grensesnitt (Junior / Mid-level)",
-        "url": "https://witted.com/projects/testingenior-applikasjon-og-grensesnitt-junior-mid-level-0d7c6242"
-      },
-      {
-        "company": "",
-        "location": "Finland",
-        "snippet": "A client within the manufacturing industry is looking for an experienced SAP Production Planning consultant to advise them on the technical set-up of SAP ECC. Technical expertise…",
-        "title": "SAP ECC Production Planning Technical Specialist",
-        "url": "https://witted.com/projects/sap-ecc-production-planning-technical-specialist-e74e0d65"
-      },
-      {
-        "company": "",
-        "location": "Oslo · Norway",
-        "snippet": "Vår kunde trenger 3st C++ SW utviklere, og har to aktuelle prosjekter de skal jobbe på .",
-        "title": "3 x C++ Utviklere",
-        "url": "https://witted.com/projects/3-x-c-utviklere-cb11721e"
-      },
-      {
-        "company": "",
-        "location": "Finland",
-        "snippet": "Suurella vähittäiskaupan asiakkaalla on useita sovelluksia työntekijöilleen; työkaluja, työtehtäviä ja sovelluksia niiden ohjaamista varten. Sovelluksia kehitetään erillään ja…",
-        "title": "Principal Product Designer for Retail",
-        "url": "https://witted.com/projects/principal-product-designer-for-retail-eddb9be1"
-      },
-      {
-        "company": "",
-        "location": "Oslo · Norway",
-        "snippet": "Digdir skal øke kapasiteten i utviklingsteamene som utvikler og forvalter flere nasjonale fellesløsninger, og ser etter 4 til 10 seniorutviklere. Noen av rollene er nye, mens…",
-        "title": "4-10 konsulenter til utviklingsteam for Digdirs fellesløsninger",
-        "url": "https://witted.com/projects/4-10-konsulenter-til-utviklingsteam-for-digdirs-felleslosninger-653e2102"
-      },
-      {
-        "company": "",
-        "location": "Finland",
-        "snippet": "Kaupan alan asiakas kehittää myymälätyöntekijöilleen prosesseja ja työkaluja, ja painopiste on yhä vahvemmin datapohjaisessa myynnin suunnittelussa. Haetaan suunnittelijaa…",
-        "title": "Designer for Retail",
-        "url": "https://witted.com/projects/designer-for-retail-8f902b04"
-      },
-      {
-        "company": "",
-        "location": "Finland",
-        "snippet": "Julkisen sektorin mediaorganisaatio etsii Full-Stack-kehittäjää (PHP / React / JVM) käynnissä olevaan kehitysprojektiin. Tiimi kehittää sisällönhallinta-alustoja ja julkisia…",
-        "title": "Full-Stack Developer (React, Drupal, JVM)",
-        "url": "https://witted.com/projects/full-stack-developer-react-drupal-jvm-541bfbed"
-      },
-      {
-        "company": "",
-        "location": "Finland",
-        "snippet": "A Finnish telecom and network services provider is looking for two senior backend developers to join a newly established Autonomous Network Operations (ANO) team. The team builds…",
-        "title": "Senior developer - Network Automation",
-        "url": "https://witted.com/projects/senior-developer-network-automation-019f2a26"
-      },
-      {
-        "company": "",
-        "location": "Oslo · Norway",
-        "snippet": "En C++-komponent (utviklet i C++17/20) skal integreres i eksisterende legacy-kode på en annen plattform, samtidig som eksisterende funksjonalitet videreutvikles. Den nye koden…",
-        "title": "System Architect",
-        "url": "https://witted.com/projects/system-architect-28d404ed"
-      }
-    ],
-    "page_hash": "4587e5407e97ec9d673c0a2606e97b9d56f36246"
+    "checked": "2026-11-03",
+    "items": [],
+    "page_hash": "48b733ea0c4611be8c22b94367af00fd65a931fe"
   },
   "https://www.adwise.se/": {
     "checked": "2026-10-22",
@@ -913,7 +848,7 @@
     "page_hash": "f8d675932e31c23e74c6866702f2237533d08059"
   },
   "https://www.alphadev.se/lediga-uppdrag": {
-    "checked": "2026-10-13",
+    "checked": "2026-11-03",
     "items": [
       {
         "company": "",
@@ -935,16 +870,9 @@
         "snippet": "Vi söker en Senior Scrum Master som ska ansvara för två väletablerade Scrum-team inom en B2B-portfölj. Rollen innebär att coacha och stötta teamen i det agila arbetet, skapa förutsättningar för effektiva leveranser och kontinuerlig förbättring samt arbeta nära Product Owners kring backlog, prioriteringar och kapacitet.",
         "title": "Senior Scrum Master",
         "url": "https://www.alphadev.se/lediga-uppdrag/senior-scrum-master-4d2f6cf8"
-      },
-      {
-        "company": "",
-        "location": "Stockholm/Solna",
-        "snippet": "Vi söker en fullstackutvecklare till ett längre uppdrag hos vår kund i Stockholm/Solna. Konsulten kommer att ingå i ett agilt DevSecOps-team och arbeta med utveckling och vidareutveckling av webbaserade applikationer. Rollen är bred och omfattar både frontend och backend, med fokus på moderna, användarvänliga och säkra lösningar.",
-        "title": "Fullstack .NET/Angular",
-        "url": "https://www.alphadev.se/lediga-uppdrag/fullstack-net-angular-9b93500b"
       }
     ],
-    "page_hash": "b15c8654955846738aa1d2e935a3e11570c47687"
+    "page_hash": "bc6b3faa744865298b7b05ecce5c2d1df5794ea2"
   },
   "https://www.asociety.se/uppdrag?hsCtaTracking=154dc934-1c0f-4bf3-869e-598d0623f129%7C70ccb48b-e3a3-479b-ab61-7b1ddb517c66": {
     "checked": "2026-10-02",
@@ -960,94 +888,87 @@
     "page_hash": "f8cf8d2b872c0b7bad4b5cd6a7eed094293b2626"
   },
   "https://www.capa.se/lediga-jobb/program-projektledare-12-manaders-uppdrag-500000594": {
-    "checked": "2026-10-28",
+    "checked": "2026-11-03",
     "items": [
       {
         "company": "",
         "location": "Stockholm",
         "snippet": "CFO till lönsamt och entreprenörsdrivet bolag i Stockholm Rekrytering Pågående",
-        "title": "CFO till lönsamt och entreprenörsdrivet bolag i Stockholm Rekrytering Pågående",
+        "title": "CFO till lönsamt och entreprenörsdrivet bolag i Stockholm",
         "url": "https://www.capa.se/lediga-jobb/cfo-till-lonsamt-och-entreprenorsdrivet-bolag-i-stockholm-792"
       },
       {
         "company": "",
         "location": "Stockholm",
         "snippet": "HR & Reward Analyst Stockholm Rekrytering Pågående",
-        "title": "HR & Reward Analyst Stockholm Rekrytering Pågående",
+        "title": "HR & Reward Analyst",
         "url": "https://www.capa.se/lediga-jobb/hr-reward-analyst-794"
       },
       {
         "company": "",
         "location": "Stockholm South",
         "snippet": "Senior Enterprise Architect / IT Transformation Architect Stockholm South Interim Pågående",
-        "title": "Senior Enterprise Architect / IT Transformation Architect Stockholm South Interim Pågående",
+        "title": "Senior Enterprise Architect / IT Transformation Architect",
         "url": "https://www.capa.se/lediga-jobb/senior-enterprise-architect-it-transformation-architect-500000605"
       },
       {
         "company": "",
         "location": "Stockholm",
         "snippet": "Business Controller Stockholm Rekrytering Pågående",
-        "title": "Business Controller Stockholm Rekrytering Pågående",
+        "title": "Business Controller",
         "url": "https://www.capa.se/lediga-jobb/business-controller-789"
       },
       {
         "company": "",
         "location": "",
         "snippet": "Head of Rental Rekrytering Pågående",
-        "title": "Head of Rental Rekrytering Pågående",
+        "title": "Head of Rental",
         "url": "https://www.capa.se/lediga-jobb/head-of-rental-762"
       },
       {
         "company": "",
         "location": "",
         "snippet": "VD till snabbväxande energikoncern Executive Pågående",
-        "title": "VD till snabbväxande energikoncern Executive Pågående",
+        "title": "VD till snabbväxande energikoncern",
         "url": "https://www.capa.se/lediga-jobb/vd-till-snabbvaxande-energikoncern-740"
-      },
-      {
-        "company": "",
-        "location": "Malmö",
-        "snippet": "Senior Jurist Malmö Rekrytering Pågående",
-        "title": "Senior Jurist Malmö Rekrytering Pågående",
-        "url": "https://www.capa.se/lediga-jobb/senior-jurist-759"
       },
       {
         "company": "",
         "location": "Stockholm",
         "snippet": "Operational Excellence Lead -AI & Transformation Stockholm Rekrytering Pågående",
-        "title": "Operational Excellence Lead -AI & Transformation Stockholm Rekrytering Pågående",
+        "title": "Operational Excellence Lead -AI & Transformation",
         "url": "https://www.capa.se/lediga-jobb/operational-excellence-lead-ai-transformation-753"
       },
       {
         "company": "",
         "location": "Stockholm, North",
         "snippet": "Interim Financial Controller Stockholm, North Interim Pågående",
-        "title": "Interim Financial Controller Stockholm, North Interim Pågående",
+        "title": "Interim Financial Controller",
         "url": "https://www.capa.se/lediga-jobb/interim-financial-controller-500000567"
       },
       {
         "company": "",
         "location": "",
         "snippet": "Öppen ansökan - Interim Finance & Accounting Rekrytering Pågående",
-        "title": "Öppen ansökan - Interim Finance & Accounting Rekrytering Pågående",
+        "title": "Öppen ansökan - Interim Finance & Accounting",
         "url": "https://www.capa.se/lediga-jobb/oppen-ansokan-interim-finance-accounting-526"
       },
       {
         "company": "",
         "location": "",
         "snippet": "Öppen ansökan HR-konsult Rekrytering Pågående",
-        "title": "Öppen ansökan HR-konsult Rekrytering Pågående",
+        "title": "Öppen ansökan HR-konsult",
         "url": "https://www.capa.se/lediga-jobb/oppen-ansokan-hr-konsult-516"
       },
       {
         "company": "",
         "location": "",
         "snippet": "Öppen ansökan - Data & Tech Rekrytering Pågående",
-        "title": "Öppen ansökan - Data & Tech Rekrytering Pågående",
+        "title": "Öppen ansökan - Data & Tech",
         "url": "https://www.capa.se/lediga-jobb/oppen-ansokan-data-tech-663"
       }
     ],
-    "page_hash": "ee81c05e8b25a8a30d3379d10cf7154f1560be5e"
+    "page_hash": "e2744b9cc4208d3a4e9ba5b1cd771f30927079bf"
   },
   "https://www.cfinder.com/": {
     "checked": "2026-09-02",
@@ -1117,9 +1038,9 @@
     "page_hash": "4b39ed14f3674f7aaba44f7a19484368b574f783"
   },
   "https://www.experis.se/sv/sok": {
-    "checked": "2026-11-02",
+    "checked": "2026-11-03",
     "items": [],
-    "page_hash": "420e8bbe8c7774b0687db26d28fd545b64fb0e4f"
+    "page_hash": "199f8a7a34bc15368027adf81710acb4ded61353"
   },
   "https://www.folq.se/uppdragsgivare/utvecklare/": {
     "checked": "2026-10-02",
@@ -1127,9 +1048,9 @@
     "page_hash": "148bef0d2e03f686407eb7dd91bd14dbed05d685"
   },
   "https://www.freelancer.com/job/": {
-    "checked": "2026-11-02",
+    "checked": "2026-11-03",
     "items": [],
-    "page_hash": "bfcf47ee27ef8967543dbda6193b6a4dadaf9bb7"
+    "page_hash": "f09fac7ec4c376eb911c3f752d8b61c25b34b850"
   },
   "https://www.gameboost.se/jobs": {
     "checked": "2026-09-16",
@@ -1282,8 +1203,15 @@
     "page_hash": "f57b375f35d8c15f9b93004c091c51d0f7a06fbf"
   },
   "https://www.interimsearch.com/publika-uppdrag/": {
-    "checked": "2026-11-02",
+    "checked": "2026-11-03",
     "items": [
+      {
+        "company": "Konfidentiellt",
+        "location": "Sverige",
+        "snippet": "Interim Search har fått förtroendet att tillsätta en interim KMA-ansvarig till ett bygg/entreprenadbolag.",
+        "title": "Interim KMA-ansvarig",
+        "url": "https://www.interimsearch.com/uppdrag/interim-kma-ansvarig-2/"
+      },
       {
         "company": "Konfidentiellt",
         "location": "Stockholm",
@@ -1342,13 +1270,6 @@
       },
       {
         "company": "Konfidentiellt",
-        "location": "Stockholm",
-        "snippet": "Interim Search har fått förtroendet att tillsätta en senior och operativ Expert AML Compliance Specialist till ett väletablerat finansiellt…",
-        "title": "Interim AML Compliance-specialist",
-        "url": "https://www.interimsearch.com/uppdrag/interim-aml-compliance-specialist/"
-      },
-      {
-        "company": "Konfidentiellt",
         "location": "Västra Götaland",
         "snippet": "",
         "title": "Interim Produktionschef",
@@ -1383,7 +1304,7 @@
         "url": "https://www.interimsearch.com/uppdrag/interim-chef-administration-jobb-id-3715/"
       }
     ],
-    "page_hash": "e0356effd8f7640b92b34b9b97810f19dc892ce7"
+    "page_hash": "fc8564f9d11d915a2600eec072039d3202a6e020"
   },
   "https://www.jappa.jobs/jobb": {
     "checked": "2026-11-02",
@@ -1480,9 +1401,9 @@
     "page_hash": "fa4fb2052532c77d6a3efaee8770c277dac5b129"
   },
   "https://www.nikita.se/lediga-uppdrag/": {
-    "checked": "2026-11-02",
+    "checked": "2026-11-03",
     "items": [],
-    "page_hash": "1bfe3d6c3ec37a45232322ff6b87fd58a7911c4c"
+    "page_hash": "3cbb5123d7661bd78c6584b52dd4387a99c3dd9e"
   },
   "https://www.pro4u.se/pro4us-uppdragsavtal-blomstrar-12-okning-i-forfragningar/": {
     "checked": "2026-10-13",
@@ -1490,23 +1411,51 @@
     "page_hash": "eee6c2777ece12ac926f1c8933af71ee5e0ebaaa"
   },
   "https://www.progressiverecruitment.com/en-gb/job-search/": {
-    "checked": "2026-11-02",
+    "checked": "2026-11-03",
     "items": [],
-    "page_hash": "c50bda6e332f9a55c3e6fb3e4df919180b28a5b4"
+    "page_hash": "08cf7ab7c06bba9dbb43b15b7bd38b1bc550cc53"
   },
   "https://www.randstad.se/jobb/jt-konsultuppdrag/": {
-    "checked": "2026-11-02",
+    "checked": "2026-11-03",
     "items": [],
-    "page_hash": "b36a990c98c054e72a01e42b79b82b6f2c437b60"
+    "page_hash": "e5c24ca0f05dc0bdc163c2ea51a3e2f51b063d17"
   },
   "https://www.safemind.se/": {
-    "checked": "2026-11-02",
+    "checked": "2026-11-03",
     "items": [],
-    "page_hash": "7a3364a28424d90aa7375ad280a02d632a435dd3"
+    "page_hash": "c68aadfb504e679584d385e675660da40cdc8f29"
   },
   "https://www.sigma.se/career/assignments/": {
-    "checked": "2026-11-02",
+    "checked": "2026-11-03",
     "items": [
+      {
+        "company": "Sigma Industry Development",
+        "location": "Stockholms län, Sweden",
+        "snippet": "Spontanansökan: Erfaren konstruktör med erfarenhet från fordonsindustrin Sigma Industry Development | Stockholms län, Sweden Application deadline 2027-03-31 Observera: Detta är en spontanansökan och inte kopplat till något specifikt uppdrag. Vi söker löpande erfarna konstruktörer för framtida uppdrag inom… Read more",
+        "title": "Spontanansökan: Erfaren konstruktör med erfarenhet från fordonsindustrin",
+        "url": "https://www.sigma.se/assignment/spontanansokan-erfaren-konstruktor-med-erfarenhet-fran-fordonsindustrin-stockholms-lan-en-20261102/"
+      },
+      {
+        "company": "Sigma Industry Development",
+        "location": "Stockholms län, Sweden",
+        "snippet": "Spontanansökan: CFD ingenjör Sigma Industry Development | Stockholms län, Sweden Application deadline 2027-03-31 Observera: Detta är en spontanansökan och inte kopplat till något specifikt uppdrag. Vi söker löpande CFD-ingenjörer för framtida uppdrag inom strömningsmekanik, termiska analyser och… Read more",
+        "title": "Spontanansökan: CFD ingenjör",
+        "url": "https://www.sigma.se/assignment/spontanansokan-cfd-ingenjor-stockholms-lan-en-20261102/"
+      },
+      {
+        "company": "Sigma Industry Development",
+        "location": "Stockholms län, Sweden",
+        "snippet": "Spontanansökan: Hållbarhetskonsult Sigma Industry Development | Stockholms län, Sweden Application deadline 2027-03-31 Observera: Detta är en spontanansökan och inte kopplat till något specifikt uppdrag. Vi söker löpande hållbarhetskonsulter för framtida uppdrag inom olika delar av hållbarhetsområdet. Vi… Read more",
+        "title": "Spontanansökan: Hållbarhetskonsult",
+        "url": "https://www.sigma.se/assignment/spontanansokan-hallbarhetskonsult-stockholms-lan-en-20261102/"
+      },
+      {
+        "company": "Sigma Industry Smart",
+        "location": "Stockholms län, Sweden",
+        "snippet": "Industrisäljare Sigma Industry Smart | Stockholms län, Sweden Application deadline 2026-11-04 Vi söker en Industrisäljare för ett längre uppdrag i Stockholm. Konsulten kommer att ansvara för att utveckla och stärka affären mot industrikunder genom ett… Read more",
+        "title": "Industrisäljare",
+        "url": "https://www.sigma.se/assignment/industrisaljare-stockholms-lan-en-20261102/"
+      },
       {
         "company": "Sigma Industry Development",
         "location": "Stockholms län, Sweden",
@@ -1534,37 +1483,9 @@
         "snippet": "Systemingenjör inom tekniska projekt Sigma Industry Evolve | Sweden Application deadline 2026-11-05 Vi söker en systemingenjör som vill arbeta nära produktutveckling och teknikteam i komplexa tekniska projekt. Rollen innebär att omsätta kund- och verksamhetskrav till… Read more",
         "title": "Systemingenjör inom tekniska projekt",
         "url": "https://www.sigma.se/assignment/systemingenjor-inom-tekniska-projekt-sweden-en-20261029/"
-      },
-      {
-        "company": "Sigma Industry Evolution",
-        "location": "Skåne län, Sweden",
-        "snippet": "Senior Project Manager / Project Leader Sigma Industry Evolution | Skåne län, Sweden Application deadline 2026-11-10 We are seeking a highly skilled, business-oriented Senior Project Manager / Project Leader with a strong background in IT governance, service management, and the Microsoft ecosystem. In this role,… Read more",
-        "title": "Senior Project Manager / Project Leader",
-        "url": "https://www.sigma.se/assignment/senior-project-manager-project-leader-skane-lan-sweden-en-20261028/"
-      },
-      {
-        "company": "Sigma Industry Evolution",
-        "location": "Sweden",
-        "snippet": "Audio & Acoustics Engineer Sigma Industry Evolution | Sweden Application deadline 2026-11-19 As an Audio & Acoustics Engineer based in Lund, you will engage in audio and acoustic development ranging from early concept stages and component selection to acoustic design. Your role includes… Read more",
-        "title": "Audio & Acoustics Engineer",
-        "url": "https://www.sigma.se/assignment/audio-acoustics-engineer-sweden-en-20261028/"
-      },
-      {
-        "company": "Sigma Industry Evolution",
-        "location": "Sweden",
-        "snippet": "Strategic Sourcing Specialist – Electronics Sigma Industry Evolution | Sweden Application deadline 2026-11-20 We are looking for a senior and self-motivated strategic buyer with a strong background in electronics/semiconductor sourcing . The person needs to have concrete experience with electronic… Read more",
-        "title": "Strategic Sourcing Specialist – Electronics",
-        "url": "https://www.sigma.se/assignment/strategic-sourcing-specialist-electronics-sweden-en-20261028/"
-      },
-      {
-        "company": "Sigma Industry Development",
-        "location": "Stockholms län, Sweden",
-        "snippet": "Senior metodingenjör inom diagnostik och felsökning Sigma Industry Development | Stockholms län, Sweden Application deadline 2026-11-06 Vi söker en erfaren metodingenjör som vill arbeta nära utvecklingsorganisationer och fungera som en viktig länk mellan teknik, funktion och användare. Rollen har fokus på diagnostik, felsökning,… Read more",
-        "title": "Senior metodingenjör inom diagnostik och felsökning",
-        "url": "https://www.sigma.se/assignment/senior-metodingenjor-inom-diagnostik-och-felsokning-stockholms-lan-en-20261027/"
       }
     ],
-    "page_hash": "81c87653dd9842e4dcdaa2893ee627aeec1ef553"
+    "page_hash": "42a3c3496056018d62a38798cfe051a0a6c28b48"
   },
   "https://www.teksystems.com/sv-se": {
     "checked": "2026-09-02",
@@ -1599,115 +1520,115 @@
     "page_hash": "6e24486ac6f36f643dd8c902f82498f6f70f3ce2"
   },
   "https://www.trib.se/jobs": {
-    "checked": "2026-10-27",
+    "checked": "2026-11-03",
     "items": [
       {
         "company": "",
         "location": "",
-        "snippet": "",
+        "snippet": "Intern – Growth Marketing TRIB Talent Agency permanent",
+        "title": "Intern – Growth Marketing TRIB Talent Agency permanent",
+        "url": "https://www.trib.se/jobs/intern-growth-marketing/"
+      },
+      {
+        "company": "Petites Pommes",
+        "location": "",
+        "snippet": "Content Manager Petites Pommes permanent",
         "title": "Content Manager Petites Pommes permanent",
         "url": "https://www.trib.se/jobs/petites-pommes-content-manager/"
       },
       {
-        "company": "",
+        "company": "Courtier",
         "location": "",
-        "snippet": "",
+        "snippet": "Content & Communications Specialist Courtier permanent",
         "title": "Content & Communications Specialist Courtier permanent",
         "url": "https://www.trib.se/jobs/content-communications-specialist/"
       },
       {
-        "company": "",
+        "company": "Courtier",
         "location": "",
-        "snippet": "",
+        "snippet": "Paid Social Specialist Courtier permanent",
         "title": "Paid Social Specialist Courtier permanent",
         "url": "https://www.trib.se/jobs/paid-social-specialist-courtier/"
       },
       {
-        "company": "",
+        "company": "Scandic",
         "location": "",
-        "snippet": "",
+        "snippet": "Head of Design Scandic permanent",
         "title": "Head of Design Scandic permanent",
         "url": "https://www.trib.se/jobs/scandic-head-of-design/"
       },
       {
-        "company": "",
+        "company": "Lundhags",
         "location": "",
-        "snippet": "",
+        "snippet": "Marketing Project & Production Manager Lundhags permanent",
         "title": "Marketing Project & Production Manager Lundhags permanent",
         "url": "https://www.trib.se/jobs/marketing-project-production-manager/"
       },
       {
         "company": "",
         "location": "",
-        "snippet": "",
+        "snippet": "Talent & Client Partner TRIB Talent Agency permanent",
         "title": "Talent & Client Partner TRIB Talent Agency permanent",
         "url": "https://www.trib.se/jobs/talent-client-partner/"
       },
       {
-        "company": "",
+        "company": "Stream Analyze",
         "location": "",
-        "snippet": "",
+        "snippet": "Marketing Manager Stream Analyze permanent",
         "title": "Marketing Manager Stream Analyze permanent",
         "url": "https://www.trib.se/jobs/marketing-manager-b2b-gtm/"
       },
       {
-        "company": "",
+        "company": "Stream Analyze",
         "location": "",
-        "snippet": "",
+        "snippet": "Product Marketing Manager Stream Analyze permanent",
         "title": "Product Marketing Manager Stream Analyze permanent",
         "url": "https://www.trib.se/jobs/product-marketing-manager-b2b-gtm/"
       },
       {
-        "company": "",
+        "company": "Tretorn",
         "location": "",
-        "snippet": "",
+        "snippet": "Creative Producer Tretorn permanent",
         "title": "Creative Producer Tretorn permanent",
         "url": "https://www.trib.se/jobs/creative-producer-tretorn/"
       },
       {
-        "company": "",
+        "company": "Nordic Knots",
         "location": "",
-        "snippet": "",
+        "snippet": "VP Ecommerce Nordic Knots permanent",
         "title": "VP Ecommerce Nordic Knots permanent",
         "url": "https://www.trib.se/jobs/vp-ecommerce/"
       },
       {
-        "company": "",
+        "company": "Nordic Knots",
         "location": "",
-        "snippet": "",
-        "title": "Senior Manager, Paid Marketing Etraveli permanent",
-        "url": "https://www.trib.se/jobs/senior-manager-paid-marketing/"
-      },
-      {
-        "company": "",
-        "location": "",
-        "snippet": "",
+        "snippet": "Technical Project Lead Nordic Knots permanent",
         "title": "Technical Project Lead Nordic Knots permanent",
         "url": "https://www.trib.se/jobs/technical-project-lead/"
       },
       {
-        "company": "",
+        "company": "Nordic Knots",
         "location": "",
-        "snippet": "",
+        "snippet": "Head of Technology Nordic Knots permanent",
         "title": "Head of Technology Nordic Knots permanent",
         "url": "https://www.trib.se/jobs/head-of-technology-2/"
       },
       {
-        "company": "",
+        "company": "Nordic Knots",
         "location": "",
-        "snippet": "",
+        "snippet": "IT Operations Specialist Nordic Knots permanent",
         "title": "IT Operations Specialist Nordic Knots permanent",
         "url": "https://www.trib.se/jobs/it-ops-specialist/"
       },
       {
-        "company": "",
+        "company": "SCRL",
         "location": "",
-        "snippet": "",
+        "snippet": "Senior Product Designer SCRL permanent",
         "title": "Senior Product Designer SCRL permanent",
         "url": "https://www.trib.se/jobs/scrl-product-designer/"
       }
     ],
-    "page_hash": "5428d317563e80b899fe434d9b3d56a0860a4589"
+    "page_hash": "7cd14e3f1d408cdbd02d653166595e25914cf4ff"
   },
   "https://www.wequel.se/": {
     "checked": "2026-11-02",
